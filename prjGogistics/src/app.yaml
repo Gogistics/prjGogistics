@@ -15,9 +15,6 @@ handlers:
 - url: /js
   static_dir: static/javascript
 
-- url: /leaflet
-  static_dir: static/leaflet-0.6.4
-
 - url: /img
   static_dir: static/images
 
