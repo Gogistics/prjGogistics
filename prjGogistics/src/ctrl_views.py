@@ -13,6 +13,7 @@ jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.di
 class GogisticsIndexHandler(webapp2.RequestHandler):
     def get(self):
         template_values = {}
+        template_values.update({'title':'Gogistics Home'})
         template = jinja_environment.get_template('/gogistics_index.html')
         self.response.out.write(template.render(template_values))
 
