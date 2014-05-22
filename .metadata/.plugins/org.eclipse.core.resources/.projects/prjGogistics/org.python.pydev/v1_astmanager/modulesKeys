@@ -149,6 +149,7 @@ concurrent.futures.process|C:\Program Files (x86)\Google\google_appengine\lib\co
 concurrent.futures.thread|C:\Program Files (x86)\Google\google_appengine\lib\concurrent\concurrent\futures\thread.py
 ctrl_views|D:\prjGogistics\prjGogistics\src\ctrl_views.py
 dev_appserver|C:\Program Files (x86)\Google\google_appengine\dev_appserver.py
+dict_keys_values|D:\prjGogistics\prjGogistics\src\dict_keys_values.py
 django.__init__|C:\Program Files (x86)\Google\google_appengine\lib\django-1.3\django\__init__.py
 django.bin.__init__|C:\Program Files (x86)\Google\google_appengine\lib\django-1.3\django\bin\__init__.py
 django.bin.daily_cleanup|C:\Program Files (x86)\Google\google_appengine\lib\django-1.2\django\bin\daily_cleanup.py
