@@ -11,7 +11,7 @@ import webapp2
 import jinja2
 import os
 
-#append templates' path directory
+#append templates' path
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/static/templates'))  # append templates' path
 
 #index handler
