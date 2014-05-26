@@ -4,8 +4,8 @@ Created on May 21, 2014
 
 @author: Alan Tai
 
-Discription:
-Project for company web-site
+@Discription:
+The project is for developing the company web-site. The part is the view controller of dispatching url paths
 '''
 import webapp2
 import jinja2

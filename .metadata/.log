@@ -358,3 +358,19 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.python.pydev.ui.editor.scope,,,system)
+!SESSION 2014-05-24 18:54:15.046 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2014-05-24 19:06:00.324
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.5.0.v201211121242-rel-r37
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2014-05-24 19:06:00.729
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.8.9
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2014-05-24 19:06:01.639
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.5.1
