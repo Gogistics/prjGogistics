@@ -20,7 +20,6 @@ handlers:
 
 - url: /.*
   script: ctrl_views.app
-  secure: always
 
 inbound_services:
 - channel_presence
