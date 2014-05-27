@@ -22,5 +22,5 @@ class GogisticsIndexHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('/gogistics_index.html')
         self.response.out.write(template.render(template_values))
 
-#url dispatcher
+#url handler
 app = webapp2.WSGIApplication([('/gogistics_index', GogisticsIndexHandler)], debug=True)
