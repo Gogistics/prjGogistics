@@ -24,3 +24,78 @@ java.runtime.version,sysinfo,,,"1.7.0_01-b08",1401188714975
 java.specification.name,sysinfo,,,"Java Platform API Specification",1401188714975
 java.specification.vendor,sysinfo,,,"Oracle Corporation",1401188714975
 java.specification.version,sysinfo,,,"1.7",1401188714975
+java.vendor,sysinfo,,,"Oracle Corporation",1401188714975
+java.version,sysinfo,,,"1.7.0_01",1401188714975
+java.vm.info,sysinfo,,,"mixed mode",1401188714975
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1401188714975
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1401188714975
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1401188714975
+java.vm.specification.version,sysinfo,,,"1.7",1401188714975
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1401188714975
+java.vm.version,sysinfo,,,"21.1-b02",1401188714975
+started,bundle,org.eclipse.cdt.make.core,7.1.2.201202111925,"org.eclipse.cdt.make.core",1401188715182
+started,bundle,org.eclipse.cdt.managedbuilder.core,8.0.2.201202111925,"org.eclipse.cdt.managedbuilder.core",1401188715278
+started,bundle,org.eclipse.cdt.core,5.3.2.201202111925,"org.eclipse.cdt.core",1401188715425
+started,bundle,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui",1401188715639
+started,bundle,org.eclipse.cdt.codan.core.cxx,1.0.0.201202111925,"org.eclipse.cdt.codan.core.cxx",1401188715651
+started,bundle,org.eclipse.cdt.make.ui,7.1.2.201202111925,"org.eclipse.cdt.make.ui",1401188715651
+started,bundle,org.eclipse.cdt.codan.core,2.0.0.201202111925,"org.eclipse.cdt.codan.core",1401188715652
+started,bundle,org.eclipse.cdt.codan.checkers,1.0.1.201202111925,"org.eclipse.cdt.codan.checkers",1401188715735
+activated,view,org.python.pydev,2.8.2.2013090511,"org.python.pydev.navigator.view",1401188715903
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401188716778
+started,bundle,com.google.gdt.eclipse.drive,3.5.1.v201312301719-rel-r37,"com.google.gdt.eclipse.drive",1401188717002
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401188724835
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401188725640
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401188725854
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401188728055
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401194546146
+activated,editor,org.python.pydev,2.8.2.2013090511,"org.python.pydev.editor.PythonEditor",1401194549735
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1401194553514
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordPrevious",1401194556317
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordPrevious",1401194556660
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordPrevious",1401194556984
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1401194557819
+started,bundle,org.eclipse.wst.sse.core,1.1.602.v201112071516,"org.eclipse.wst.sse.core",1401194560598
+activated,view,org.python.pydev,2.8.2.2013090511,"org.python.pydev.navigator.view",1401194560621
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401194560873
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401194567913
+activated,editor,org.python.pydev,2.8.2.2013090511,"org.python.pydev.editor.PythonEditor",1401194567946
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1401194571187
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401194574563
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1401194819840
+started,bundle,org.eclipse.wst.sse.ui,1.3.2.v201201041522,"org.eclipse.wst.sse.ui",1401194824114
+started,bundle,org.eclipse.wst.css.ui,1.0.601.v201201101544,"org.eclipse.wst.css.ui",1401194824212
+started,bundle,com.google.gwt.eclipse.core,3.5.1.v201312301719-rel-r37,"com.google.gwt.eclipse.core",1401194824478
+started,bundle,org.eclipse.wst.css.core,1.1.501.v201111292150,"org.eclipse.wst.css.core",1401194824571
+started,bundle,org.eclipse.wst.html.core,1.1.502.v201202091936,"org.eclipse.wst.html.core",1401194824662
+started,bundle,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui",1401194825727
+started,bundle,org.eclipse.wst.xml.core,1.1.602.v201201091944,"org.eclipse.wst.xml.core",1401194825750
+started,bundle,org.eclipse.wst.validation,1.2.303.v201202090300,"org.eclipse.wst.validation",1401194826155
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.200.v201103170302,"org.eclipse.jst.common.project.facet.core",1401194826298
+started,bundle,org.eclipse.jst.ws.jaxrs.core,1.0.301.v201108240656,"org.eclipse.jst.ws.jaxrs.core",1401194826315
+started,bundle,org.eclipse.emf.common,2.7.0.v20120127-1122,"org.eclipse.emf.common",1401194826531
+opened,editor,org.eclipse.wst.css.ui,1.0.601.v201201101544,"org.eclipse.wst.css.core.csssource.source",1401194826608
+activated,editor,org.eclipse.wst.css.ui,1.0.601.v201201101544,"org.eclipse.wst.css.core.csssource.source",1401194826872
+started,bundle,org.eclipse.wst.html.ui,1.0.602.v201202091936,"org.eclipse.wst.html.ui",1401194826915
+started,bundle,org.eclipse.wst.common.uriresolver,1.1.401.v201004280700,"org.eclipse.wst.common.uriresolver",1401194827134
+started,bundle,org.eclipse.wst.jsdt.web.ui,1.0.401.v201108152113,"org.eclipse.wst.jsdt.web.ui",1401194827631
+started,bundle,org.eclipse.wst.jsdt.core,1.1.102.v201111090634,"org.eclipse.wst.jsdt.core",1401194828061
+started,bundle,org.eclipse.wst.jsdt.web.core,1.0.401.v201108152113,"org.eclipse.wst.jsdt.web.core",1401194828088
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.300.v201104272153,"org.eclipse.wst.jsdt.manipulation",1401194829121
+started,bundle,org.eclipse.wst.jsdt.ui,1.1.102.v201201131900,"org.eclipse.wst.jsdt.ui",1401194829129
+started,bundle,org.eclipse.wst.dtd.ui,1.0.600.v201103171359,"org.eclipse.wst.dtd.ui",1401194829150
+opened,editor,org.eclipse.wst.html.ui,1.0.602.v201202091936,"org.eclipse.wst.html.core.htmlsource.source",1401194829221
+activated,editor,org.eclipse.wst.html.ui,1.0.602.v201202091936,"org.eclipse.wst.html.core.htmlsource.source",1401194829431
+started,bundle,org.eclipse.wst.common.frameworks,1.2.102.v201201190400,"org.eclipse.wst.common.frameworks",1401194830597
+started,bundle,org.eclipse.wst.common.core,1.2.0.v200908252030,"org.eclipse.wst.common.core",1401194830683
+started,bundle,org.eclipse.emf.ecore,2.7.0.v20120127-1122,"org.eclipse.emf.ecore",1401194830793
+started,bundle,org.eclipse.jem.util,2.1.100.v201103021400,"org.eclipse.jem.util",1401194830795
+started,bundle,org.eclipse.wst.common.emf,1.2.100.v201101101900,"org.eclipse.wst.common.emf",1401194830811
+started,bundle,org.eclipse.jst.j2ee.core,1.2.102.v201202090300,"org.eclipse.jst.j2ee.core",1401194830814
+started,bundle,org.eclipse.emf.ecore.xmi,2.7.0.v20120127-1122,"org.eclipse.emf.ecore.xmi",1401194830877
+started,bundle,org.eclipse.wst.common.emfworkbench.integration,1.2.101.v201107140600,"org.eclipse.wst.common.emfworkbench.integration",1401194830881
+started,bundle,org.eclipse.wst.common.modulecore,1.2.103.v201201190400,"org.eclipse.wst.common.modulecore",1401194830957
+started,bundle,org.eclipse.jem,2.0.501.v201111030500,"org.eclipse.jem",1401194831016
+started,bundle,org.eclipse.jst.jsf.common,1.2.3.v201104061039,"org.eclipse.jst.jsf.common",1401194831028
+started,bundle,org.eclipse.jst.jsf.core,1.3.105.v201108261005,"org.eclipse.jst.jsf.core",1401194831038
+started,bundle,org.eclipse.jst.jsf.facelet.ui,1.0.1.v201104032306,"org.eclipse.jst.jsf.facelet.ui",1401194831039
