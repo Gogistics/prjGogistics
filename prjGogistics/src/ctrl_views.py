@@ -7,6 +7,8 @@ Created on May 21, 2014
 @Discription:
 The project is for developing the company web-site. The part is the view controller of dispatching url paths
 '''
+__author__ = 'Alan Tai'
+
 import webapp2
 import jinja2
 import os
