@@ -1,0 +1,28 @@
+{% extends "/gogistics_base.html"%} {% block main_content %}
+<div id="main_content"
+	style="text-align: center; margin: 0px auto; position: fixed; top: 15%; width: 100%; background-color: #000; z-index: 100;">
+	
+	<!-- Company logo and slogan -->
+	<img alt="Gogistics" src="/img/gogistics_font_side.png"
+		class="gogistics_font_side_img">
+
+    <!--  -->
+	<div style="display: block; margin: 5px auto;">
+		<p style="color: #fff; display: inline-block;">Language</p>
+		<select class="language_selector">
+			<option>中文</option>
+			<option>English</option>
+		</select>
+	</div>
+
+	<div id="copy_right" class="copy_right"
+		style="margin-top: 30px; margin-bottom: 10px; text-align: center;">
+		<!-- Copy right -->
+		<p style="color: #9a9a9a; margin: 0px auto; font-size: 11px;">
+			&copy; <span>Gogistics Ltd.</span> <span>Ailin.Alan Design
+				Studio.</span> <span>Since 2014</span>
+		</p>
+		<!-- end of Copy right -->
+	</div>
+</div>
+{% endblock %}

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on May 22, 2014
 
@@ -18,9 +19,11 @@ class Keys_vaules_General():
 #English
 class Keys_Values_English():
     def __init__(self):
-        self.index_title = '資雲科技'
+        self.index_title = 'Gogistics'
+        self.founder = 'Alan Tai'
     
 #Chinese
 class Keys_Values_Chinese():
     def __init__(self):
-        self.index_title = 'Gogistics'
+        self.index_title = u'資雲科技'
+        self.founder = u'戴立舟'

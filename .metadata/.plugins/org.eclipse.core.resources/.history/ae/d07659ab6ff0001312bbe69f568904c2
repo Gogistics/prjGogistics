@@ -1,0 +1,28 @@
+{% extends "/gogistics_base.html"%} {% block main_content %}
+<div
+	style="text-align: center; margin: 0px auto; position: fixed; top: 15%; width: 100%; background-color: #000; z-index: 100;">
+	<img alt="Gogistics" src="/img/gogistics_font_side.png"> <select
+		class="language_selector">
+		<option>中文</option>
+		<option>English</option>
+	</select>
+
+	<div id="copy_right"
+		style="margin-top: 30px; margin-bottom: 10px; text-align: center;">
+		<!-- Copy right -->
+		<p style="color: #323232; margin: 0px auto; font-size: 11px;">
+			&copy; <span>Gogistics Ltd.</span> <span>Ailin.Alan Design
+				Studio.</span> <span>Since 2014</span>
+		</p>
+		<!-- end of Copy right -->
+
+		<!-- Parting Line -->
+		<div class="parting_line"></div>
+		<!-- End -->
+	</div>
+</div>
+
+<div
+	style="position: absolute; top: 100px; margin: 10px auto; width: 100%; text-align: center;">
+</div>
+{% endblock %}

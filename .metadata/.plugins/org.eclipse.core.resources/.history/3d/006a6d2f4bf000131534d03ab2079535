@@ -1,0 +1,16 @@
+{% extends "/gogistics_base.html"%} {% block main_content %}
+<div
+	style="text-align: center; margin: 0px auto; position: fixed; top: 30%; width: 100%; background-color: #000; z-index: 100;">
+	<img alt="Gogistics" src="/img/gogistics_font_side.png">
+	<select>
+		<option>中文</option>
+		<option>English</option>
+	</select>
+	
+	<p style="font-size: 20px; color: #fff;">Under Construction...</p>
+</div>
+
+<div
+	style="position: absolute; top: 100px; margin: 10px auto; width: 100%; text-align: center;">
+</div>
+{% endblock %}
