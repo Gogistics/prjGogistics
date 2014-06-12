@@ -20,6 +20,7 @@
 		display: inline-block;
 		margin: 5px auto;
 		font-size: 13px;
+		width: 100px;
 		text-align: center;
 	}
 	.language_selector > option{
@@ -53,6 +54,7 @@
 		margin: 5px auto;
 		text-align: center;
 		font-size: 13px;
+		width: 100px;
 	}
 	.language_selector > option{
 		text-align: center;
@@ -77,7 +79,7 @@
 		background-color: #000;
 	}
 	.gogistics_font_side_img {
-		width: 300px;
+		width: 350px;
 		margin: 2px auto;
 	}
 	.language_selector {
@@ -85,13 +87,11 @@
 		margin: 5px auto;
 		text-align: center;
 		font-size: 13px;
+		width: 90px;
 	}
 	.language_selector > option{
 		text-align: center;
 		font-size: 13px;
 		width: 90px;
-	}
-	#brief_introduction_company_service > span{
-		display: block;
 	}
 }

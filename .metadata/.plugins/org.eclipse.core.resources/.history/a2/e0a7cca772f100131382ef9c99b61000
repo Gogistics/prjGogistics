@@ -8,7 +8,7 @@
 
     <!-- language selector -->
 	<div style="display: block; margin: 20px auto;">
-		<p style="color: #fff; display: inline-block; font-size: 14px;">Language</p>
+		<p style="color: #fff; display: inline-block; font-size: 13px;">Language</p>
 		<select class="language_selector">
 			<option>中文</option>
 			<option>English</option>
@@ -16,7 +16,7 @@
 	</div>
 	
 	
-	<p id="brief_introduction_company_service" style="color: #9bdfff; margin: 2px 3px; font-size: 14px;"><span>完整雲端服務整合  =</span> <span>Google應用程式 (Google Apps) +</span> <span>Google應用程式開發平台 (Google App Engine) +</span> <span>行動裝置應用程式 + ...</span></p>
+	<p style="color: #fff; ">Google Apps + Google App Engine + 行動裝置應用程式</p>
 </div>
 
 {% endblock %}
