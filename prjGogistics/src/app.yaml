@@ -18,8 +18,8 @@ handlers:
 - url: /img
   static_dir: static/images
 
-- url: /.*
-  script: ctrl_views.app
+- url: /
+  script: dispatchers.index_dispatcher.app
 
 inbound_services:
 - channel_presence

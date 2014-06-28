@@ -21,9 +21,11 @@ class Keys_Values_English():
     def __init__(self):
         self.index_title = 'Gogistics'
         self.founder = 'Alan Tai'
+        self.google_apps_engine = 'Google Apps Engine'
     
 #Chinese
 class Keys_Values_Chinese():
     def __init__(self):
         self.index_title = u'資雲科技'
         self.founder = u'戴立舟'
+        self.google_apps_engine = u'資雲科技(Google Apps Engine)'
