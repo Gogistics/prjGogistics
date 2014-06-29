@@ -1,0 +1,8 @@
+{ "web":
+  { "client_id": "555225571005-dr9rmjo484gf5n2knlai8tl5p45c5ojc.apps.googleusercontent.com",
+    "client_secret": "555225571005-dr9rmjo484gf5n2knlai8tl5p45c5ojc@developer.gserviceaccount.com",
+    "redirect_uris": [ "postmessage"],
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token"
+  }
+}

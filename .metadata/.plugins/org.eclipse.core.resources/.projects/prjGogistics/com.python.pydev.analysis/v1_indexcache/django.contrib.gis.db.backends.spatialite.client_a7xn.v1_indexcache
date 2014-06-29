@@ -1,9 +1,1 @@
-db
-client
-backends
-SpatiaLiteClient
-sqlite3
-django
-DatabaseClient
-executable_name
-spatialite
+0

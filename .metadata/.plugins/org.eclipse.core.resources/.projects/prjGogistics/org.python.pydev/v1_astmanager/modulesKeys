@@ -20,7 +20,6 @@ apiclient.__init__|C:\Program Files (x86)\Google\google_appengine\lib\google-api
 apiclient.contrib.__init__|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\contrib\__init__.py
 apiclient.contrib.latitude.__init__|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\contrib\latitude\__init__.py
 apiclient.contrib.moderator.__init__|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\contrib\moderator\__init__.py
-apiclient.discovery|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\discovery.py
 apiclient.errors|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\errors.py
 apiclient.ext.__init__|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\ext\__init__.py
 apiclient.ext.appengine|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\ext\appengine.py
@@ -147,10 +146,14 @@ concurrent.futures._base|C:\Program Files (x86)\Google\google_appengine\lib\conc
 concurrent.futures._compat|C:\Program Files (x86)\Google\google_appengine\lib\concurrent\concurrent\futures\_compat.py
 concurrent.futures.process|C:\Program Files (x86)\Google\google_appengine\lib\concurrent\concurrent\futures\process.py
 concurrent.futures.thread|C:\Program Files (x86)\Google\google_appengine\lib\concurrent\concurrent\futures\thread.py
-ctrl_views|D:\prjGogistics\prjGogistics\src\ctrl_views.py
-database_handlers.__init__|D:\prjGogistics\prjGogistics\src\database_handlers\__init__.py
 dev_appserver|C:\Program Files (x86)\Google\google_appengine\dev_appserver.py
-dict_keys_values|D:\prjGogistics\prjGogistics\src\dict_keys_values.py
+dictionaries.__init__|D:\prjGogistics\prjGogistics\src\dictionaries\__init__.py
+dictionaries.dict_html_pages|D:\prjGogistics\prjGogistics\src\dictionaries\dict_html_pages.py
+dictionaries.dict_keys_values|D:\prjGogistics\prjGogistics\src\dictionaries\dict_keys_values.py
+dispatchers.__init__|D:\prjGogistics\prjGogistics\src\dispatchers\__init__.py
+dispatchers.dispatcher_client_services|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_client_services.py
+dispatchers.dispatcher_index|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_index.py
+dispatchers.dispatcher_questions_answers|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_questions_answers.py
 django.__init__|C:\Program Files (x86)\Google\google_appengine\lib\django-1.3\django\__init__.py
 django.bin.__init__|C:\Program Files (x86)\Google\google_appengine\lib\django-1.3\django\bin\__init__.py
 django.bin.daily_cleanup|C:\Program Files (x86)\Google\google_appengine\lib\django-1.2\django\bin\daily_cleanup.py
@@ -1270,7 +1273,6 @@ flags_modules_for_testing.module_bar|C:\Program Files (x86)\Google\google_appeng
 flags_modules_for_testing.module_baz|C:\Program Files (x86)\Google\google_appengine\lib\python-gflags\tests\flags_modules_for_testing\module_baz.py
 flags_modules_for_testing.module_foo|C:\Program Files (x86)\Google\google_appengine\lib\python-gflags\tests\flags_modules_for_testing\module_foo.py
 gen_protorpc|C:\Program Files (x86)\Google\google_appengine\gen_protorpc.py
-general_handlers.__init__|D:\prjGogistics\prjGogistics\src\general_handlers\__init__.py
 gflags_googletest|C:\Program Files (x86)\Google\google_appengine\lib\python-gflags\tests\gflags_googletest.py
 gflags_helpxml_test|C:\Program Files (x86)\Google\google_appengine\lib\python-gflags\tests\gflags_helpxml_test.py
 gflags_unittest|C:\Program Files (x86)\Google\google_appengine\lib\python-gflags\tests\gflags_unittest.py
@@ -2106,7 +2108,8 @@ grizzled.test.test_helpers|C:\Program Files (x86)\Google\google_appengine\lib\gr
 grizzled.test.text.TestStr2Bool|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\test\text\TestStr2Bool.py
 grizzled.test.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\test\text\__init__.py
 grizzled.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\text\__init__.py
-httplib2.__init__|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\__init__.py
+handlers_database.__init__|D:\prjGogistics\prjGogistics\src\handlers_database\__init__.py
+handlers_general.__init__|D:\prjGogistics\prjGogistics\src\handlers_general\__init__.py
 httplib2.iri2uri|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\iri2uri.py
 httplib2.socks|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\socks.py
 httplib2.test.__init__|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\test\__init__.py
@@ -2162,8 +2165,10 @@ markupsafe.__init__|C:\Program Files (x86)\Google\google_appengine\lib\markupsaf
 markupsafe._constants|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\_constants.py
 markupsafe._native|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\_native.py
 markupsafe.tests|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\tests.py
+models.__init__|D:\prjGogistics\prjGogistics\src\models\__init__.py
+models.models_admin|D:\prjGogistics\prjGogistics\src\models\models_admin.py
+models.models_clients|D:\prjGogistics\prjGogistics\src\models\models_clients.py
 oauth2.__init__|C:\Program Files (x86)\Google\google_appengine\lib\oauth2\oauth2\__init__.py
-oauth2client.__init__|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\oauth2client\__init__.py
 oauth2client.anyjson|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\oauth2client\anyjson.py
 oauth2client.appengine|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\oauth2client\appengine.py
 oauth2client.client|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\oauth2client\client.py

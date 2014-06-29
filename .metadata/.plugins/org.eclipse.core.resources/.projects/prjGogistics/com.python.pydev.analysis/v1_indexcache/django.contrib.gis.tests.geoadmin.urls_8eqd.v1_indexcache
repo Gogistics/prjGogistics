@@ -1,10 +1,1 @@
-site
-urlpatterns
-patterns
-r
-admin
-urls
-django
-contrib
-conf
-include
+0

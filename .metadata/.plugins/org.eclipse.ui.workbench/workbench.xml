@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="76" version="2.0">
+<workbench progressCount="51" version="2.0">
 <workbenchAdvisor/>
-<window height="684" maximized="true" width="1024" x="217" y="11">
+<window height="414" width="1029" x="220" y="79">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -20,12 +20,12 @@
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -33,44 +33,28 @@
 </coolbarLayout>
 <page focus="true" label="Workspace - PyDev">
 <editors>
-<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@1130cce">
+<editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-</presentation>
-</folder>
-</info>
-<info part="org.eclipse.ui.internal.EditorStack@1130cce" ratio="0.67000836" ratioLeft="802" ratioRight="395" relationship="2" relative="DefaultEditorWorkbook">
-<folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.python.pydev.editor.PythonEditor" name="ctrl_views.py" partName="ctrl_views" path="D:/prjGogistics/prjGogistics/src/ctrl_views.py" title="ctrl_views" tooltip="prjGogistics/src/ctrl_views.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/ctrl_views.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="308" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="dispatcher_index.py" partName="dispatcher_index" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatcher_index.py" title="dispatcher_index" tooltip="prjGogistics/src/dispatchers/dispatcher_index.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="292" selectionTopPixel="53"/>
 </editor>
-<editor focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="gogistics_index.html" partName="gogistics_index.html" path="D:/prjGogistics/prjGogistics/src/static/templates/gogistics_index.html" title="gogistics_index.html" tooltip="prjGogistics/src/static/templates/gogistics_index.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/gogistics_index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="692" selectionTopPixel="0"/>
+<editor id="org.python.pydev.editor.PythonEditor" name="dict_html_pages.py" partName="dict_html_pages" path="D:/prjGogistics/prjGogistics/src/dictionaries/dict_html_pages.py" title="dict_html_pages" tooltip="prjGogistics/src/dictionaries/dict_html_pages.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dictionaries/dict_html_pages.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="175" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="gogistics_base.html" partName="gogistics_base.html" path="D:/prjGogistics/prjGogistics/src/static/templates/gogistics_base.html" title="gogistics_base.html" tooltip="prjGogistics/src/static/templates/gogistics_base.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/gogistics_base.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="228" selectionTopPixel="23"/>
-</editor>
-<editor id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" partName="dict_keys_values" path="D:/prjGogistics/prjGogistics/src/dict_keys_values.py" title="dict_keys_values" tooltip="prjGogistics/src/dict_keys_values.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dict_keys_values.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="711" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.css.core.csssource.source" name="css_gogistics.css" partName="css_gogistics.css" path="D:/prjGogistics/prjGogistics/src/static/css/css_gogistics.css" title="css_gogistics.css" tooltip="prjGogistics/src/static/css/css_gogistics.css" workbook="org.eclipse.ui.internal.EditorStack@1130cce">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/css/css_gogistics.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1835" selectionTopPixel="300"/>
+<editor id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" partName="dict_keys_values" path="D:/prjGogistics/prjGogistics/src/dictionaries/dict_keys_values.py" title="dict_keys_values" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -100,14 +84,13 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/css"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/images"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/templates"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogistics/src/app.yaml"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.eclipse.wst.css.core.csssource.source" activePerspective="org.python.pydev.ui.PythonPerspective">
+<perspectives activePart="org.python.pydev.editor.PythonEditor" activePerspective="org.python.pydev.ui.PythonPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -281,7 +264,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.11045219" ratioLeft="149" ratioRight="1200" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.19644181" ratioLeft="265" ratioRight="1084" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
@@ -298,163 +281,181 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/google_plus_dispatcher.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/apiclient/channel.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/clientsecrets.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/crypt.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/django_orm.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/file.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/gce.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/keyring_storage.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/locked_file.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/multistore_file.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/old_run.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/tools.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/util.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/oauth2client/xsrfutil.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/index_dispatcher.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dict_html_pages.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/__init__.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/models/__init__.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/dict_html_pages.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/gogistics_index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/css_gogistics.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/gogistics_base.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/gogistics_base.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/css_gogistics.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/gogistics_index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/css_gogistics.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/models/models_clients.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/models/models_admin.py"/>
 </editors>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="584" y="0"/>
+<item historyLabel="channel" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="1722" y="0"/>
+<item historyLabel="google_plus_dispatcher" index="0">
+<position info="not_deleted" x="1718" y="0"/>
 </item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="485" y="0"/>
+<item historyLabel="clientsecrets" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="css_gogistics.css" index="1">
+<item historyLabel="crypt" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="django_orm" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="file" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="gce" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="keyring_storage" index="7">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="locked_file" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="multistore_file" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="old_run" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="tools" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="util" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xsrfutil" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="util" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="tools" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="old_run" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="multistore_file" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="locked_file" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="keyring_storage" index="7">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="gce" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="file" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="django_orm" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="crypt" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="clientsecrets" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="google_plus_dispatcher" index="0">
+<position info="not_deleted" x="1718" y="0"/>
+</item>
+<item historyLabel="index_dispatcher" index="14">
+<position info="not_deleted" x="261" y="0"/>
+</item>
+<item historyLabel="dict_html_pages" index="15">
+<position info="not_deleted" x="103" y="0"/>
+</item>
+<item historyLabel="index_dispatcher" index="14">
+<position info="not_deleted" x="261" y="0"/>
+</item>
+<item historyLabel="dictionaries" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index_dispatcher" index="14">
+<position info="not_deleted" x="565" y="0"/>
+</item>
+<item historyLabel="dispatcher_client_services" index="17">
+<position info="not_deleted" x="52" y="0"/>
+</item>
+<item historyLabel="index_dispatcher" index="14">
+<position info="not_deleted" x="565" y="0"/>
+</item>
+<item historyLabel="dictionaries" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="models" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="19">
+<position info="not_deleted" x="868" y="0"/>
+</item>
+<item historyLabel="dict_html_pages" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="dict_keys_values" index="21">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="dict_html_pages" index="20">
+<position info="not_deleted" x="118" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="19">
 <position/>
 </item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="580" y="0"/>
+<item historyLabel="dict_html_pages" index="20">
+<position info="not_deleted" x="206" y="0"/>
 </item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="462" y="0"/>
+<item historyLabel="dispatcher_index" index="19">
+<position info="not_deleted" x="1270" y="0"/>
 </item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="580" y="0"/>
+<item historyLabel="dict_html_pages" index="20">
+<position info="not_deleted" x="175" y="0"/>
 </item>
-<item historyLabel="gogistics_base.html" index="2">
-<position info="not_deleted" x="190" y="0"/>
+<item historyLabel="dispatcher_index" index="19">
+<position info="not_deleted" x="888" y="0"/>
 </item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="1722" y="0"/>
+<item historyLabel="gogistics_index.html" index="22">
+<position info="not_deleted" x="493" y="0"/>
 </item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="580" y="0"/>
+<item historyLabel="dispatcher_index" index="19">
+<position info="not_deleted" x="888" y="0"/>
 </item>
-<item historyLabel="css_gogistics.css" index="1">
-<position/>
+<item historyLabel="models_clients" index="23">
+<position info="not_deleted" x="52" y="0"/>
 </item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
+<item historyLabel="dispatcher_index" index="19">
+<position info="not_deleted" x="888" y="0"/>
 </item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="1311" y="0"/>
+<item historyLabel="models_admin" index="24">
+<position info="not_deleted" x="52" y="0"/>
 </item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="1388" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="1642" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="462" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="gogistics_base.html" index="2">
-<position info="not_deleted" x="188" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="462" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="gogistics_base.html" index="2">
-<position info="not_deleted" x="188" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="329" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="475" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="1">
-<position info="not_deleted" x="553" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="929" y="0"/>
-</item>
-<item historyLabel="gogistics_base.html" index="3">
-<position info="not_deleted" x="1277" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="94" y="98"/>
-</item>
-<item historyLabel="gogistics_base.html" index="3">
-<position info="not_deleted" x="1033" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="94" y="98"/>
-</item>
-<item historyLabel="gogistics_base.html" index="3">
-<position info="not_deleted" x="1031" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="416" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="4">
-<position info="not_deleted" x="1672" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="727" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="4">
-<position info="not_deleted" x="1530" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="669" y="0"/>
-</item>
-<item historyLabel="css_gogistics.css" index="4">
-<position info="not_deleted" x="1839" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="635" y="34"/>
-</item>
-<item historyLabel="css_gogistics.css" index="4">
-<position info="not_deleted" x="1835" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="0">
-<position info="not_deleted" x="489" y="0"/>
-</item>
-<item historyLabel="gogistics_base.html" index="3">
-<position info="not_deleted" x="1031" y="0"/>
-</item>
-<item historyLabel="gogistics_index.html" index="5">
-<position info="not_deleted" x="692" y="0"/>
-</item>
-<item active="true" historyLabel="css_gogistics.css" index="6">
-<position info="not_deleted" x="1835" y="0"/>
+<item active="true" historyLabel="dispatcher_index" index="19">
+<position info="not_deleted" x="888" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -475,35 +476,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="favicon.ico" tooltip="prjGogistics/src/static/images/favicon.ico">
-<persistable path="/prjGogistics/src/static/images/favicon.ico"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogistics/src/app.yaml">
 <persistable path="/prjGogistics/src/app.yaml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="css_gogistics.css" tooltip="prjGogistics/src/static/css/css_gogistics.css">
-<persistable path="/prjGogistics/src/static/css/css_gogistics.css"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_admin.py" tooltip="prjGogistics/src/models/models_admin.py">
+<persistable path="/prjGogistics/src/models/models_admin.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" tooltip="prjGogistics/src/dict_keys_values.py">
-<persistable path="/prjGogistics/src/dict_keys_values.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogistics/src/database_handlers/__init__.py">
-<persistable path="/prjGogistics/src/database_handlers/__init__.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogistics/src/general_handlers/__init__.py">
-<persistable path="/prjGogistics/src/general_handlers/__init__.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="gogistics_base.html" tooltip="prjGogistics/src/static/templates/gogistics_base.html">
-<persistable path="/prjGogistics/src/static/templates/gogistics_base.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_clients.py" tooltip="prjGogistics/src/models/models_clients.py">
+<persistable path="/prjGogistics/src/models/models_clients.py"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="gogistics_index.html" tooltip="prjGogistics/src/static/templates/gogistics_index.html">
 <persistable path="/prjGogistics/src/static/templates/gogistics_index.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_gogistics.html" tooltip="prjGogistics/src/static/templates/index_gogistics.html">
-<persistable path="/prjGogistics/src/static/templates/index_gogistics.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py">
+<persistable path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="ctrl_views.py" tooltip="prjGogistics/src/ctrl_views.py">
-<persistable path="/prjGogistics/src/ctrl_views.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_html_pages.py" tooltip="prjGogistics/src/dictionaries/dict_html_pages.py">
+<persistable path="/prjGogistics/src/dictionaries/dict_html_pages.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_index.py" tooltip="prjGogistics/src/dispatchers/dispatcher_index.py">
+<persistable path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogistics/src/models/__init__.py">
+<persistable path="/prjGogistics/src/models/__init__.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_client_services.py" tooltip="prjGogistics/src/dispatchers/dispatcher_client_services.py">
+<persistable path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogistics/src/dictionaries/__init__.py">
+<persistable path="/prjGogistics/src/dictionaries/__init__.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_html_pages.py" tooltip="prjGogistics/src/dict_html_pages.py">
+<persistable path="/prjGogistics/src/dict_html_pages.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="xsrfutil.py" tooltip="prjGogistics/src/oauth2client/xsrfutil.py">
+<persistable path="/prjGogistics/src/oauth2client/xsrfutil.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="util.py" tooltip="prjGogistics/src/oauth2client/util.py">
+<persistable path="/prjGogistics/src/oauth2client/util.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="tools.py" tooltip="prjGogistics/src/oauth2client/tools.py">
+<persistable path="/prjGogistics/src/oauth2client/tools.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="old_run.py" tooltip="prjGogistics/src/oauth2client/old_run.py">
+<persistable path="/prjGogistics/src/oauth2client/old_run.py"/>
 </file>
 </mruList>
 </workbench>

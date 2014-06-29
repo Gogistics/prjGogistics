@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+'''
+Created on Jun 28, 2014
+
+@author: Alan Tai
+'''
+import json
+__author__ = 'Alan Tai'
+
+import jinja2
+
+#append templates' path directory
+jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader('static/templates'))  # append templates' path
+CLIENT_SECRETS = json.loads(open('client_secrets.json', 'r'))

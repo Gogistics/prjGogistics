@@ -1,12 +1,1 @@
-register
-template
-INSTALLED_APPS
-static
-templatetags
-Library
-simple_tag
-settings
-django
-contrib
-staticfiles
-conf
+0
