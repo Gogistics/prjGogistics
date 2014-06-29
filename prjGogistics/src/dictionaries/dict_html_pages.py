@@ -6,6 +6,6 @@ Created on Jun 29, 2014
 '''
 __author__ = 'Alan Tai'
 
-class Html_Reference():
+class HtmlPagesReference():
     def __init__(self):
         self.html_index = '/gogistics_index.html'

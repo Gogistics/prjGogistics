@@ -2166,8 +2166,8 @@ markupsafe._constants|C:\Program Files (x86)\Google\google_appengine\lib\markups
 markupsafe._native|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\_native.py
 markupsafe.tests|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\tests.py
 models.__init__|D:\prjGogistics\prjGogistics\src\models\__init__.py
-models.models_admin|D:\prjGogistics\prjGogistics\src\models\models_admin.py
-models.models_clients|D:\prjGogistics\prjGogistics\src\models\models_clients.py
+models.models_people|D:\prjGogistics\prjGogistics\src\models\models_people.py
+models.models_website_objects|D:\prjGogistics\prjGogistics\src\models\models_website_objects.py
 oauth2.__init__|C:\Program Files (x86)\Google\google_appengine\lib\oauth2\oauth2\__init__.py
 oauth2client.anyjson|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\oauth2client\anyjson.py
 oauth2client.appengine|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\oauth2client\appengine.py

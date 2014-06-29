@@ -8,7 +8,7 @@ Created on May 22, 2014
 dictionary for key-value pairs
 '''
 
-class Keys_Vaules_General():
+class KeysVaulesGeneral():
     def __init__(self):
         self.website = 'http://gogistics.gotistics-tw.com'
         self.host_email = 'gogistics@gogistics-tw.com'
@@ -17,14 +17,13 @@ class Keys_Vaules_General():
         
         #tokens
         self.token_index_page = 'index_page'
-        self.questions_answer_page = 'questions_answer_page'
-        self.client_services_page = 'client_services_page'
-        self.purchasing_page = 'purchasing_page'
+        self.token_questions_answer_page = 'questions_answer_page'
+        self.token_client_services_page = 'client_services_page'
         
         
 #Multi-languages dictionary
 #English
-class Keys_Values_English():
+class KeysValuesEnglish():
     def __init__(self):
         self.index_title = 'Gogistics'
         self.founder = 'Alan Tai'
@@ -32,7 +31,7 @@ class Keys_Values_English():
         self.google_apps_engine = 'Google Apps Engine'
     
 #Chinese
-class Keys_Values_Chinese():
+class KeysValuesChinese():
     def __init__(self):
         self.index_title = u'資雲科技'
         self.founder = u'戴立舟'

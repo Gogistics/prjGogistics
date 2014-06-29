@@ -12,21 +12,21 @@ __author__ = 'Alan Tai<gogistics@gogistics-tw.com>'
 import webapp2
 import jinja2
 import os
-from dictionaries.dict_keys_values import Keys_Vaules_General, Keys_Values_Chinese,\
-    Keys_Values_English
-from dictionaries.dict_html_pages import Html_Reference
+from dictionaries.dict_keys_values import KeysVaulesGeneral, KeysValuesChinese,\
+    KeysValuesEnglish
+from dictionaries.dict_html_pages import HtmlPagesReference
 
 #append templates' path directory
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader('static/templates'))  # append templates' path
 CLIENT_SECRETS = os.path.join(os.path.dirname(__file__), 'client_secrets.json')
 
 #dictionaries instances
-keys_values_general = Keys_Vaules_General()
-keys_values_chinese = Keys_Values_Chinese()
-keys_values_english = Keys_Values_English()
+keys_values_general = KeysVaulesGeneral()
+keys_values_chinese = KeysValuesChinese()
+keys_values_english = KeysValuesEnglish()
 
 #html reference
-html_pages_ref = Html_Reference()
+html_pages_ref = HtmlPagesReference()
 
 
 #index handler
