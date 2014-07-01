@@ -1,0 +1,32 @@
+{% extends "/gogistics_base.html"%}
+
+<!-- css block -->
+{% block css_content %}
+<link type="text/css" rel="stylesheet" href="/css/index.css" />
+{% endblock %}
+
+<!-- js block -->
+{% block js_content %}
+{% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<div id="main_content"
+	style="text-align: center; position: fixed; top: 15%; width: 100%; background-color: #000; z-index: 100;">
+	
+	<!-- Company logo and slogan in image format -->
+	<img alt="Gogistics" src="/img/gogistics_font_side.png"
+		class="gogistics_font_side_img">
+
+    <!-- language selector -->
+	<div style="display: block; margin: 20px auto;">
+		<select class="language_selector">
+			<option>English</option>
+			<option>中文</option>
+		</select>
+	</div>
+	
+	
+	<p id="brief_introduction_company_service" style="color: #fff65e; margin: 2px 3px; font-size: 14px;"><span>完整雲端服務整合  =</span> <span>Google應用程式 (Google Apps) +</span> <span>Google應用程式開發平台 (Google App Engine) +</span> <span>行動裝置應用程式 + ...</span></p>
+</div>
+{% endblock %}

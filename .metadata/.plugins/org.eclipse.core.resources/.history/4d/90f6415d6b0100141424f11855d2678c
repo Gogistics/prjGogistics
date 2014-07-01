@@ -8,4 +8,4 @@ __author__ = 'Alan Tai'
 
 class HtmlPagesReference():
     def __init__(self):
-        self.html_index = '/index.html'
+        self.html_index = '/gogistics_index.html'

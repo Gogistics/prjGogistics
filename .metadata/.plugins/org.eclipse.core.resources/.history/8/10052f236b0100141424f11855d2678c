@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<meta name="author" content="Alan Tai">
+<meta name="company" content="Gogistics Ltd.">
+<meta name="country" content="Taiwan">
+<meta name="city" content="Kaohsiung">
+<meta name="html_page_token" content="{{token_html_page}}">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Cache-Control"
+	content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+
+<link type="text/css" rel="stylesheet" href="/css/css_gogistics.css" />
+{% block css_content %} {% endblock %}
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+
+{% block js_content %} {% endblock %}
+
+<title>{{ title }}</title>
+</head>
+<body>
+	{% block main_content %}
+	<p>No Templates Found</p>
+	{% endblock %}
+	
+	
+	<!-- copy right -->
+	<div id="copy_right" class="copy_right"
+		style="text-align: center; position: fixed; bottom: 0px; width: 100%; background-color: #000; z-index: 100;">
+		<p style="color: #9a9a9a; margin: 10px auto; font-size: 11px;">
+			&copy; <span>Gogistics Ltd.</span> <span>Ailin.Alan Design.</span> <span>Since 2014</span>
+		</p>
+	</div>
+</body>
+</html>
