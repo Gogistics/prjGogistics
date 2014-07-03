@@ -30,7 +30,7 @@ html_pages_ref = HtmlPagesReference()
 
 
 #index handler
-class IndexHandler(webapp2.RequestHandler):
+class GogisticsIndexHandler(webapp2.RequestHandler):
     def get(self):
         title_chinese = keys_values_chinese.index_title
         template_values = {'token':keys_values_general.token_index_page}
@@ -39,4 +39,4 @@ class IndexHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(template_values))
 
 #url dispatcher
-app = webapp2.WSGIApplication([('/', IndexHandler)], debug=True)
+app = webapp2.WSGIApplication([('/', GogisticsIndexHandler)], debug=True)
