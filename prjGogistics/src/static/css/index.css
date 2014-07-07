@@ -1,36 +1,65 @@
 @CHARSET "UTF-8";
 
 @media all and (min-device-width: 901px) {
-	.language_selector {
-		display: inline-block;
-		width: 100px;
-		border-radius: 3px;
-		margin: 5px auto;
-		font-size: 13px;
-		text-align: center;
+	.gogistics_font_side_img {
+		width: 360px;
+		margin: 2px auto;
 	}
-	.language_selector > option{
+	/*index page styles*/
+	.index_topic_selectors_block {
+		width: 800px;
+		margin: 0px auto;
+		border-bottom: solid thin #767676;
+	}
+	.index_topic_selector {
+		display: inline-block;
+		margin: -1px 20px;
+		padding-bottom: 8px;
+		letter-spacing: 5px;
+		text-indent: 5px;
+		font-size: 15px;
 		text-align: center;
+		color: #fff;
+	}
+	.index_topic_selector:hover {
+		cursor: pointer;
+		color: #ffff66;
+	}
+	.index_topic_content {
+		width: 750px;
+		margin: 5px auto;
+		color: #fff;
 		font-size: 13px;
-		width: 100px;
+		letter-spacing: 2px;
+		text-align: center;
 	}
 }
 
 @media all and (min-device-width: 701px) and (max-device-width: 900px) {
 	.gogistics_font_side_img {
-		width: 500px;
+		width: 400px;
 		margin: 2px auto;
 	}
-	.language_selector {
-		display: inline-block;
-		margin: 5px auto;
-		text-align: center;
-		font-size: 13px;
+
+	/*index page styles*/
+	.index_topic_selectors_block {
+		width: 800px;
+		margin: 0px auto;
+		border-bottom: solid thin #badbff;
 	}
-	.language_selector > option{
+	.index_topic_selector {
+		display: inline-block;
+		margin: -1px 20px;
+		padding-bottom: 8px;
+		letter-spacing: 5px;
+		text-indent: 5px;
+		font-size: 15px;
 		text-align: center;
-		font-size: 13px;
-		width: 100px;
+		color: #badbff;
+	}
+	.index_topic_selector:hover {
+		cursor: pointer;
+		color: #fff;
 	}
 }
 
@@ -39,18 +68,30 @@
 		width: 300px;
 		margin: 2px auto;
 	}
-	.language_selector {
+
+	/*index page styles*/
+	.index_topic_selectors_block {
+		width: 800px;
+		margin: 0px auto;
+		border-bottom: solid thin #e5f1ff;
+	}
+	.index_topic_selector {
 		display: inline-block;
-		margin: 5px auto;
+		margin: -1px 20px;
+		padding-bottom: 8px;
+		letter-spacing: 5px;
+		text-indent: 5px;
+		font-size: 15px;
 		text-align: center;
-		font-size: 13px;
+		color: #e5f1ff;
 	}
-	.language_selector > option{
-		text-align: center;
-		font-size: 13px;
-		width: 90px;
+	.index_topic_selector:hover {
+		cursor: pointer;
+		color: #fff;
 	}
-	#brief_introduction_company_service > span{
+
+	/**/
+	#brief_introduction_company_service>span {
 		display: block;
 	}
 }

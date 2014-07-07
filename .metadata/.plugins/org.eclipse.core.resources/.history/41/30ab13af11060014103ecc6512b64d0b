@@ -1,0 +1,105 @@
+{% extends "/base.html"%}
+
+<!-- css block -->
+{% block css_content %}
+<link type="text/css" rel="stylesheet" href="/css/index.css" />
+{% endblock %}
+
+<!-- js block -->
+{% block js_content %} {% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<div id="main_content"
+	style="text-align: center; position: absolute ; top: 10%; width: 100%; background-color: #000; z-index: 100;">
+
+	<!-- Company logo and slogan in image format -->
+	<img alt="Gogistics" src="/img/gogistics_font_side.png"
+		class="gogistics_font_side_img">
+
+	<!-- language selector -->
+	<div style="display: block; margin: 10px auto;">
+		<select class="language_selector">
+			<option>English</option>
+			<option>中文</option>
+		</select>
+	</div>
+
+
+
+	<div
+		style="position: absolute; margin: 10px auto; width: 100%; text-align: center;">
+		<!--  -->
+		<div>
+			<div id="index_topic_selectors_block"
+				class="index_topic_selectors_block">
+				<p id="selector_company_introduction" class="index_topic_selector"
+					onclick="select_topic(this)">公司簡介</p>
+				<p id="selector_cloud_services_introduction"
+					class="index_topic_selector" onclick="select_topic(this)">雲端服務簡介</p>
+				<p id="selector_contact" class="index_topic_selector"
+					onclick="select_topic(this)">連絡資訊</p>
+			</div>
+
+			<div id="index_topic_contents_block">
+				<section id="content_company_introduction"
+					class="index_topic_content">
+					<p>company introduction</p>
+				</section>
+				<section id="content_cloud_services_introduction"
+					class="index_topic_content">
+
+					<p id="brief_introduction_company_service">
+						<span>完整雲端服務整合 =</span> <span>Google應用程式 (Google Apps) +</span> <span>Google應用程式開發平台
+							(Google App Engine) +</span> <span>行動裝置應用程式 + ...</span>
+					</p>
+				</section>
+				<section id="content_contact" class="index_topic_content">
+					<p>contact</p>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+
+			//init selected topic
+			highlight_clicked_topic_selector('#selector_company_introduction');
+			show_topic_content('#content_company_introduction');
+		});
+
+		//onclick listener
+		function select_topic(arg_clicked_obj) {
+			var selected_id = $(arg_clicked_obj).attr('id');
+			var content_id = selected_id.substring(selected_id.indexOf('_'));
+			highlight_clicked_topic_selector(arg_clicked_obj);
+			show_topic_content('#content' + content_id);
+		}
+
+		//highlight clicked topic selector
+		function highlight_clicked_topic_selector(arg_clicked_topic_selector) {
+			$('#index_topic_selectors_block > p').css({
+				'border-bottom' : 'none',
+				'color' : '#e5f1ff'
+			});
+			$(arg_clicked_topic_selector).css({
+				'border-bottom' : 'solid thin #0371ec',
+				'color' : '#fff'
+			});
+		}
+
+		//show topic content
+		function show_topic_content(arg_shown_topic_content) {
+			$('#index_topic_contents_block > section').css({
+				'display' : 'none'
+			});
+			$(arg_shown_topic_content).css({
+				'display' : 'block'
+			});
+		}
+	</script>
+
+	<!-- end -->
+</div>
+{% endblock %}

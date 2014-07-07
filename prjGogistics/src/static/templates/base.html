@@ -24,17 +24,30 @@
 <title>{{ title }}</title>
 </head>
 <body>
+<!-- top bar -->
+
+	<!-- language selector -->
+	<div 
+	style="text-align: right; position: fixed ; top: 0px; width: 100%; background-color: #000; z-index: 100;">
+		
+		<select class="language_selector">
+			<option>English</option>
+			<option>中文</option>
+		</select>
+	</div>
+
+
+<!-- main content -->
 	{% block main_content %}
 	<p>No Templates Found</p>
 	{% endblock %}
 	
-	
 	<!-- copy right -->
-	<div id="copy_right" class="copy_right"
-		style="text-align: center; position: fixed; bottom: 0px; width: 100%; background-color: #000; z-index: 100;">
-		<p style="color: #9a9a9a; margin: 10px auto; font-size: 11px;">
+	<div id="copy_right" class="copy_right_block">
+		<p>
 			&copy; <span>Gogistics(資雲科技) Ltd.</span> <span>Ailin.Alan Design.</span> <span>Since 2014</span>
 		</p>
+		
 	</div>
 </body>
 </html>
