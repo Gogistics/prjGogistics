@@ -30,7 +30,6 @@
 		color: #ffff00;
 		border: none;
 		border-bottom: solid thin #9a9a9a;
-		border-radius: 0px;
 	}
 	.language_selector:hover {
 		cursor: pointer;
