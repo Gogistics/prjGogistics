@@ -87,7 +87,7 @@
 
 	/*index page styles*/
 	.index_topic_selectors_block {
-		width: 290px;
+		width: 800px;
 		margin: 5px auto;
 		border-bottom: solid thin #767676;
 	}
@@ -97,7 +97,7 @@
 		padding-bottom: 8px;
 		letter-spacing: 3px;
 		text-indent: 3px;
-		font-size: 18x;
+		font-size: 185x;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
@@ -107,14 +107,15 @@
 		color: #ffff66;
 	}
 	.index_topic_content {
-		width: 280px;
+		width: 750px;
 		margin: 5px auto;
 		color: #fff;
 		font-size: 13px;
-		line-height: 15px;
+		font-stretch: narrower;
+		line-height: 20px;
 		letter-spacing: 2px;
 		font-weight: lighter;
-		text-align: left;
+		text-align: center;
 	}
 
 	/**/

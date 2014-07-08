@@ -97,7 +97,7 @@
 		padding-bottom: 8px;
 		letter-spacing: 3px;
 		text-indent: 3px;
-		font-size: 18x;
+		font-size: 185x;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
@@ -114,7 +114,7 @@
 		line-height: 15px;
 		letter-spacing: 2px;
 		font-weight: lighter;
-		text-align: left;
+		text-align: center;
 	}
 
 	/**/

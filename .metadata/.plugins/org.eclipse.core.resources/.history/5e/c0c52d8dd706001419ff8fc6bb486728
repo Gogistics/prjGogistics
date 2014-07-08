@@ -97,7 +97,7 @@
 		padding-bottom: 8px;
 		letter-spacing: 3px;
 		text-indent: 3px;
-		font-size: 18x;
+		font-size: 185x;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
@@ -111,14 +111,16 @@
 		margin: 5px auto;
 		color: #fff;
 		font-size: 13px;
-		line-height: 15px;
+		line-height: 13px;
 		letter-spacing: 2px;
 		font-weight: lighter;
-		text-align: left;
+		text-align: center;
 	}
 
 	/**/
 	#brief_introduction_company_service>span {
 		display: block;
+		font-size: 12px;
+		line-height: 15px;
 	}
 }

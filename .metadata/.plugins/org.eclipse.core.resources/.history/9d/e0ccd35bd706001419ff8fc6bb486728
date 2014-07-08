@@ -348,6 +348,6 @@
 		color: #ffff00;
 		margin: 6px auto;
 		font-size: 9px;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 	}
 }

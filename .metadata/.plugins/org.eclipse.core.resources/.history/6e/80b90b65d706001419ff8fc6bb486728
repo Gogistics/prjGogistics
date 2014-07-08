@@ -347,7 +347,7 @@
 	.copy_right_block>p {
 		color: #ffff00;
 		margin: 6px auto;
-		font-size: 9px;
-		letter-spacing: 1px;
+		font-size: 8px;
+		letter-spacing: 2px;
 	}
 }

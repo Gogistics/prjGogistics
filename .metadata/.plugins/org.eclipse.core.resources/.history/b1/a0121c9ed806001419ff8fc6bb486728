@@ -114,7 +114,6 @@
 		line-height: 15px;
 		letter-spacing: 2px;
 		font-weight: lighter;
-		text-align: left;
 	}
 
 	/**/

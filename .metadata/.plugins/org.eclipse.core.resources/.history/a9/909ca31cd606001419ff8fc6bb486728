@@ -255,13 +255,13 @@
 	}
 	/*title block*/
 	.title_block {
-		text-align: center;
+		text-align: right;
 		position: fixed;
 		top: 0px;
 		width: 100%;
 		background-color: #000;
 		z-index: 1000;
-		padding-top: 3px;
+		padding-top: 5px;
 		
 		background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
@@ -292,6 +292,8 @@
 		min-width: 80px;
 		margin: 0px auto;
 		padding-top: 0px;
+		padding-bottom: 1px;
+		padding-left: 4px;
 		font-size: 12px;
 		font-weight: 100;
 		letter-spacing: 2px;
@@ -307,10 +309,10 @@
 	}
 	.language_selector>option {
 		text-align: center;
-		font-size: 12px;
+		font-size: 13px;
 		width: 100px;
 		color: #ffff00;
-		margin: 1px auto;
+		margin: 1px 5px;
 		outline: none;
 	}
 
@@ -347,7 +349,9 @@
 	.copy_right_block>p {
 		color: #ffff00;
 		margin: 6px auto;
-		font-size: 9px;
-		letter-spacing: 1px;
+		font-size: 10px;
+		font-stretch: narrower;
+		letter-spacing: 2px;
+		font-weight: 10;
 	}
 }
