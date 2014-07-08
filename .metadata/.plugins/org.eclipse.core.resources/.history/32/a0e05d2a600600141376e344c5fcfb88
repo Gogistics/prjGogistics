@@ -8,7 +8,7 @@
 	/*index page styles*/
 	.index_topic_selectors_block {
 		width: 800px;
-		margin: 5px auto;
+		margin: 0px auto;
 		border-bottom: solid thin #767676;
 	}
 	.index_topic_selector {
@@ -32,9 +32,8 @@
 		color: #fff;
 		font-size: 13px;
 		font-stretch: narrower;
-		line-height: 20px;
+		line-height: 15px;
 		letter-spacing: 2px;
-		font-weight: lighter;
 		text-align: center;
 	}
 }

@@ -12,7 +12,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: 微軟宋體, segoe ui, bisque;
+		font-family: 微軟正黑體, segoe ui, bisque;
 		background-color: #000;
 	}
 	
@@ -26,7 +26,6 @@
 		padding-left: 4px;
 		font-size: 13px;
 		font-weight: 100;
-		letter-spacing: 2px;
 		text-align: center;
 		background: #000;
 		color: #ffff00;

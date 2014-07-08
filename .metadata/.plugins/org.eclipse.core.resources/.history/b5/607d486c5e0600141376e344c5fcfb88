@@ -11,7 +11,7 @@
 <!-- main content -->
 {% block main_content %}
 <div id="main_content"
-	style="text-align: center; position: absolute ; top: 8%; width: 100%; background-color: #000; z-index: 100;">
+	style="text-align: center; position: absolute ; top: 10%; width: 100%; background-color: #000; z-index: 100;">
 
 	<!-- Company logo and slogan in image format -->
 	<img alt="Gogistics" src="/img/gogistics_font_side.png"

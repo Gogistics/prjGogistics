@@ -21,18 +21,15 @@
 		display: inline-block;
 		min-width: 80px;
 		margin: 0px auto;
-		padding-top: 10px;
+		padding-top: 5px;
 		padding-bottom: 1px;
 		padding-left: 4px;
 		font-size: 13px;
-		font-weight: 100;
-		letter-spacing: 2px;
 		text-align: center;
 		background: #000;
 		color: #ffff00;
 		border: none;
 		border-radius: 0px;
-		outline: none;
 	}
 	.language_selector:hover {
 		cursor: pointer;
@@ -43,7 +40,6 @@
 		width: 100px;
 		color: #ffff00;
 		margin: 1px 5px;
-		outline: none;
 	}
 	
 	/*copy right*/
