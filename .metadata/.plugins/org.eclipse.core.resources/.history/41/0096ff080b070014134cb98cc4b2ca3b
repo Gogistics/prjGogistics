@@ -62,8 +62,9 @@
 		letter-spacing: 2px;
 		text-align: center;
 		background: #000;
-		color: #fff;
+		color: #ffff00;
 		border: none;
+		border-radius: 0px;
 		outline: none;
 	}
 	.language_selector:hover {
@@ -73,7 +74,7 @@
 		text-align: center;
 		font-size: 13px;
 		width: 100px;
-		color: #fff;
+		color: #ffff00;
 		margin: 1px 5px;
 		outline: none;
 	}
@@ -109,7 +110,7 @@
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
-		color: #fff;
+		color: #ffff00;
 		margin: 6px auto;
 		font-size: 10px;
 		font-stretch: narrower;
@@ -298,6 +299,7 @@
 		background: #000;
 		color: #fff;
 		border: none;
+		border-radius: 0px;
 		outline: none;
 	}
 	.language_selector:hover {
@@ -343,7 +345,7 @@
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
-		color: #fff;
+		color: #ffff00;
 		margin: 6px auto;
 		font-size: 9px;
 		letter-spacing: 1px;

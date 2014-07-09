@@ -31,6 +31,7 @@
 		margin: 5px auto;
 		color: #ffff00;
 		font-size: 13px;
+		font-stretch: narrower;
 		line-height: 20px;
 		letter-spacing: 2px;
 		font-weight: lighter;

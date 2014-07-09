@@ -74,6 +74,13 @@
 				'border-bottom' : 'none',
 				'color' : '#fff'
 			});
+			$('#index_topic_selectors_block > p').hover(function() {
+				$(this).css({
+					'color' : '#ffff55'
+				});
+			}, function() {
+				$(this).css("color", "#fff");
+			});
 			$(arg_clicked_topic_selector).css({
 				'border-bottom' : 'solid thin #ffff00',
 				'color' : '#ffff00'

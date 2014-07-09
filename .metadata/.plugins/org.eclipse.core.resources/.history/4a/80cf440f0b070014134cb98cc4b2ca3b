@@ -29,8 +29,9 @@
 	.index_topic_content {
 		width: 750px;
 		margin: 5px auto;
-		color: #ffff00;
+		color: #fff;
 		font-size: 13px;
+		font-stretch: narrower;
 		line-height: 20px;
 		letter-spacing: 2px;
 		font-weight: lighter;
@@ -108,7 +109,7 @@
 	.index_topic_content {
 		width: 280px;
 		margin: 5px auto;
-		color: #ffff00;
+		color: #fff;
 		font-size: 13px;
 		line-height: 15px;
 		letter-spacing: 2px;
