@@ -14,10 +14,11 @@
 	.index_topic_selector {
 		display: inline-block;
 		margin: -1px 20px;
+		padding-top: 8px;
 		padding-bottom: 8px;
-		letter-spacing: 7px;
-		text-indent: 7px;
-		font-size: 18px;
+		letter-spacing: 12px;
+		text-indent: 12px;
+		font-size: 20px;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
@@ -53,10 +54,11 @@
 	.index_topic_selector {
 		display: inline-block;
 		margin: -1px 20px;
+		padding-top: 8px;
 		padding-bottom: 8px;
-		letter-spacing: 7px;
-		text-indent: 7px;
-		font-size: 18px;
+		letter-spacing: 10px;
+		text-indent: 10px;
+		font-size: 20px;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
@@ -93,10 +95,11 @@
 	.index_topic_selector {
 		display: block;
 		margin: 2px auto;
+		padding-top: 8px;
 		padding-bottom: 8px;
-		letter-spacing: 3px;
-		text-indent: 3px;
-		font-size: 18x;
+		letter-spacing: 5px;
+		text-indent: 5px;
+		font-size: 20x;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
