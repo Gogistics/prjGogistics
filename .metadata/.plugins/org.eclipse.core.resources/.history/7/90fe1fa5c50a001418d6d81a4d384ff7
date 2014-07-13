@@ -18,7 +18,7 @@
 		padding-bottom: 8px;
 		letter-spacing: 12px;
 		text-indent: 12px;
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
@@ -58,7 +58,7 @@
 		padding-bottom: 8px;
 		letter-spacing: 10px;
 		text-indent: 10px;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: lighter;
 		text-align: center;
 		color: #fff;
