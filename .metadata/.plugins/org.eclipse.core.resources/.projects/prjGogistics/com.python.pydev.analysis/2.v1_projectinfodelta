@@ -1,9 +1,1 @@
-INSTUPdictionaries.dict_html_pages
-D:\prjGogistics\prjGogistics\src\dictionaries\dict_html_pages.py
-INFOS:&&3|1|2|0&&1|3|2|0&&2|4|2|3&&3|5|2|6
-__init__=4
-dictionaries.dict_html_pages=2
-__author__=1
-HtmlPagesReference.__init__=6
-html_index=5
-HtmlPagesReference=3
+DELSTRdispatchers.dispatcher_index

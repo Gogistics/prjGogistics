@@ -35,20 +35,19 @@
 			<div id="index_topic_contents_block">
 				<section id="content_company_introduction"
 					class="index_topic_content">
-					<p>建購中</p>
+					<span>建購中</span>
 					<p>company introduction</p>
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content">
-
+					<span>建購中</span>
 					<p id="brief_introduction_company_service">
-					<p>建購中</p>
 						<span>完整雲端服務整合 =</span> <span>Google應用程式 (Google Apps) +</span> <span>Google應用程式開發平台
 							(Google App Engine) +</span> <span>行動裝置應用程式 + ...</span>
-					</p>
+					<p>
 				</section>
 				<section id="content_contact" class="index_topic_content">
-					<p>建購中</p>
+					<span>建購中</span>
 					<p>contact</p>
 				</section>
 			</div>
@@ -91,6 +90,100 @@
 			$(arg_shown_topic_content).css({
 				'display' : 'block'
 			});
+		}
+		
+		
+		
+		// change language
+		var language_version = new Object;
+		var token_html_page = '{{token_html_page}}';
+		$('#language_selector').change(function(){
+			language_version['language'] = $(this).val();
+			language_version['token_html_page'] = token_html_page;
+			
+			change_language();
+		});
+		
+		function change_language(){
+			var json_string_language_version_request = JSON.stringify(language_version, 2, 2);
+			$.ajax('/index_language_version_handler', {
+				type: 'POST',
+				data: {
+					fmt: 'json',
+					json_language_version_request : json_string_language_version_request
+				},
+				success : success_handler,
+				error : fail_handler
+			});
+		}
+		
+		function success_handler(response){
+			if(response.language === 'english'){
+				$('#index_topic_selectors_block > p').css({
+					'letter-spacing' : '2px',
+					'text-indent' : '2px'
+				});
+				// selector
+				$('#selector_company_introduction').attr({
+					title : response.company_introduction_selector
+				});
+				$('#selector_company_introduction').text(response.company_introduction_selector);
+				
+				$('#selector_cloud_services_introduction').attr({
+					title : response.cloud_services_introduction_selector
+				});
+				$('#selector_cloud_services_introduction').text(response.cloud_services_introduction_selector);
+				
+				$('#selector_contact').attr({
+					title : response.contact_information_selector
+				});
+				$('#selector_contact').text(response.contact_information_selector);
+				
+				//content
+				$('#content_company_introduction > p').text(response.company_introduction_content);
+				
+				$('#content_cloud_services_introduction > p[id="brief_introduction_company_service"]').text(response.cloud_services_introduction_content);
+				
+				$('#content_contact > p').text(response.contact_information_content);
+			}
+			else if(response.language === 'mandarin'){
+				$('#index_topic_selectors_block > p').css({
+					'letter-spacing' : '12px',
+					'text-indent' : '12px'
+				});
+				// selector
+				$('#selector_company_introduction').attr({
+					title : response.company_introduction_selector
+				});
+				$('#selector_company_introduction').text(response.company_introduction_selector);
+				
+				$('#selector_cloud_services_introduction').attr({
+					title : response.cloud_services_introduction_selector
+				});
+				$('#selector_cloud_services_introduction').text(response.cloud_services_introduction_selector);
+				
+				$('#selector_contact').attr({
+					title : response.contact_information_selector
+				});
+				$('#selector_contact').text(response.contact_information_selector);
+				
+				//content
+				$('#content_company_introduction > p').text(response.company_introduction_content);
+				
+				$('#content_cloud_services_introduction > p[id="brief_introduction_company_service"]').text(response.cloud_services_introduction_content);
+				
+				$('#content_contact > p').text(response.contact_information_content);
+			}
+		}
+		
+		function fail_handler(xhr, textStatus, error){
+			//
+			alert('Status Message: ' + xhr.statusText + ' ; Error: ' + error);
+
+			//log
+			console.log(xhr.statusText);
+			console.log(textStatus);
+			console.log(error);
 		}
 	</script>
 

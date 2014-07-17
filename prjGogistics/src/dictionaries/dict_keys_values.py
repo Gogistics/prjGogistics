@@ -31,7 +31,7 @@ class KeysValuesEnglish():
         self.google_apps_engine = 'Google Apps Engine'
     
 #Chinese
-class KeysValuesChinese():
+class KeysValuesMandarin():
     def __init__(self):
         self.index_title = u'資雲科技'
         self.founder = u'戴立舟'
