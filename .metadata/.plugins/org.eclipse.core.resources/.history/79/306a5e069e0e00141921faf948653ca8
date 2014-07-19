@@ -1,11 +1,10 @@
 @CHARSET "UTF-8";
 
-@font-face {
-	font-family: Bisque;
-	src: url(/bisque/bisque.ttf); /* TTF file for CSS3 browsers */
-}
-
 @media all and (min-device-width: 901px) {
+	@font-face {
+		font-family: "bisque";
+		src: url("/bisque/bisque.ttf") /* TTF file for CSS3 browsers */
+	}
 	body,html {
 		width: 100%;
 		height: 100%;
@@ -17,7 +16,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: 'bisque', 微軟宋體;
 		background-color: #000;
 	}
 
@@ -50,7 +49,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#000000',
 			endColorstr='#00000000', GradientType=0 ); /* IE6-9 */
 	}
 
@@ -84,7 +83,6 @@
 		color: #fff;
 		margin: 1px 5px;
 		outline: none;
-		font-family: Bisque, 微軟宋體, segoe ui;
 	}
 
 	/*copy right*/
@@ -114,7 +112,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 0.4) 6%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 100% );
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#00000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(     startColorstr='#00000000',
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
@@ -139,7 +137,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: 微軟宋體, segoe ui, bisque;
 		background-color: #000;
 	}
 
@@ -171,7 +169,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#000000',
 			endColorstr='#00000000', GradientType=0 ); /* IE6-9 */
 	}
 
@@ -232,7 +230,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 0.4) 6%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 100% );
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#00000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(     startColorstr='#00000000',
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
@@ -257,7 +255,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: 微軟宋體, segoe ui, bisque;
 		background-color: #000;
 	}
 	/*title block*/
@@ -288,7 +286,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#000000',
 			endColorstr='#00000000', GradientType=0 ); /* IE6-9 */
 	}
 
@@ -346,7 +344,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 0.4) 6%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 100% );
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#00000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(     startColorstr='#00000000',
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {

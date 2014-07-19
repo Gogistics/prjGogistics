@@ -2110,6 +2110,7 @@ grizzled.test.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\g
 grizzled.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\text\__init__.py
 handlers_database.__init__|D:\prjGogistics\prjGogistics\src\handlers_database\__init__.py
 handlers_general.__init__|D:\prjGogistics\prjGogistics\src\handlers_general\__init__.py
+handlers_general.handler_languages_versions|D:\prjGogistics\prjGogistics\src\handlers_general\handler_languages_versions.py
 httplib2.iri2uri|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\iri2uri.py
 httplib2.socks|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\socks.py
 httplib2.test.__init__|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\test\__init__.py

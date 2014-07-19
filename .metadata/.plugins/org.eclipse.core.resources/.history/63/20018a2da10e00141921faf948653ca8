@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: Bisque;
-	src: url(/bisque/bisque.ttf); /* TTF file for CSS3 browsers */
+	src: url(/bisque/bisque.ttf) /* TTF file for CSS3 browsers */
 }
 
 @media all and (min-device-width: 901px) {
@@ -17,7 +17,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: Bisque, 微軟宋體;
 		background-color: #000;
 	}
 
@@ -84,7 +84,6 @@
 		color: #fff;
 		margin: 1px 5px;
 		outline: none;
-		font-family: Bisque, 微軟宋體, segoe ui;
 	}
 
 	/*copy right*/
@@ -246,6 +245,10 @@
 }
 
 @media all and (max-device-width: 700px) {
+	@font-face {
+		font-family: "Bisque";
+		src: url("/bisque/bisque.ttf") /* TTF file for CSS3 browsers */
+	}
 	body,html {
 		width: 100%;
 		height: 100%;
@@ -257,7 +260,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: "Bisque", 微軟宋體, segoe ui;
 		background-color: #000;
 	}
 	/*title block*/

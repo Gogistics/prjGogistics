@@ -9,6 +9,9 @@ handlers:
   static_files: static/images/favicon.ico
   upload: static/images/favicon.ico
 
+- url: /bisque
+  static_dir: static/bisque_font_style
+
 - url: /css
   static_dir: static/css
 

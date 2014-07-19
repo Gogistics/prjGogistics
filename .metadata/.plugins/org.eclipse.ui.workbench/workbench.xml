@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="75" version="2.0">
+<workbench progressCount="52" version="2.0">
 <workbenchAdvisor/>
-<window height="414" maximized="true" width="1029" x="220" y="79">
+<window height="414" maximized="true" width="1029" x="212" y="297">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -20,7 +20,7 @@
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -42,29 +42,39 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.python.pydev.editor.PythonEditor" name="dispatcher_index.py" partName="dispatcher_index" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatcher_index.py" title="dispatcher_index" tooltip="prjGogistics/src/dispatchers/dispatcher_index.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="939" selectionTopPixel="60"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2149" selectionTopPixel="683"/>
 </editor>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="D:/prjGogistics/prjGogistics/src/static/templates/index.html" title="index.html" tooltip="prjGogistics/src/static/templates/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1765" selectionTopPixel="240"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4935" selectionTopPixel="2055"/>
 </editor>
 <editor id="org.eclipse.wst.css.core.csssource.source" name="index.css" partName="index.css" path="D:/prjGogistics/prjGogistics/src/static/css/index.css" title="index.css" tooltip="prjGogistics/src/static/css/index.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/css/index.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="455" selectionTopPixel="45"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="205" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogistics/src/static/templates/base.html" title="base.html" tooltip="prjGogistics/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogistics/src/static/templates/base.html" title="base.html" tooltip="prjGogistics/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/base.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="966" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="842" selectionTopPixel="75"/>
+</editor>
+<editor id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" partName="dict_keys_values" path="D:/prjGogistics/prjGogistics/src/dictionaries/dict_keys_values.py" title="dict_keys_values" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="465" selectionTopPixel="8"/>
+</editor>
+<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="handler_languages_versions.py" partName="handler_languages_versions" path="D:/prjGogistics/prjGogistics/src/handlers_general/handler_languages_versions.py" title="handler_languages_versions" tooltip="prjGogistics/src/handlers_general/handler_languages_versions.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/handlers_general/handler_languages_versions.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="387" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.wst.css.core.csssource.source" name="base.css" partName="base.css" path="D:/prjGogistics/prjGogistics/src/static/css/base.css" title="base.css" tooltip="prjGogistics/src/static/css/base.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/css/base.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="463" selectionTopPixel="195"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="88" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -94,8 +104,12 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dictionaries"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dictionaries/dict_keys_values.py"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dispatchers"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/handlers_general"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/bisque_font_style"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/css"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/templates"/>
 <selected IMemento.internal.id="D:/prjGogistics/prjGogistics/src/app.yaml"/>
@@ -103,7 +117,7 @@
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.eclipse.wst.html.core.htmlsource.source" activePerspective="org.python.pydev.ui.PythonPerspective">
+<perspectives activePart="org.python.pydev.editor.PythonEditor" activePerspective="org.python.pydev.ui.PythonPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -294,172 +308,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/base.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/base.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/base.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/base.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/handlers_general/handler_languages_versions.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/base.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/base.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/base.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/handlers_general/handler_languages_versions.py"/>
 </editors>
-<item historyLabel="base.html" index="1">
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="3701" y="8"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="395" y="43"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="3834" y="0"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="395" y="43"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4804" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2874" y="36"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4233" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2972" y="28"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="3961" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2789" y="29"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4055" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2874" y="36"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4055" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2874" y="36"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4286" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2972" y="28"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4461" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2972" y="28"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="2133" y="0"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="205" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1210" y="28"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2972" y="28"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1779" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="3260" y="27"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4802" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="3155" y="35"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4721" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="3069" y="28"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1510" y="0"/>
+</item>
+<item historyLabel="handler_languages_versions" index="3">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1510" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="3069" y="28"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4967" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="3363" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4849" y="0"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="205" y="0"/>
+</item>
+<item historyLabel="dispatcher_index" index="1">
+<position info="not_deleted" x="2149" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4967" y="0"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="205" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="4967" y="0"/>
+</item>
+<item historyLabel="base.css" index="4">
+<position info="not_deleted" x="11333" y="0"/>
+</item>
+<item historyLabel="index.css" index="5">
+<position info="not_deleted" x="205" y="0"/>
+</item>
+<item historyLabel="base.css" index="4">
 <position/>
 </item>
-<item historyLabel="base.css" index="0">
+<item historyLabel="base.html" index="6">
 <position/>
 </item>
-<item historyLabel="base.html" index="1">
+<item historyLabel="base.css" index="4">
 <position/>
 </item>
-<item historyLabel="base.css" index="0">
+<item historyLabel="base.html" index="6">
 <position/>
 </item>
-<item historyLabel="base.html" index="1">
-<position/>
+<item historyLabel="base.css" index="4">
+<position info="not_deleted" x="411" y="0"/>
 </item>
-<item historyLabel="base.css" index="0">
-<position/>
+<item historyLabel="base.html" index="6">
+<position info="not_deleted" x="842" y="0"/>
 </item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="932" y="0"/>
+<item historyLabel="base.css" index="4">
+<position info="not_deleted" x="411" y="0"/>
 </item>
-<item historyLabel="base.css" index="0">
-<position/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="932" y="0"/>
-</item>
-<item historyLabel="base.css" index="0">
-<position info="not_deleted" x="1376" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position/>
-</item>
-<item historyLabel="base.css" index="0">
-<position info="not_deleted" x="502" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="958" y="0"/>
-</item>
-<item historyLabel="base.css" index="0">
-<position info="not_deleted" x="3750" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="1051" y="0"/>
-</item>
-<item historyLabel="base.css" index="0">
-<position info="not_deleted" x="3750" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="1051" y="0"/>
-</item>
-<item historyLabel="base.css" index="0">
-<position info="not_deleted" x="1826" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="1051" y="0"/>
-</item>
-<item historyLabel="base.css" index="2">
-<position info="not_deleted" x="8024" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="960" y="0"/>
-</item>
-<item historyLabel="index.css" index="3">
-<position info="not_deleted" x="2216" y="0"/>
-</item>
-<item historyLabel="base.css" index="2">
-<position info="not_deleted" x="11173" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="960" y="0"/>
-</item>
-<item historyLabel="index.css" index="3">
-<position info="not_deleted" x="2216" y="0"/>
-</item>
-<item historyLabel="index.html" index="4">
-<position info="not_deleted" x="1500" y="0"/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="960" y="0"/>
-</item>
-<item historyLabel="index.css" index="3">
-<position info="not_deleted" x="2032" y="0"/>
-</item>
-<item historyLabel="base.css" index="5">
-<position info="not_deleted" x="11047" y="0"/>
-</item>
-<item historyLabel="index.css" index="3">
-<position info="not_deleted" x="2234" y="0"/>
-</item>
-<item historyLabel="base.css" index="5">
-<position info="not_deleted" x="3608" y="0"/>
-</item>
-<item historyLabel="index.css" index="3">
-<position info="not_deleted" x="2234" y="0"/>
-</item>
-<item historyLabel="index.html" index="6">
-<position info="not_deleted" x="2523" y="0"/>
-</item>
-<item historyLabel="base.css" index="5">
-<position info="not_deleted" x="3608" y="0"/>
-</item>
-<item historyLabel="index.css" index="7">
-<position info="not_deleted" x="2055" y="0"/>
-</item>
-<item historyLabel="base.css" index="5">
-<position info="not_deleted" x="9458" y="0"/>
-</item>
-<item historyLabel="index.css" index="8">
-<position info="not_deleted" x="2075" y="0"/>
-</item>
-<item historyLabel="index.html" index="9">
-<position info="not_deleted" x="2523" y="0"/>
-</item>
-<item historyLabel="dispatcher_index" index="10">
-<position info="not_deleted" x="707" y="0"/>
-</item>
-<item historyLabel="dispatcher_client_services" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatcher_index" index="10">
-<position info="not_deleted" x="707" y="0"/>
-</item>
-<item historyLabel="index.html" index="12">
-<position info="not_deleted" x="595" y="0"/>
-</item>
-<item historyLabel="index.css" index="13">
-<position info="not_deleted" x="2344" y="0"/>
-</item>
-<item historyLabel="base.html" index="14">
-<position/>
-</item>
-<item historyLabel="base.css" index="15">
-<position info="not_deleted" x="396" y="0"/>
-</item>
-<item historyLabel="base.html" index="14">
-<position info="not_deleted" x="1146" y="0"/>
-</item>
-<item historyLabel="base.css" index="15">
-<position info="not_deleted" x="1792" y="0"/>
-</item>
-<item historyLabel="base.html" index="14">
-<position info="not_deleted" x="1191" y="0"/>
-</item>
-<item historyLabel="base.css" index="15">
-<position info="not_deleted" x="463" y="0"/>
-</item>
-<item active="true" historyLabel="base.html" index="14">
-<position info="not_deleted" x="1191" y="0"/>
+<item active="true" historyLabel="handler_languages_versions" index="7">
+<position info="not_deleted" x="387" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -483,11 +489,20 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogistics/src/app.yaml">
 <persistable path="/prjGogistics/src/app.yaml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_client_services.py" tooltip="prjGogistics/src/dispatchers/dispatcher_client_services.py">
-<persistable path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="bisque.ttf" tooltip="prjGogistics/src/static/bisque_font_style/bisque.ttf">
+<persistable path="/prjGogistics/src/static/bisque_font_style/bisque.ttf"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="base.css" tooltip="prjGogistics/src/static/css/base.css">
 <persistable path="/prjGogistics/src/static/css/base.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_languages_versions.py" tooltip="prjGogistics/src/handlers_general/handler_languages_versions.py">
+<persistable path="/prjGogistics/src/handlers_general/handler_languages_versions.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py">
+<persistable path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_client_services.py" tooltip="prjGogistics/src/dispatchers/dispatcher_client_services.py">
+<persistable path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" tooltip="prjGogistics/src/static/templates/base.html">
 <persistable path="/prjGogistics/src/static/templates/base.html"/>
@@ -510,20 +525,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="gogistics_base.html" tooltip="prjGogistics/src/static/templates/gogistics_base.html">
 <persistable path="/prjGogistics/src/static/templates/gogistics_base.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py">
-<persistable path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_admin.py" tooltip="prjGogistics/src/models/models_admin.py">
 <persistable path="/prjGogistics/src/models/models_admin.py"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_clients.py" tooltip="prjGogistics/src/models/models_clients.py">
 <persistable path="/prjGogistics/src/models/models_clients.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_index.py" tooltip="prjGogistics/src/dispatchers/dispatcher_index.py">
-<persistable path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogistics/src/models/__init__.py">
-<persistable path="/prjGogistics/src/models/__init__.py"/>
 </file>
 </mruList>
 </workbench>

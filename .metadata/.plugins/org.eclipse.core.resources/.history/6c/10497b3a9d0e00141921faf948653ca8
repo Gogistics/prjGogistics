@@ -1,9 +1,10 @@
 @CHARSET "UTF-8";
 
 @font-face {
-	font-family: Bisque;
-	src: url(/bisque/bisque.ttf); /* TTF file for CSS3 browsers */
+    font-family:"bisque";
+    src: url("/bisque/bisque.ttf") /* TTF file for CSS3 browsers */
 }
+
 
 @media all and (min-device-width: 901px) {
 	body,html {
@@ -17,10 +18,10 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: 微軟宋體, calibri, bisque;
 		background-color: #000;
 	}
-
+	
 	/*title block*/
 	.title_block {
 		text-align: center;
@@ -31,6 +32,7 @@
 		background-color: #000;
 		z-index: 1000;
 		padding-top: 5px;
+		
 		background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* FF3.6+ */
@@ -50,7 +52,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#000000',
 			endColorstr='#00000000', GradientType=0 ); /* IE6-9 */
 	}
 
@@ -84,7 +86,6 @@
 		color: #fff;
 		margin: 1px 5px;
 		outline: none;
-		font-family: Bisque, 微軟宋體, segoe ui;
 	}
 
 	/*copy right*/
@@ -114,7 +115,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 0.4) 6%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 100% );
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#00000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#00000000',
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
@@ -139,10 +140,10 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: 微軟宋體, segoe ui, bisque;
 		background-color: #000;
 	}
-
+	
 	/*title block*/
 	.title_block {
 		text-align: right;
@@ -152,6 +153,7 @@
 		background-color: #000;
 		z-index: 1000;
 		padding-top: 5px;
+		
 		background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* FF3.6+ */
@@ -171,7 +173,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#000000',
 			endColorstr='#00000000', GradientType=0 ); /* IE6-9 */
 	}
 
@@ -232,7 +234,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 0.4) 6%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 100% );
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#00000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#00000000',
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
@@ -257,7 +259,7 @@
 		top: 0px;
 		left: 0px;
 		overflow: auto;
-		font-family: Bisque, 微軟宋體, segoe ui;
+		font-family: 微軟宋體, segoe ui, bisque;
 		background-color: #000;
 	}
 	/*title block*/
@@ -269,6 +271,7 @@
 		background-color: #000;
 		z-index: 1000;
 		padding-top: 3px;
+		
 		background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* FF3.6+ */
@@ -288,7 +291,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.67) 90%, rgba(0, 0, 0, 0) 100%
 			); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#000000',
 			endColorstr='#00000000', GradientType=0 ); /* IE6-9 */
 	}
 
@@ -346,7 +349,7 @@
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 0.4) 6%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 100% );
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#00000000',
+		filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#00000000',
 			endColorstr='#000000', GradientType=0 ); /* IE6-9 */
 	}
 	.copy_right_block>p {
