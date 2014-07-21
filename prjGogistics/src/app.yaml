@@ -12,6 +12,11 @@ handlers:
 - url: /bisque
   static_dir: static/bisque_font_style
 
+- url: /font_styles/(.*\.(ttf|otf|tcc))$
+  static_files: static/font_styles/\1
+  upload: static/font_styles/(.*\.(ttf|otf|tcc))$
+  mime_type: application/x-font-otf
+
 - url: /css
   static_dir: static/css
 
