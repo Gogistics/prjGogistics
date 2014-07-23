@@ -7,9 +7,13 @@ Created on May 21, 2014
 @Discription:
 The project is for developing the company web-site. The part is the view controller of dispatching url paths
 '''
-import json
-
 __author__ = 'Alan Tai<gogistics@gogistics-tw.com>'
+
+
+import json
+import logging
+from handlers_general.handler_languages_versions import MandarinHandler,\
+    EnglishHandler
 import webapp2
 import jinja2
 import os
@@ -23,19 +27,20 @@ CLIENT_SECRETS = os.path.join(os.path.dirname(__file__), 'client_secrets.json')
 
 #dictionaries instances
 keys_values_general = KeysVaulesGeneral()
-keys_values_chinese = KeysValuesMandarin()
+keys_values_mandarin = KeysValuesMandarin()
 keys_values_english = KeysValuesEnglish()
 
 #html reference
 html_pages_ref = HtmlPagesReference()
+language_handler_madarin = MandarinHandler()
+language_handler_english = EnglishHandler()
 
 
 #index handler
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
-        title_chinese = keys_values_chinese.index_title
-        template_values = {'token_html_page':keys_values_general.token_index_page}
-        template_values.update({'title':title_chinese})
+        template_values = {}
+        template_values.update(language_handler_madarin.handle_index_page_info())
         template = jinja_environment.get_template(html_pages_ref.html_index)
         self.response.out.write(template.render(template_values))
         
@@ -53,36 +58,15 @@ class IndexLanguageVersionHandler(webapp2.RequestHandler):
         
         ajax_response = {'requst_status' : 'unknown'}
         if requested_language == 'mandarin' and token_html_page == keys_values_general.token_index_page:
-            ajax_response['company_introduction_selector'] = u'公司簡介'
-            ajax_response['cloud_services_introduction_selector'] = u'雲端服務簡介'
-            ajax_response['contact_information_selector'] = u'連絡資訊'
-            
-            ajax_response['company_introduction_content'] = u'資雲科技'
-            ajax_response['cloud_services_introduction_content'] = u'Google雲端服務整合'
-            ajax_response['contact_information_content'] = u'連絡在雲端'
-            ajax_response['language'] = 'mandarin'
+            ajax_response.update(language_handler_madarin.handle_index_page_info())
             ajax_response['request_status'] = 'success'
         
         elif requested_language == 'english' and token_html_page == keys_values_general.token_index_page:
-            ajax_response['company_introduction_selector'] = 'Company Introduction'
-            ajax_response['cloud_services_introduction_selector'] = 'Cloud Service Introduction'
-            ajax_response['contact_information_selector'] = 'Contact Information'
-            
-            ajax_response['company_introduction_content'] = 'Gogistics Introduction'
-            ajax_response['cloud_services_introduction_content'] = 'Google Cloud Services Introduction'
-            ajax_response['contact_information_content'] = u'Contact via Cloud'
-            ajax_response['language'] = 'english'
+            ajax_response.update(language_handler_english.handle_index_page_info())
             ajax_response['request_status'] = 'success'
         
         else:
-            ajax_response['company_introduction_selector'] = u'公司簡介'
-            ajax_response['cloud_services_introduction_selector'] = u'雲端服務簡介'
-            ajax_response['contact_information_selector'] = u'連絡資訊'
-            
-            ajax_response['company_introduction_content'] = u'資雲科技'
-            ajax_response['cloud_services_introduction_content'] = u'Google雲端服務整合'
-            ajax_response['contact_information_content'] = u'連絡在雲端'
-            
+            ajax_response.update(language_handler_madarin.handle_index_page_info())
             ajax_response['request_status'] = 'success'
             
         self.response.out.headers['Content-Type'] = 'text/json'
@@ -91,3 +75,6 @@ class IndexLanguageVersionHandler(webapp2.RequestHandler):
 #url dispatcher
 app = webapp2.WSGIApplication([('/', IndexHandler),
                                ('/index_language_version_handler', IndexLanguageVersionHandler)], debug=True)
+
+#log 
+logging.getLogger().setLevel(logging.DEBUG)

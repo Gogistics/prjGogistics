@@ -24,31 +24,30 @@
 			<div id="index_topic_selectors_block"
 				class="index_topic_selectors_block">
 				<p id="selector_company_introduction" class="index_topic_selector"
-					title="公司簡介" onclick="select_topic(this)">公司簡介</p>
+					title="{{company_introduction_selector}}" onclick="select_topic(this)">{{company_introduction_selector}}</p>
 				<p id="selector_cloud_services_introduction"
-					class="index_topic_selector" title="雲端服務簡介"
-					onclick="select_topic(this)">雲端服務簡介</p>
-				<p id="selector_contact" class="index_topic_selector" title="連絡資訊"
-					onclick="select_topic(this)">連絡資訊</p>
+					class="index_topic_selector" title="{cloud_services_introduction_selector{}}"
+					onclick="select_topic(this)">{{cloud_services_introduction_selector}}</p>
+				<p id="selector_contact" class="index_topic_selector" title="{{contact_information_selector}}"
+					onclick="select_topic(this)">{{contact_information_selector}}</p>
 			</div>
 
 			<div id="index_topic_contents_block">
 				<section id="content_company_introduction"
 					class="index_topic_content">
 					<span>建購中</span>
-					<p>company introduction</p>
+					<p>{{company_introduction_content}}</p>
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content">
 					<span>建購中</span>
 					<p id="brief_introduction_company_service">
-						<span>完整雲端服務整合 =</span> <span>Google應用程式 (Google Apps) +</span> <span>Google應用程式開發平台
-							(Google App Engine) +</span> <span>行動裝置應用程式 + ...</span>
+						{{cloud_services_introduction_content}}
 					<p>
 				</section>
 				<section id="content_contact" class="index_topic_content">
 					<span>建購中</span>
-					<p>contact</p>
+					<p>{{contact_information_content}}</p>
 				</section>
 			</div>
 		</div>
