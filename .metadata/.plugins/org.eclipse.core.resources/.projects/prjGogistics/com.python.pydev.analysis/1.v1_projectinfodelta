@@ -1,1 +1,7 @@
-DELSTRdictionaries.dict_keys_values
+INSTUPdispatchers.dispatcher_cron_tasks
+D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_cron_tasks.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|0
+app=4
+get=3
+dispatchers.dispatcher_cron_tasks=2
+GCMCronTaskHandler=1

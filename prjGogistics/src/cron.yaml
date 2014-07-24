@@ -1,0 +1,5 @@
+cron:
+- description: gcm notification
+  url: /cron_tasks_gcm_handler
+  schedule: 1, 9, 18, 27 of jul,aug,sep 01:00
+  timezone: Asia/Taipei

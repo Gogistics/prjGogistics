@@ -1,0 +1,6 @@
+'''
+Created on Jul 23, 2014
+
+@author: user
+'''
+class ClientRegID(ndb.MODEL):

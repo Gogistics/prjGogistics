@@ -152,6 +152,7 @@ dictionaries.dict_html_pages|D:\prjGogistics\prjGogistics\src\dictionaries\dict_
 dictionaries.dict_keys_values|D:\prjGogistics\prjGogistics\src\dictionaries\dict_keys_values.py
 dispatchers.__init__|D:\prjGogistics\prjGogistics\src\dispatchers\__init__.py
 dispatchers.dispatcher_client_services|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_client_services.py
+dispatchers.dispatcher_gcm|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_gcm.py
 dispatchers.dispatcher_index|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_index.py
 dispatchers.dispatcher_questions_answers|D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_questions_answers.py
 django.__init__|C:\Program Files (x86)\Google\google_appengine\lib\django-1.3\django\__init__.py
@@ -2109,6 +2110,9 @@ grizzled.test.text.TestStr2Bool|C:\Program Files (x86)\Google\google_appengine\l
 grizzled.test.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\test\text\__init__.py
 grizzled.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\text\__init__.py
 handlers_database.__init__|D:\prjGogistics\prjGogistics\src\handlers_database\__init__.py
+handlers_gcm.__init__|D:\prjGogistics\prjGogistics\src\handlers_gcm\__init__.py
+handlers_gcm.example|D:\prjGogistics\prjGogistics\src\handlers_gcm\example.py
+handlers_gcm.handler_gcm|D:\prjGogistics\prjGogistics\src\handlers_gcm\handler_gcm.py
 handlers_general.__init__|D:\prjGogistics\prjGogistics\src\handlers_general\__init__.py
 handlers_general.handler_languages_versions|D:\prjGogistics\prjGogistics\src\handlers_general\handler_languages_versions.py
 httplib2.iri2uri|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\iri2uri.py
@@ -2167,6 +2171,7 @@ markupsafe._constants|C:\Program Files (x86)\Google\google_appengine\lib\markups
 markupsafe._native|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\_native.py
 markupsafe.tests|C:\Program Files (x86)\Google\google_appengine\lib\markupsafe-0.15\markupsafe\tests.py
 models.__init__|D:\prjGogistics\prjGogistics\src\models\__init__.py
+models.models_gcm|D:\prjGogistics\prjGogistics\src\models\models_gcm.py
 models.models_people|D:\prjGogistics\prjGogistics\src\models\models_people.py
 models.models_website_objects|D:\prjGogistics\prjGogistics\src\models\models_website_objects.py
 oauth2.__init__|C:\Program Files (x86)\Google\google_appengine\lib\oauth2\oauth2\__init__.py

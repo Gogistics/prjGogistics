@@ -1,0 +1,13 @@
+'''
+Created on Jul 24, 2014
+
+@author: user
+'''
+import webapp2
+from models.models_gcm import GCMClientRegID
+
+class GCMCronTasks(webapp2.RequestHandler):
+    def get(self):
+        pass
+    
+app = webapp2.WSGIApplication([], debug = True)

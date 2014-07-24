@@ -1,0 +1,13 @@
+'''
+Created on Jul 24, 2014
+
+@author: user
+'''
+import webapp2
+from google.appengine.api import taskqueue
+
+class GCMCronTasks(webapp2.RequestHandler):
+    def get(self):
+        taskqueue.add(url = '/')
+    
+app = webapp2.WSGIApplication([], debug = True)

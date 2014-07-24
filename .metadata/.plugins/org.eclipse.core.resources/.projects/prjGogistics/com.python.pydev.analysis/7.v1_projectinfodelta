@@ -1,1 +1,8 @@
-DELSTRdictionaries.dict_keys_values
+INSTUPdispatchers.dispatcher_gcm
+D:\prjGogistics\prjGogistics\src\dispatchers\dispatcher_gcm.py
+INFOS:&&1|1|2|0&&2|3|2|1&&1|4|2|0&&2|3|2|4&&3|5|2|0
+dispatchers.dispatcher_gcm=2
+app=5
+post=3
+GCMSendHandler=4
+GCMReceiveRegIDHandler=1
