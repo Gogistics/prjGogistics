@@ -11,14 +11,14 @@
 <!-- main content -->
 {% block main_content %}
 <div id="main_content"
-	style="text-align: center; position: absolute; top: 8%; width: 100%; background-color: #000; z-index: 100;">
+	style="text-align: center; position: absolute; top: 30px; width: 100%; background-color: #000; z-index: 100;">
 
 	<!-- Company logo and slogan in image format -->
 	<img alt="Gogistics" src="/img/gogistics_font_side.png"
 		class="gogistics_font_side_img">
 
 	<div
-		style="position: absolute; margin: 10px auto; width: 100%; text-align: center;">
+		style="position: absolute; margin: 5px auto; width: 100%; text-align: center;">
 		<!--  -->
 		<div>
 			<div id="index_topic_selectors_block"
@@ -51,6 +51,24 @@
 				<section id="content_contact" class="index_topic_content">
 					<span>建購中</span>
 					<p>{{contact_information_content}}</p>
+
+					<div id="contact_message_sheet">
+						<div>
+							<label><span style="color: #fff; display: inline;">*</span>Name</label> <input type="text">
+						</div>
+						<div>
+							<label><span style="color: #fff; display: inline;">*</span>Email</label> <input type="text">
+						</div>
+						<div>
+							<label><span style="color: #fff; display: inline;">*</span>Subject</label> <input type="text">
+						</div>
+						<div>
+							<label><span style="color: #fff; display: inline;">*</span>Body</label> <textarea rows="10"></textarea>
+						</div>
+					</div>
+					
+					<input id="send_message_submit" type="button" value="寄">
+
 				</section>
 			</div>
 		</div>

@@ -53,10 +53,10 @@ class KeysValuesMandarin():
         #
         self.company_introduction = u'公司簡介'
         self.cloud_service_introduction = u'雲端服務簡介'
-        self.contact_information = u'連絡資訊'
+        self.contact_information = u'聯絡資訊'
         self.company_introduction_content = u'資雲科技'
         self.cloud_service_introduction_content = u'Google雲端服務整合'
-        self.contact_information_content = u'連絡在雲端'
+        self.contact_information_content = u'聯絡在雲端'
         
         
         
