@@ -64,10 +64,10 @@
 		-webkit-border-radius: 25px;
 		-moz-border-radius: 25px;
 		border-radius: 23px;
-		border: solid 1px #ff0;
+		border: solid 1px #fff;
 		vertical-align: middle;
 		background-color: transparent;
-		color: #ff0;
+		color: #fff;
 		font-weight: 900;
 		transition: font-weight .1s ease-in-out;
 		-moz-transition: font-weight .1s ease-in-out;
