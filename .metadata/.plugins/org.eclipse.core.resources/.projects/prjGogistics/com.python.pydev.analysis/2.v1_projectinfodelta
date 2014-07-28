@@ -1,1 +1,14 @@
-DELSTRdispatchers.dispatcher_index
+INSTUPhandlers_general.handler_languages_versions
+D:\prjGogistics\prjGogistics\src\handlers_general\handler_languages_versions.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1&&2|8|2|1&&1|9|2|0&&2|3|2|9&&3|4|2|10&&3|11|2|10&&2|7|2|9&&2|8|2|9
+__init__=3
+handlers_general.handler_languages_versions=2
+EnglishHandler=9
+handle_index_page_info=7
+dict_keys_values_mandarin=6
+MandarinHandler.__init__=5
+dict_keys_values_general=4
+MandarinHandler=1
+dict_keys_values_english=11
+EnglishHandler.__init__=10
+handle_customer_services_page_info=8

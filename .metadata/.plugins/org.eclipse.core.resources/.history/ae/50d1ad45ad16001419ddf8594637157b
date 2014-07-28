@@ -1,0 +1,342 @@
+@CHARSET "UTF-8";
+
+@media all and (min-device-width: 901px) {
+	.gogistics_font_side_img {
+		width: 370px;
+		margin: 2px auto;
+	}
+	/*index page styles*/
+	.index_topic_selectors_block {
+		width: 850px;
+		margin: 2px auto;
+		border-bottom: solid thin #767676;
+	}
+	.index_topic_selector {
+		display: inline-block;
+		margin: -1px 20px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		letter-spacing: 12px;
+		text-indent: 12px;
+		font-size: 18px;
+		font-weight: lighter;
+		text-align: center;
+		color: #fff;
+	}
+	.index_topic_selector:hover {
+		cursor: pointer;
+		color: #ffff66;
+	}
+	#index_topic_contents_block {
+		margin-bottom: 50px;
+	}
+	.index_topic_content {
+		width: 750px;
+		margin: 10px auto;
+		color: #ffff00;
+		font-size: 13px;
+		line-height: 20px;
+		letter-spacing: 2px;
+		font-weight: lighter;
+		text-align: center;
+	}
+	
+	#brief_introduction_company_service {
+		display: block;
+	}
+	
+	/**/
+	#contact_message_sheet {
+		margin-bottom: 20px;
+	}
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
+		display: block;
+		margin: 5px auto;
+		width: 300px;
+		border-radius: 2px;
+	}
+
+	/* rewrite message */
+	#rewrite_message {
+		width: 90px;
+		height: 28px;
+		margin: 10px 20px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #fff;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #fff;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#rewrite_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#rewrite_message:hover,#rewrite_message:active,#rewrite_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+	#send_message {
+		width: 90px;
+		height: 28px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #ff0;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #ff0;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#send_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#send_message:hover,#send_message:active,#send_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+}
+
+@media all and (min-device-width: 701px) and (max-device-width: 900px) {
+	.gogistics_font_side_img {
+		width: 400px;
+		margin: 2px auto;
+	}
+
+	/*index page styles*/
+	.index_topic_selectors_block {
+		width: 800px;
+		margin: 5px auto;
+		border-bottom: solid thin #767676;
+	}
+	.index_topic_selector {
+		display: inline-block;
+		margin: -1px 20px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		letter-spacing: 10px;
+		text-indent: 10px;
+		font-size: 20px;
+		font-weight: lighter;
+		text-align: center;
+		color: #fff;
+	}
+	.index_topic_selector:hover {
+		cursor: pointer;
+		color: #ffff66;
+	}
+	.index_topic_content {
+		width: 750px;
+		margin: 5px auto;
+		color: #fff;
+		font-size: 13px;
+		font-stretch: narrower;
+		line-height: 20px;
+		letter-spacing: 2px;
+		font-weight: lighter;
+		text-align: center;
+	}
+	
+	
+	/**/
+	#contact_message_sheet {
+		margin-bottom: 20px;
+	}
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
+		display: block;
+		margin: 5px auto;
+		width: 300px;
+		border-radius: 2px;
+	}
+
+	/* rewrite message */
+	#rewrite_message {
+		width: 90px;
+		height: 28px;
+		margin: 10px 20px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #fff;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #fff;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#rewrite_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#rewrite_message:hover,#rewrite_message:active,#rewrite_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+	#send_message {
+		width: 90px;
+		height: 28px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #ff0;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #ff0;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#send_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#send_message:hover,#send_message:active,#send_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+}
+
+@media all and (max-device-width: 700px) {
+	.gogistics_font_side_img {
+		width: 300px;
+		margin: 0px auto;
+	}
+
+	/*index page styles*/
+	.index_topic_selectors_block {
+		width: 290px;
+		margin: 5px auto;
+		border-bottom: solid thin #767676;
+	}
+	.index_topic_selector {
+		display: block;
+		margin: 0px auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		letter-spacing: 5px;
+		text-indent: 5px;
+		font-size: 20x;
+		text-align: center;
+		color: #fff;
+	}
+	.index_topic_selector:hover {
+		cursor: pointer;
+		color: #ffff66;
+	}
+	.index_topic_content {
+		width: 280px;
+		margin: 5px auto;
+		color: #ffff00;
+		font-size: 13px;
+		line-height: 15px;
+		letter-spacing: 2px;
+		font-weight: lighter;
+		text-align: left;
+	}
+
+	/* company introduction */
+	#brief_introduction_company_service {
+		display: block;
+	}
+	
+	/* contact message sheet*/
+	#contact_message_sheet {
+		margin-bottom: 30px;
+		width: 290px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#contact_message_sheet>div {
+		margin: 5px auto;
+	}
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
+		display: block;
+		margin: 10px auto;
+		border-radius: 2px;
+	}
+
+	/* rewrite message */
+	#rewrite_message {
+		width: 90px;
+		height: 28px;
+		margin: 10px 20px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #fff;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #fff;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#rewrite_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#rewrite_message:hover,#rewrite_message:active,#rewrite_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+	#send_message {
+		width: 90px;
+		height: 28px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #ff0;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #ff0;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#send_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#send_message:hover,#send_message:active,#send_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+}

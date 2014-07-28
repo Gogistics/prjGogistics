@@ -27,11 +27,9 @@
 		cursor: pointer;
 		color: #ffff66;
 	}
-	
-	#index_topic_contents_block{
+	#index_topic_contents_block {
 		margin-bottom: 50px;
 	}
-	
 	.index_topic_content {
 		width: 750px;
 		margin: 10px auto;
@@ -43,27 +41,59 @@
 		text-align: center;
 	}
 	
-	#contact_message_sheet{
-		margin-bottom: 20px;
+	#brief_introduction_company_service {
+		display: block;
 	}
 	
-	#contact_message_sheet>div>label, #contact_message_sheet>div>input, #contact_message_sheet>div>textarea{
+	/**/
+	#contact_message_sheet {
+		margin-bottom: 20px;
+	}
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
 		display: block;
 		margin: 5px auto;
 		width: 300px;
 		border-radius: 2px;
 	}
-	
-	#send_message_submit{
-		width: 46px;
-		height: 46px;
-		margin: 10px auto;
+
+	/* rewrite message */
+	#rewrite_message {
+		width: 90px;
+		height: 28px;
+		margin: 10px 20px;
 		text-align: center;
-		display: block;
+		display: inline-block;
 		font-size: 13px;
-		-webkit-border-radius: 25px;
-		-moz-border-radius: 25px;
-		border-radius: 23px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #fff;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #fff;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#rewrite_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#rewrite_message:hover,#rewrite_message:active,#rewrite_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+	#send_message {
+		width: 90px;
+		height: 28px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
 		border: solid 1px #ff0;
 		vertical-align: middle;
 		background-color: transparent;
@@ -72,12 +102,13 @@
 		transition: font-weight .1s ease-in-out;
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
 	}
-	#send_message_submit:hover {
+	#send_message:hover {
 		cursor: pointer;
 		font-weight: 100;
 	}
-	#send_message_submit:hover,#send_message_submit:active,#send_message_submit:focus{
+	#send_message:hover,#send_message:active,#send_message:focus {
 		outline: 0;
 		cursor: pointer;
 	}
@@ -123,30 +154,71 @@
 		text-align: center;
 	}
 	
-	#send_message_submit{
-		width: 46px;
-		height: 46px;
-		margin: 10px auto;
-		text-align: center;
+	
+	/**/
+	#contact_message_sheet {
+		margin-bottom: 20px;
+	}
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
 		display: block;
+		margin: 5px auto;
+		width: 300px;
+		border-radius: 2px;
+	}
+
+	/* rewrite message */
+	#rewrite_message {
+		width: 90px;
+		height: 28px;
+		margin: 10px 20px;
+		text-align: center;
+		display: inline-block;
 		font-size: 13px;
-		-webkit-border-radius: 25px;
-		-moz-border-radius: 25px;
-		border-radius: 23px;
-		border: solid 1px #f00;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #fff;
 		vertical-align: middle;
 		background-color: transparent;
-		color: #f00;
+		color: #fff;
 		font-weight: 900;
 		transition: font-weight .1s ease-in-out;
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
 	}
-	#send_message_submit:hover {
+	#rewrite_message:hover {
 		cursor: pointer;
 		font-weight: 100;
 	}
-	#send_message_submit:hover,#send_message_submit:active,#send_message_submit:focus{
+	#rewrite_message:hover,#rewrite_message:active,#rewrite_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+	#send_message {
+		width: 90px;
+		height: 28px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #ff0;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #ff0;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 10px 20px;
+	}
+	#send_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#send_message:hover,#send_message:active,#send_message:focus {
 		outline: 0;
 		cursor: pointer;
 	}
@@ -155,24 +227,24 @@
 @media all and (max-device-width: 700px) {
 	.gogistics_font_side_img {
 		width: 300px;
-		margin: 2px auto;
+		margin: 0px auto;
 	}
 
 	/*index page styles*/
 	.index_topic_selectors_block {
-		width: 290px;
+		width: 300px;
 		margin: 5px auto;
+		text-align: center;
 		border-bottom: solid thin #767676;
 	}
 	.index_topic_selector {
 		display: block;
 		margin: 2px auto;
-		padding-top: 8px;
-		padding-bottom: 8px;
+		padding-top: 15px;
+		padding-bottom: 10px;
 		letter-spacing: 5px;
 		text-indent: 5px;
 		font-size: 20x;
-		font-weight: lighter;
 		text-align: center;
 		color: #fff;
 	}
@@ -180,8 +252,12 @@
 		cursor: pointer;
 		color: #ffff66;
 	}
+	#index_topic_contents_block{
+		margin: 5px auto;
+		text-align: center;
+	}
 	.index_topic_content {
-		width: 280px;
+		width: 300px;
 		margin: 5px auto;
 		color: #ffff00;
 		font-size: 13px;
@@ -191,8 +267,84 @@
 		text-align: left;
 	}
 
-	/**/
-	#brief_introduction_company_service>span {
+	/* company introduction */
+	#brief_introduction_company_service {
 		display: block;
+	}
+	
+	/* contact message sheet*/
+	#contact_message_sheet {
+		margin-bottom: 30px;
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#contact_message_sheet>div {
+		margin: 5px auto;
+	}
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input{
+		display: block;
+		margin: 10px auto;
+		height: 30px;
+		border-radius: 2px;
+	}
+	#contact_message_sheet>div>textarea{
+		display: block;
+		margin: 10px auto;
+		border-radius: 3px;
+	}
+
+	/* rewrite message */
+	#rewrite_message {
+		width: 90px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #fff;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #fff;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 5px 20px;
+	}
+	#rewrite_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#rewrite_message:hover,#rewrite_message:active,#rewrite_message:focus {
+		outline: 0;
+		cursor: pointer;
+	}
+	#send_message {
+		width: 90px;
+		text-align: center;
+		display: inline-block;
+		font-size: 13px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #ff0;
+		vertical-align: middle;
+		background-color: transparent;
+		color: #ff0;
+		font-weight: 900;
+		transition: font-weight .1s ease-in-out;
+		-moz-transition: font-weight .1s ease-in-out;
+		-webkit-transition: font-weight .1s ease-in-out;
+		margin: 5px 20px;
+	}
+	#send_message:hover {
+		cursor: pointer;
+		font-weight: 100;
+	}
+	#send_message:hover,#send_message:active,#send_message:focus {
+		outline: 0;
+		cursor: pointer;
 	}
 }

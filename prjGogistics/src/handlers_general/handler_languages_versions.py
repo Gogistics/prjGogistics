@@ -8,7 +8,6 @@ from dictionaries.dict_keys_values import KeysValuesMandarin, KeysVaulesGeneral,
 class MandarinHandler():
     def __init__(self):
         self.dict_keys_values_general = KeysVaulesGeneral()
-        self.dict_keys_values_english = KeysVaulesGeneral()
         self.dict_keys_values_mandarin = KeysValuesMandarin()
     
     def handle_index_page_info(self):
@@ -21,6 +20,15 @@ class MandarinHandler():
         index_page_info.update({'company_introduction_content' : self.dict_keys_values_mandarin.company_introduction_content})
         index_page_info.update({'cloud_services_introduction_content': self.dict_keys_values_mandarin.cloud_service_introduction_content})
         index_page_info.update({'contact_information_content' : self.dict_keys_values_mandarin.contact_information_content})
+        
+        index_page_info.update({'contact_message_name':self.dict_keys_values_mandarin.contact_message_name})
+        index_page_info.update({'contact_message_email':self.dict_keys_values_mandarin.contact_message_email})
+        index_page_info.update({'contact_message_subject':self.dict_keys_values_mandarin.contact_message_subject})
+        index_page_info.update({'contact_message_body':self.dict_keys_values_mandarin.contact_message_body})
+        
+        index_page_info.update({'btn_rewrite':self.dict_keys_values_mandarin.btn_rewrite})
+        index_page_info.update({'btn_send':self.dict_keys_values_mandarin.btn_send})
+        
         index_page_info.update({'language' : 'mandarin'})
         
         return index_page_info
@@ -46,6 +54,16 @@ class EnglishHandler():
         index_page_info.update({'company_introduction_content' : self.dict_keys_values_english.company_introduction_content})
         index_page_info.update({'cloud_services_introduction_content': self.dict_keys_values_english.cloud_service_introduction_content})
         index_page_info.update({'contact_information_content' : self.dict_keys_values_english.contact_information_content})
+        
+        index_page_info.update({'contact_message_name':self.dict_keys_values_english.contact_message_name})
+        index_page_info.update({'contact_message_email':self.dict_keys_values_english.contact_message_email})
+        index_page_info.update({'contact_message_subject':self.dict_keys_values_english.contact_message_subject})
+        index_page_info.update({'contact_message_body':self.dict_keys_values_english.contact_message_body})
+        
+        index_page_info.update({'btn_rewrite':self.dict_keys_values_english.btn_rewrite})
+        index_page_info.update({'btn_send':self.dict_keys_values_english.btn_send})
+        
+        
         index_page_info.update({'language' : 'english'})
         
         return index_page_info

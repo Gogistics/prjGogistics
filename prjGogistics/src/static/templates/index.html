@@ -49,25 +49,31 @@
 					<p>
 				</section>
 				<section id="content_contact" class="index_topic_content">
-					<span>建購中</span>
 					<p>{{contact_information_content}}</p>
 
 					<div id="contact_message_sheet">
 						<div>
-							<label><span style="color: #fff; display: inline;">*</span>Name</label> <input type="text">
+							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_name">{{contact_message_name}}</span></label>
+							<input type="text">
 						</div>
 						<div>
-							<label><span style="color: #fff; display: inline;">*</span>Email</label> <input type="text">
+							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_email">{{contact_message_email}}</span></label>
+							<input type="text">
 						</div>
 						<div>
-							<label><span style="color: #fff; display: inline;">*</span>Subject</label> <input type="text">
+							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_subject">{{contact_message_subject}}</span></label>
+							<input type="text">
 						</div>
 						<div>
-							<label><span style="color: #fff; display: inline;">*</span>Body</label> <textarea rows="10"></textarea>
+							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_body">{{contact_message_body}}</span></label>
+							<textarea rows="10"></textarea>
 						</div>
 					</div>
-					
-					<input id="send_message_submit" type="button" value="寄">
+
+					<div style="display: block; margin-bottom: 50px;">
+						<input id="rewrite_message" type="button" value="重填"> <input
+							id="send_message" type="button" value="寄送">
+					</div>
 
 				</section>
 			</div>
@@ -174,6 +180,16 @@
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
+				
+				//contact message titles
+				$('#contact_message_name').text(response.contact_message_name);
+				$('#contact_message_email').text(response.contact_message_email);
+				$('#contact_message_subject').text(response.contact_message_subject);
+				$('#contact_message_body').text(response.contact_message_body);
+				
+				$('#rewrite_message').val(response.btn_rewrite);
+				$('#send_message').val(response.btn_send);
+				
 			} else if (response.language === 'mandarin') {
 				$('#index_topic_selectors_block > p').css({
 					'letter-spacing' : '12px',
@@ -208,6 +224,15 @@
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
+				
+				//contact message titles
+				$('#contact_message_name').text(response.contact_message_name);
+				$('#contact_message_email').text(response.contact_message_email);
+				$('#contact_message_subject').text(response.contact_message_subject);
+				$('#contact_message_body').text(response.contact_message_body);
+				
+				$('#rewrite_message').val(response.btn_rewrite);
+				$('#send_message').val(response.btn_send);
 			}
 		}
 

@@ -32,13 +32,23 @@ class KeysValuesEnglish():
         self.google_apps = 'Google Apps'
         self.google_apps_engine = 'Google Apps Engine'
         
-        
+        #
         self.company_introduction = u'Company Introdcution'
         self.cloud_service_introduction = u'Could Services Introduction'
         self.contact_information = u'Contact Information'
         self.company_introduction_content = u'Gogistics = Google + Logistics'
         self.cloud_service_introduction_content = u'Integration of google cloud services'
         self.contact_information_content = u'contact me via cloud'
+        
+        self.contact_message_name = 'Sender Name'
+        self.contact_message_email = 'Sender Email'
+        self.contact_message_subject = 'Subject'
+        self.contact_message_body = 'Body'
+        
+        #
+        self.btn_rewrite = u'Rewrite'
+        self.btn_send = u'Send'
+        
     
 #Chinese
 class KeysValuesMandarin():
@@ -58,9 +68,14 @@ class KeysValuesMandarin():
         self.cloud_service_introduction_content = u'Google雲端服務整合'
         self.contact_information_content = u'聯絡在雲端'
         
+        #
+        self.contact_message_name = u'寄件人姓名'
+        self.contact_message_email = u'寄件者電子郵件'
+        self.contact_message_subject = u'主旨'
+        self.contact_message_body = u'內容'
         
-        
-        
-        
+        #
+        self.btn_rewrite = u'重填'
+        self.btn_send = u'寄送'
         
         
