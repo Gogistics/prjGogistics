@@ -44,10 +44,12 @@
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content content_cloud_services_introduction">
-					<article id="cloud_services_article">{{cloud_services_introduction_content}}
-					</article>
+					<p
+						style="text-align: justify; margin: 20px 10px; letter-spacing: 3px;">
+						{{cloud_services_introduction_content}}
+					<p>
 
-					<!--  -->
+						<!--  -->
 					<div id="google_cloud_services_block">
 						<hr style="border: none; border-top: dotted 1px #ababab;">
 						<section id="google_cloud_services">

@@ -49,9 +49,16 @@
 		font-weight: lighter;
 	}
 	#cloud_services_article {
-		display: block;
 		letter-spacing: 3px;
-		margin: 15px auto;
+		text-indent: -1px;
+		text-align: justify;
+		display: block;
+	}
+	#cloud_services_content{
+		letter-spacing: 3px;
+		text-indent: -1px;
+		text-align: justify;
+		display: block;
 	}
 	#google_cloud_services_block {
 		width: 700px;

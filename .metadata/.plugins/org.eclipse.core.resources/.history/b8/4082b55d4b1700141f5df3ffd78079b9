@@ -44,12 +44,13 @@
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content content_cloud_services_introduction">
-					<article id="cloud_services_article">{{cloud_services_introduction_content}}
-					</article>
+					<p style="text-align: justify; margin: 20px 20px;">
+						{{cloud_services_introduction_content}}
+					<p>
 
 					<!--  -->
 					<div id="google_cloud_services_block">
-						<hr style="border: none; border-top: dotted 1px #ababab;">
+						<hr style="border: none; border-top: dotted 1px #767676;">
 						<section id="google_cloud_services">
 							<span>Google Apps for Business</span><span>Google App
 								Engine</span><span>Google Compute Engine</span>

@@ -40,23 +40,18 @@
 		font-size: 13px;
 		line-height: 20px;
 		letter-spacing: 2px;
-		text-indent: 2px; font-weight : lighter;
+		text-indent: 2px;
+		font-weight: lighter;
 		text-align: center;
 		padding: 10px;
 		border-radius: 3px;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
-		font-weight: lighter;
-	}
-	#cloud_services_article {
-		display: block;
-		letter-spacing: 3px;
-		margin: 15px auto;
 	}
 	#google_cloud_services_block {
 		width: 700px;
 		display: block;
-		margin: 20px auto;
+		margin: 10px auto;
 	}
 	#google_cloud_services>span {
 		margin-left: 10px;
@@ -300,16 +295,9 @@
 		margin: 5px auto;
 	}
 	/**/
-	#cloud_services_article {
-		letter-spacing: 3px;
-		text-align: justify;
-		margin: 20px 10px;
-		display: block;
-	}
 	#google_cloud_services_block {
 		display: block;
-		margin-top: 20px;
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 		width: 260px;
 		margin-left: auto;
 		margin-right: auto;

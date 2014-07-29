@@ -44,8 +44,9 @@
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content content_cloud_services_introduction">
-					<article id="cloud_services_article">{{cloud_services_introduction_content}}
-					</article>
+					<p id="cloud_services_article">
+						{{cloud_services_introduction_content}}
+					</p>
 
 					<!--  -->
 					<div id="google_cloud_services_block">

@@ -51,7 +51,7 @@
 	#cloud_services_article {
 		display: block;
 		letter-spacing: 3px;
-		margin: 15px auto;
+		margin: 20px auto;
 	}
 	#google_cloud_services_block {
 		width: 700px;

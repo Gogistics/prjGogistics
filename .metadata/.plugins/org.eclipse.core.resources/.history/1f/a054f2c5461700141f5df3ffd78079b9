@@ -38,18 +38,24 @@
 
 
 			<div id="index_topic_contents_block">
+				<!--  -->
+				<div id="vertical_line"></div>
+				<!--  -->
 				<section id="content_company_introduction"
 					class="index_topic_content">
 					<p>{{company_introduction_content}}</p>
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content content_cloud_services_introduction">
-					<article id="cloud_services_article">{{cloud_services_introduction_content}}
-					</article>
+					<p style="text-align: justify; margin: 10px 20px;">
+						{{cloud_services_introduction_content}}
+					<p>
 
 					<!--  -->
 					<div id="google_cloud_services_block">
-						<hr style="border: none; border-top: dotted 1px #ababab;">
+						<div
+							style="width: 1px; height: 30px; background-color: #767676; margin-bottom: -7px; margin-left: auto; margin-right: auto;"></div>
+						<hr style="border: none; border-top: dotted 1px #767676;">
 						<section id="google_cloud_services">
 							<span>Google Apps for Business</span><span>Google App
 								Engine</span><span>Google Compute Engine</span>
@@ -89,6 +95,7 @@
 						<input id="rewrite_message" type="button" value="重填"> <input
 							id="send_message" type="button" value="寄送">
 					</div>
+
 				</section>
 			</div>
 		</div>
