@@ -58,11 +58,10 @@
 		display: block;
 		margin: 20px auto;
 	}
-	#google_cloud_services>a {
+	#google_cloud_services>span {
 		margin-left: 10px;
 		margin-right: 10px;
 		color: #fff;
-		text-decoration: none;
 	}
 
 	/**/

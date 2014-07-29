@@ -51,8 +51,8 @@
 					<div id="google_cloud_services_block">
 						<hr style="border: none; border-top: dotted 1px #ababab;">
 						<section id="google_cloud_services">
-							<a href="http://www.google.com/enterprise/apps/business/" target="_blank" title="Google Apps for Business">Google Apps for Business</a><a href="https://developers.google.com/appengine/" target="_blank" title="Google App Engine">Google App
-								Engine</a><a href="https://cloud.google.com/products/compute-engine/" target="_blank" title="Google Compute Engine">Google Compute Engine</a>
+							<a href="" target="_blank">Google Apps for Business</a><span>Google App
+								Engine</span><span>Google Compute Engine</span>
 						</section>
 						<hr style="border: none; border-top: dotted 1px #767676;">
 					</div>
