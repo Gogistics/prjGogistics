@@ -281,34 +281,16 @@
 	}
 	#contact_message_sheet>div {
 		display: block;
-		width: 100%;
 		margin: 5px auto;
-		
-		margin-left: auto;
-		margin-right: auto;
 	}
-	#contact_message_sheet>div>label {
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input {
 		display: block;
 		margin: 10px auto;
 		border-radius: 2px;
-		width: 200px;
-		
-		margin-left: auto;
-		margin-right: auto;
-	}
-	#contact_message_sheet>div>input {
-		display: block;
-		width: 200px;
-		margin: 10px auto;
-		border-radius: 2px;
-		
-		margin-left: auto;
-		margin-right: auto;
 	}
 	#contact_message_sheet>div>textarea {
 		display: block;
 		margin: 10px auto;
-		width: 200px;
 		border-radius: 3px;
 	}
 
@@ -328,8 +310,8 @@
 		transition: font-weight .1s ease-in-out;
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
-		margin: 5px 20px;
-		padding: 10px;
+		margin: 5px auto;
+		padding: 5px;
 	}
 	#rewrite_message:hover {
 		cursor: pointer;
@@ -354,8 +336,8 @@
 		transition: font-weight .1s ease-in-out;
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
-		margin: 5px 20px;
-		padding: 10px;
+		margin: 5px auto;
+		padding: 5px;
 	}
 	#send_message:hover {
 		cursor: pointer;

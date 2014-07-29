@@ -70,7 +70,7 @@
 						</div>
 					</div>
 
-					<div style="display: block; margin-bottom: 50px; margin-left: auto; margin-right: auto; width: 100%;">
+					<div style="display: block; margin-bottom: 50px;">
 						<input id="rewrite_message" type="button" value="重填"> <input
 							id="send_message" type="button" value="寄送">
 					</div>

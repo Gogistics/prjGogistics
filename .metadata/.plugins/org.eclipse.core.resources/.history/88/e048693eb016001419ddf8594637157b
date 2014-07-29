@@ -40,16 +40,16 @@
 		font-weight: lighter;
 		text-align: center;
 	}
+	
 	#brief_introduction_company_service {
 		display: block;
 	}
-
+	
 	/**/
 	#contact_message_sheet {
 		margin-bottom: 20px;
 	}
-	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea
-		{
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
 		display: block;
 		margin: 5px auto;
 		width: 300px;
@@ -153,13 +153,13 @@
 		font-weight: lighter;
 		text-align: center;
 	}
-
+	
+	
 	/**/
 	#contact_message_sheet {
 		margin-bottom: 20px;
 	}
-	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea
-		{
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input,#contact_message_sheet>div>textarea{
 		display: block;
 		margin: 5px auto;
 		width: 300px;
@@ -252,7 +252,7 @@
 		cursor: pointer;
 		color: #ffff66;
 	}
-	#index_topic_contents_block {
+	#index_topic_contents_block{
 		margin: 5px auto;
 		text-align: center;
 	}
@@ -264,51 +264,32 @@
 		line-height: 15px;
 		letter-spacing: 2px;
 		font-weight: lighter;
-		text-align: center;
+		text-align: left;
 	}
 
 	/* company introduction */
 	#brief_introduction_company_service {
 		display: block;
 	}
-
+	
 	/* contact message sheet*/
 	#contact_message_sheet {
 		margin-bottom: 30px;
-		width: 100%;
+		width: 300px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	#contact_message_sheet>div {
-		display: block;
-		width: 100%;
 		margin: 5px auto;
-		
-		margin-left: auto;
-		margin-right: auto;
 	}
-	#contact_message_sheet>div>label {
+	#contact_message_sheet>div>label,#contact_message_sheet>div>input{
 		display: block;
 		margin: 10px auto;
 		border-radius: 2px;
-		width: 200px;
-		
-		margin-left: auto;
-		margin-right: auto;
 	}
-	#contact_message_sheet>div>input {
-		display: block;
-		width: 200px;
-		margin: 10px auto;
-		border-radius: 2px;
-		
-		margin-left: auto;
-		margin-right: auto;
-	}
-	#contact_message_sheet>div>textarea {
+	#contact_message_sheet>div>textarea{
 		display: block;
 		margin: 10px auto;
-		width: 200px;
 		border-radius: 3px;
 	}
 
@@ -329,7 +310,7 @@
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
 		margin: 5px 20px;
-		padding: 10px;
+		padding: 5px;
 	}
 	#rewrite_message:hover {
 		cursor: pointer;
@@ -355,7 +336,7 @@
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
 		margin: 5px 20px;
-		padding: 10px;
+		padding: 5px;
 	}
 	#send_message:hover {
 		cursor: pointer;
