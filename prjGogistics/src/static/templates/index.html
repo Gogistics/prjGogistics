@@ -28,49 +28,70 @@
 					onclick="select_topic(this)">{{company_introduction_selector}}</p>
 				<p id="selector_cloud_services_introduction"
 					class="index_topic_selector"
-					title="{cloud_services_introduction_selector{}}"
+					title="{{cloud_services_introduction_selector}}"
 					onclick="select_topic(this)">{{cloud_services_introduction_selector}}</p>
 				<p id="selector_contact" class="index_topic_selector"
 					title="{{contact_information_selector}}"
 					onclick="select_topic(this)">{{contact_information_selector}}</p>
 			</div>
 
+
+
 			<div id="index_topic_contents_block">
+				<!--  -->
+				<div id="vertical_line"></div>
+				<!--  -->
 				<section id="content_company_introduction"
 					class="index_topic_content">
-					<span>建購中</span>
 					<p>{{company_introduction_content}}</p>
 				</section>
 				<section id="content_cloud_services_introduction"
-					class="index_topic_content">
-					<span>建購中</span>
-					<p id="brief_introduction_company_service">
+					class="index_topic_content content_cloud_services_introduction">
+					<p style="text-align: justify; margin: 10px 20px;">
 						{{cloud_services_introduction_content}}
 					<p>
+
+					<!--  -->
+					<div id="google_cloud_services_block">
+						<div
+							style="width: 1px; height: 30px; background-color: #767676; margin-bottom: -7px; margin-left: auto; margin-right: auto;"></div>
+						<hr style="border: none; border-top: dotted 1px #767676;">
+						<section id="google_cloud_services">
+							<span>Google Apps for Business</span><span>Google App
+								Engine</span><span>Google Compute Engine</span>
+						</section>
+						<hr style="border: none; border-top: dotted 1px #767676;">
+					</div>
+					<!--  -->
 				</section>
 				<section id="content_contact" class="index_topic_content">
 					<p>{{contact_information_content}}</p>
 
 					<div id="contact_message_sheet">
 						<div>
-							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_name">{{contact_message_name}}</span></label>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_name">{{contact_message_name}}</span></label> <input
+								type="text">
+						</div>
+						<div>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_email">{{contact_message_email}}</span></label>
 							<input type="text">
 						</div>
 						<div>
-							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_email">{{contact_message_email}}</span></label>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_subject">{{contact_message_subject}}</span></label>
 							<input type="text">
 						</div>
 						<div>
-							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_subject">{{contact_message_subject}}</span></label>
-							<input type="text">
-						</div>
-						<div>
-							<label><span style="color: #f00; display: inline;">* </span><span id="contact_message_body">{{contact_message_body}}</span></label>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_body">{{contact_message_body}}</span></label>
 							<textarea rows="10"></textarea>
 						</div>
 					</div>
 
-					<div style="display: block; margin-bottom: 50px; margin-left: auto; margin-right: auto; width: 100%;">
+					<div
+						style="display: block; margin-bottom: 50px; margin-left: auto; margin-right: auto; width: 100%;">
 						<input id="rewrite_message" type="button" value="重填"> <input
 							id="send_message" type="button" value="寄送">
 					</div>
@@ -180,16 +201,18 @@
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
-				
+
 				//contact message titles
 				$('#contact_message_name').text(response.contact_message_name);
-				$('#contact_message_email').text(response.contact_message_email);
-				$('#contact_message_subject').text(response.contact_message_subject);
+				$('#contact_message_email')
+						.text(response.contact_message_email);
+				$('#contact_message_subject').text(
+						response.contact_message_subject);
 				$('#contact_message_body').text(response.contact_message_body);
-				
+
 				$('#rewrite_message').val(response.btn_rewrite);
 				$('#send_message').val(response.btn_send);
-				
+
 			} else if (response.language === 'mandarin') {
 				$('#index_topic_selectors_block > p').css({
 					'letter-spacing' : '12px',
@@ -224,13 +247,15 @@
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
-				
+
 				//contact message titles
 				$('#contact_message_name').text(response.contact_message_name);
-				$('#contact_message_email').text(response.contact_message_email);
-				$('#contact_message_subject').text(response.contact_message_subject);
+				$('#contact_message_email')
+						.text(response.contact_message_email);
+				$('#contact_message_subject').text(
+						response.contact_message_subject);
 				$('#contact_message_body').text(response.contact_message_body);
-				
+
 				$('#rewrite_message').val(response.btn_rewrite);
 				$('#send_message').val(response.btn_send);
 			}
