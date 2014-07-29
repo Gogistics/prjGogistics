@@ -315,6 +315,10 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+	#google_cloud_services>span {
+		
+		color: #fff;
+	}
 	#google_cloud_services>a {
 		display: block;
 		margin: 20px auto;
