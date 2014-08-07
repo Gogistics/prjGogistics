@@ -44,6 +44,11 @@ class IndexHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template(html_pages_ref.html_index)
         self.response.out.write(template.render(template_values))
         
+        
+class IndexContactMessageHandler(webapp2.RequestHandler):
+    def post(self):
+        pass
+        
 class IndexLanguageVersionHandler(webapp2.RequestHandler):
     def post(self):
         assert self.request.get('fmt'), 'data format is not available'

@@ -397,7 +397,7 @@
 		border: solid 1px #ff0;
 		background-color: transparent;
 		color: #ff0;
-		font-weight: 600;
+		font-weight: 900;
 		transition: font-weight .1s ease-in-out;
 		-moz-transition: font-weight .1s ease-in-out;
 		-webkit-transition: font-weight .1s ease-in-out;
