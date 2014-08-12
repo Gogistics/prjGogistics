@@ -36,7 +36,7 @@ class KeysValuesEnglish():
         self.company_introduction = u'Company Introdcution'
         self.cloud_service_introduction = u'Could Services Introduction'
         self.contact_information = u'Contact Information'
-        self.company_introduction_content = u'Gogistics = Google + Logistics'
+        self.company_introduction_content = u'"Learn The Technology, Connect the World"'
         self.cloud_service_introduction_content = u'Integration of google cloud services'
         self.contact_information_content = u'contact me via cloud'
         
@@ -64,7 +64,7 @@ class KeysValuesMandarin():
         self.company_introduction = u'公司簡介'
         self.cloud_service_introduction = u'雲端服務'
         self.contact_information = u'聯絡資訊'
-        self.company_introduction_content = u'資雲科技'
+        self.company_introduction_content = u'"知識即是串起世界的力量"'
         self.cloud_service_introduction_content = u'雲端就是提供你服務的地方，當你有需要時可以在任何時間地點用來儲存資料、執行應用程式。跟需要下載的桌面應用程式不同，雲端服務可以透過網路和行動裝置在任何時間地點使用。'
         self.contact_information_content = u'聯絡在雲端'
         

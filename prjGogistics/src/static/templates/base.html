@@ -21,10 +21,17 @@
 	
 <!-- css -->
 <link type="text/css" rel="stylesheet" href="/css/base.css" />
+<link type="text/css" rel="stylesheet" href="/leaflet/leaflet.css" />
 {% block css_content %} {% endblock %}
-<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
 
 <!-- js -->
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/js/d3.js"></script>
+<script type="text/javascript" src="/leaflet/arc.js"></script>
+<script type="text/javascript" src="/leaflet/leaflet.js"></script>
+<script type="text/javascript" src="/leaflet/animatedMaker-leaflet-plugin.js"></script>
+
+<script src="http://d3js.org/topojson.v1.min.js"></script>
 {% block js_content %} {% endblock %}
 
 <title>{{ title }}</title>

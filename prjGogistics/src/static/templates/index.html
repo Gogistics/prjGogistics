@@ -40,7 +40,15 @@
 			<div id="index_topic_contents_block">
 				<section id="content_company_introduction"
 					class="index_topic_content">
-					<p>{{company_introduction_content}}</p>
+					<div id="map_company_introduction"
+						style="width: 1300px; height: 350px; margin: 40px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
+						<p
+							style="width: 1302px; right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.7; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
+					</div>
+
+					<div id="map_container"
+						style="width: 1300px; height: 350px; margin: 40px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;"></div>
+
 				</section>
 				<section id="content_cloud_services_introduction"
 					class="index_topic_content content_cloud_services_introduction">
@@ -51,8 +59,13 @@
 					<div id="google_cloud_services_block">
 						<hr style="border: none; border-top: dotted 1px #ababab;">
 						<section id="google_cloud_services">
-							<a href="http://www.google.com/enterprise/apps/business/" target="_blank" title="Google Apps for Business">Google Apps for Business</a><a href="https://developers.google.com/appengine/" target="_blank" title="Google App Engine">Google App
-								Engine</a><a href="https://cloud.google.com/products/compute-engine/" target="_blank" title="Google Compute Engine">Google Compute Engine</a>
+							<a href="http://www.google.com/enterprise/apps/business/"
+								target="_blank" title="Google Apps for Business">Google Apps
+								for Business</a><a href="https://developers.google.com/appengine/"
+								target="_blank" title="Google App Engine">Google App Engine</a><a
+								href="https://cloud.google.com/products/compute-engine/"
+								target="_blank" title="Google Compute Engine">Google Compute
+								Engine</a>
 						</section>
 						<hr style="border: none; border-top: dotted 1px #767676;">
 					</div>
@@ -100,8 +113,10 @@
 			//init selected topic
 			highlight_clicked_topic_selector('#selector_company_introduction');
 			show_topic_content('#content_company_introduction');
+
 		});
 
+		/* self-defined functions */
 		//onclick listener
 		function select_topic(arg_clicked_obj) {
 			var selected_id = $(arg_clicked_obj).attr('id');
@@ -255,7 +270,7 @@
 		}
 
 		function fail_handler(xhr, textStatus, error) {
-			//
+			//popup alert message
 			alert('Status Message: ' + xhr.statusText + ' ; Error: ' + error);
 
 			//log
@@ -263,6 +278,174 @@
 			console.log(textStatus);
 			console.log(error);
 		}
+
+		//show leaflet map
+		/*globals L $*/
+
+		// This demo is based off of cibi.me by OpenPlans and my earlier visualization
+		// at http://github.com/openplans/cibi_animation
+		(function() {
+			var bikeIcon = L.icon({
+				iconUrl : '/leaflet/images/marker-icon.png',
+				iconSize : [ 25, 39 ],
+				iconAnchor : [ 12, 39 ],
+				shadowUrl : null
+			});
+
+			var config = {
+				tileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
+				initLatLng : new L.LatLng(22.605028, 120.298636), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
+				initZoom : 12,
+				minZoom : 12,
+				maxZoom : 12
+			};
+
+			var map = L.map('map_company_introduction', {
+				minZoom : config.minZoom,
+				maxZoom : config.maxZoom,
+				zoomControl : false
+
+			}), routeLines = [ L.polyline([ [ 22.605028, 120.298636 ],
+					[ 22.605028, 120.288636 ], [ 22.615028, 120.308636 ],
+					[ 22.615028, 120.291636 ], [ 22.585028, 120.398636 ],
+					[ 22.635028, 120.232636 ], [ 22.605028, 120.298636 ] ]) ], markers = [];
+
+			map.addLayer(new L.TileLayer(config.tileUrl));
+			map.setView(config.initLatLng, config.initZoom);
+
+			var marker;
+			function do_animation() {
+				$.each(routeLines, function(i, routeLine) {
+					marker = L.animatedMarker(routeLine.getLatLngs(), {
+						icon : bikeIcon,
+						autoStart : true,
+						distance : 1000, // meters
+						interval : 2000, // milliseconds
+						onEnd : function() {
+							$(this._shadow).fadeOut(300);
+							$(this._icon).fadeOut(1000, function() {
+								map.removeLayer(this);
+							});
+
+							setTimeout(do_animation(), 8000);
+						}
+					});
+
+					map.addLayer(marker);
+					markers.push(marker);
+				});
+			}
+
+			//start animation after 500 mil-sec
+			setTimeout(do_animation(), 300);
+
+		}());
+		//end of show map
+
+		/* d3 + leaflet */
+		var locations = {
+			"countries" : [ {
+				"id" : 12,
+				"lt" : 22.605028,
+				"ln" : 120.298636,
+				"tw" : "Kaohsiung",
+				"fo" : "",
+				"al" : 1,
+				"d8" : "04\/10\/12"
+			}, {
+				"id" : 14,
+				"lt" : 48.8566140,
+				"ln" : 2.3522220,
+				"tw" : "Italy",
+				"fo" : "",
+				"al" : 5,
+				"d8" : "20\/10\/12"
+			}, {
+				"id" : 13,
+				"lt" : 37.3860520,
+				"ln" : -122.0838510,
+				"tw" : "Mountain View, CA",
+				"fo" : "",
+				"al" : 10,
+				"d8" : "27\/10\/12"
+			} ]
+		};
+		var vector = L.geoJson(topojson.feature(topojson_nation,
+				topojson_nation.objects.countries), {
+			style : {
+				className : 'map'
+			}
+		});
+		var map = L.map('map_container', {
+			zoom : 2,
+			center : [ 48.8566140, 2.3522220 ],
+			layers : vector,
+			maxZoom : 16,
+			zoomControl : false,
+			attributionControl : false
+		});
+		// Start and end points, in x = longitude, y = latitude values
+		var start = {
+			x : 2.3522220,
+			y : 48.8566140
+		};
+		var end = {
+			x : -122.0838510,
+			y : 37.3860520
+		};
+		var generator = new arc.GreatCircle(start, end, {
+			name : 'Paris to Mountain View'
+		});
+		var line = generator.Arc(150, {
+			offset : 0
+		});
+		var myStyle = {
+			"color" : "#f00",
+			"weight" : 2,
+			"opacity" : 0.9
+		};
+		L.geoJson(line.json(), {
+			style : myStyle
+		}).addTo(map);
+		// Start and end points, in x = longitude, y = latitude values
+		var start = {
+			x : 2.3522220,
+			y : 48.8566140
+		};
+		var end = {
+			x : 120.298636,
+			y : 22.605028
+		};
+		var generator = new arc.GreatCircle(start, end, {
+			name : 'Paris to Mountain View'
+		});
+		var line = generator.Arc(150, {
+			offset : 0
+		});
+		var myStyle = {
+			"color" : "#f00",
+			"weight" : 2,
+			"opacity" : 0.9
+		};
+		L.geoJson(line.json(), {
+			style : myStyle
+		}).addTo(map);
+
+		//
+		var marker_icon = L.divIcon({
+	        iconSize: [8,8],
+	        iconAnchor: [4,4]
+	    });
+		
+		$.each(locations['countries'], function(i, item) {
+			var coords = new L.LatLng(item.lt, item.ln);
+	        marker = L.marker(coords, {icon: marker_icon}).addTo(map)
+	            .on('click', function(e) { map.setView(e.target.getLatLng()) });
+		});
+		
+		var coords = new L.LatLng(37.3860520, -122.0838510);
+        marker = L.marker(coords, {icon: marker_icon}).addTo(map)
+            .on('click', function(e) { map.setView(e.target.getLatLng()) });
 	</script>
 
 	<!-- end -->

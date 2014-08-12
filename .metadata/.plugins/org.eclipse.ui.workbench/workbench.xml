@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -24,6 +24,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -41,30 +42,25 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="D:/prjGogistics/prjGogistics/src/static/templates/index.html" title="index.html" tooltip="prjGogistics/src/static/templates/index.html" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="D:/prjGogistics/prjGogistics/src/static/templates/index.html" title="index.html" tooltip="prjGogistics/src/static/templates/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2054" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12411" selectionTopPixel="312"/>
 </editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" partName="dict_keys_values" path="D:/prjGogistics/prjGogistics/src/dictionaries/dict_keys_values.py" title="dict_keys_values" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
-<editorState selectionHorizontalPixel="184" selectionLength="0" selectionOffset="2379" selectionTopPixel="638"/>
-</editor>
-<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="dispatcher_index.py" partName="dispatcher_index" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatcher_index.py" title="dispatcher_index" tooltip="prjGogistics/src/dispatchers/dispatcher_index.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1596" selectionTopPixel="600"/>
-</editor>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogistics/src/static/templates/base.html" title="base.html" tooltip="prjGogistics/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/base.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="1477" selectionTopPixel="270"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2258" selectionTopPixel="503"/>
 </editor>
 <editor id="org.eclipse.wst.css.core.csssource.source" name="index.css" partName="index.css" path="D:/prjGogistics/prjGogistics/src/static/css/index.css" title="index.css" tooltip="prjGogistics/src/static/css/index.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/css/index.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8820" selectionTopPixel="3325"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1689" selectionTopPixel="900"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogistics/src/static/templates/base.html" title="base.html" tooltip="prjGogistics/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/base.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1145" selectionTopPixel="398"/>
 </editor>
 </editors>
 <views>
@@ -94,11 +90,16 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/javascripts"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/leaflet-0.6.4"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/templates"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/leaflet-0.6.4/leaflet.js"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.python.pydev.editor.PythonEditor" activePerspective="org.python.pydev.ui.PythonPerspective">
+<perspectives activePart="org.eclipse.wst.html.core.htmlsource.source" activePerspective="org.python.pydev.ui.PythonPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -272,7 +273,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.14306894" ratioLeft="193" ratioRight="1156" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.21942179" ratioLeft="296" ratioRight="1053" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
@@ -290,164 +291,163 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/models/models_gcm.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/base.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/css/index.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogistics/src/static/javascripts/d3.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogistics/src/static/leaflet-0.6.4/arc.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.ie.css"/>
 </editors>
 <item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1830" y="0"/>
+<position info="not_deleted" x="4388" y="0"/>
 </item>
-<item historyLabel="index.css" index="1">
-<position/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1396" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
-<position/>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1389" y="0"/>
 </item>
 <item historyLabel="index.html" index="0">
-<position/>
+<position info="not_deleted" x="4388" y="0"/>
 </item>
-<item historyLabel="index.css" index="1">
-<position/>
-</item>
-<item historyLabel="index.html" index="0">
-<position/>
-</item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1078" y="0"/>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1515" y="0"/>
 </item>
 <item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1723" y="0"/>
+<position info="not_deleted" x="4388" y="0"/>
 </item>
-<item historyLabel="index.css" index="1">
+<item historyLabel="index.css" index="2">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1729" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
+<item historyLabel="leaflet.css" index="4">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1937" y="0"/>
+<item historyLabel="index.css" index="2">
+<position/>
 </item>
-<item historyLabel="index.css" index="1">
+<item historyLabel="leaflet.css" index="4">
+<position/>
+</item>
+<item historyLabel="index.css" index="2">
 <position/>
 </item>
 <item historyLabel="index.html" index="0">
 <position/>
 </item>
-<item historyLabel="index.css" index="1">
-<position/>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1391" y="0"/>
 </item>
 <item historyLabel="index.html" index="0">
 <position/>
 </item>
-<item historyLabel="index.css" index="1">
+<item historyLabel="index.css" index="2">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
+<item historyLabel="leaflet.css" index="4">
 <position/>
 </item>
-<item historyLabel="index.css" index="1">
+<item historyLabel="index.css" index="2">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1776" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
-<position/>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="1258" y="0"/>
 </item>
 <item historyLabel="index.html" index="0">
 <position/>
 </item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1157" y="0"/>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1483" y="0"/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1687" y="0"/>
+<item historyLabel="leaflet.js" index="5">
+<position/>
 </item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1077" y="22"/>
+<item historyLabel="index.css" index="2">
+<position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1709" y="0"/>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="0" y="10241"/>
 </item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1101" y="0"/>
+<item historyLabel="d3.js" index="3">
+<position info="not_deleted" x="334657" y="0"/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1675" y="7"/>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="0" y="10241"/>
 </item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1101" y="0"/>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="1258" y="0"/>
+</item>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="0" y="10241"/>
 </item>
 <item historyLabel="index.html" index="0">
 <position/>
 </item>
-<item historyLabel="index.css" index="1">
-<position/>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1920" y="0"/>
 </item>
 <item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1779" y="0"/>
+<position info="not_deleted" x="11923" y="0"/>
 </item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1170" y="0"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1750" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1169" y="0"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1750" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1158" y="0"/>
-</item>
-<item historyLabel="index.html" index="2">
-<position info="not_deleted" x="2021" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1292" y="0"/>
-</item>
-<item historyLabel="index.html" index="2">
-<position info="not_deleted" x="2206" y="0"/>
-</item>
-<item historyLabel="index.css" index="1">
-<position info="not_deleted" x="1381" y="0"/>
-</item>
-<item historyLabel="index.html" index="2">
-<position info="not_deleted" x="2312" y="0"/>
-</item>
-<item historyLabel="index.css" index="3">
-<position info="not_deleted" x="6995" y="0"/>
-</item>
-<item historyLabel="models_gcm" index="4">
-<position info="not_deleted" x="143" y="16"/>
-</item>
-<item historyLabel="index.html" index="5">
-<position info="not_deleted" x="2054" y="0"/>
-</item>
-<item historyLabel="base.html" index="6">
-<position info="not_deleted" x="1477" y="18"/>
-</item>
-<item historyLabel="index.html" index="5">
-<position info="not_deleted" x="2054" y="0"/>
-</item>
-<item historyLabel="index.css" index="7">
+<item historyLabel="base.html" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="dispatcher_index" index="8">
-<position info="not_deleted" x="418" y="0"/>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="arc.js" index="6">
+<position info="not_deleted" x="9628" y="0"/>
+</item>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="1145" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="424" y="0"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1898" y="0"/>
+</item>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="424" y="0"/>
+</item>
+<item historyLabel="arc.js" index="6">
+<position info="not_deleted" x="9628" y="0"/>
+</item>
+<item historyLabel="index.html" index="0">
+<position/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1689" y="0"/>
+</item>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="3767" y="6"/>
+</item>
+<item historyLabel="leaflet.ie.css" index="7">
+<position info="not_deleted" x="783" y="0"/>
+</item>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="3767" y="6"/>
+</item>
+<item historyLabel="leaflet.js" index="5">
+<position info="not_deleted" x="125495" y="0"/>
+</item>
+<item historyLabel="leaflet.css" index="4">
+<position info="not_deleted" x="3767" y="6"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1689" y="0"/>
+</item>
+<item historyLabel="arc.js" index="6">
+<position info="not_deleted" x="9628" y="0"/>
+</item>
+<item historyLabel="index.css" index="2">
+<position info="not_deleted" x="1689" y="0"/>
+</item>
+<item active="true" historyLabel="index.html" index="0">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -468,14 +468,32 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="index.css" tooltip="prjGogistics/src/static/css/index.css">
-<persistable path="/prjGogistics/src/static/css/index.css"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="leaflet.js" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet.js">
+<persistable path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="leaflet.ie.css" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet.ie.css">
+<persistable path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.ie.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="arc.js" tooltip="prjGogistics/src/static/leaflet-0.6.4/arc.js">
+<persistable path="/prjGogistics/src/static/leaflet-0.6.4/arc.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" tooltip="prjGogistics/src/static/templates/base.html">
 <persistable path="/prjGogistics/src/static/templates/base.html"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="leaflet.css" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet.css">
+<persistable path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="d3.js" tooltip="prjGogistics/src/static/javascripts/d3.js">
+<persistable path="/prjGogistics/src/static/javascripts/d3.js"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="base.css" tooltip="prjGogistics/src/static/css/base.css">
 <persistable path="/prjGogistics/src/static/css/base.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogistics/src/app.yaml">
+<persistable path="/prjGogistics/src/app.yaml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="index.css" tooltip="prjGogistics/src/static/css/index.css">
+<persistable path="/prjGogistics/src/static/css/index.css"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_index.py" tooltip="prjGogistics/src/dispatchers/dispatcher_index.py">
 <persistable path="/prjGogistics/src/dispatchers/dispatcher_index.py"/>
@@ -489,29 +507,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogistics/src/cron.yaml">
 <persistable path="/prjGogistics/src/cron.yaml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogistics/src/app.yaml">
-<persistable path="/prjGogistics/src/app.yaml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_cron_tasks.py" tooltip="prjGogistics/src/handlers_general/handler_cron_tasks.py">
 <persistable path="/prjGogistics/src/handlers_general/handler_cron_tasks.py"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="urlfetch.py" tooltip="C:\Program Files (x86)\Google\google_appengine\google\appengine\api\urlfetch.py">
 <persistable uri="file:/C:/Program%20Files%20(x86)/Google/google_appengine/google/appengine/api/urlfetch.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_gcm.py" tooltip="prjGogistics/src/handlers_gcm/handler_gcm.py">
-<persistable path="/prjGogistics/src/handlers_gcm/handler_gcm.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="prjGogistics/src/static/templates/index.html">
-<persistable path="/prjGogistics/src/static/templates/index.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="example.py" tooltip="prjGogistics/src/handlers_gcm/example.py">
-<persistable path="/prjGogistics/src/handlers_gcm/example.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogistics/src/handlers_gcm/__init__.py">
-<persistable path="/prjGogistics/src/handlers_gcm/__init__.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_people.py" tooltip="prjGogistics/src/models/models_people.py">
-<persistable path="/prjGogistics/src/models/models_people.py"/>
 </file>
 </mruList>
 </workbench>

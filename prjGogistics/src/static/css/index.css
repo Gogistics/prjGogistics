@@ -31,7 +31,7 @@
 		margin-bottom: 50px;
 	}
 	.index_topic_content {
-		width: 700px;
+		width: 100%;
 		margin-top: -1px;
 		margin-bottom: 10px;
 		margin-left: auto;
@@ -40,9 +40,9 @@
 		font-size: 13px;
 		line-height: 20px;
 		letter-spacing: 2px;
-		text-indent: 2px; font-weight : lighter;
+		text-indent: 2px;
+		font-weight: lighter;
 		text-align: center;
-		padding: 10px;
 		border-radius: 3px;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
@@ -64,6 +64,36 @@
 		color: #fff;
 		text-decoration: none;
 	}
+
+	/* d3 + leaflet */
+	.map {
+		fill: #555;
+		fill-opacity: 1;
+		stroke: #333;
+		stroke-width: 1;
+	}
+	.leaflet-overlay-pane {
+		fill: #555;
+		fill-opacity: 1;
+		stroke: #333;
+		stroke-width: 1;
+	}
+	.leaflet-div-icon {
+		border: 0;
+		border-radius: 50%;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	}
+	.polyline {
+		fill: none;
+		stroke: #f00;
+		stroke-width: 2;
+		stroke-opacity: 1;
+		z-index: 1;
+	}
+	.leaflet-google-layer,.leaflet-tile-pane,.leaflet-overlay-pane .map {
+		z-index: 0 !important;
+	}
+	/* end of d3 + leaflet */
 
 	/**/
 	#contact_message_sheet {

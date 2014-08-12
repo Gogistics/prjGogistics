@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<meta name="author" content="Alan Tai">
+<meta name="company" content="Gogistics Ltd.">
+<meta name="country" content="Taiwan">
+<meta name="city" content="Kaohsiung">
+<meta name="html_page_token" content="{{token_html_page}}">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Cache-Control"
+	content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+	
+<!-- icon -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+<!-- css -->
+<link type="text/css" rel="stylesheet" href="/css/base.css" />
+{% block css_content %} {% endblock %}
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<link type="text/css" rel="stylesheet" href="/leaflet/leaflet.css" />
+
+<!-- js -->
+{% block js_content %} {% endblock %}
+
+<title>{{ title }}</title>
+</head>
+<body>
+<!-- top bar -->
+
+	<!-- language selector -->
+	<div class="title_block">
+	<p style="margin: 5px auto; color: #ff0; display: none;">Learn the Technology, Connect the World</p>
+		<select id="language_selector" class="language_selector">
+			<option value="mandarin">中文/Mandarin</option>
+			<option value="english">英文/English</option>
+		</select>
+	</div>
+
+
+<!-- main content -->
+	{% block main_content %}
+	<p>No Templates Found</p>
+	{% endblock %}
+	
+	<!-- copy right -->
+	<div id="copy_right" class="copy_right_block">
+		<p>
+			&copy; <span>Gogistics(資雲科技) Ltd.</span> <span>Ailin.Alan Design.</span> <span>Since 2014</span>
+		</p>
+	</div>
+	
+</body>
+</html>
