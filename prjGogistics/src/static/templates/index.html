@@ -41,16 +41,10 @@
 				<section id="content_company_introduction"
 					class="index_topic_content">
 					<div id="map_company_introduction"
-						style="width: 1300px; height: 350px; margin: 40px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
+						style="height: 350px; margin: 30px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
 						<p
-							style="width: 1302px; right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.7; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
+							style="right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.85; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
 					</div>
-
-					<div id="map_container"
-						style="width: 1300px; height: 350px; margin: 40px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
-						<p
-							style="width: 1302px; right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.7; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
-						</div>
 
 				</section>
 				<section id="content_cloud_services_introduction"
@@ -288,15 +282,38 @@
 		// This demo is based off of cibi.me by OpenPlans and my earlier visualization
 		// at http://github.com/openplans/cibi_animation
 		(function() {
-			var bikeIcon = L.icon({
+
+			//
+			var vector = L.geoJson(topojson.feature(topojson_nation,
+					topojson_nation.objects.countries), {
+				style : {
+					className : 'map'
+				}
+			});
+
+			//
+			var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
+					+ '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
+					+ 'Imagery © <a href="http://mapbox.com">Mapbox</a>', mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
+
+			var grayscale = L.tileLayer(mbUrl, {
+				id : 'examples.map-20v6611k',
+				attribution : mbAttr
+			}), streets = L.tileLayer(mbUrl, {
+				id : 'examples.map-i86knfo3',
+				attribution : mbAttr
+			});
+
+			var myIcon = L.icon({
 				iconUrl : '/leaflet/images/marker-icon.png',
-				iconSize : [ 25, 39 ],
-				iconAnchor : [ 12, 39 ],
-				shadowUrl : null
+				iconSize : [ 20, 33 ],
+				iconAnchor : [ 9, 32 ],
+				shadowSize : [ 22, 33 ],
+				shadowAnchor : [ 5, 32 ],
+				shadowUrl : '/leaflet/images/marker-shadow.png',
 			});
 
 			var config = {
-				tileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
 				initLatLng : new L.LatLng(48.8566140, 2.3522220), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
 				initZoom : 2,
 				minZoom : 2,
@@ -306,20 +323,25 @@
 			var map = L.map('map_company_introduction', {
 				minZoom : config.minZoom,
 				maxZoom : config.maxZoom,
-				zoomControl : false
+				zoomControl : false,
+				dragging : false,
+				zoom : 2,
+				center : [ 48.8566140, 2.3522220 ],
+				layers : grayscale,
+				attributionControl : false
 
-			}), routeLines = [ L.polyline([[ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ], [ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ] ]) ], markers = [];
+			}), routeLines = [ L.polyline([ [ 22.605028, 120.298636 ],
+					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ],
+					[ 22.605028, 120.298636 ], [ 48.8566140, 2.3522220 ] ]) ], markers = [];
 
-			map.addLayer(new L.TileLayer(config.tileUrl));
-			map.setView(config.initLatLng, config.initZoom);
+			//map.addLayer(new L.TileLayer(config.tileUrl));
+			//map.setView(config.initLatLng, config.initZoom);
 
 			var marker;
 			function do_animation() {
 				$.each(routeLines, function(i, routeLine) {
 					marker = L.animatedMarker(routeLine.getLatLngs(), {
-						icon : bikeIcon,
+						icon : myIcon,
 						autoStart : true,
 						distance : 100000, // meters
 						interval : 100, // milliseconds
@@ -341,109 +363,98 @@
 			//start animation after 500 mil-sec
 			setTimeout(do_animation(), 10);
 
+			//draw curve and points
+			var locations = {
+				"countries" : [ {
+					"id" : 12,
+					"lt" : 22.605028,
+					"ln" : 120.298636,
+					"description" : '<div style = "letter-spacing: 2px; color: #000;">'
+						+ 'Kaohsiung, Taiwan<br>'
+						+ '</div>',
+					"al" : 1,
+					"d8" : "04\/10\/12"
+				}, {
+					"id" : 14,
+					"lt" : 48.8566140,
+					"ln" : 2.3522220,
+					"description" : '<div style = "letter-spacing: 2px; color: #000;">'
+						+ 'Italy<br>'
+						+ '</div>',
+					"al" : 5,
+					"d8" : "20\/10\/12"
+				}, {
+					"id" : 13,
+					"lt" : 37.3860520,
+					"ln" : -122.0838510,
+					"description" : '<div style = "letter-spacing: 2px; color: #000;">'
+						+ 'Mountain View, CA<br>'
+						+ '</div>',
+					"al" : 10,
+					"d8" : "27\/10\/12"
+				} ]
+			};
+
+			// Start and end points, in x = longitude, y = latitude values
+			var start = {
+				x : 2.3522220,
+				y : 48.8566140
+			};
+			var end = {
+				x : -122.0838510,
+				y : 37.3860520
+			};
+			var generator = new arc.GreatCircle(start, end, {
+				name : 'Paris to Mountain View'
+			});
+			var line = generator.Arc(150, {
+				offset : 0
+			});
+			var myStyle = {
+				"color" : "#f00",
+				"weight" : 1,
+				"dashArray" : "5, 5",
+				"opacity" : 0.95
+			};
+			L.geoJson(line.json(), {
+				style : myStyle
+			}).addTo(map);
+			// Start and end points, in x = longitude, y = latitude values
+			var start = {
+				x : 2.3522220,
+				y : 48.8566140
+			};
+			var end = {
+				x : 120.298636,
+				y : 22.605028
+			};
+			var generator = new arc.GreatCircle(start, end, {
+				name : 'Paris to Mountain View'
+			});
+			var line = generator.Arc(200, {
+				offset : 10
+			});
+			L.geoJson(line.json(), {
+				style : myStyle
+			}).addTo(map);
+
+			//
+			var marker_icon = L.divIcon({
+				iconSize : [ 4, 4 ],
+				iconAnchor : [ 2, 2 ]
+			});
+
+			$.each(locations['countries'], function(i, item) {
+				var coords = new L.LatLng(item.lt, item.ln);
+				marker = L.marker(coords, {
+					icon : marker_icon
+				}).addTo(map).on('click', function(e) {
+					map.setView(e.target.getLatLng())
+				}).bindPopup(item.description);
+			});
+
 		}());
 		//end of show map
-
-		/* d3 + leaflet */
-		var locations = {
-			"countries" : [ {
-				"id" : 12,
-				"lt" : 22.605028,
-				"ln" : 120.298636,
-				"tw" : "Kaohsiung",
-				"fo" : "",
-				"al" : 1,
-				"d8" : "04\/10\/12"
-			}, {
-				"id" : 14,
-				"lt" : 48.8566140,
-				"ln" : 2.3522220,
-				"tw" : "Italy",
-				"fo" : "",
-				"al" : 5,
-				"d8" : "20\/10\/12"
-			}, {
-				"id" : 13,
-				"lt" : 37.3860520,
-				"ln" : -122.0838510,
-				"tw" : "Mountain View, CA",
-				"fo" : "",
-				"al" : 10,
-				"d8" : "27\/10\/12"
-			} ]
-		};
-		var vector = L.geoJson(topojson.feature(topojson_nation,
-				topojson_nation.objects.countries), {
-			style : {
-				className : 'map'
-			}
-		});
-		var map = L.map('map_container', {
-			zoom : 2,
-			center : [ 48.8566140, 2.3522220 ],
-			layers : vector,
-			maxZoom : 16,
-			zoomControl : false,
-			attributionControl : false
-		});
-		// Start and end points, in x = longitude, y = latitude values
-		var start = {
-			x : 2.3522220,
-			y : 48.8566140
-		};
-		var end = {
-			x : -122.0838510,
-			y : 37.3860520
-		};
-		var generator = new arc.GreatCircle(start, end, {
-			name : 'Paris to Mountain View'
-		});
-		var line = generator.Arc(150, {
-			offset : 0
-		});
-		var myStyle = {
-			"color" : "#f00",
-			"weight" : 2,
-			"dashArray" : "5, 5",
-			"opacity" : 0.9
-		};
-		L.geoJson(line.json(), {
-			style : myStyle
-		}).addTo(map);
-		// Start and end points, in x = longitude, y = latitude values
-		var start = {
-			x : 2.3522220,
-			y : 48.8566140
-		};
-		var end = {
-			x : 120.298636,
-			y : 22.605028
-		};
-		var generator = new arc.GreatCircle(start, end, {
-			name : 'Paris to Mountain View'
-		});
-		var line = generator.Arc(150, {
-			offset : 0
-		});
-		L.geoJson(line.json(), {
-			style : myStyle
-		}).addTo(map);
-
-		//
-		var marker_icon = L.divIcon({
-	        iconSize: [8,8],
-	        iconAnchor: [4,4]
-	    });
-		
-		$.each(locations['countries'], function(i, item) {
-			var coords = new L.LatLng(item.lt, item.ln);
-	        marker = L.marker(coords, {icon: marker_icon}).addTo(map)
-	            .on('click', function(e) { map.setView(e.target.getLatLng()) });
-		});
-		
-		var coords = new L.LatLng(37.3860520, -122.0838510);
-        marker = L.marker(coords, {icon: marker_icon}).addTo(map)
-            .on('click', function(e) { map.setView(e.target.getLatLng()) });
 	</script>
 
 	<!-- end -->

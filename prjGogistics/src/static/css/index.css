@@ -67,21 +67,24 @@
 
 	/* d3 + leaflet */
 	.map {
-		fill: #555;
+		fill: #999;
 		fill-opacity: 1;
 		stroke: #333;
 		stroke-width: 1;
+		width: 100%;
 	}
 	.leaflet-overlay-pane {
 		fill: #555;
 		fill-opacity: 1;
-		stroke: #333;
-		stroke-width: 1;
+		stroke: #222;
+		stroke-width: 2px;
 	}
 	.leaflet-div-icon {
-		border: 0;
+		background-color: #ff0;
 		border-radius: 50%;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		box-shadow: 0 0px 2px rgba(255, 255, 0, 0.4);
 	}
 	.polyline {
 		fill: none;
