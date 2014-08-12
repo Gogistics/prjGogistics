@@ -308,9 +308,8 @@
 				maxZoom : config.maxZoom,
 				zoomControl : false
 
-			}), routeLines = [ L.polyline([[ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ], [ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ] ]) ], markers = [];
+			}), routeLines = [ L.polyline([ [ 22.605028, 120.298636 ],
+					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ] ]) ], markers = [];
 
 			map.addLayer(new L.TileLayer(config.tileUrl));
 			map.setView(config.initLatLng, config.initZoom);
@@ -324,12 +323,12 @@
 						distance : 100000, // meters
 						interval : 100, // milliseconds
 						onEnd : function() {
-							$(this._shadow).fadeOut(100);
+							$(this._shadow).fadeOut(300);
 							$(this._icon).fadeOut(100, function() {
 								map.removeLayer(this);
 							});
 
-							setTimeout(do_animation(), 100);
+							setTimeout(do_animation(), 500);
 						}
 					});
 
@@ -339,7 +338,7 @@
 			}
 
 			//start animation after 500 mil-sec
-			setTimeout(do_animation(), 10);
+			setTimeout(do_animation(), 300);
 
 		}());
 		//end of show map
@@ -404,7 +403,6 @@
 		var myStyle = {
 			"color" : "#f00",
 			"weight" : 2,
-			"dashArray" : "5, 5",
 			"opacity" : 0.9
 		};
 		L.geoJson(line.json(), {
@@ -425,6 +423,11 @@
 		var line = generator.Arc(150, {
 			offset : 0
 		});
+		var myStyle = {
+			"color" : "#f00",
+			"weight" : 2,
+			"opacity" : 0.9
+		};
 		L.geoJson(line.json(), {
 			style : myStyle
 		}).addTo(map);

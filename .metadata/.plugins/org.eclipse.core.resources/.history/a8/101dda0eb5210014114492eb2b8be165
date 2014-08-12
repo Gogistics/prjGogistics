@@ -47,10 +47,7 @@
 					</div>
 
 					<div id="map_container"
-						style="width: 1300px; height: 350px; margin: 40px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
-						<p
-							style="width: 1302px; right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.7; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
-						</div>
+						style="width: 1300px; height: 350px; margin: 40px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;"></div>
 
 				</section>
 				<section id="content_cloud_services_introduction"
@@ -297,10 +294,10 @@
 
 			var config = {
 				tileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
-				initLatLng : new L.LatLng(48.8566140, 2.3522220), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
-				initZoom : 2,
-				minZoom : 2,
-				maxZoom : 2
+				initLatLng : new L.LatLng(22.605028, 120.298636), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
+				initZoom : 12,
+				minZoom : 12,
+				maxZoom : 12
 			};
 
 			var map = L.map('map_company_introduction', {
@@ -308,9 +305,10 @@
 				maxZoom : config.maxZoom,
 				zoomControl : false
 
-			}), routeLines = [ L.polyline([[ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ], [ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ] ]) ], markers = [];
+			}), routeLines = [ L.polyline([ [ 22.605028, 120.298636 ],
+					[ 22.605028, 120.288636 ], [ 22.615028, 120.308636 ],
+					[ 22.615028, 120.291636 ], [ 22.585028, 120.398636 ],
+					[ 22.635028, 120.232636 ], [ 22.605028, 120.298636 ] ]) ], markers = [];
 
 			map.addLayer(new L.TileLayer(config.tileUrl));
 			map.setView(config.initLatLng, config.initZoom);
@@ -321,15 +319,15 @@
 					marker = L.animatedMarker(routeLine.getLatLngs(), {
 						icon : bikeIcon,
 						autoStart : true,
-						distance : 100000, // meters
-						interval : 100, // milliseconds
+						distance : 1000, // meters
+						interval : 2000, // milliseconds
 						onEnd : function() {
-							$(this._shadow).fadeOut(100);
-							$(this._icon).fadeOut(100, function() {
+							$(this._shadow).fadeOut(300);
+							$(this._icon).fadeOut(1000, function() {
 								map.removeLayer(this);
 							});
 
-							setTimeout(do_animation(), 100);
+							setTimeout(do_animation(), 8000);
 						}
 					});
 
@@ -339,7 +337,7 @@
 			}
 
 			//start animation after 500 mil-sec
-			setTimeout(do_animation(), 10);
+			setTimeout(do_animation(), 300);
 
 		}());
 		//end of show map
@@ -404,7 +402,6 @@
 		var myStyle = {
 			"color" : "#f00",
 			"weight" : 2,
-			"dashArray" : "5, 5",
 			"opacity" : 0.9
 		};
 		L.geoJson(line.json(), {
@@ -425,6 +422,11 @@
 		var line = generator.Arc(150, {
 			offset : 0
 		});
+		var myStyle = {
+			"color" : "#f00",
+			"weight" : 2,
+			"opacity" : 0.9
+		};
 		L.geoJson(line.json(), {
 			style : myStyle
 		}).addTo(map);

@@ -404,7 +404,6 @@
 		var myStyle = {
 			"color" : "#f00",
 			"weight" : 2,
-			"dashArray" : "5, 5",
 			"opacity" : 0.9
 		};
 		L.geoJson(line.json(), {
@@ -425,6 +424,12 @@
 		var line = generator.Arc(150, {
 			offset : 0
 		});
+		var myStyle = {
+			"color" : "#f00",
+			"weight" : 2,
+			"dashArray" : [5, 5, 1, 5],
+			"opacity" : 0.9
+		};
 		L.geoJson(line.json(), {
 			style : myStyle
 		}).addTo(map);
