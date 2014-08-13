@@ -30,6 +30,10 @@
 					class="index_topic_selector"
 					title="{{cloud_services_introduction_selector}}"
 					onclick="select_topic(this)">{{cloud_services_introduction_selector}}</p>
+				<p id="selector_cloud_services_integration"
+					class="index_topic_selector"
+					title="{{cloud_services_integration_selector}}"
+					onclick="select_topic(this)">{{cloud_services_integration_selector}}</p>
 				<p id="selector_contact" class="index_topic_selector"
 					title="{{contact_information_selector}}"
 					onclick="select_topic(this)">{{contact_information_selector}}</p>
@@ -41,7 +45,7 @@
 				<section id="content_company_introduction"
 					class="index_topic_content">
 					<div id="map_company_introduction"
-						style="height: 350px; margin: 30px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
+						style="height: 400px; margin: 30px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
 						<p
 							style="right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.85; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
 					</div>
@@ -54,7 +58,7 @@
 
 					<!--  -->
 					<div id="google_cloud_services_block">
-						<hr style="border: none; border-top: dotted 1px #ababab;">
+						<hr style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
 						<section id="google_cloud_services">
 							<a href="http://www.google.com/enterprise/apps/business/"
 								target="_blank" title="Google Apps for Business">Google Apps
@@ -64,7 +68,28 @@
 								target="_blank" title="Google Compute Engine">Google Compute
 								Engine</a>
 						</section>
-						<hr style="border: none; border-top: dotted 1px #767676;">
+						<hr style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
+					</div>
+					<!--  -->
+				</section>
+				<section id="content_cloud_services_integration"
+					class="index_topic_content">
+					<article id="cloud_services_integration_article">{{cloud_services_integration_content}}
+					</article>
+
+					<!--  -->
+					<div id="google_cloud_services_block">
+						<hr style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
+						<section id="google_cloud_services">
+							<a href="http://www.google.com/enterprise/apps/business/"
+								target="_blank" title="Google Apps for Business">Google Apps
+								for Business</a><a href="https://developers.google.com/appengine/"
+								target="_blank" title="Google App Engine">Google App Engine</a><a
+								href="https://cloud.google.com/products/compute-engine/"
+								target="_blank" title="Google Compute Engine">Google Compute
+								Engine</a>
+						</section>
+						<hr style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
 					</div>
 					<!--  -->
 				</section>
@@ -177,19 +202,29 @@
 					'letter-spacing' : '2px',
 					'text-indent' : '2px'
 				});
-				// selector
+				// selector update
+				//company introduction
 				$('#selector_company_introduction').attr({
 					title : response.company_introduction_selector
 				});
 				$('#selector_company_introduction').text(
 						response.company_introduction_selector);
 
+				//cloud services
 				$('#selector_cloud_services_introduction').attr({
 					title : response.cloud_services_introduction_selector
 				});
 				$('#selector_cloud_services_introduction').text(
 						response.cloud_services_introduction_selector);
+				
+				//services integration
+				$('#selector_cloud_services_integration').attr({
+					title : response.cloud_services_integration_selector
+				});
+				$('#selector_cloud_services_integration').text(
+						response.cloud_services_integration_selector);
 
+				//contact
 				$('#selector_contact').attr({
 					title : response.contact_information_selector
 				});
@@ -197,12 +232,13 @@
 						response.contact_information_selector);
 
 				//content
-				$('#content_company_introduction > p').text(
+				$('#map_company_introduction > p').text(
 						response.company_introduction_content);
 
-				$(
-						'#content_cloud_services_introduction > p[id="brief_introduction_company_service"]')
+				$('#cloud_services_article')
 						.text(response.cloud_services_introduction_content);
+				
+				$('#cloud_services_integration_article').text(response.cloud_services_integration_content);
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
@@ -236,6 +272,13 @@
 				$('#selector_cloud_services_introduction').text(
 						response.cloud_services_introduction_selector);
 
+				//services integration
+				$('#selector_cloud_services_integration').attr({
+					title : response.cloud_services_integration_selector
+				});
+				$('#selector_cloud_services_integration').text(
+						response.cloud_services_integration_selector);
+
 				$('#selector_contact').attr({
 					title : response.contact_information_selector
 				});
@@ -243,12 +286,13 @@
 						response.contact_information_selector);
 
 				//content
-				$('#content_company_introduction > p').text(
+				$('#map_company_introduction > p').text(
 						response.company_introduction_content);
 
-				$(
-						'#content_cloud_services_introduction > p[id="brief_introduction_company_service"]')
+				$('#cloud_services_article')
 						.text(response.cloud_services_introduction_content);
+				
+				$('#cloud_services_integration_article').text(response.cloud_services_integration_content);
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
@@ -344,7 +388,7 @@
 						icon : myIcon,
 						autoStart : true,
 						distance : 100000, // meters
-						interval : 100, // milliseconds
+						interval : 200, // milliseconds
 						onEnd : function() {
 							$(this._shadow).fadeOut(100);
 							$(this._icon).fadeOut(100, function() {
@@ -361,7 +405,7 @@
 			}
 
 			//start animation after 500 mil-sec
-			setTimeout(do_animation(), 10);
+			do_animation();
 
 			//draw curve and points
 			var locations = {

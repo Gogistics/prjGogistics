@@ -35,9 +35,11 @@ class KeysValuesEnglish():
         #
         self.company_introduction = u'Company Introdcution'
         self.cloud_service_introduction = u'Could Services Introduction'
+        self.cloud_services_integration = u'Cloud Services Integration'
         self.contact_information = u'Contact Information'
         self.company_introduction_content = u'"Learn The Technology, Connect the World"'
-        self.cloud_service_introduction_content = u'Integration of google cloud services'
+        self.cloud_service_introduction_content = u'Introduction of cloud services'
+        self.cloud_services_integration_content = u'Integrations of cloud services'
         self.contact_information_content = u'contact me via cloud'
         
         self.contact_message_name = 'Sender Name'
@@ -63,9 +65,13 @@ class KeysValuesMandarin():
         #
         self.company_introduction = u'公司簡介'
         self.cloud_service_introduction = u'雲端服務'
+        self.cloud_services_integration = u'整合應用'
         self.contact_information = u'聯絡資訊'
+        
+        #
         self.company_introduction_content = u'"知識串起世界各角落"'
         self.cloud_service_introduction_content = u'雲端就是提供你服務的地方，當你有需要時可以在任何時間地點用來儲存資料、執行應用程式。跟需要下載的桌面應用程式不同，雲端服務可以透過網路和行動裝置在任何時間地點使用。'
+        self.cloud_services_integration_content = u'雲端服務整合應用'
         self.contact_information_content = u'聯絡在雲端'
         
         #

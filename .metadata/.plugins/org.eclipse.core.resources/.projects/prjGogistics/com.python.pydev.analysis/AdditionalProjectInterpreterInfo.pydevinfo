@@ -2,6 +2,7 @@
 -- START DISKCACHE
 D:\prjGogistics\.metadata\.plugins\org.eclipse.core.resources\.projects\prjGogistics\com.python.pydev.analysis\v1_indexcache
 .v1_indexcache
+handlers_general.handler_languages_versions|0|D:\prjGogistics\prjGogistics\src\handlers_general\handler_languages_versions.py
 dictionaries.dict_keys_values|0|D:\prjGogistics\prjGogistics\src\dictionaries\dict_keys_values.py
 -- END DISKCACHE
 -- START DICTIONARY
@@ -22,7 +23,7 @@ dictionaries.dict_keys_values|0|D:\prjGogistics\prjGogistics\src\dictionaries\di
 20=GCMMessage.__init__
 22=EnglishHandler.__init__
 14=KeysVaulesGeneral
-16=EnglishHandler
+15=EnglishHandler
 28=GCMSendHandler
 12=KeysValuesMandarin
 29=GCMReceiveRegIDHandler
@@ -33,7 +34,7 @@ dictionaries.dict_keys_values|0|D:\prjGogistics\prjGogistics\src\dictionaries\di
 8=models.models_gcm
 7=handlers_gcm.handler_gcm
 26=KeysVaulesGeneral.__init__
-15=MandarinHandler
+16=MandarinHandler
 21=GCMClientRegID
 31=IndexContactMessageHandler
 24=GCMCronTaskHandler
@@ -42,10 +43,10 @@ dictionaries.dict_keys_values|0|D:\prjGogistics\prjGogistics\src\dictionaries\di
 18
 __a|2|__author__!11@__author__!19@
 and|1|android_payload!27@
-app|3|app!35@app!11@app!43@
+app|3|app!11@app!35@app!43@
 cli|1|CLIENT_SECRETS!11@
 eng|1|EnglishHandler!49@
-gcm|11|GCM_QUEUE_CALLBACK_URL!59@GCMSendHandler!41@GCM_CONFIG!59@gcm_message!27@GCMReceiveRegIDHandler!41@GCM_QUEUE_NAME!59@GCMClientRegID!65@gcm_conn!27@GCMCronTaskHandler!33@GCMMessage!57@GCMConnection!57@
+gcm|11|GCMSendHandler!41@GCM_QUEUE_CALLBACK_URL!59@GCMReceiveRegIDHandler!41@gcm_message!27@GCM_CONFIG!59@GCM_QUEUE_NAME!59@GCMClientRegID!65@GCMCronTaskHandler!33@gcm_conn!27@GCMConnection!57@GCMMessage!57@
 goo|2|GOOGLE_LOGIN_URL!59@GOOGLE_GCM_SEND_URL!59@
 htm|2|html_pages_ref!11@HtmlPagesReference!17@
 ind|3|IndexLanguageVersionHandler!9@IndexHandler!9@IndexContactMessageHandler!9@
@@ -71,26 +72,26 @@ _re|1|_requeue_message!17&58@
 _se|2|_send_request!17&58@_set_memcached!17&58@
 _su|1|_submit_message!17&58@
 btn|4|btn_send!18&75@btn_send!19&75@btn_rewrite!18&75@btn_rewrite!19&75@
-clo|4|cloud_service_introduction_content!18&75@cloud_service_introduction_content!19&75@cloud_service_introduction!18&75@cloud_service_introduction!19&75@
+clo|8|cloud_service_introduction_content!18&75@cloud_service_introduction_content!19&75@cloud_services_integration_content!18&75@cloud_services_integration_content!19&75@cloud_services_integration!18&75@cloud_services_integration!19&75@cloud_service_introduction!18&75@cloud_service_introduction!19&75@
 col|2|collapse_key!20&59@collapse_key!10&59@
 com|4|company_introduction_content!18&75@company_introduction!18&75@company_introduction_content!19&75@company_introduction!19&75@
 con|12|contact_message_subject!18&75@contact_message_subject!19&75@contact_information_content!18&75@contact_information_content!19&75@contact_message_email!18&75@contact_message_email!19&75@contact_message_body!18&75@contact_message_body!19&75@contact_message_name!18&75@contact_information!18&75@contact_message_name!19&75@contact_information!19&75@
 cre|1|created_date_time!21&67@
 deb|1|debug!17&58@
-del|3|delay_while_idle!10&59@delay_while_idle!20&59@delete_bad_token!17&58@
+del|3|delay_while_idle!20&59@delay_while_idle!10&59@delete_bad_token!17&58@
 dev|2|device_tokens!20&59@device_tokens!10&59@
 dic|4|dict_keys_values_english!22&51@dict_keys_values_general!22&51@dict_keys_values_general!23&51@dict_keys_values_mandarin!23&51@
 fou|2|founder!18&75@founder!19&75@
 get|2|get!24&34@get!25&10@
 goo|4|google_apps_engine!18&75@google_apps!18&75@google_apps_engine!19&75@google_apps!19&75@
-han|4|handle_index_page_info!16&50@handle_index_page_info!15&50@handle_customer_services_page_info!16&50@handle_customer_services_page_info!15&50@
+han|4|handle_index_page_info!15&50@handle_index_page_info!16&50@handle_customer_services_page_info!15&50@handle_customer_services_page_info!16&50@
 hos|1|host_email!26&75@
 htm|1|html_index!27&19@
 ind|2|index_page_title!18&75@index_page_title!19&75@
 jso|1|json_string!10&58@
 log|1|login_complete!17&58@
 mob|2|mobile_usa_ca!26&75@mobile_tw!26&75@
-not|3|notify_device!17&58@notification!10&59@notification!20&59@
+not|3|notification!20&59@notification!10&59@notify_device!17&58@
 pos|4|post!28&42@post!29&42@post!30&10@post!31&10@
 reg|1|reg_id!21&67@
 tim|2|time_to_live!20&59@time_to_live!10&59@
