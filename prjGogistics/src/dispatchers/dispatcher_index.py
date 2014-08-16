@@ -37,7 +37,7 @@ language_handler_english = EnglishHandler()
 
 
 #index handler
-class IndexHandler(webapp2.RequestHandler):
+class DemoLeafLetAnimationHandler(webapp2.RequestHandler):
     def get(self):
         template_values = {}
         template_values.update(language_handler_madarin.handle_index_page_info())
@@ -49,7 +49,7 @@ class IndexContactMessageHandler(webapp2.RequestHandler):
     def post(self):
         pass
         
-class IndexLanguageVersionHandler(webapp2.RequestHandler):
+class DemosLanguageVersionHandler(webapp2.RequestHandler):
     def post(self):
         assert self.request.get('fmt'), 'data format is not available'
         assert self.request.get('json_language_version_request'), 'request content is not available'
@@ -78,8 +78,8 @@ class IndexLanguageVersionHandler(webapp2.RequestHandler):
         self.response.out.write(json.dumps(ajax_response))
 
 #url dispatcher
-app = webapp2.WSGIApplication([('/', IndexHandler),
-                               ('/index_language_version_handler', IndexLanguageVersionHandler)], debug=True)
+app = webapp2.WSGIApplication([('/', DemoLeafLetAnimationHandler),
+                               ('/index_language_version_handler', DemosLanguageVersionHandler)], debug=True)
 
 #log 
 logging.getLogger().setLevel(logging.DEBUG)

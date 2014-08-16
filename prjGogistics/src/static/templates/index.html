@@ -6,7 +6,10 @@
 {% endblock %}
 
 <!-- js block -->
-{% block js_content %} {% endblock %}
+{% block js_content %}
+<script type="text/javascript" src="/js/queue.v1.min.js"></script>
+<script type="text/javascript" src="/js/topojson.v0.min.js"></script>
+{% endblock %}
 
 <!-- main content -->
 {% block main_content %}
@@ -47,7 +50,7 @@
 					<div id="map_company_introduction"
 						style="height: 400px; margin: 30px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
 						<p
-							style="right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.85; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
+							style="right: 0px; left: 0px; z-index: 1000; position: relative; background-color: transparent ; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
 					</div>
 
 				</section>
@@ -58,7 +61,8 @@
 
 					<!--  -->
 					<div id="google_cloud_services_block">
-						<hr style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
+						<hr
+							style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
 						<section id="google_cloud_services">
 							<a href="http://www.google.com/enterprise/apps/business/"
 								target="_blank" title="Google Apps for Business">Google Apps
@@ -68,7 +72,8 @@
 								target="_blank" title="Google Compute Engine">Google Compute
 								Engine</a>
 						</section>
-						<hr style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
+						<hr
+							style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
 					</div>
 					<!--  -->
 				</section>
@@ -79,7 +84,8 @@
 
 					<!--  -->
 					<div id="google_cloud_services_block">
-						<hr style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
+						<hr
+							style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
 						<section id="google_cloud_services">
 							<a href="http://www.google.com/enterprise/apps/business/"
 								target="_blank" title="Google Apps for Business">Google Apps
@@ -89,7 +95,8 @@
 								target="_blank" title="Google Compute Engine">Google Compute
 								Engine</a>
 						</section>
-						<hr style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
+						<hr
+							style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
 					</div>
 					<!--  -->
 				</section>
@@ -216,7 +223,7 @@
 				});
 				$('#selector_cloud_services_introduction').text(
 						response.cloud_services_introduction_selector);
-				
+
 				//services integration
 				$('#selector_cloud_services_integration').attr({
 					title : response.cloud_services_integration_selector
@@ -235,10 +242,11 @@
 				$('#map_company_introduction > p').text(
 						response.company_introduction_content);
 
-				$('#cloud_services_article')
-						.text(response.cloud_services_introduction_content);
-				
-				$('#cloud_services_integration_article').text(response.cloud_services_integration_content);
+				$('#cloud_services_article').text(
+						response.cloud_services_introduction_content);
+
+				$('#cloud_services_integration_article').text(
+						response.cloud_services_integration_content);
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
@@ -289,10 +297,11 @@
 				$('#map_company_introduction > p').text(
 						response.company_introduction_content);
 
-				$('#cloud_services_article')
-						.text(response.cloud_services_introduction_content);
-				
-				$('#cloud_services_integration_article').text(response.cloud_services_integration_content);
+				$('#cloud_services_article').text(
+						response.cloud_services_introduction_content);
+
+				$('#cloud_services_integration_article').text(
+						response.cloud_services_integration_content);
 
 				$('#content_contact > p').text(
 						response.contact_information_content);
@@ -320,187 +329,202 @@
 			console.log(error);
 		}
 
-		//show leaflet map
-		/*globals L $*/
+		//d3 earth
+		d3.select(window).on("mousemove", mousemove).on("mouseup", mouseup);
 
-		// This demo is based off of cibi.me by OpenPlans and my earlier visualization
-		// at http://github.com/openplans/cibi_animation
-		(function() {
+		var width = 960, height = 550;
 
-			//
-			var vector = L.geoJson(topojson.feature(topojson_nation,
-					topojson_nation.objects.countries), {
-				style : {
-					className : 'map'
-				}
-			});
+		var proj = d3.geo.orthographic().translate([ width / 2, height / 2 ])
+				.clipAngle(90).scale(220);
 
-			//
-			var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
-					+ '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
-					+ 'Imagery © <a href="http://mapbox.com">Mapbox</a>', mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
+		var sky = d3.geo.orthographic().translate([ width / 2, height / 2 ])
+				.clipAngle(90).scale(300);
 
-			var grayscale = L.tileLayer(mbUrl, {
-				id : 'examples.map-20v6611k',
-				attribution : mbAttr
-			}), streets = L.tileLayer(mbUrl, {
-				id : 'examples.map-i86knfo3',
-				attribution : mbAttr
-			});
+		var path = d3.geo.path().projection(proj).pointRadius(2);
 
-			var myIcon = L.icon({
-				iconUrl : '/leaflet/images/marker-icon.png',
-				iconSize : [ 20, 33 ],
-				iconAnchor : [ 9, 32 ],
-				shadowSize : [ 22, 33 ],
-				shadowAnchor : [ 5, 32 ],
-				shadowUrl : '/leaflet/images/marker-shadow.png',
-			});
+		var swoosh = d3.svg.line().x(function(d) {
+			return d[0]
+		}).y(function(d) {
+			return d[1]
+		}).interpolate("cardinal").tension(.0);
 
-			var config = {
-				initLatLng : new L.LatLng(48.8566140, 2.3522220), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
-				initZoom : 2,
-				minZoom : 2,
-				maxZoom : 2
-			};
+		var links = [], arcLines = [];
 
-			var map = L.map('map_company_introduction', {
-				minZoom : config.minZoom,
-				maxZoom : config.maxZoom,
-				zoomControl : false,
-				dragging : false,
-				zoom : 2,
-				center : [ 48.8566140, 2.3522220 ],
-				layers : grayscale,
-				attributionControl : false
+		var svg = d3.select("div#map_company_introduction").append("svg").attr("width", width)
+				.attr("height", height).on("mousedown", mousedown);
 
-			}), routeLines = [ L.polyline([ [ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ],
-					[ 22.605028, 120.298636 ], [ 48.8566140, 2.3522220 ] ]) ], markers = [];
+		queue().defer(d3.json, "/mis/world-110m.json").defer(d3.json,
+				"/mis/places.json").await(ready);
 
-			//map.addLayer(new L.TileLayer(config.tileUrl));
-			//map.setView(config.initLatLng, config.initZoom);
+		function ready(error, world, places) {
+			var ocean_fill = svg.append("defs").append("radialGradient").attr(
+					"id", "ocean_fill").attr("cx", "75%").attr("cy", "25%");
+			ocean_fill.append("stop").attr("offset", "5%").attr("stop-color",
+					"#fff");
+			ocean_fill.append("stop").attr("offset", "100%").attr("stop-color",
+					"#ababab");
 
-			var marker;
-			function do_animation() {
-				$.each(routeLines, function(i, routeLine) {
-					marker = L.animatedMarker(routeLine.getLatLngs(), {
-						icon : myIcon,
-						autoStart : true,
-						distance : 100000, // meters
-						interval : 200, // milliseconds
-						onEnd : function() {
-							$(this._shadow).fadeOut(100);
-							$(this._icon).fadeOut(100, function() {
-								map.removeLayer(this);
-							});
+			var globe_highlight = svg.append("defs").append("radialGradient")
+					.attr("id", "globe_highlight").attr("cx", "75%").attr("cy",
+							"25%");
+			globe_highlight.append("stop").attr("offset", "5%").attr(
+					"stop-color", "#ffd").attr("stop-opacity", "0.6");
+			globe_highlight.append("stop").attr("offset", "100%").attr(
+					"stop-color", "#ba9").attr("stop-opacity", "0.2");
 
-							setTimeout(do_animation(), 100);
-						}
-					});
+			var globe_shading = svg.append("defs").append("radialGradient")
+					.attr("id", "globe_shading").attr("cx", "55%").attr("cy",
+							"45%");
+			globe_shading.append("stop").attr("offset", "30%").attr(
+					"stop-color", "#fff").attr("stop-opacity", "0")
+			globe_shading.append("stop").attr("offset", "100%").attr(
+					"stop-color", "#505962").attr("stop-opacity", "0.3")
 
-					map.addLayer(marker);
-					markers.push(marker);
+			var drop_shadow = svg.append("defs").append("radialGradient").attr(
+					"id", "drop_shadow").attr("cx", "50%").attr("cy", "50%");
+			drop_shadow.append("stop").attr("offset", "20%").attr("stop-color",
+					"#000").attr("stop-opacity", ".5")
+			drop_shadow.append("stop").attr("offset", "100%").attr(
+					"stop-color", "#000").attr("stop-opacity", "0")
+
+			svg.append("ellipse").attr("cx", 440).attr("cy", 450).attr("rx",
+					proj.scale() * .90).attr("ry", proj.scale() * .25).attr(
+					"class", "noclicks").style("fill", "url(#drop_shadow)");
+
+			svg.append("circle").attr("cx", width / 2).attr("cy", height / 2)
+					.attr("r", proj.scale()).attr("class", "noclicks").style(
+							"fill", "url(#ocean_fill)");
+
+			svg.append("path")
+					.datum(topojson.object(world, world.objects.land)).attr(
+							"class", "land noclicks").attr("d", path);
+
+			svg.append("circle").attr("cx", width / 2).attr("cy", height / 2)
+					.attr("r", proj.scale()).attr("class", "noclicks").style(
+							"fill", "url(#globe_highlight)");
+
+			svg.append("circle").attr("cx", width / 2).attr("cy", height / 2)
+					.attr("r", proj.scale()).attr("class", "noclicks").style(
+							"fill", "url(#globe_shading)");
+
+			svg.append("g").attr("class", "points").selectAll("text").data(
+					places.features).enter().append("path").attr("class",
+					"point").attr("d", path);
+
+			// spawn links between cities as source/target coord pairs
+			places.features.forEach(function(a) {
+				places.features.forEach(function(b) {
+					if (a !== b) {
+						links.push({
+							source : a.geometry.coordinates,
+							target : b.geometry.coordinates
+						});
+					}
 				});
+			});
+
+			// build geoJSON features from links array
+			links.forEach(function(e, i, a) {
+				var feature = {
+					"type" : "Feature",
+					"geometry" : {
+						"type" : "LineString",
+						"coordinates" : [ e.source, e.target ]
+					}
+				}
+				arcLines.push(feature)
+			})
+
+			svg.append("g").attr("class", "arcs").selectAll("path").data(
+					arcLines).enter().append("path").attr("class", "arc").attr(
+					"d", path)
+
+			svg.append("g").attr("class", "flyers").selectAll("path").data(
+					links).enter().append("path").attr("class", "flyer").attr(
+					"d", function(d) {
+						return swoosh(flying_arc(d))
+					})
+
+			refresh();
+		}
+
+		function flying_arc(pts) {
+			var source = pts.source, target = pts.target;
+
+			var mid = location_along_arc(source, target, .5);
+			var result = [ proj(source), sky(mid), proj(target) ]
+			return result;
+		}
+
+		function refresh() {
+			svg.selectAll(".land").attr("d", path);
+			svg.selectAll(".point").attr("d", path);
+
+			svg.selectAll(".arc").attr("d", path).attr("opacity", function(d) {
+				return fade_at_edge(d)
+			})
+
+			svg.selectAll(".flyer").attr("d", function(d) {
+				return swoosh(flying_arc(d))
+			}).attr("opacity", function(d) {
+				return fade_at_edge(d)
+			})
+		}
+
+		function fade_at_edge(d) {
+			var centerPos = proj.invert([ width / 2, height / 2 ]), arc = d3.geo
+					.greatArc(), start, end;
+			// function is called on 2 different data structures..
+			if (d.source) {
+				start = d.source, end = d.target;
+			} else {
+				start = d.geometry.coordinates[0];
+				end = d.geometry.coordinates[1];
 			}
 
-			//start animation after 500 mil-sec
-			do_animation();
-
-			//draw curve and points
-			var locations = {
-				"countries" : [ {
-					"id" : 12,
-					"lt" : 22.605028,
-					"ln" : 120.298636,
-					"description" : '<div style = "letter-spacing: 2px; color: #000;">'
-						+ 'Kaohsiung, Taiwan<br>'
-						+ '</div>',
-					"al" : 1,
-					"d8" : "04\/10\/12"
-				}, {
-					"id" : 14,
-					"lt" : 48.8566140,
-					"ln" : 2.3522220,
-					"description" : '<div style = "letter-spacing: 2px; color: #000;">'
-						+ 'Italy<br>'
-						+ '</div>',
-					"al" : 5,
-					"d8" : "20\/10\/12"
-				}, {
-					"id" : 13,
-					"lt" : 37.3860520,
-					"ln" : -122.0838510,
-					"description" : '<div style = "letter-spacing: 2px; color: #000;">'
-						+ 'Mountain View, CA<br>'
-						+ '</div>',
-					"al" : 10,
-					"d8" : "27\/10\/12"
-				} ]
-			};
-
-			// Start and end points, in x = longitude, y = latitude values
-			var start = {
-				x : 2.3522220,
-				y : 48.8566140
-			};
-			var end = {
-				x : -122.0838510,
-				y : 37.3860520
-			};
-			var generator = new arc.GreatCircle(start, end, {
-				name : 'Paris to Mountain View'
-			});
-			var line = generator.Arc(150, {
-				offset : 0
-			});
-			var myStyle = {
-				"color" : "#f00",
-				"weight" : 1,
-				"dashArray" : "5, 5",
-				"opacity" : 0.95
-			};
-			L.geoJson(line.json(), {
-				style : myStyle
-			}).addTo(map);
-			// Start and end points, in x = longitude, y = latitude values
-			var start = {
-				x : 2.3522220,
-				y : 48.8566140
-			};
-			var end = {
-				x : 120.298636,
-				y : 22.605028
-			};
-			var generator = new arc.GreatCircle(start, end, {
-				name : 'Paris to Mountain View'
-			});
-			var line = generator.Arc(200, {
-				offset : 10
-			});
-			L.geoJson(line.json(), {
-				style : myStyle
-			}).addTo(map);
-
-			//
-			var marker_icon = L.divIcon({
-				iconSize : [ 4, 4 ],
-				iconAnchor : [ 2, 2 ]
+			var start_dist = 1.57 - arc.distance({
+				source : start,
+				target : centerPos
+			}), end_dist = 1.57 - arc.distance({
+				source : end,
+				target : centerPos
 			});
 
-			$.each(locations['countries'], function(i, item) {
-				var coords = new L.LatLng(item.lt, item.ln);
-				marker = L.marker(coords, {
-					icon : marker_icon
-				}).addTo(map).on('click', function(e) {
-					map.setView(e.target.getLatLng())
-				}).bindPopup(item.description);
-			});
+			var fade = d3.scale.linear().domain([ -.1, 0 ]).range([ 0, .1 ])
+			var dist = start_dist < end_dist ? start_dist : end_dist;
 
-		}());
-		//end of show map
+			return fade(dist)
+		}
+
+		function location_along_arc(start, end, loc) {
+			var interpolator = d3.geo.interpolate(start, end);
+			return interpolator(loc)
+		}
+
+		// modified from http://bl.ocks.org/1392560
+		var m0, o0;
+		function mousedown() {
+			m0 = [ d3.event.pageX, d3.event.pageY ];
+			o0 = proj.rotate();
+			d3.event.preventDefault();
+		}
+		function mousemove() {
+			if (m0) {
+				var m1 = [ d3.event.pageX, d3.event.pageY ], o1 = [
+						o0[0] + (m1[0] - m0[0]) / 6,
+						o0[1] + (m0[1] - m1[1]) / 6 ];
+				o1[1] = o1[1] > 30 ? 30 : o1[1] < -30 ? -30 : o1[1];
+				proj.rotate(o1);
+				sky.rotate(o1);
+				refresh();
+			}
+		}
+		function mouseup() {
+			if (m0) {
+				mousemove();
+				m0 = null;
+			}
+		}
 	</script>
-
-	<!-- end -->
 </div>
 {% endblock %}

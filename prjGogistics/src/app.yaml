@@ -29,6 +29,9 @@ handlers:
 - url: /img
   static_dir: static/images
 
+- url: /mis
+  static_dir: static/mis
+
 - url: /(index_.*)?
   script: dispatchers.dispatcher_index.app
 
@@ -39,6 +42,8 @@ handlers:
 - url: /gcm_.*
   script: dispatchers.dispatcher_gcm.app
 
+- url: /demos/.*
+  script: dispatchers.dispatcher_demos.app
 
 builtins:
 - remote_api: on
