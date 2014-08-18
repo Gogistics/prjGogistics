@@ -15,19 +15,19 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.python.pydev.editor.PythonEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -43,11 +43,13 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="D:/prjGogistics/prjGogistics/src/static/templates/index.html" title="index.html" tooltip="prjGogistics/src/static/templates/index.html" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="D:/prjGogistics/prjGogistics/src/static/templates/index.html" title="index.html" tooltip="prjGogistics/src/static/templates/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/templates/index.html"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12511" selectionTopPixel="0"/>
 </editor>
@@ -66,6 +68,14 @@
 <editor id="org.python.pydev.editor.PythonEditor" name="dispatcher_demos.py" partName="dispatcher_demos" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatcher_demos.py" title="dispatcher_demos" tooltip="prjGogistics/src/dispatchers/dispatcher_demos.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatcher_demos.py"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3469" selectionTopPixel="653"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="leaflet.js" partName="leaflet.js" path="D:/prjGogistics/prjGogistics/src/static/leaflet-0.6.4/leaflet.js" title="leaflet.js" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="125495" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="leaflet-src.js" partName="leaflet-src.js" path="D:/prjGogistics/prjGogistics/src/static/leaflet-0.6.4/leaflet-src.js" title="leaflet-src.js" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet-src.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet-src.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -95,15 +105,12 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dispatchers"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/javascripts"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/mis"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.eclipse.wst.html.core.htmlsource.source" activePerspective="org.python.pydev.ui.PythonPerspective">
+<perspectives activePart="org.python.pydev.navigator.view" activePerspective="org.python.pydev.ui.PythonPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -304,16 +311,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/demos/demo_d3_earth_animation_world_tour.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogistics/src/static/templates/demos/demo_leaflet_map_animation.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogistics/src/static/leaflet-0.6.4/leaflet-src.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
 </editors>
-<item historyLabel="dispatcher_demos" index="2">
-<position info="not_deleted" x="52" y="0"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="12339" y="0"/>
-</item>
-<item historyLabel="demo_leaflet_map_animation.html" index="3">
-<position info="not_deleted" x="16319" y="0"/>
-</item>
 <item historyLabel="index.html" index="0">
 <position info="not_deleted" x="0" y="18087"/>
 </item>
@@ -449,8 +450,20 @@
 <item historyLabel="demo_d3_earth_animation_world_tour.html" index="7">
 <position info="not_deleted" x="2110" y="0"/>
 </item>
-<item active="true" historyLabel="index.html" index="8">
+<item historyLabel="index.html" index="8">
 <position info="not_deleted" x="12511" y="0"/>
+</item>
+<item historyLabel="leaflet.js" index="10">
+<position info="not_deleted" x="0" y="125495"/>
+</item>
+<item historyLabel="leaflet-src.js" index="11">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="dispatcher_client_services" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="leaflet-src.js" index="11">
+<position info="not_deleted" x="3" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -471,8 +484,17 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_client_services.py" tooltip="prjGogistics/src/dispatchers/dispatcher_client_services.py">
+<persistable path="/prjGogistics/src/dispatchers/dispatcher_client_services.py"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogistics/src/app.yaml">
 <persistable path="/prjGogistics/src/app.yaml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="leaflet-src.js" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet-src.js">
+<persistable path="/prjGogistics/src/static/leaflet-0.6.4/leaflet-src.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="leaflet.js" tooltip="prjGogistics/src/static/leaflet-0.6.4/leaflet.js">
+<persistable path="/prjGogistics/src/static/leaflet-0.6.4/leaflet.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="world-country-names.tsv" tooltip="prjGogistics/src/static/javascripts/world-country-names.tsv">
 <persistable path="/prjGogistics/src/static/javascripts/world-country-names.tsv"/>
