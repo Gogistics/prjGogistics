@@ -1,6 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/dictionaries/dict_html_pages.py=utf-8
 encoding//src/dictionaries/dict_keys_values.py=utf-8
-encoding//src/dispatchers/dispatchers_demos.py=utf-8
-encoding//src/dispatchers/dispatchers_index.py=utf-8
+encoding//src/dispatchers/dispatcher_demos.py=utf-8
+encoding//src/dispatchers/dispatcher_index.py=utf-8
 encoding/<project>=UTF-8
