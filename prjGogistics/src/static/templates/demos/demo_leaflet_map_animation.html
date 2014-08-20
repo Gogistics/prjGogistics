@@ -329,9 +329,10 @@
 		}
 
 		//show leaflet map
+		var map;
 		(function() {
 
-			//
+			//set vector style
 			var vector = L.geoJson(topojson.feature(topojson_nation,
 					topojson_nation.objects.countries), {
 				style : {
@@ -339,11 +340,12 @@
 				}
 			});
 
-			//
+			//map attr. info.
 			var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
 					+ '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
 					+ 'Imagery © <a href="http://mapbox.com">Mapbox</a>', mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
 
+			//gray scale map
 			var grayscale = L.tileLayer(mbUrl, {
 				id : 'examples.map-20v6611k',
 				attribution : mbAttr
@@ -352,67 +354,124 @@
 				attribution : mbAttr
 			});
 
+			//marker config.
 			var myIcon = L.icon({
-				iconUrl : '/leaflet/images/marker-icon.png',
-				iconSize : [ 20, 33 ],
-				iconAnchor : [ 9, 32 ],
-				shadowSize : [ 22, 33 ],
-				shadowAnchor : [ 5, 32 ],
+				iconUrl : '/leaflet/images/winever_logo_map_marker_pin.png',
 				shadowUrl : '/leaflet/images/marker-shadow.png',
+
+				iconSize : [ 50, 50 ],
+				shadowSize : [ 40, 40 ],
+				iconAnchor : [ 25, 49 ],
+				shadowAnchor : [ 12, 37 ],
+				popupAnchor : [ -3, -40 ]
 			});
 
+			//defualt config. of map view
 			var config = {
-				initLatLng : new L.LatLng(48.8566140, 2.3522220), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
+				initLatLng : new L.LatLng(22.605028, 120.298636), // kaohsiung software 22.605028, 120.298636 ; mountain view 37.380498, -122.061526
 				initZoom : 2,
 				minZoom : 2,
 				maxZoom : 2
 			};
 
-			var map = L.map('map_company_introduction', {
+			map = L.map('map_company_introduction', {
 				minZoom : config.minZoom,
 				maxZoom : config.maxZoom,
 				zoomControl : false,
 				dragging : false,
 				zoom : 2,
-				center : [ 48.8566140, 2.3522220 ],
+				center : config.initLatLng,
 				layers : grayscale,
 				attributionControl : false
 
-			}), routeLines = [ L.polyline([ [ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ], [ 37.3860520, -122.0838510 ],
-					[ 22.605028, 120.298636 ], [ 48.8566140, 2.3522220 ] ]) ], markers = [];
+			}), routeLines = [ L.polyline([[ 22.605028, 120.298636 ],
+					[ 48.8566140, 2.3522220 ], [ 37.380498, -122.061526 ],[ 22.605028, 120.298636 ] ]) ], markers = [];
 
 			//map.addLayer(new L.TileLayer(config.tileUrl));
 			//map.setView(config.initLatLng, config.initZoom);
-
-			var marker;
+			
+			//defualt location of popup
+			var popup, circle, marker, polyline;
+			var is_start = false;
 			function do_animation() {
+				//set init popup and location circle
+				popup = L.popup({keepInView: true})
+		     	.setLatLng([ 22.605028, 120.298636 ])
+		     	.setContent('<p style="color:#000;">Start Point-<br />Kaohsiung...</p>');
+				
+				circle = L.circle([ 22.605028, 120.298636 ], 200, {
+				    color: '#f00',
+				    fillColor: '#f05',
+				    fillOpacity: 0.8
+				}).bindPopup('<p style="color:#000;">This is Kaohsiung</p>', {keepInView: true}).addTo(map);
+				
+				
+				
+				//iterate LatLng array
 				$.each(routeLines, function(i, routeLine) {
 					marker = L.animatedMarker(routeLine.getLatLngs(), {
 						icon : myIcon,
-						autoStart : true,
+						autoStart : false,
 						distance : 100000, // meters
-						interval : 200, // milliseconds
+						interval : 100, // milliseconds
 						onEnd : function() {
 							$(this._shadow).fadeOut(100);
 							$(this._icon).fadeOut(100, function() {
 								map.removeLayer(this);
 							});
-
-							setTimeout(do_animation(), 100);
+							//this.closePopup();
+							this.bindPopup('<p style="color: #000;">Final Destination- HomeTown Kaoshiung</p>').openPopup();
+							clearMap(map);
+							setTimeout(restart_animation(), 500);
 						}
 					});
-
+					
+					//add marker on map and push it into array
 					map.addLayer(marker);
 					markers.push(marker);
+					
+					//click event is fired up while clicking map
+					map.on('click', function(e) {
+						if(!is_start){
+							marker.start();
+							is_start = !is_start;
+						}
+					});
 				});
+			}
+			
+			//restart animation
+			function restart_animation(){
+				//apply promise to this animation
+				do_animation();
+				if(typeof marker !== undefined){
+					marker.start();
+				}
+			}
+			
+			//clear layers on map
+			function clearMap(m) {
+			    for(i in m._layers) {
+			        if(m._layers[i]._path != undefined) {
+			            try {
+			                m.removeLayer(m._layers[i]);
+			            }
+			            catch(e) {
+			                console.log("problem with " + e + m._layers[i]);
+			            }
+			        }
+			    }
 			}
 
 			//start animation after 500 mil-sec
 			do_animation();
-
+			//setTimeout(marker.start(), 10000);
+			/* end of animation */
+			
+			
+			/* drawing on map */
 			//draw curve and points
-			var locations = {
+			/* var locations = {
 				"countries" : [ {
 					"id" : 12,
 					"lt" : 22.605028,
@@ -499,7 +558,7 @@
 				}).addTo(map).on('click', function(e) {
 					map.setView(e.target.getLatLng())
 				}).bindPopup(item.description);
-			});
+			}); */
 
 		}());
 		//end of show map
