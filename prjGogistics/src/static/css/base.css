@@ -119,9 +119,8 @@
 	}
 	.copy_right_block>p {
 		color: #fff;
-		margin: 6px auto;
-		font-size: 10px;
-		font-stretch: narrower;
+		margin: 8px auto;
+		font-size: 11px;
 		letter-spacing: 2px;
 		font-weight: 10;
 	}

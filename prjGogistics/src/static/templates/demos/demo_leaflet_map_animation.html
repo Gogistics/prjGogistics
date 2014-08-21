@@ -47,7 +47,7 @@
 				<section id="content_company_introduction"
 					class="index_topic_content">
 					<div id="map_company_introduction"
-						style="height: 400px; margin: 30px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
+						style="height: 500px; margin: 30px auto; z-index: 900; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;">
 						<p
 							style="right: 0px; left: 0px; z-index: 1000; position: relative; background-color: #000; opacity: 0.85; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
 					</div>
@@ -374,19 +374,34 @@
 				maxZoom : 2
 			};
 
+			
+			//
+			var geo_info = [{'geo_location':[ 22.605028, 120.298636 ], 'geo_description':'台灣-高雄'},
+			                {'geo_location':[ 48.8566140, 2.3522220 ], 'geo_description':'法國-巴黎'},
+			                {'geo_location':[ 37.380498, -122.061526 ], 'geo_description':'美國-加州'},
+			                {'geo_location':[ 22.605028, 120.298636 ], 'geo_description':'回到溫暖的故鄉-高雄'}];
+			
+			var descriptions = [], locations = [];
+			$.each(geo_info, function(ith, elem){
+				locations.push(elem['geo_location']);
+				descriptions.push(elem['geo_description']);
+				
+			});
+			
+			var routeLines = [ L.polyline(locations) ], markers = [];
+
 			map = L.map('map_company_introduction', {
 				minZoom : config.minZoom,
 				maxZoom : config.maxZoom,
 				zoomControl : false,
-				dragging : false,
-				zoom : 2,
+				dragging : true,
+				zoom : config.initZoom,
 				center : config.initLatLng,
 				layers : grayscale,
 				attributionControl : false
 
-			}), routeLines = [ L.polyline([[ 22.605028, 120.298636 ],
-					[ 48.8566140, 2.3522220 ], [ 37.380498, -122.061526 ],[ 22.605028, 120.298636 ] ]) ], markers = [];
-
+			});
+			
 			//map.addLayer(new L.TileLayer(config.tileUrl));
 			//map.setView(config.initLatLng, config.initZoom);
 			
@@ -395,17 +410,12 @@
 			var is_start = false;
 			function do_animation() {
 				//set init popup and location circle
-				popup = L.popup({keepInView: true})
-		     	.setLatLng([ 22.605028, 120.298636 ])
-		     	.setContent('<p style="color:#000;">Start Point-<br />Kaohsiung...</p>');
-				
 				circle = L.circle([ 22.605028, 120.298636 ], 200, {
 				    color: '#f00',
 				    fillColor: '#f05',
 				    fillOpacity: 0.8
-				}).bindPopup('<p style="color:#000;">This is Kaohsiung</p>', {keepInView: true}).addTo(map);
-				
-				
+				}).bindPopup('<p style="color:#000;">高雄- 美麗島</p>', {keepInView: true}).addTo(map);
+			
 				
 				//iterate LatLng array
 				$.each(routeLines, function(i, routeLine) {
@@ -414,19 +424,24 @@
 						autoStart : false,
 						distance : 100000, // meters
 						interval : 100, // milliseconds
+						geo_descriptions: descriptions, //locations descriptions
 						onEnd : function() {
-							$(this._shadow).fadeOut(100);
-							$(this._icon).fadeOut(100, function() {
+							//remove marker icon
+							/* $(this._shadow).fadeOut(100);
+							$(this._icon).fadeOut(1000, function() {
 								map.removeLayer(this);
-							});
-							//this.closePopup();
-							this.bindPopup('<p style="color: #000;">Final Destination- HomeTown Kaoshiung</p>').openPopup();
-							clearMap(map);
-							setTimeout(restart_animation(), 500);
+							}); */
+							
+							//bind popup message on marker
+							this.bindPopup('<p style="color: #000;">'+ descriptions[descriptions.length - 1] +'</p>', {keepInView: true}).addTo(map).openPopup();
+							
+							//inifite animation
+							//setTimeout(restart_animation(), 5000);
 						}
 					});
 					
 					//add marker on map and push it into array
+					marker.bindPopup('<p style="color: #000;">高雄- 美麗島</p><p style="color: #000;">請按地圖開始動畫</p>', {keepInView: true}).addTo(map).openPopup();
 					map.addLayer(marker);
 					markers.push(marker);
 					
@@ -442,6 +457,8 @@
 			
 			//restart animation
 			function restart_animation(){
+				clearMap(map);
+				
 				//apply promise to this animation
 				do_animation();
 				if(typeof marker !== undefined){
@@ -451,6 +468,10 @@
 			
 			//clear layers on map
 			function clearMap(m) {
+				//
+				m.closePopup();
+				
+				//
 			    for(i in m._layers) {
 			        if(m._layers[i]._path != undefined) {
 			            try {

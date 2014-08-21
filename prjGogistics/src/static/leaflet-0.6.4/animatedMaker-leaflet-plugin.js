@@ -8,7 +8,11 @@ L.AnimatedMarker = L.Marker.extend({
     autoStart: true,
     // callback onend
     onEnd: function(){},
-    clickable: false
+    // marker clickable
+    clickable: true,
+    
+    //location descriptions
+    geo_descriptions: []
   },
 
   initialize: function (latlngs, options) {
@@ -82,11 +86,24 @@ L.AnimatedMarker = L.Marker.extend({
     
     //draw polyline
     polyline = L.polyline([this._latlngs[this._i - 1], this._latlngs[this._i]], {color: '#000', weight: 1, "dashArray" : "5, 5"}).addTo(map);
-    circle = L.circle(this._latlngs[this._i], 200, {
+    
+    //add popup layers
+    if(this._i < len - 1){
+        var popupLocation1 = this._latlngs[this._i];
+        var popupContent1 = '<p style="color:#000;">'+ this.options.geo_descriptions[this._i] +'</p>',
+        popup1 = new L.Popup();
+
+        popup1.setLatLng(popupLocation1);
+        popup1.setContent(popupContent1);
+        map.addLayer(popup1);
+    }
+    
+    
+    circle = L.circle(this._latlngs[this._i], 1000, {
 	    color: '#f00',
 	    fillColor: '#f06',
 	    fillOpacity: 0.5
-	}).bindPopup('<p style="color:#000;">Next Destination</p>', {keepInView: true}).addTo(map).openPopup();
+	}).bindPopup('<p style="color:#000;">'+ this.options.geo_descriptions[this._i] +' </p>', {keepInView: true}).addTo(map).openPopup();
     
     //set center of map view
     map.setView(this._latlngs[this._i],2); //openOn( <Map> map )
@@ -107,8 +124,7 @@ L.AnimatedMarker = L.Marker.extend({
 
   // Start the animation
   start: function() {
-	  setTimeout(this.animate(), this.start_delay);
-    //this.animate();
+    this.animate();
   },
 
   // Stop the animation in place
