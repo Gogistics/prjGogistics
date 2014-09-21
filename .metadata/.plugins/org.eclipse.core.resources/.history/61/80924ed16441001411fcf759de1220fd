@@ -1,0 +1,140 @@
+{% extends "/base.html"%}
+
+<!-- css block -->
+{% block css_content %}
+<link type="text/css" rel="stylesheet" href="/css/index.css" />
+{% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<div id="main_content"
+	style="text-align: center; position: absolute; top: 30px; width: 100%; background-color: #000; z-index: 100;">
+
+	<!-- Company logo and slogan in image format -->
+	<img alt="Gogistics" src="/img/gogistics_front_side.png"
+		class="gogistics_front_side_img">
+
+	<div
+		style="position: absolute; margin: 5px auto; width: 100%; text-align: center;">
+		<!--  -->
+		<div>
+			<div id="index_topic_selectors_block"
+				class="index_topic_selectors_block">
+				<p id="selector_company_introduction" class="index_topic_selector"
+					title="{{company_introduction_selector}}"
+					onclick="select_topic(this)">{{company_introduction_selector}}</p>
+				<p id="selector_cloud_services_introduction"
+					class="index_topic_selector"
+					title="{{cloud_services_introduction_selector}}"
+					onclick="select_topic(this)">{{cloud_services_introduction_selector}}</p>
+				<p id="selector_cloud_services_integration"
+					class="index_topic_selector"
+					title="{{cloud_services_integration_selector}}"
+					onclick="select_topic(this)">{{cloud_services_integration_selector}}</p>
+				<p id="selector_contact" class="index_topic_selector"
+					title="{{contact_information_selector}}"
+					onclick="select_topic(this)">{{contact_information_selector}}</p>
+			</div>
+
+
+
+			<div id="index_topic_contents_block">
+				<section id="content_company_introduction"
+					class="index_topic_content">
+					<div id="earth_map_company_introduction">
+						<p
+							style="right: 0px; left: 0px; z-index: 1000; position: relative; background-color: transparent ; margin: 0 auto; padding-top: 15px; padding-bottom: 15px;">{{company_introduction_content}}</p>
+					</div>
+
+				</section>
+				<section id="content_cloud_services_introduction"
+					class="index_topic_content content_cloud_services_introduction">
+					<article id="cloud_services_article">{{cloud_services_introduction_content}}
+					</article>
+
+					<!--  -->
+					<div id="google_cloud_services_block">
+						<hr
+							style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
+						<section id="google_cloud_services">
+							<a href="http://www.google.com/enterprise/apps/business/"
+								target="_blank" title="Google Apps for Business">Google Apps
+								for Business</a><a href="https://developers.google.com/appengine/"
+								target="_blank" title="Google App Engine">Google App Engine</a><a
+								href="https://cloud.google.com/products/compute-engine/"
+								target="_blank" title="Google Compute Engine">Google Compute
+								Engine</a>
+						</section>
+						<hr
+							style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
+					</div>
+					<!--  -->
+				</section>
+				<section id="content_cloud_services_integration"
+					class="index_topic_content">
+					<article id="cloud_services_integration_article">{{cloud_services_integration_content}}
+					</article>
+
+					<!--  -->
+					<div id="google_cloud_services_block">
+						<hr
+							style="border: none; border-top: dotted 1px #ababab; margin-top: 10px; margin-bottom: 10px;">
+						<section id="google_cloud_services">
+							<a href="http://www.google.com/enterprise/apps/business/"
+								target="_blank" title="Google Apps for Business">Google Apps
+								for Business</a><a href="https://developers.google.com/appengine/"
+								target="_blank" title="Google App Engine">Google App Engine</a><a
+								href="https://cloud.google.com/products/compute-engine/"
+								target="_blank" title="Google Compute Engine">Google Compute
+								Engine</a>
+						</section>
+						<hr
+							style="border: none; border-top: dotted 1px #767676; margin-top: 10px; margin-bottom: 10px;">
+					</div>
+					<!--  -->
+				</section>
+				<section id="content_contact" class="index_topic_content">
+					<p>{{contact_information_content}}</p>
+
+					<div id="contact_message_sheet">
+						<div>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_name">{{contact_message_name}}</span></label> <input
+								type="text">
+						</div>
+						<div>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_email">{{contact_message_email}}</span></label>
+							<input type="text">
+						</div>
+						<div>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_subject">{{contact_message_subject}}</span></label>
+							<input type="text">
+						</div>
+						<div>
+							<label><span style="color: #f00; display: inline;">*
+							</span><span id="contact_message_body">{{contact_message_body}}</span></label>
+							<textarea rows="10"></textarea>
+						</div>
+					</div>
+
+					<div
+						style="display: block; margin-bottom: 30px; margin-left: auto; margin-right: auto; width: 100%;">
+						<input id="rewrite_message" type="button" value="重填"> <input
+							id="send_message" type="button" value="寄送">
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+<!-- js block -->
+{% block js_content %}
+<script type="text/javascript" src="/js/queue.v1.min.js"></script>
+<script type="text/javascript" src="/js/topojson.v0.min.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+{% endblock %}
