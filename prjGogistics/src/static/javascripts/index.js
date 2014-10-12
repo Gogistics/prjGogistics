@@ -39,11 +39,12 @@ $(function() {
 
 		// change language
 		var language_version = new Object;
-		var token_html_page = '{{token_html_page}}';
+		var token_html_page = $("meta[name='html_page_token']").attr('content');;
 		$('#language_selector').change(function() {
 			language_version['language'] = $(this).val();
 			language_version['token_html_page'] = token_html_page;
-
+			
+			// change language
 			change_language();
 		});
 
@@ -65,6 +66,7 @@ $(function() {
 		}
 
 		function success_handler(response) {
+			//alert(response.company_introduction_selector);
 			if (response.language === 'english') {
 				$('#index_topic_selectors_block > p').css({
 					'letter-spacing' : '2px',

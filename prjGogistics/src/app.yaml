@@ -9,6 +9,14 @@ handlers:
   static_files: static/images/favicon.ico
   upload: static/images/favicon.ico
 
+- url: /apple-touch-icon\.png
+  static_files: static/images/gogistics_front_side.png
+  upload: static/images/gogistics_front_side.png
+
+- url: /apple-touch-icon-precomposed\.png
+  static_files: static/images/gogistics_front_side.png
+  upload: static/images/gogistics_front_side.png
+
 - url: /bisque
   static_dir: static/bisque_font_style
 
@@ -31,6 +39,10 @@ handlers:
 
 - url: /mis
   static_dir: static/mis
+
+- url: /robots\.txt
+  static_files: static/mis/robots.txt
+  upload: static/mis/robots.txt
 
 - url: /(index_.*)?
   script: dispatchers.dispatchers_index.app

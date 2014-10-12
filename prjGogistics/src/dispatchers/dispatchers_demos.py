@@ -37,7 +37,7 @@ language_handler_english = EnglishHandler()
 
 
 #index handler
-class DemoLeafLetAnimationHandler(webapp2.RequestHandler):
+class DemoLeafLetAnimationDispatcher(webapp2.RequestHandler):
     def get(self):
         template_values = {}
         template_values.update(language_handler_madarin.handle_index_page_info())
@@ -51,7 +51,7 @@ class DemoD3WorldTourHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('/demos/demo_d3_earth_animation_world_tour.html')
         self.response.out.write(template.render(template_values))
         
-class DemosLanguageVersionHandler(webapp2.RequestHandler):
+class IndexLanguageVersionDispatcher(webapp2.RequestHandler):
     def post(self):
         assert self.request.get('fmt'), 'data format is not available'
         assert self.request.get('json_language_version_request'), 'request content is not available'
@@ -80,9 +80,9 @@ class DemosLanguageVersionHandler(webapp2.RequestHandler):
         self.response.out.write(json.dumps(ajax_response))
 
 #url dispatcher
-app = webapp2.WSGIApplication([('/demos/leaflet_map_animation', DemoLeafLetAnimationHandler),
+app = webapp2.WSGIApplication([('/demos/leaflet_map_animation', DemoLeafLetAnimationDispatcher),
                                ('/demos/world_tour', DemoD3WorldTourHandler),
-                               ('/demos/language_version_handler', DemosLanguageVersionHandler)], debug=True)
+                               ('/demos/language_version_handler', IndexLanguageVersionDispatcher)], debug=True)
 
 #log 
 logging.getLogger().setLevel(logging.DEBUG)
