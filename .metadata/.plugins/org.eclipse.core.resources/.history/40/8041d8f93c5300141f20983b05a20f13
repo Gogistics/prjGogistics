@@ -61,7 +61,6 @@
 	<script type="text/javascript"
 		src="/leaflet/animatedMaker-leaflet-plugin.js"></script>
 
-	<!-- sub-js -->
 	{% block js_content %} {% endblock %}
 </body>
 </html>
