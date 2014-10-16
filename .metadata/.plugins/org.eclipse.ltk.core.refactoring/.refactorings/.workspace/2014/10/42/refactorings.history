@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;prjGogisticsUpdated/src/static/javascripts/my_ng/directives&apos;" deleteContents="false" description="Delete resource &apos;prjGogisticsUpdated/src/static/javascripts/my_ng/directives&apos;" element1="/prjGogisticsUpdated/src/static/javascripts/my_ng/directives" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1413435149003"/>
+</session>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="author" content="Alan Tai">
+<meta name="company" content="Gogistics Ltd.">
+<meta name="country" content="Taiwan">
+<meta name="city" content="Kaohsiung">
+<meta name="html_page_token" content="{{token_html_page}}">
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+	
+<!-- icon -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- Bootstrap Core CSS -->
+{% block css_content %} {% endblock %}
+
+
+<title>{{ title|safe }}</title>
+</head>
+<body ng-app="my_app">
+
+	<!-- main content block -->
+	{% block main_content %}
+	<p>No Templates Found</p>
+	{% endblock %}
+
+	<!-- js placed at the end of the document so the pages load faster -->
+
+	<!-- sub-js -->
+	{% block js_content %} {% endblock %}
+
+</body>
+</html>
