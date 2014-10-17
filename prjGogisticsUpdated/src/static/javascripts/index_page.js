@@ -37,18 +37,18 @@ index_page_app.config(function(responsiveHelperProvider, $stateProvider, $urlRou
 	})
 	.state('index_page', {
 		parent: 'home',
-		templateUrl: '/ng_templates/' + device + '/index.html',
+		templateUrl: '/ng_templates/' + device + '/index/index.html',
 		controller: 'indexPageDispatchCtrl'
 	})
 	.state('index_1', {
 		url: '/index_1',
 		parent: 'index_page',
-		templateUrl: '/ng_templates/' + device + '/index_1.html',
+		templateUrl: '/ng_templates/' + device + '/index/index_1.html',
 	})
 	.state('index_2', {
 		url: '/index_2',
 		parent: 'index_page',
-		templateUrl: '/ng_templates/' + device + '/index_2.html',
+		templateUrl: '/ng_templates/' + device + '/index/index_2.html',
 	});
 
 	$urlRouterProvider.otherwise('/index_1'); // for defualt state routing; for current routing mechanism, it's not necessary

@@ -26,6 +26,9 @@ front_page_app.config(function(responsiveHelperProvider, $stateProvider, $urlRou
 	if (responsiveHelper.isMobile()) {
 		device = 'mobile';
 	}
+	else if(responsiveHelper.isTablet()){
+		device = 'tablet';
+	}
 	
 	// nested templates and routing
 	$stateProvider
