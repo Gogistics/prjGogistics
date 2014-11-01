@@ -6054,3 +6054,16 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.eclipse.epp.usagedata.recording 1 0 2014-10-16 22:10:22.560
 !MESSAGE Usage data upload to http://udc.eclipse.org/upload.php failed with error code 404.
+!SESSION 2014-11-01 15:49:12.094 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\prjGogistics -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.python.pydev.shared_core 4 4 2014-11-01 15:51:03.394
+!MESSAGE Info: Rebuilding internal caches: D:\prjGogistics\.metadata\.plugins\org.eclipse.core.resources\.projects\prjGogisticsRTC\com.python.pydev.analysis\AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2014-11-01 15:52:20.009
+!MESSAGE Usage data upload to http://udc.eclipse.org/upload.php failed with error code 404.
