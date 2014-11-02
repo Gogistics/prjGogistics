@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="50" version="2.0">
+<workbench progressCount="37" version="2.0">
 <workbenchAdvisor/>
 <window height="430" maximized="true" width="1307" x="19" y="299">
 <fastViewData fastViewLocation="1024"/>
@@ -26,9 +26,9 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.python.pydev.editor.PythonEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -39,13 +39,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.eclipse.ui.DefaultTextEditor" name="app.yaml" partName="app.yaml" path="D:/prjGogistics/prjGogisticsRTC/src/app.yaml" title="app.yaml" tooltip="prjGogisticsRTC/src/app.yaml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsRTC/src/app.yaml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="333" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="D:/prjGogistics/prjGogisticsRTC/src/static/templates/index.html" title="index.html" tooltip="prjGogisticsRTC/src/static/templates/index.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsRTC/src/static/templates/index.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1475" selectionTopPixel="68"/>
+</editor>
+<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="apprtc.py" partName="apprtc" path="D:/prjGogistics/prjGogisticsRTC/src/apprtc.py" title="apprtc" tooltip="prjGogisticsRTC/src/apprtc.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsRTC/src/apprtc.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2313"/>
 </editor>
 </editors>
 <views>
@@ -74,23 +79,27 @@
 <view id="org.python.pydev.navigator.view" partName="PyDev Package Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dictionaries"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dispatchers"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/handlers_database"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/handlers_gcm"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/handlers_general"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/templates"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/my_ng_templates"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/my_ng_templates/shared"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/templates"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/templates/test"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/javascripts"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/javascripts/my_ng_directives"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop/demo"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop/index"/>
-<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/my_ng_templates"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
@@ -286,109 +295,170 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogisticsUpdated/src/static/css/base.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsUpdated/src/dictionaries/dict_keys_values.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/index.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/full.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/stereoscopic.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/main.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/apprtc.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_index.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/dict_html_pages.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsUpdated/src/static/my_ng_templates/desktop/index/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/prjGogisticsRTC/src/app.yaml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsUpdated/src/static/my_ng_templates/my_ng_template_base.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/dictionaries/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/diapatchers/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/handlers/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/models/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsUpdated/src/dispatchers/dispatchers_base.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsUpdated/src/dictionaries/dict_keys_values.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsUpdated/src/handlers_general/handler_webapp2_extra_auth.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsUpdated/src/handlers/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogisticsUpdated/src/static/css/base.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsUpdated/src/static/javascripts/my_ng_directives/index_page_directives.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsUpdated/src/static/my_ng_templates/desktop/index/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/prjGogisticsRTC/src/app.yaml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/test/test_channel.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/adapter.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/ga.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/vr.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/turn-prober/turn-prober.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/prjGogisticsRTC/src/turn-prober/README"/>
 </editors>
-<item historyLabel="base.css" index="0">
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="stereoscopic.js" index="2">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="main.js" index="3">
+<position/>
+</item>
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dict_keys_values" index="1">
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="22126" y="0"/>
+</item>
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="20049" y="1"/>
+</item>
+<item historyLabel="dispatchers_index" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dict_keys_values (prjGogistics.src.dictionaries)" index="2">
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="20049" y="1"/>
+</item>
+<item historyLabel="dispatchers_index" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dict_keys_values (prjGogisticsUpdated.src.dictionaries)" index="1">
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="20049" y="1"/>
+</item>
+<item historyLabel="dispatchers_index" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dict_keys_values (prjGogistics.src.dictionaries)" index="2">
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="401" y="0"/>
+</item>
+<item historyLabel="dispatchers_index" index="5">
+<position info="not_deleted" x="705" y="18"/>
+</item>
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="dispatchers_index" index="5">
+<position info="not_deleted" x="705" y="18"/>
+</item>
+<item historyLabel="dict_html_pages" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="base.css" index="0">
+<item historyLabel="dict_keys_values" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index.html" index="3">
+<item historyLabel="dict_html_pages" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="src" index="4">
-<position info="not_deleted" x="47" y="0"/>
+<item historyLabel="dispatchers_index" index="5">
+<position info="not_deleted" x="705" y="18"/>
 </item>
-<item historyLabel="app.yaml" index="5">
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="17579" y="0"/>
+</item>
+<item historyLabel="dict_html_pages" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="my_ng_template_base.html" index="6">
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="17579" y="0"/>
+</item>
+<item historyLabel="dispatchers_index" index="5">
+<position info="not_deleted" x="261" y="0"/>
+</item>
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="17579" y="0"/>
+</item>
+<item historyLabel="main.js" index="3">
+<position/>
+</item>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="app.yaml" index="5">
-<position info="not_deleted" x="333" y="0"/>
+<item historyLabel="index.html" index="0">
+<position info="not_deleted" x="1475" y="0"/>
 </item>
-<item historyLabel="dictionaries" index="7">
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="diapatchers" index="8">
+<item historyLabel="full.html" index="1">
+<position info="not_deleted" x="1241" y="0"/>
+</item>
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="handlers" index="9">
+<item historyLabel="test_channel.html" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="models" index="10">
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="app.yaml" index="5">
-<position info="not_deleted" x="333" y="0"/>
+<item historyLabel="adapter.js" index="9">
+<position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="dispatchers_base" index="11">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="dict_keys_values" index="12">
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dispatchers_base" index="11">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="handler_webapp2_extra_auth" index="13">
+<item historyLabel="ga.js" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dispatchers_base" index="11">
-<position info="not_deleted" x="123" y="0"/>
-</item>
-<item historyLabel="handlers" index="14">
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dispatchers_base" index="11">
-<position info="not_deleted" x="169" y="0"/>
+<item historyLabel="main.js" index="3">
+<position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="base.css" index="15">
+<item historyLabel="stereoscopic.js" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index_page_directives.js" index="16">
+<item historyLabel="main.js" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="stereoscopic.js" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="base.css" index="15">
+<item historyLabel="main.js" index="3">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="apprtc" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index.html" index="17">
-<position info="not_deleted" x="560" y="0"/>
+<item historyLabel="vr.js" index="11">
+<position info="not_deleted" x="4" y="0"/>
 </item>
-<item active="true" historyLabel="app.yaml" index="18">
-<position info="not_deleted" x="333" y="0"/>
+<item historyLabel="apprtc" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="turn-prober.html" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="README" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="turn-prober.html" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="apprtc" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -396,9 +466,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -412,50 +479,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index_page_directives.js" tooltip="prjGogisticsUpdated/src/static/javascripts/my_ng_directives/index_page_directives.js">
-<persistable path="/prjGogisticsUpdated/src/static/javascripts/my_ng_directives/index_page_directives.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="README" tooltip="prjGogisticsRTC/src/turn-prober/README">
+<persistable path="/prjGogisticsRTC/src/turn-prober/README"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsUpdated/src/handlers/__init__.py">
-<persistable path="/prjGogisticsUpdated/src/handlers/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="turn-prober.html" tooltip="prjGogisticsRTC/src/turn-prober/turn-prober.html">
+<persistable path="/prjGogisticsRTC/src/turn-prober/turn-prober.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_webapp2_extra_auth.py" tooltip="prjGogisticsUpdated/src/handlers_general/handler_webapp2_extra_auth.py">
-<persistable path="/prjGogisticsUpdated/src/handlers_general/handler_webapp2_extra_auth.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsRTC/src/app.yaml">
+<persistable path="/prjGogisticsRTC/src/app.yaml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" tooltip="prjGogisticsUpdated/src/dictionaries/dict_keys_values.py">
-<persistable path="/prjGogisticsUpdated/src/dictionaries/dict_keys_values.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="vr.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/vr.js">
+<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/vr.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_base.py" tooltip="prjGogisticsUpdated/src/dispatchers/dispatchers_base.py">
-<persistable path="/prjGogisticsUpdated/src/dispatchers/dispatchers_base.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="stereoscopic.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/stereoscopic.js">
+<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/stereoscopic.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsRTC/src/models/__init__.py">
-<persistable path="/prjGogisticsRTC/src/models/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="main.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/main.js">
+<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/main.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsRTC/src/handlers/__init__.py">
-<persistable path="/prjGogisticsRTC/src/handlers/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="ga.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/ga.js">
+<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/ga.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsRTC/src/diapatchers/__init__.py">
-<persistable path="/prjGogisticsRTC/src/diapatchers/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="adapter.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/adapter.js">
+<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/adapter.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsRTC/src/dictionaries/__init__.py">
-<persistable path="/prjGogisticsRTC/src/dictionaries/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="test_channel.html" tooltip="prjGogisticsRTC/src/static/templates/test/test_channel.html">
+<persistable path="/prjGogisticsRTC/src/static/templates/test/test_channel.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="my_ng_template_base.html" tooltip="prjGogisticsUpdated/src/static/my_ng_templates/my_ng_template_base.html">
-<persistable path="/prjGogisticsUpdated/src/static/my_ng_templates/my_ng_template_base.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="full.html" tooltip="prjGogisticsRTC/src/static/templates/full.html">
+<persistable path="/prjGogisticsRTC/src/static/templates/full.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsRTC/src/__init__.py">
-<persistable path="/prjGogisticsRTC/src/__init__.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="prjGogisticsUpdated/src/static/my_ng_templates/desktop/index/index.html">
-<persistable path="/prjGogisticsUpdated/src/static/my_ng_templates/desktop/index/index.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="apprtc.py" tooltip="prjGogisticsRTC/src/apprtc.py">
+<persistable path="/prjGogisticsRTC/src/apprtc.py"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_keys_values.py" tooltip="prjGogistics/src/dictionaries/dict_keys_values.py">
 <persistable path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="base.css" tooltip="prjGogisticsUpdated/src/static/css/base.css">
-<persistable path="/prjGogisticsUpdated/src/static/css/base.css"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_html_pages.py" tooltip="prjGogistics/src/dictionaries/dict_html_pages.py">
+<persistable path="/prjGogistics/src/dictionaries/dict_html_pages.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsUpdated/src/app.yaml">
-<persistable path="/prjGogisticsUpdated/src/app.yaml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_index.py" tooltip="prjGogistics/src/dispatchers/dispatchers_index.py">
+<persistable path="/prjGogistics/src/dispatchers/dispatchers_index.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogistics/src/app.yaml">
+<persistable path="/prjGogistics/src/app.yaml"/>
 </file>
 </mruList>
 </workbench>

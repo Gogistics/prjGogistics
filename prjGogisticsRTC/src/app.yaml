@@ -5,20 +5,17 @@ threadsafe: true
 api_version: 1
 
 handlers:
-- url: /html
-  static_dir: html
-
-- url: /images
-  static_dir: images
-
+- url: /img
+  static_dir: static/images
 
 - url: /js
-  static_dir: js
-
+  static_dir: static/javascripts
 
 - url: /css
-  static_dir: css
+  static_dir: static/css
 
+- url: /mis
+  static_dir: static/mis
 
 - url: /.*
   script: apprtc.app
@@ -26,7 +23,6 @@ handlers:
 
 inbound_services:
 - channel_presence
-
 
 libraries:
 - name: jinja2

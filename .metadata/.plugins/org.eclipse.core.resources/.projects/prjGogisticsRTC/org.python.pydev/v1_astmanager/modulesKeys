@@ -33,6 +33,7 @@ apiclient.model|C:\Program Files (x86)\Google\google_appengine\lib\google-api-py
 apiclient.oauth|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\oauth.py
 apiclient.schema|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\schema.py
 appcfg|C:\Program Files (x86)\Google\google_appengine\appcfg.py
+apprtc|D:\prjGogistics\prjGogisticsRTC\src\apprtc.py
 backends_conversion|C:\Program Files (x86)\Google\google_appengine\backends_conversion.py
 bulkload_client|C:\Program Files (x86)\Google\google_appengine\bulkload_client.py
 bulkloader|C:\Program Files (x86)\Google\google_appengine\bulkloader.py
