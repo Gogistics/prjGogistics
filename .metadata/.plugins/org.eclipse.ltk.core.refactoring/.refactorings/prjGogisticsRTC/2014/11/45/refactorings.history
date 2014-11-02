@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;prjGogisticsRTC/src/static/javascript&apos; to &apos;javascripts&apos;" description="Rename resource &apos;javascript&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/javascript" name="javascripts" stamp="1414899937475" updateReferences="true"/>
+</session>

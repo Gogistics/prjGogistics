@@ -2178,8 +2178,8 @@ grizzled.test.test_helpers|C:\Program Files (x86)\Google\google_appengine\lib\gr
 grizzled.test.text.TestStr2Bool|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\test\text\TestStr2Bool.py
 grizzled.test.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\test\text\__init__.py
 grizzled.text.__init__|C:\Program Files (x86)\Google\google_appengine\lib\grizzled\grizzled\text\__init__.py
-handlers_general.__init__|D:\prjGogistics\prjGogisticsUpdated\src\handlers_general\__init__.py
-handlers_general.handler_webapp2_extra_auth|D:\prjGogistics\prjGogisticsUpdated\src\handlers_general\handler_webapp2_extra_auth.py
+handlers.__init__|D:\prjGogistics\prjGogisticsUpdated\src\handlers\__init__.py
+handlers.handler_webapp2_extra_auth|D:\prjGogistics\prjGogisticsUpdated\src\handlers\handler_webapp2_extra_auth.py
 httplib2.__init__|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\__init__.py
 httplib2.iri2uri|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\iri2uri.py
 httplib2.socks|C:\Program Files (x86)\Google\google_appengine\lib\httplib2\httplib2\socks.py
