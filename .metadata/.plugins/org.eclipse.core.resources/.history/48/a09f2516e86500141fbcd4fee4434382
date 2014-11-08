@@ -40,7 +40,7 @@ class GCMSendHandler(webapp2.RequestHandler):
         if reg_ids.count() > 0:
             for reg_id in reg_ids:
                 params = {}
-                params['data'] = {'message': 'receiver: ' + reg_id.user_name + ' ; sender: Gogistics Ltd.'}
+                params['data'] = {'message': 'receiver: ' + reg_id.user_name + ' ; sender: '}
                 params['registration_ids'] = [reg_id.reg_id]
                 
                 json_parame = json.dumps(params)
