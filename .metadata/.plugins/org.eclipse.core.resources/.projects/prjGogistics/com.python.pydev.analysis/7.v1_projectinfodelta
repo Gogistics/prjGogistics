@@ -1,1 +1,7 @@
-DELSTRdispatchers.dispatchers_index
+INSTUPdispatchers.dispatchers_cron_tasks
+D:\prjGogistics\prjGogistics\src\dispatchers\dispatchers_cron_tasks.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|0
+app=4
+get=3
+dispatchers.dispatchers_cron_tasks=2
+GCMCronTaskHandler=1
