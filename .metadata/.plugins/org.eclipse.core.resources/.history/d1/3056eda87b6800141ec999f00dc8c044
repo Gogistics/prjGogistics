@@ -20,7 +20,6 @@ import os
 from dictionaries.dict_keys_values import KeysVaulesGeneral, KeysValuesMandarin,\
     KeysValuesEnglish
 from dictionaries.dict_html_pages import HtmlPagesReference
-from google.appengine.api import taskqueue
 
 #append templates' path directory
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader('static/templates'))  # append templates' path
@@ -38,22 +37,19 @@ language_handler_english = EnglishHandler()
 
 
 #index handler
-class IndexPageDispatcher(webapp2.RequestHandler):
+class DemoLeafLetAnimationDispatcher(webapp2.RequestHandler):
     def get(self):
-        ''' index dispatcher '''
-        
-        #
-        taskqueue.add(url = '/gcm_send_message')
-        
-        #
         template_values = {}
         template_values.update(language_handler_madarin.handle_index_page_info())
-        template = jinja_environment.get_template(html_pages_ref.html_index)
+        template = jinja_environment.get_template('/demos/demo_leaflet_map_animation.html')
         self.response.out.write(template.render(template_values))
         
-class IndexContactMessageDispatcher(webapp2.RequestHandler):
-    def post(self):
-        pass
+class DemoD3WorldTourHandler(webapp2.RequestHandler):
+    def get(self):
+        template_values = {}
+        template_values.update(language_handler_madarin.handle_index_page_info())
+        template = jinja_environment.get_template('/demos/demo_d3_earth_animation_world_tour.html')
+        self.response.out.write(template.render(template_values))
         
 class IndexLanguageVersionDispatcher(webapp2.RequestHandler):
     def post(self):
@@ -67,7 +63,7 @@ class IndexLanguageVersionDispatcher(webapp2.RequestHandler):
         token_html_page = json_obj['token_html_page']
         requested_language = json_obj['language']
         
-        ajax_response = {}
+        ajax_response = {'requst_status' : 'unknown'}
         if requested_language == 'mandarin' and token_html_page == keys_values_general.token_index_page:
             ajax_response.update(language_handler_madarin.handle_index_page_info())
             ajax_response['request_status'] = 'success'
@@ -84,8 +80,9 @@ class IndexLanguageVersionDispatcher(webapp2.RequestHandler):
         self.response.out.write(json.dumps(ajax_response))
 
 #url dispatcher
-app = webapp2.WSGIApplication([('/', IndexPageDispatcher),
-                               ('/index_language_version_handler', IndexLanguageVersionDispatcher)], debug=True)
+app = webapp2.WSGIApplication([('/demos/leaflet_map_animation', DemoLeafLetAnimationDispatcher),
+                               ('/demos/world_tour', DemoD3WorldTourHandler),
+                               ('/demos/language_version_handler', IndexLanguageVersionDispatcher)], debug=True)
 
 #log 
 logging.getLogger().setLevel(logging.DEBUG)

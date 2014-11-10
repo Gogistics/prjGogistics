@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="50" version="2.0">
+<workbench progressCount="29" version="2.0">
 <workbenchAdvisor/>
-<window height="430" maximized="true" width="1307" x="19" y="299">
+<window height="430" maximized="true" width="1307" x="29" y="254">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -40,27 +40,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="dispatchers_gcm.py" partName="dispatchers_gcm" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatchers_gcm.py" title="dispatchers_gcm" tooltip="prjGogistics/src/dispatchers/dispatchers_gcm.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1513" selectionTopPixel="0"/>
-</editor>
-<editor id="org.python.pydev.editor.PythonEditor" name="models_gcm.py" partName="models_gcm" path="D:/prjGogistics/prjGogistics/src/models/models_gcm.py" title="models_gcm" tooltip="prjGogistics/src/models/models_gcm.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/models/models_gcm.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.python.pydev.editor.PythonEditor" name="handler_gcm.py" partName="handler_gcm" path="D:/prjGogistics/prjGogistics/src/handlers_gcm/handler_gcm.py" title="handler_gcm" tooltip="prjGogistics/src/handlers_gcm/handler_gcm.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/handlers_gcm/handler_gcm.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1929"/>
-</editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="dispatchers_cron_tasks.py" partName="dispatchers_cron_tasks" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py" title="dispatchers_cron_tasks" tooltip="prjGogistics/src/dispatchers/dispatchers_cron_tasks.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="dispatchers_gcm.py" partName="dispatchers_gcm" path="D:/prjGogistics/prjGogistics/src/dispatchers/dispatchers_gcm.py" title="dispatchers_gcm" tooltip="prjGogistics/src/dispatchers/dispatchers_gcm.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="321"/>
 </editor>
 </editors>
 <views>
@@ -88,6 +78,7 @@
 </view>
 <view id="org.python.pydev.navigator.view" partName="PyDev Package Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dispatchers"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/handlers_gcm"/>
@@ -95,11 +86,18 @@
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/templates"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src/static/my_ng_templates"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src/static/templates"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/my_ng_templates"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/templates"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/templates/test"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/turn-prober"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/javascripts"/>
@@ -108,12 +106,12 @@
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop/demo"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop/index"/>
-<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.python.pydev.navigator.view" activePerspective="&lt;PyDev&gt;">
+<perspectives activePart="org.python.pydev.editor.PythonEditor" activePerspective="&lt;PyDev&gt;">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -304,175 +302,14 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/full.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/stereoscopic.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/main.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsRTC/src/apprtc.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_index.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/dict_html_pages.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dictionaries/dict_keys_values.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/test/test_channel.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/adapter.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/ga.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsRTC/src/static/javascripts/rtc/vr.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/turn-prober/turn-prober.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/prjGogisticsRTC/src/turn-prober/README"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsRTC/src/static/templates/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/models/models_gcm.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/handlers_gcm/handler_gcm.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
 </editors>
-<item historyLabel="dispatchers_index" index="5">
+<item historyLabel="dispatchers_cron_tasks" index="0">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="401" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="5">
-<position info="not_deleted" x="705" y="18"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="201" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="5">
-<position info="not_deleted" x="705" y="18"/>
-</item>
-<item historyLabel="dict_html_pages" index="6">
+<item active="true" historyLabel="dispatchers_gcm" index="1">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dict_keys_values" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dict_html_pages" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="5">
-<position info="not_deleted" x="705" y="18"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="17579" y="0"/>
-</item>
-<item historyLabel="dict_html_pages" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="17579" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="5">
-<position info="not_deleted" x="261" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="17579" y="0"/>
-</item>
-<item historyLabel="main.js" index="3">
-<position/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1475" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1475" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="full.html" index="1">
-<position info="not_deleted" x="1241" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="test_channel.html" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="adapter.js" index="9">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ga.js" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.js" index="3">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="stereoscopic.js" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.js" index="3">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="stereoscopic.js" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.js" index="3">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="vr.js" index="11">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="turn-prober.html" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="README" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="turn-prober.html" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="apprtc" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="index.html" index="14">
-<position info="not_deleted" x="1475" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="15">
-<position info="not_deleted" x="520" y="0"/>
-</item>
-<item historyLabel="models_gcm" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="15">
-<position info="not_deleted" x="862" y="0"/>
-</item>
-<item historyLabel="handler_gcm" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="18">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="15">
-<position info="not_deleted" x="1513" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="18">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="handler_gcm" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="models_gcm" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="dispatchers_gcm" index="15">
-<position info="not_deleted" x="1513" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -493,50 +330,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogistics/src/cron.yaml">
-<persistable path="/prjGogistics/src/cron.yaml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_gcm.py" tooltip="prjGogistics/src/dispatchers/dispatchers_gcm.py">
+<persistable path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_cron_tasks.py" tooltip="prjGogistics/src/dispatchers/dispatchers_cron_tasks.py">
 <persistable path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_gcm.py" tooltip="prjGogistics/src/handlers_gcm/handler_gcm.py">
-<persistable path="/prjGogistics/src/handlers_gcm/handler_gcm.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_gcm.py" tooltip="prjGogistics/src/models/models_gcm.py">
-<persistable path="/prjGogistics/src/models/models_gcm.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="apprtc.py" tooltip="prjGogisticsRTC/src/apprtc.py">
+<persistable path="/prjGogisticsRTC/src/apprtc.py"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsRTC/src/app.yaml">
 <persistable path="/prjGogisticsRTC/src/app.yaml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_gcm.py" tooltip="prjGogistics/src/dispatchers/dispatchers_gcm.py">
-<persistable path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="README" tooltip="prjGogisticsRTC/src/turn-prober/README">
-<persistable path="/prjGogisticsRTC/src/turn-prober/README"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="turn-prober.sh" tooltip="prjGogisticsRTC/src/turn-prober/turn-prober.sh">
+<persistable path="/prjGogisticsRTC/src/turn-prober/turn-prober.sh"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="turn-prober.html" tooltip="prjGogisticsRTC/src/turn-prober/turn-prober.html">
 <persistable path="/prjGogisticsRTC/src/turn-prober/turn-prober.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="vr.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/vr.js">
-<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/vr.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="my_ng_template_base.html" tooltip="prjGogisticsGoogleAppEnjoy/src/static/my_ng_templates/my_ng_template_base.html">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/static/my_ng_templates/my_ng_template_base.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="stereoscopic.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/stereoscopic.js">
-<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/stereoscopic.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page_container.html" tooltip="prjGogisticsGoogleAppEnjoy/src/static/templates/front_page_container.html">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/static/templates/front_page_container.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="main.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/main.js">
-<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/main.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" tooltip="prjGogisticsGoogleAppEnjoy/src/static/templates/base.html">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/static/templates/base.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="ga.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/ga.js">
-<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/ga.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsGoogleAppEnjoy/src/__init__.py">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/__init__.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="adapter.js" tooltip="prjGogisticsRTC/src/static/javascripts/rtc/adapter.js">
-<persistable path="/prjGogisticsRTC/src/static/javascripts/rtc/adapter.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsGoogleAppEnjoy/src/app.yaml">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/app.yaml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="test_channel.html" tooltip="prjGogisticsRTC/src/static/templates/test/test_channel.html">
-<persistable path="/prjGogisticsRTC/src/static/templates/test/test_channel.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsGoogleAppEnjoy/src/models/__init__.py">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/models/__init__.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="full.html" tooltip="prjGogisticsRTC/src/static/templates/full.html">
-<persistable path="/prjGogisticsRTC/src/static/templates/full.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsGoogleAppEnjoy/src/handlers/__init__.py">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/handlers/__init__.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsGoogleAppEnjoy/src/dispatchers/__init__.py">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/dispatchers/__init__.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsGoogleAppEnjoy/src/dictionaries/__init__.py">
+<persistable path="/prjGogisticsGoogleAppEnjoy/src/dictionaries/__init__.py"/>
 </file>
 </mruList>
 </workbench>

@@ -37,7 +37,7 @@ language_handler_english = EnglishHandler()
 
 
 #index handler
-class DemoLeafLetAnimationDispatcher(webapp2.RequestHandler):
+class IndexPageDispatcher(webapp2.RequestHandler):
     def get(self):
         template_values = {}
         template_values.update(language_handler_madarin.handle_index_page_info())
@@ -80,7 +80,7 @@ class IndexLanguageVersionDispatcher(webapp2.RequestHandler):
         self.response.out.write(json.dumps(ajax_response))
 
 #url dispatcher
-app = webapp2.WSGIApplication([('/demos/leaflet_map_animation', DemoLeafLetAnimationDispatcher),
+app = webapp2.WSGIApplication([('/demos/leaflet_map_animation', IndexPageDispatcher),
                                ('/demos/world_tour', DemoD3WorldTourHandler),
                                ('/demos/language_version_handler', IndexLanguageVersionDispatcher)], debug=True)
 
