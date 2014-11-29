@@ -42,7 +42,7 @@ class IndexPageDispatcher(webapp2.RequestHandler):
     def get(self):
         ''' index dispatcher '''
         
-        # for gcm demo use; for testing only
+        # for gcm demo use
         # taskqueue.add(url = '/gcm_send_message')
         
         # index context
