@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+'''
+Created on Dec 24, 2014
+
+@author: Alan Tai
+'''
+from handlers.handler_webapp2_extra_auth import BaseHandler
+
+
+class IndexDispatcher(BaseHandler):
+    def get(self):
+        pass
+    

@@ -1,0 +1,17 @@
+application: gogistics-winever
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /cron_tasks/.*
+  script: dispatchers.dispatchers_cron_tasks.app
+  login: admin
+  
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest

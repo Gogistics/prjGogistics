@@ -1,1 +1,7 @@
-DELSTRlibs_crawler.sgmllib3
+INSTUPdispatchers.dispatcher_base
+D:\prjGogistics\prjGogisticsWINEVER\src\dispatchers\dispatcher_base.py
+INFOS:&&3|1|2|0&&1|3|2|0&&2|4|2|3
+IndexDispatcher=3
+dispatchers.dispatcher_base=2
+get=4
+jinja_environment=1

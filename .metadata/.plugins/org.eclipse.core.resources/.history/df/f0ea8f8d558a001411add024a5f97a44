@@ -1,0 +1,13 @@
+'''
+Created on Dec 22, 2014
+
+@author: Alan Tai
+'''
+from handlers.handler_webapp2_extra_auth import BaseHandler
+
+class CrawlingDispatcher(BaseHandler):
+    def get(self):
+        pass
+    
+    def _read_feed(self):
+        pass

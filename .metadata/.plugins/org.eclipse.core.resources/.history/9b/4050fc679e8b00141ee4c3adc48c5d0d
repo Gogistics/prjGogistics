@@ -1,0 +1,24 @@
+'''
+Created on Dec 22, 2014
+
+@author: Alan Tai
+'''
+from handlers.handler_webapp2_extra_auth import BaseHandler
+import feedparser
+from models.models_wine_info import WebLink
+
+class CrawlerDispatcher(BaseHandler):
+    def get(self):
+        self._read_feed()
+    
+    def _read_feed(self):
+        feeds = feedparser.parse("http://www.wine-searcher.com/")
+        
+        for feed in feeds["items"]:
+            queried_entities = WebLink.query(WebLink.link == feed["link"])
+            if(queried_entities.count() == 0):
+                new_link = WebLink()
+                new_link.link = feed["link"]
+                new_link.title = feed["title"]
+                new_link.logo = feed["logo"]
+                new_link.put()
