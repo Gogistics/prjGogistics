@@ -73,6 +73,11 @@ margin: 3px;
 					href="callto:14085655133" title="Call US at 1-408-565-5133 (USA)"
 					style="color: #000; margin-left: 10px;"></a></span>
 			</div>
+			
+<div class="flexcontainer row center">
+<div class="test_div"></div>
+<div class="test_div"></div>
+</div>
 		</div>
 	</div>
 </div>

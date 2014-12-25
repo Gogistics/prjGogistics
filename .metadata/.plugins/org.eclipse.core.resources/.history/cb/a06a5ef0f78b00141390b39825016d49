@@ -74,5 +74,12 @@ margin: 3px;
 					style="color: #000; margin-left: 10px;"></a></span>
 			</div>
 		</div>
+		
+		
+<div class="flexcontainer row center">
+<div class="test_div"></div>
+<div class="test_div"></div>
+</div>
+		
 	</div>
 </div>

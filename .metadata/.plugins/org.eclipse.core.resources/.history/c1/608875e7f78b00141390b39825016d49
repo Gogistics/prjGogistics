@@ -76,3 +76,8 @@ margin: 3px;
 		</div>
 	</div>
 </div>
+
+<div class="flexcontainer row center">
+<div class="test_div"></div>
+<div class="test_div"></div>
+</div>

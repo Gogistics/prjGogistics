@@ -41,14 +41,6 @@
    -webkit-justify-content: center;
    justify-content: center;
 }
-.test_div{
-height: 100px;
-width: 100px;
-background-color: #e46119;
-border: 1px solid #626262;
-margin: 3px;
-}
-
 }
 
 @media all and (max-device-width: 767px) {}
@@ -75,4 +67,9 @@ margin: 3px;
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="">
+<div></div>
+<div></div>
 </div>

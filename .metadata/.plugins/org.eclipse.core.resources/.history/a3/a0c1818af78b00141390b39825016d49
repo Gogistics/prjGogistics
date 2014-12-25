@@ -30,25 +30,6 @@
 		margin: 20px auto;
 		letter-spacing: 3px;
 	}
-	
-	.flexcontainer {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-}
-.test_div{
-height: 100px;
-width: 100px;
-background-color: #e46119;
-border: 1px solid #626262;
-margin: 3px;
-}
-
 }
 
 @media all and (max-device-width: 767px) {}
