@@ -3,27 +3,30 @@
 @media all and (min-device-width: 768px) {
 	.front_page_block {
 		height: 100%
+		display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
 	}
-	
 	.vertical-center {
+		display: -webkit-flex !important;
+		display: flex !important;
+	
 		min-height: 100% !important;
 		min-height: 100vh !important;
-		display: flex !important;
-		display: -webkit-flex !important;
 		align-items: center !important;
-		-webkit-align-items: center !important;
-   		justify-content: center;
 	}
-
 	.jumbotron {
 		margin-bottom: 0px !important;
 		background-color: transparent !important;
 	}
-	
 	.navbar-brand {
 		padding: 10px !important;
 	}
-	
 	.my_navbar_brand_copy_right,.my_navbar_brand_copy_right>span {
 		color: #000;
 		font-size: 13px;

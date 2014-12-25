@@ -4,7 +4,6 @@
 	.front_page_block {
 		height: 100%
 	}
-	
 	.vertical-center {
 		min-height: 100% !important;
 		min-height: 100vh !important;
@@ -19,11 +18,9 @@
 		margin-bottom: 0px !important;
 		background-color: transparent !important;
 	}
-	
 	.navbar-brand {
 		padding: 10px !important;
 	}
-	
 	.my_navbar_brand_copy_right,.my_navbar_brand_copy_right>span {
 		color: #000;
 		font-size: 13px;
