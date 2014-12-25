@@ -10,7 +10,7 @@ var front_page_app;
 	
 	/* Angular.js */
 	// declare app level module which depends on filters, and services, and modify $interpolateProvider to avoid the conflict with jinja2' symbol
-	front_page_app = angular.module('front_page_app', [ 'angular-responsive', 'ui.router' ], function($interpolateProvider) {
+	front_page_app = front_page_app || angular.module('frontPageApp', [ 'angular-responsive', 'ui.router' ], function($interpolateProvider) {
 		$interpolateProvider.startSymbol('[[');
 		$interpolateProvider.endSymbol(']]');
 	});

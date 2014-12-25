@@ -157,7 +157,6 @@ import urlparse
 import warnings
 
 from htmlentitydefs import name2codepoint, codepoint2name, entitydefs
-from libs_crawler import sgmllib3
 
 try:
     from io import BytesIO as _StringIO

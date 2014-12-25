@@ -15,7 +15,7 @@ import webapp2, logging
 #
 dict_general = KeyValuePairsGeneral()
 
-class CrawlerDispatcher(BaseHandler):
+class CrawlerGeneralWineInfoDispatcher(BaseHandler):
     def get(self):
         self._read_feed()
     
@@ -37,7 +37,7 @@ config = dict_general.config_setting
 
 # app
 app = webapp2.WSGIApplication([
-    webapp2.Route(r'/cron_tasks/crawler_wine_searcher', CrawlerDispatcher, name='crawler_wine_searcher')
+    webapp2.Route(r'/cron_tasks/crawler_wine_searcher', CrawlerGeneralWineInfoDispatcher, name='crawler_wine_searcher')
 ], debug=True, config=config)
 
 # log

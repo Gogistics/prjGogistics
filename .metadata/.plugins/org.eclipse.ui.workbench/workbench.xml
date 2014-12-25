@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="50" version="2.0">
+<workbench progressCount="75" version="2.0">
 <workbenchAdvisor/>
 <window height="430" maximized="true" width="1307" x="29" y="254">
 <fastViewData fastViewLocation="1024"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -24,8 +24,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -42,6 +42,11 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
@@ -56,11 +61,31 @@
 </editor>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/base.html" title="base.html" tooltip="prjGogisticsWINEVER/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1533" selectionTopPixel="713"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" partName="index_page_container.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/index_page_container.html" title="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" partName="front_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html" title="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="999" selectionTopPixel="443"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="front_page_container.html" partName="front_page_container.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/front_page_container.html" title="front_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/front_page_container.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="368" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="front_page_container.js" partName="front_page_container.js" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js" title="front_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/front_page_container.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1520" selectionTopPixel="368"/>
+</editor>
+<editor id="org.python.pydev.editor.PythonEditor" name="dispatchers_base.py" partName="dispatchers_base" path="D:/prjGogistics/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py" title="dispatchers_base" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="435" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="base.css" partName="base.css" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/base.css" title="base.css" tooltip="prjGogisticsWINEVER/src/static/css/base.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/css/base.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="195" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" partName="front_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html" title="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="366" selectionOffset="702" selectionTopPixel="353"/>
 </editor>
 </editors>
 <views>
@@ -88,20 +113,20 @@
 </view>
 <view id="org.python.pydev.navigator.view" partName="PyDev Package Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/dispatchers"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/handlers"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates"/>
-<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.python.pydev.navigator.view" activePerspective="&lt;PyDev&gt;">
+<perspectives activePart="org.eclipse.wst.html.core.htmlsource.source" activePerspective="&lt;PyDev&gt;">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -275,7 +300,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24759081" ratioLeft="334" ratioRight="1015" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.17049666" ratioLeft="230" ratioRight="1119" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
@@ -292,169 +317,165 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/handlers/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dictionaries/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dictionaries/dict_general_key_value_pairs.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/WebLinks.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/models_wine_info.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/libs_crawler/feedparser.py"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.python.pydev.editor.PythonEditor" uri="file:/C:/Python27/Lib/sgmllib.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/prjGogisticsWINEVER/src/app.yaml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/handlers/handler_webapp2_extra_auth.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogisticsWINEVER/src/static/css/base.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
 </editors>
-<item historyLabel="dispatchers_cron_tasks" index="0">
-<position info="not_deleted" x="82" y="44"/>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position info="not_deleted" x="406" y="0"/>
+<item historyLabel="front_page.html" index="2">
+<position/>
 </item>
-<item historyLabel="handlers" index="2">
+<item historyLabel="index_page_container.html" index="0">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="models" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="models" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="351" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
+</item>
+<item historyLabel="front_page_container.js" index="4">
+<position info="not_deleted" x="2015" y="0"/>
+</item>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="585" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="dictionaries" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="241" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
+</item>
+<item historyLabel="front_page_container.js" index="4">
+<position info="not_deleted" x="1520" y="0"/>
+</item>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="241" y="0"/>
+</item>
+<item historyLabel="front_page_container.js" index="4">
+<position info="not_deleted" x="1520" y="0"/>
+</item>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="dict_general_key_value_pairs" index="6">
-<position info="not_deleted" x="56" y="0"/>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="1614" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="241" y="0"/>
+</item>
+<item historyLabel="handler_webapp2_extra_auth" index="6">
 <position/>
 </item>
-<item historyLabel="WebLinks" index="7">
-<position info="not_deleted" x="56" y="0"/>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="140" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="front_page_container.js" index="4">
+<position info="not_deleted" x="1520" y="0"/>
+</item>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="140" y="0"/>
+</item>
+<item historyLabel="handler_webapp2_extra_auth" index="6">
+<position info="not_deleted" x="3451" y="0"/>
+</item>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="435" y="11"/>
+</item>
+<item historyLabel="handler_webapp2_extra_auth" index="6">
+<position info="not_deleted" x="3451" y="0"/>
+</item>
+<item historyLabel="dispatchers_base" index="5">
+<position info="not_deleted" x="435" y="11"/>
+</item>
+<item historyLabel="front_page_container.js" index="4">
+<position info="not_deleted" x="1520" y="0"/>
+</item>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="252" y="0"/>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="1533" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="base.css" index="7">
+<position info="not_deleted" x="466" y="44"/>
+</item>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="109" y="0"/>
+<item historyLabel="base.html" index="1">
+<position info="not_deleted" x="1533" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="203" y="0"/>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
+<item historyLabel="base.css" index="7">
+<position info="not_deleted" x="466" y="44"/>
+</item>
+<item historyLabel="front_page.html" index="2">
 <position/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="214" y="0"/>
+<item historyLabel="front_page_container.js" index="4">
+<position info="not_deleted" x="1520" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position/>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="1039" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
+<item historyLabel="base.css" index="7">
+<position info="not_deleted" x="195" y="0"/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="253" y="0"/>
+<item historyLabel="front_page_container.html" index="3">
+<position info="not_deleted" x="368" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="1052" y="0"/>
 </item>
-<item historyLabel="feedparser" index="9">
-<position/>
+<item historyLabel="front_page.html" index="8">
+<position info="not_deleted" x="2150" y="0"/>
 </item>
-<item historyLabel="sgmllib" index="10">
-<position info="not_deleted" x="3939" y="0"/>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="0" y="2030"/>
 </item>
-<item historyLabel="feedparser" index="9">
-<position/>
+<item historyLabel="front_page.html" index="8">
+<position info="not_deleted" x="2123" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="2003" y="0"/>
 </item>
-<item historyLabel="dict_key_value_pairs" index="11">
-<position info="not_deleted" x="84" y="0"/>
+<item historyLabel="front_page.html" index="8">
+<position info="not_deleted" x="702" y="366"/>
 </item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="253" y="0"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
-</item>
-<item historyLabel="app.yaml" index="12">
-<position info="not_deleted" x="201" y="0"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
-</item>
-<item historyLabel="app.yaml" index="12">
-<position info="not_deleted" x="201" y="0"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
-</item>
-<item historyLabel="app.yaml" index="12">
-<position info="not_deleted" x="201" y="0"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position/>
-</item>
-<item historyLabel="models_wine_info" index="8">
-<position info="not_deleted" x="330" y="0"/>
-</item>
-<item historyLabel="dict_key_value_pairs" index="11">
-<position info="not_deleted" x="84" y="0"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="1">
-<position info="not_deleted" x="23" y="0"/>
-</item>
-<item historyLabel="dict_key_value_pairs" index="11">
-<position info="not_deleted" x="84" y="0"/>
-</item>
-<item historyLabel="dispatcher_base" index="13">
-<position info="not_deleted" x="427" y="1"/>
-</item>
-<item historyLabel="feedparser" index="9">
-<position info="not_deleted" x="22853" y="0"/>
-</item>
-<item historyLabel="dispatcher_base" index="13">
-<position info="not_deleted" x="438" y="0"/>
-</item>
-<item historyLabel="base.html" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatcher_base" index="13">
-<position info="not_deleted" x="438" y="0"/>
-</item>
-<item active="true" historyLabel="index_page_container.html" index="15">
-<position info="not_deleted" x="0" y="0"/>
+<item active="true" historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="2003" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -475,47 +496,50 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="favicon.ico" tooltip="prjGogisticsWINEVER/src/static/images/favicon.ico">
+<persistable path="/prjGogisticsWINEVER/src/static/images/favicon.ico"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="wine_bottle_icon.png" tooltip="prjGogisticsWINEVER/src/static/images/wine_bottle_icon.png">
+<persistable path="/prjGogisticsWINEVER/src/static/images/wine_bottle_icon.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsWINEVER/src/app.yaml">
+<persistable path="/prjGogisticsWINEVER/src/app.yaml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="base.css" tooltip="prjGogisticsWINEVER/src/static/css/base.css">
+<persistable path="/prjGogisticsWINEVER/src/static/css/base.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_webapp2_extra_auth.py" tooltip="prjGogisticsWINEVER/src/handlers/handler_webapp2_extra_auth.py">
+<persistable path="/prjGogisticsWINEVER/src/handlers/handler_webapp2_extra_auth.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_base.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py">
+<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogisticsWINEVER/src/cron.yaml">
+<persistable path="/prjGogisticsWINEVER/src/cron.yaml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="front_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/front_page_container.js">
+<persistable path="/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/front_page_container.html">
+<persistable path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="winever_txt.png" tooltip="prjGogisticsWINEVER/src/static/images/winever_txt.png">
+<persistable path="/prjGogisticsWINEVER/src/static/images/winever_txt.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="winery_icon.png" tooltip="prjGogisticsWINEVER/src/static/images/winery_icon.png">
+<persistable path="/prjGogisticsWINEVER/src/static/images/winery_icon.png"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html">
 <persistable path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" tooltip="prjGogisticsWINEVER/src/static/templates/base.html">
 <persistable path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="feedparser.py" tooltip="prjGogisticsWINEVER/src/libs_crawler/feedparser.py">
-<persistable path="/prjGogisticsWINEVER/src/libs_crawler/feedparser.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_base.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py">
-<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogisticsWINEVER/src/cron.yaml">
-<persistable path="/prjGogisticsWINEVER/src/cron.yaml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsWINEVER/src/app.yaml">
-<persistable path="/prjGogisticsWINEVER/src/app.yaml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_cron_tasks.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py">
-<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_key_value_pairs.py" tooltip="prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py">
-<persistable path="/prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="sgmllib.py" tooltip="C:\Python27\Lib\sgmllib.py">
-<persistable uri="file:/C:/Python27/Lib/sgmllib.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_wine_info.py" tooltip="prjGogisticsWINEVER/src/models/models_wine_info.py">
-<persistable path="/prjGogisticsWINEVER/src/models/models_wine_info.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="WebLinks.py" tooltip="prjGogisticsWINEVER/src/models/WebLinks.py">
-<persistable path="/prjGogisticsWINEVER/src/models/WebLinks.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_general_key_value_pairs.py" tooltip="prjGogisticsWINEVER/src/dictionaries/dict_general_key_value_pairs.py">
-<persistable path="/prjGogisticsWINEVER/src/dictionaries/dict_general_key_value_pairs.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/dictionaries/__init__.py">
-<persistable path="/prjGogisticsWINEVER/src/dictionaries/__init__.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogistics/src/cron.yaml">
-<persistable path="/prjGogistics/src/cron.yaml"/>
 </file>
 </mruList>
 </workbench>

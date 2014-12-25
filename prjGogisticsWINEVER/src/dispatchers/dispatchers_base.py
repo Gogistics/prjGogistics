@@ -16,9 +16,17 @@ dict_general = KeyValuePairsGeneral()
 
 class FrontPageDispatcher(BaseHandler):
     def get(self):
+        """ front page """
         template_values = {}
-        template_values.update({'title' : 'WINEver'})
+        template_values.update({'title' : 'Welcome to WINEver'})
         self.render_template("/front_page_container.html", template_values)
+        
+class IndexPageDispatcher(BaseHandler):
+    def get(self):
+        """ index page """
+        template_values = {}
+        template_values.update({"title" : "WINEver Index Page"})
+        self.render_template("/index_page_container.html", template_values)
     
 # configuration
 config = dict_general.config_setting
