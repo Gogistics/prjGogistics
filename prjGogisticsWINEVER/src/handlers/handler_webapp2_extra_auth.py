@@ -6,15 +6,10 @@ Created on Jul 7, 2014
 import webapp2
 import jinja2
 from webapp2_extras import auth, sessions
-from models.models_people import User
-from google.appengine.ext import ndb
+
 
 # jinja environment
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader('static/templates'))
-
-# dict
-from dictionaries.dict_html_pages_reference import HtmlPagesReference
-dict_html_pages_reference = HtmlPagesReference()
 
 def user_required(handler):
     """ decorator that checks if the user exist """
@@ -35,9 +30,7 @@ def admin_required(handler):
             self.redirect('/auth/login', abort=True)
            
         user =  auth.get_user_by_session()
-        queried_entity = User.get_by_id(user['user_id'])
-        
-        if queried_entity and queried_entity.phb_user_admin_status == 'admin-1':
+        if user and user['user_id'] == 5069036098420736:
             return handler(self, *args, **kwargs)
         else:
             self.redirect('/', abort = True)
@@ -45,7 +38,9 @@ def admin_required(handler):
     return admin_login
 
 
+# Basehandler
 class BaseHandler(webapp2.RequestHandler):
+    
     @webapp2.cached_property
     def auth(self):
         """ shortcut to access the auth instance """
@@ -66,12 +61,19 @@ class BaseHandler(webapp2.RequestHandler):
     @webapp2.cached_property
     def user_model(self):
         """ return the implementation """
+        
         return self.auth.store.user_model
     
     @webapp2.cached_property
     def session(self):
         """ shortcut """
-        return self.session_store.get_session(backend = 'datastore')
+        if not self._backend_name:
+            self._backend_name = 'memcache'
+        return self.session_store.get_session(name = self._session_name, backend = self._backend_name)
+    
+    def set_session(self, arg_session_name = None, arg_backend_name = 'memcache'):
+        self._session_name = arg_session_name
+        self._backend_name = arg_backend_name
     
     def render_template(self, view_filename, params=None):
         if not params:
@@ -86,7 +88,7 @@ class BaseHandler(webapp2.RequestHandler):
         params = {
                   'message' : message
                   }
-        self.render_template(dict_html_pages_reference.auth_message, params)
+        self.render_template('/auth/message.html', params)
         
     # this is needed for webapp2 session to work
     def dispatch(self):
@@ -100,6 +102,6 @@ class BaseHandler(webapp2.RequestHandler):
             # save all session
             self.session_store.save_sessions(self.response)
             
+    # get user' info
     def get_user_info(self):
         return self.auth.get_user_by_session()
-            

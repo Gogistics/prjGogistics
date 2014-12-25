@@ -11,12 +11,12 @@ handlers:
   upload: static/images/favicon.ico
 
 - url: /apple-touch-icon\.png
-  static_files: static/images/gogistics_icon_black.png
-  upload: static/images/gogistics_icon_black.png
+  static_files: static/images/winever_logo.png
+  upload: static/images/winever_logo.png
 
 - url: /apple-touch-icon-precomposed\.png
-  static_files: static/images/gogistics_icon_black.png
-  upload: static/images/gogistics_icon_black.png
+  static_files: static/images/winever_logo.png
+  upload: static/images/winever_logo.png
 
 - url: /css
   static_dir: static/css
@@ -39,6 +39,9 @@ handlers:
 - url: /robots\.txt
   static_files: static/mis/robots.txt
   upload: static/mis/robots.txt
+
+- url: /(base/.*)?
+  script: dispatchers.dispatchers_base.app
 
 - url: /cron_tasks/.*
   script: dispatchers.dispatchers_cron_tasks.app
