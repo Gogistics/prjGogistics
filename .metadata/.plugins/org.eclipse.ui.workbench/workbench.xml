@@ -26,9 +26,9 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -41,20 +41,25 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="app.yaml" partName="app.yaml" path="D:/prjGogistics/prjGogisticsWINEVER/src/app.yaml" title="app.yaml" tooltip="prjGogisticsWINEVER/src/app.yaml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/app.yaml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="201" selectionTopPixel="0"/>
+<editor id="org.python.pydev.editor.PythonEditor" name="dict_key_value_pairs.py" partName="dict_key_value_pairs" path="D:/prjGogistics/prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py" title="dict_key_value_pairs" tooltip="prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="84" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.python.pydev.editor.PythonEditor" name="dispatcher_cron_tasks.py" partName="dispatcher_cron_tasks" path="D:/prjGogistics/prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py" title="dispatcher_cron_tasks" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="402" selectionTopPixel="0"/>
+<editor id="org.python.pydev.editor.PythonEditor" name="dispatcher_base.py" partName="dispatcher_base" path="D:/prjGogistics/prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py" title="dispatcher_base" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="438" selectionTopPixel="0"/>
 </editor>
-<editor id="org.python.pydev.editor.PythonEditor" name="__init__.py" partName="models" path="D:/prjGogistics/prjGogisticsWINEVER/src/models/__init__.py" title="models" tooltip="prjGogisticsWINEVER/src/models/__init__.py" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/models/__init__.py"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/base.html" title="base.html" tooltip="prjGogisticsWINEVER/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" partName="index_page_container.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/index_page_container.html" title="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
@@ -83,30 +88,15 @@
 </view>
 <view id="org.python.pydev.navigator.view" partName="PyDev Package Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/dispatchers"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/handlers_gcm"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/models"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogistics/src/static/templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src/static/my_ng_templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsGoogleAppEnjoy/src/static/templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/my_ng_templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/static/templates/test"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsRTC/src/turn-prober"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/javascripts"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/javascripts/my_ng_directives"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop/demo"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsUpdated/src/static/my_ng_templates/desktop/index"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
@@ -303,130 +293,168 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_index.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/handlers_gcm/example.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/handlers_gcm/handler_gcm.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/libs_crawler/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/__init__.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/handlers/__init__.py"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/__init__.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/__init__.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dictionaries/__init__.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dictionaries/dict_general_key_value_pairs.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/WebLinks.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/models/models_wine_info.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/libs_crawler/feedparser.py"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.python.pydev.editor.PythonEditor" uri="file:/C:/Python27/Lib/sgmllib.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/prjGogisticsWINEVER/src/app.yaml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
 </editors>
 <item historyLabel="dispatchers_cron_tasks" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="example" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="handler_gcm" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1228" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
-<position info="not_deleted" x="209" y="40"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1228" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1397" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="2">
 <position info="not_deleted" x="82" y="44"/>
 </item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1397" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1432" y="0"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1432" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1365" y="0"/>
-</item>
-<item historyLabel="src" index="6">
-<position info="not_deleted" x="49" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1365" y="0"/>
-</item>
-<item historyLabel="libs_crawler" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1365" y="0"/>
-</item>
-<item historyLabel="dispatchers" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_index" index="3">
-<position info="not_deleted" x="1365" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="9">
-<position info="not_deleted" x="82" y="44"/>
-</item>
-<item historyLabel="dispatchers_gcm" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="dispatchers_cron_tasks" index="9">
-<position info="not_deleted" x="82" y="44"/>
-</item>
-<item historyLabel="dispatcher_cron_tasks" index="11">
+<item historyLabel="dispatcher_cron_tasks" index="1">
 <position info="not_deleted" x="406" y="0"/>
 </item>
-<item historyLabel="handlers" index="12">
+<item historyLabel="handlers" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="dispatcher_cron_tasks" index="11">
+<item historyLabel="dispatcher_cron_tasks" index="1">
 <position info="not_deleted" x="406" y="0"/>
 </item>
-<item historyLabel="models" index="13">
+<item historyLabel="models" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="dispatcher_cron_tasks" index="11">
-<position info="not_deleted" x="406" y="0"/>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="dictionaries" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="dict_general_key_value_pairs" index="6">
+<position info="not_deleted" x="56" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="WebLinks" index="7">
+<position info="not_deleted" x="56" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="252" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="109" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="203" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="253" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="feedparser" index="9">
+<position/>
+</item>
+<item historyLabel="sgmllib" index="10">
+<position info="not_deleted" x="3939" y="0"/>
+</item>
+<item historyLabel="feedparser" index="9">
+<position/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="dict_key_value_pairs" index="11">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="253" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="app.yaml" index="12">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="app.yaml" index="12">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="app.yaml" index="12">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position/>
+</item>
+<item historyLabel="models_wine_info" index="8">
+<position info="not_deleted" x="330" y="0"/>
+</item>
+<item historyLabel="dict_key_value_pairs" index="11">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item historyLabel="dispatcher_cron_tasks" index="1">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="dict_key_value_pairs" index="11">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item historyLabel="dispatcher_base" index="13">
+<position info="not_deleted" x="427" y="1"/>
+</item>
+<item historyLabel="feedparser" index="9">
+<position info="not_deleted" x="22853" y="0"/>
+</item>
+<item historyLabel="dispatcher_base" index="13">
+<position info="not_deleted" x="438" y="0"/>
+</item>
+<item historyLabel="base.html" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="dispatcher_base" index="13">
+<position info="not_deleted" x="438" y="0"/>
+</item>
+<item active="true" historyLabel="index_page_container.html" index="15">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -447,47 +475,47 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/models/__init__.py">
-<persistable path="/prjGogisticsWINEVER/src/models/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html">
+<persistable path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/handlers/__init__.py">
-<persistable path="/prjGogisticsWINEVER/src/handlers/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" tooltip="prjGogisticsWINEVER/src/static/templates/base.html">
+<persistable path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="feedparser.py" tooltip="prjGogisticsWINEVER/src/libs_crawler/feedparser.py">
+<persistable path="/prjGogisticsWINEVER/src/libs_crawler/feedparser.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_base.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py">
+<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_base.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogisticsWINEVER/src/cron.yaml">
+<persistable path="/prjGogisticsWINEVER/src/cron.yaml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsWINEVER/src/app.yaml">
+<persistable path="/prjGogisticsWINEVER/src/app.yaml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatcher_cron_tasks.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py">
 <persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatcher_cron_tasks.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/dispatchers/__init__.py">
-<persistable path="/prjGogisticsWINEVER/src/dispatchers/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_key_value_pairs.py" tooltip="prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py">
+<persistable path="/prjGogisticsWINEVER/src/dictionaries/dict_key_value_pairs.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/libs_crawler/__init__.py">
-<persistable path="/prjGogisticsWINEVER/src/libs_crawler/__init__.py"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="sgmllib.py" tooltip="C:\Python27\Lib\sgmllib.py">
+<persistable uri="file:/C:/Python27/Lib/sgmllib.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/__init__.py">
-<persistable path="/prjGogisticsWINEVER/src/__init__.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="models_wine_info.py" tooltip="prjGogisticsWINEVER/src/models/models_wine_info.py">
+<persistable path="/prjGogisticsWINEVER/src/models/models_wine_info.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_index.py" tooltip="prjGogistics/src/dispatchers/dispatchers_index.py">
-<persistable path="/prjGogistics/src/dispatchers/dispatchers_index.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="WebLinks.py" tooltip="prjGogisticsWINEVER/src/models/WebLinks.py">
+<persistable path="/prjGogisticsWINEVER/src/models/WebLinks.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_gcm.py" tooltip="prjGogistics/src/handlers_gcm/handler_gcm.py">
-<persistable path="/prjGogistics/src/handlers_gcm/handler_gcm.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dict_general_key_value_pairs.py" tooltip="prjGogisticsWINEVER/src/dictionaries/dict_general_key_value_pairs.py">
+<persistable path="/prjGogisticsWINEVER/src/dictionaries/dict_general_key_value_pairs.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="example.py" tooltip="prjGogistics/src/handlers_gcm/example.py">
-<persistable path="/prjGogistics/src/handlers_gcm/example.py"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="__init__.py" tooltip="prjGogisticsWINEVER/src/dictionaries/__init__.py">
+<persistable path="/prjGogisticsWINEVER/src/dictionaries/__init__.py"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_gcm.py" tooltip="prjGogistics/src/dispatchers/dispatchers_gcm.py">
-<persistable path="/prjGogistics/src/dispatchers/dispatchers_gcm.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_cron_tasks.py" tooltip="prjGogistics/src/dispatchers/dispatchers_cron_tasks.py">
-<persistable path="/prjGogistics/src/dispatchers/dispatchers_cron_tasks.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="apprtc.py" tooltip="prjGogisticsRTC/src/apprtc.py">
-<persistable path="/prjGogisticsRTC/src/apprtc.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="app.yaml" tooltip="prjGogisticsRTC/src/app.yaml">
-<persistable path="/prjGogisticsRTC/src/app.yaml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="turn-prober.sh" tooltip="prjGogisticsRTC/src/turn-prober/turn-prober.sh">
-<persistable path="/prjGogisticsRTC/src/turn-prober/turn-prober.sh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogistics/src/cron.yaml">
+<persistable path="/prjGogistics/src/cron.yaml"/>
 </file>
 </mruList>
 </workbench>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;prjGogisticsWINEVER/src/static/images/winery_icon.png&apos; to &apos;wine_bottle_icon.png&apos;" description="Rename resource &apos;winery_icon.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/images/winery_icon.png" name="wine_bottle_icon.png" stamp="1419474170714" updateReferences="true"/>
+</session>

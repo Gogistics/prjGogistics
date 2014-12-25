@@ -5,6 +5,41 @@ api_version: 1
 threadsafe: true
 
 handlers:
+
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon.ico
+
+- url: /apple-touch-icon\.png
+  static_files: static/images/gogistics_icon_black.png
+  upload: static/images/gogistics_icon_black.png
+
+- url: /apple-touch-icon-precomposed\.png
+  static_files: static/images/gogistics_icon_black.png
+  upload: static/images/gogistics_icon_black.png
+
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/javascripts
+
+- url: /img
+  static_dir: static/images
+
+- url: /my_ng_templates
+  static_dir: static/my_ng_templates
+
+- url: /leaflet
+  static_dir: static/leaflet-0.7
+
+- url: /mis
+  static_dir: static/mis
+
+- url: /robots\.txt
+  static_files: static/mis/robots.txt
+  upload: static/mis/robots.txt
+
 - url: /cron_tasks/.*
   script: dispatchers.dispatchers_cron_tasks.app
   login: admin
