@@ -1,0 +1,14 @@
+{% extends "/base.html"%}
+
+<!-- sub-css block -->
+{% block css_content %} {% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<div ng-app="indexPageApp" ng-controller="indexPageDispatchCtrl" style="width: 100%; height: 100%;" ui-view></div>
+{% endblock %}
+
+<!-- sub-js block -->
+{% block js_content %}
+<script type="text/javascript" src="/js/index_page_container.js"></script>
+{% endblock %}

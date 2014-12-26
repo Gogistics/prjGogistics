@@ -1,0 +1,24 @@
+{% extends "/base.html"%}
+
+<!-- sub-css block -->
+{% block css_content %}{% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<style>
+<!--
+.front_page_block.ng-enter{
+	-webkit-animation: fadeInUp 5s;
+    -moz-animation: fadeInUp 5s;
+    -ms-animation: fadeInUp 5s;
+    animation: fadeInUp 5s;
+}
+-->
+</style>
+<div ng-app="frontPageApp" ng-controller="frontPageDispatchCtrl" class="front_page_block"  ui-view></div>
+{% endblock %}
+
+<!-- sub-js block -->
+{% block js_content %}
+<script type="text/javascript" src="/js/front_page_container.js"></script>
+{% endblock %}

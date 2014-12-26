@@ -33,7 +33,8 @@ config = dict_general.config_setting
 
 # app
 app = webapp2.WSGIApplication([
-    webapp2.Route(r'/', FrontPageDispatcher, name='front_page')
+    webapp2.Route(r'/', FrontPageDispatcher, name='front_page'),
+    webapp2.Route(r'/base/index', IndexPageDispatcher, name='index_page')
 ], debug=True, config=config)
 
 # log

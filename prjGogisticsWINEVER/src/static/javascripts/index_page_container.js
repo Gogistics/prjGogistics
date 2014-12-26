@@ -1,14 +1,12 @@
 /**/
 
 'use strict';
-
 var index_page_app;
 
 (function(){
 	//
 	var injected_module = [];
 	injected_module = ['angular-responsive', 'ui.router', 'ngAnimate'];
-	
 	
 	index_page_app = index_page_app || angular.module('indexPageApp', injected_module, function($interpolateProvider){
 		$interpolateProvider.startSymbol('[[');
@@ -24,7 +22,7 @@ var index_page_app;
 	index_page_app.config(function(responsiveHelperProvider, $stateProvider, $urlRouterProvider){
 		
 		// check which device user is using
-		device = 'desktop';
+		var device = 'desktop';
 		var responsiveHelper = responsiveHelperProvider.$get();
 		if(responsiveHelper.isMobile()){
 			device = 'mobile';
@@ -37,18 +35,18 @@ var index_page_app;
 			templateUrl : '/my_ng_templates/my_ng_template_base.html',
 		}).state('index_page', {
 			parent : 'home',
-			templateUrl : 'my_ng_templates' + device + '/index/index.html'
-			controller : 'indexPageDispatcherCtrl'
+			templateUrl : '/my_ng_templates/' + device + '/index/index_page.html',
+			controller : 'indexPageDispatchCtrl'
 		}).state('index_introduction', {
 			url : '/index_introduction',
 			parent : 'index_page',
-			templateUrl : 'my_ng_templates' + device + '/index/index_introduction.html'
+			templateUrl : '/my_ng_templates/' + device + '/index/index_introduction.html'
 		});
 	});
 	
 	// dispatcher
 	var indexPageDispatchController = function($state, $scope, GLOBAL_VALUES){
-		$scope.email = GLBAL_VALUES.EMAIL;
+		$scope.email = GLOBAL_VALUES.EMAIL;
 		
 		//init page
 		var selected_template = $state.current.name;
@@ -59,7 +57,20 @@ var index_page_app;
 		}
 	}
 	indexPageDispatchController.$inject = ['$state', '$scope', 'GLOBAL_VALUES'];
-	index_page_app.controller('indexPageDispatcherCtrl', indexPageDispatchController);
+	index_page_app.controller('indexPageDispatchCtrl', indexPageDispatchController);
 	// end of indexPageDispatchController
+	
+	// controller
+	var indexPageController = function($state, $scope, GLOBAL_VALUES){
+		var current_ctrl = this;
+		current_ctrl.is_list_open = false;
+		
+		current_ctrl.toggle_list = function(){
+			current_ctrl.is_list_open = !current_ctrl.is_list_open;
+		}
+	}
+	indexPageController.$inject = ['$state', '$scope', 'GLOBAL_VALUES'];
+	index_page_app.controller('indexPageCtrl', indexPageController);
+	// end
 	
 })();
