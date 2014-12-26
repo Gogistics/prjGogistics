@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="75" version="2.0">
 <workbenchAdvisor/>
-<window height="430" maximized="true" width="1307" x="29" y="254">
+<window height="398" maximized="true" width="1307" x="12" y="320">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -47,6 +47,9 @@
 <part id="6"/>
 <part id="7"/>
 <part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
 </presentation>
 </folder>
 </info>
@@ -61,31 +64,43 @@
 </editor>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" partName="base.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/base.html" title="base.html" tooltip="prjGogisticsWINEVER/src/static/templates/base.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1533" selectionTopPixel="713"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" partName="front_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html" title="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="999" selectionTopPixel="443"/>
+<editorState selectionHorizontalPixel="310" selectionLength="37" selectionOffset="1732" selectionTopPixel="285"/>
 </editor>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="front_page_container.html" partName="front_page_container.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/front_page_container.html" title="front_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/front_page_container.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="368" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="241" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="front_page_container.js" partName="front_page_container.js" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js" title="front_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/front_page_container.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1520" selectionTopPixel="368"/>
+<editorState selectionHorizontalPixel="2" selectionLength="0" selectionOffset="327" selectionTopPixel="293"/>
 </editor>
 <editor id="org.python.pydev.editor.PythonEditor" name="dispatchers_base.py" partName="dispatchers_base" path="D:/prjGogistics/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py" title="dispatchers_base" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="435" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1165" selectionTopPixel="6"/>
 </editor>
-<editor id="org.eclipse.wst.css.core.csssource.source" name="base.css" partName="base.css" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/base.css" title="base.css" tooltip="prjGogisticsWINEVER/src/static/css/base.css" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/css/base.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="195" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" partName="index_page_container.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/index_page_container.html" title="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="382" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" partName="front_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html" title="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="366" selectionOffset="702" selectionTopPixel="353"/>
+<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index_page_container.js" partName="index_page_container.js" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js" title="index_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/index_page_container.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2056" selectionTopPixel="548"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" partName="index_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html" title="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1982" selectionTopPixel="1013"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" partName="front_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html" title="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="130" selectionOffset="157" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="ng-animation.css" partName="ng-animation.css" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/plugin_ng/ng-animation.css" title="ng-animation.css" tooltip="prjGogisticsWINEVER/src/static/css/plugin_ng/ng-animation.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/css/plugin_ng/ng-animation.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="23" selectionOffset="223" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="animate.css" partName="animate.css" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css" title="animate.css" tooltip="prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="9444"/>
 </editor>
 </editors>
 <views>
@@ -117,11 +132,17 @@
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/dispatchers"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/handlers"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/libs_crawler"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/css"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/plugin_ng"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/images"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates"/>
-<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
@@ -300,7 +321,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.17049666" ratioLeft="230" ratioRight="1119" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.2359375" ratioLeft="302" ratioRight="978" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
@@ -317,165 +338,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_introduction.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/prjGogisticsWINEVER/src/handlers/handler_webapp2_extra_auth.py"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/prjGogisticsWINEVER/src/static/css/base.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
 </editors>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
 <item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="257" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
 <position/>
 </item>
-<item historyLabel="index_page_container.html" index="0">
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="143" y="9"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="188" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="index_introduction.html" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="animate.css" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="157" y="130"/>
+</item>
+<item historyLabel="index_introduction.html" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position info="not_deleted" x="61" y="0"/>
+</item>
+<item historyLabel="animate.css" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="103" y="0"/>
+</item>
+<item historyLabel="index_introduction.html" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
 <position/>
 </item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="front_page_container.js" index="4">
-<position info="not_deleted" x="2015" y="0"/>
-</item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="585" y="0"/>
+<item historyLabel="index_introduction.html" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="103" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
 <position/>
 </item>
-<item historyLabel="dispatchers_base" index="5">
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="126" y="165"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position info="not_deleted" x="752" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="126" y="165"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2144" y="0"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="126" y="165"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position info="not_deleted" x="748" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="126" y="165"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2094" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position info="not_deleted" x="760" y="0"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
+<position/>
+</item>
+<item historyLabel="index_page_container.html" index="5">
+<position info="not_deleted" x="173" y="11"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="index_page_container.html" index="5">
+<position/>
+</item>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="126" y="165"/>
+</item>
+<item historyLabel="front_page_container.html" index="6">
 <position info="not_deleted" x="241" y="0"/>
 </item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="front_page_container.js" index="4">
-<position info="not_deleted" x="1520" y="0"/>
-</item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="241" y="0"/>
-</item>
-<item historyLabel="front_page_container.js" index="4">
-<position info="not_deleted" x="1520" y="0"/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
 <item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="446" y="0"/>
+</item>
+<item historyLabel="index_page.html" index="1">
 <position/>
 </item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="1614" y="0"/>
+<item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="157" y="130"/>
 </item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="241" y="0"/>
-</item>
-<item historyLabel="handler_webapp2_extra_auth" index="6">
+<item historyLabel="index_page.html" index="1">
 <position/>
 </item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="140" y="0"/>
-</item>
-<item historyLabel="front_page_container.js" index="4">
-<position info="not_deleted" x="1520" y="0"/>
-</item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="140" y="0"/>
-</item>
-<item historyLabel="handler_webapp2_extra_auth" index="6">
-<position info="not_deleted" x="3451" y="0"/>
-</item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="435" y="11"/>
-</item>
-<item historyLabel="handler_webapp2_extra_auth" index="6">
-<position info="not_deleted" x="3451" y="0"/>
-</item>
-<item historyLabel="dispatchers_base" index="5">
-<position info="not_deleted" x="435" y="11"/>
-</item>
-<item historyLabel="front_page_container.js" index="4">
-<position info="not_deleted" x="1520" y="0"/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
 <item historyLabel="front_page.html" index="2">
+<position info="not_deleted" x="157" y="130"/>
+</item>
+<item active="true" historyLabel="index_page.html" index="1">
 <position/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="1533" y="0"/>
-</item>
-<item historyLabel="base.css" index="7">
-<position info="not_deleted" x="466" y="44"/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position/>
-</item>
-<item historyLabel="base.html" index="1">
-<position info="not_deleted" x="1533" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="base.css" index="7">
-<position info="not_deleted" x="466" y="44"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position/>
-</item>
-<item historyLabel="front_page_container.js" index="4">
-<position info="not_deleted" x="1520" y="0"/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position info="not_deleted" x="1039" y="0"/>
-</item>
-<item historyLabel="base.css" index="7">
-<position info="not_deleted" x="195" y="0"/>
-</item>
-<item historyLabel="front_page_container.html" index="3">
-<position info="not_deleted" x="368" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position info="not_deleted" x="1052" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="8">
-<position info="not_deleted" x="2150" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position info="not_deleted" x="0" y="2030"/>
-</item>
-<item historyLabel="front_page.html" index="8">
-<position info="not_deleted" x="2123" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="2">
-<position info="not_deleted" x="2003" y="0"/>
-</item>
-<item historyLabel="front_page.html" index="8">
-<position info="not_deleted" x="702" y="366"/>
-</item>
-<item active="true" historyLabel="front_page.html" index="2">
-<position info="not_deleted" x="2003" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -496,6 +515,36 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="animate.css" tooltip="prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css">
+<persistable path="/prjGogisticsWINEVER/src/static/css/plugin_ng/animate.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="ng-animation.css" tooltip="prjGogisticsWINEVER/src/static/css/plugin_ng/ng-animation.css">
+<persistable path="/prjGogisticsWINEVER/src/static/css/plugin_ng/ng-animation.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_introduction.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_introduction.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_introduction.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/index_page_container.js">
+<persistable path="/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html">
+<persistable path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="feedparser.py" tooltip="prjGogisticsWINEVER/src/libs_crawler/feedparser.py">
+<persistable path="/prjGogisticsWINEVER/src/libs_crawler/feedparser.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_cron_tasks.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_cron_tasks.py">
+<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_cron_tasks.py"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html">
 <persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
 </file>
@@ -510,36 +559,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="base.css" tooltip="prjGogisticsWINEVER/src/static/css/base.css">
 <persistable path="/prjGogisticsWINEVER/src/static/css/base.css"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="handler_webapp2_extra_auth.py" tooltip="prjGogisticsWINEVER/src/handlers/handler_webapp2_extra_auth.py">
-<persistable path="/prjGogisticsWINEVER/src/handlers/handler_webapp2_extra_auth.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_base.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py">
-<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_base.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cron.yaml" tooltip="prjGogisticsWINEVER/src/cron.yaml">
-<persistable path="/prjGogisticsWINEVER/src/cron.yaml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="front_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/front_page_container.js">
-<persistable path="/prjGogisticsWINEVER/src/static/javascripts/front_page_container.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/front_page_container.html">
-<persistable path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html">
-<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="winever_txt.png" tooltip="prjGogisticsWINEVER/src/static/images/winever_txt.png">
-<persistable path="/prjGogisticsWINEVER/src/static/images/winever_txt.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="winery_icon.png" tooltip="prjGogisticsWINEVER/src/static/images/winery_icon.png">
-<persistable path="/prjGogisticsWINEVER/src/static/images/winery_icon.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html">
-<persistable path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="base.html" tooltip="prjGogisticsWINEVER/src/static/templates/base.html">
-<persistable path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
 </file>
 </mruList>
 </workbench>

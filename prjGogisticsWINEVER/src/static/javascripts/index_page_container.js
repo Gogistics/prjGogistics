@@ -62,11 +62,20 @@ var index_page_app;
 	
 	// controller
 	var indexPageController = function($state, $scope, GLOBAL_VALUES){
-		var current_ctrl = this;
+		var current_ctrl = this, $list_block = $( "#list_block" );
 		current_ctrl.is_list_open = false;
 		
 		current_ctrl.toggle_list = function(){
 			current_ctrl.is_list_open = !current_ctrl.is_list_open;
+			
+			if($list_block.hasClass( "fadeOutLeft")){
+				$list_block.removeClass('fadeOutLeft');
+				$list_block.addClass('list_block_show fadeInLeft');
+			}else{
+				$list_block.removeClass('fadeInLeft');
+				$list_block.addClass(' fadeOutLeft');
+				$list_block.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ $('#list_block').removeClass('list_block_show');; });
+			}
 		}
 	}
 	indexPageController.$inject = ['$state', '$scope', 'GLOBAL_VALUES'];

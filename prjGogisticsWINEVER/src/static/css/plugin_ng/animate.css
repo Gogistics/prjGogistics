@@ -1159,8 +1159,8 @@ Copyright (c) 2014 Daniel Eden
 }
 
 .fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft;
+  -webkit-animation: fadeInLeft 4s;
+          animation: fadeInLeft 4s;
 }
 
 @-webkit-keyframes fadeInLeftBig {
@@ -1426,8 +1426,8 @@ Copyright (c) 2014 Daniel Eden
 }
 
 .fadeOutLeft {
-  -webkit-animation-name: fadeOutLeft;
-          animation-name: fadeOutLeft;
+  -webkit-animation: fadeOutLeft 4s;
+          animation: fadeOutLeft 4s;
 }
 
 @-webkit-keyframes fadeOutLeftBig {
