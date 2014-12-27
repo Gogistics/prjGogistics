@@ -1,1 +1,9 @@
-DELSTRdispatchers.dispatchers_base
+INSTUPrequests.packages.urllib3.util.connection
+D:\prjGogistics\prjGogisticsWINEVER\src\requests\packages\urllib3\util\connection.py
+INFOS:&&3|1|2|0&&3|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0
+poll=1
+_set_socket_options=6
+select=3
+is_connection_dropped=4
+create_connection=5
+requests.packages.urllib3.util.connection=2

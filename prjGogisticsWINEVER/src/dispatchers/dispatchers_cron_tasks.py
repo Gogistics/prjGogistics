@@ -20,7 +20,7 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
         self._read_feed()
     
     def _read_feed(self):
-        feeds = feedparser.parse("http://www.wine-searcher.com/")
+        feeds = feedparser.parse("http://www.klwines.com/")
         
         for feed in feeds["items"]:
             queried_entities = WebLink.query(WebLink.link == feed["link"])

@@ -1,1 +1,14 @@
-DELSTRdispatchers.dispatchers_base
+INSTUPrequests.packages.urllib3.request
+D:\prjGogistics\prjGogisticsWINEVER\src\requests\packages\urllib3\request.py
+INFOS:&&3|1|2|0&&1|3|2|0&&3|4|2|3&&2|5|2|3&&3|6|2|7&&2|8|2|3&&2|9|2|3&&2|10|2|3&&2|11|2|3
+headers=6
+__all__=1
+__init__=5
+request_encode_body=11
+urlopen=8
+RequestMethods.__init__=7
+request=9
+request_encode_url=10
+requests.packages.urllib3.request=2
+RequestMethods=3
+_encode_url_methods=4

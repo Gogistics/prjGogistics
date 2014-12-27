@@ -34,6 +34,23 @@ apiclient.oauth|C:\Program Files (x86)\Google\google_appengine\lib\google-api-py
 apiclient.schema|C:\Program Files (x86)\Google\google_appengine\lib\google-api-python-client\apiclient\schema.py
 appcfg|C:\Program Files (x86)\Google\google_appengine\appcfg.py
 backends_conversion|C:\Program Files (x86)\Google\google_appengine\backends_conversion.py
+bs4.__init__|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\__init__.py
+bs4.builder.__init__|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\builder\__init__.py
+bs4.builder._html5lib|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\builder\_html5lib.py
+bs4.builder._htmlparser|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\builder\_htmlparser.py
+bs4.builder._lxml|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\builder\_lxml.py
+bs4.dammit|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\dammit.py
+bs4.diagnose|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\diagnose.py
+bs4.element|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\element.py
+bs4.testing|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\testing.py
+bs4.tests.__init__|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\__init__.py
+bs4.tests.test_builder_registry|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_builder_registry.py
+bs4.tests.test_docs|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_docs.py
+bs4.tests.test_html5lib|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_html5lib.py
+bs4.tests.test_htmlparser|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_htmlparser.py
+bs4.tests.test_lxml|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_lxml.py
+bs4.tests.test_soup|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_soup.py
+bs4.tests.test_tree|D:\prjGogistics\prjGogisticsWINEVER\src\bs4\tests\test_tree.py
 bulkload_client|C:\Program Files (x86)\Google\google_appengine\bulkload_client.py
 bulkloader|C:\Program Files (x86)\Google\google_appengine\bulkloader.py
 cherrypy.__init__|C:\Program Files (x86)\Google\google_appengine\lib\cherrypy\cherrypy\__init__.py
@@ -2436,6 +2453,7 @@ requests.packages.urllib3.util.__init__|C:\Program Files (x86)\Google\google_app
 requests.packages.urllib3.util.connection|C:\Program Files (x86)\Google\google_appengine\lib\requests\requests\packages\urllib3\util\connection.py
 requests.packages.urllib3.util.request|C:\Program Files (x86)\Google\google_appengine\lib\requests\requests\packages\urllib3\util\request.py
 requests.packages.urllib3.util.response|C:\Program Files (x86)\Google\google_appengine\lib\requests\requests\packages\urllib3\util\response.py
+requests.packages.urllib3.util.retry|D:\prjGogistics\prjGogisticsWINEVER\src\requests\packages\urllib3\util\retry.py
 requests.packages.urllib3.util.ssl_|C:\Program Files (x86)\Google\google_appengine\lib\requests\requests\packages\urllib3\util\ssl_.py
 requests.packages.urllib3.util.timeout|C:\Program Files (x86)\Google\google_appengine\lib\requests\requests\packages\urllib3\util\timeout.py
 requests.packages.urllib3.util.url|C:\Program Files (x86)\Google\google_appengine\lib\requests\requests\packages\urllib3\util\url.py
