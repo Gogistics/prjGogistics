@@ -1,9 +1,4 @@
 <style>
-
-.list_icon:hover{
-cursor: pointer;
-}
-
 .list_block_show {
 	position: fixed;
 	top: 0px;
@@ -20,7 +15,7 @@ cursor: pointer;
 <div ng-controller="indexPageCtrl as ctrl">
 	<div class="navbar navbar-default navbar-fixed-top block"
 		role="navigation">
-		<div class="navbar-header list_icon">
+		<div class="navbar-header">
 			<a class="navbar-brand glyphicon glyphicon-list"
 				ng-click="ctrl.toggle_list()"></a>
 		</div>

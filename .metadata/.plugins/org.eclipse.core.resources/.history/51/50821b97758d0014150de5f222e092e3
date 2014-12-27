@@ -62,7 +62,7 @@ var index_page_app;
 	
 	// controller
 	var indexPageController = function($state, $scope, GLOBAL_VALUES){
-		var current_ctrl = this, $list_block = $( "#list_block" ), $list_detail = $("#list_detail");
+		var current_ctrl = this, $list_block = $( "#list_block" ), $list_detail = ("#list_detail");
 		current_ctrl.is_list_open = false;
 		
 		current_ctrl.toggle_list = function(){

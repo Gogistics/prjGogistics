@@ -62,7 +62,7 @@ var index_page_app;
 	
 	// controller
 	var indexPageController = function($state, $scope, GLOBAL_VALUES){
-		var current_ctrl = this, $list_block = $( "#list_block" ), $list_detail = $("#list_detail");
+		var current_ctrl = this, $list_block = $( "#list_block" ), $list_detail = ("#list_detail");
 		current_ctrl.is_list_open = false;
 		
 		current_ctrl.toggle_list = function(){
@@ -70,15 +70,11 @@ var index_page_app;
 			
 			if($list_block.hasClass( "fadeOutLeft")){
 				$list_block.removeClass('fadeOutLeft');
-				$list_detail.removeClass('list_display_none');
 				$list_block.addClass('list_block_show fadeInLeft');
 			}else{
 				$list_block.removeClass('fadeInLeft');
 				$list_block.addClass(' fadeOutLeft');
-				$list_block.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
-					$list_block.removeClass('list_block_show');
-					$list_detail.addClass('list_display_none');
-					});
+				$list_block.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ $('#list_block').removeClass('list_block_show');; });
 			}
 		}
 	}

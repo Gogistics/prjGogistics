@@ -1,9 +1,4 @@
 <style>
-
-.list_icon:hover{
-cursor: pointer;
-}
-
 .list_block_show {
 	position: fixed;
 	top: 0px;
@@ -12,15 +7,12 @@ cursor: pointer;
 	height: 100%;
 	z-index: 10000;
 }
-.list_display_none{
-	display: none;
-}
 </style>
 
 <div ng-controller="indexPageCtrl as ctrl">
 	<div class="navbar navbar-default navbar-fixed-top block"
 		role="navigation">
-		<div class="navbar-header list_icon">
+		<div class="navbar-header">
 			<a class="navbar-brand glyphicon glyphicon-list"
 				ng-click="ctrl.toggle_list()"></a>
 		</div>
@@ -31,7 +23,7 @@ cursor: pointer;
 
 
 	<div id="list_block" class="container animated fadeOutLeft">
-		<div id="list_detail" class="row list_display_none" style="height: 100%;">
+		<div class="row" style="height: 100%;">
 			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"
 				style="background-color: #eee; height: 100%;">
 				<div>

@@ -1,6 +1,6 @@
 <style>
 
-.list_icon:hover{
+.list_icon:hove{
 cursor: pointer;
 }
 
