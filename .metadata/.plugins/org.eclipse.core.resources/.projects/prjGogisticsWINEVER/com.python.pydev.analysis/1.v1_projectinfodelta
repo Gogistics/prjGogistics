@@ -1,9 +1,1 @@
-INSTUPrequests.packages.urllib3.filepost
-D:\prjGogistics\prjGogisticsWINEVER\src\requests\packages\urllib3\filepost.py
-INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0
-iter_fields=5
-requests.packages.urllib3.filepost=2
-encode_multipart_formdata=6
-writer=1
-iter_field_objects=4
-choose_boundary=3
+DELSTRdispatchers.dispatchers_cron_tasks
