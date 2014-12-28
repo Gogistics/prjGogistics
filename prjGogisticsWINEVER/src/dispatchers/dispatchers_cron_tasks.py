@@ -5,12 +5,10 @@ Created on Dec 22, 2014
 @author: Alan Tai
 '''
 from handlers.handler_webapp2_extra_auth import BaseHandler
-from libs_crawler import feedparser
 from models.models_wine_info import WebLink
 from dictionaries.dict_key_value_pairs import KeyValuePairsGeneral
 from bs4 import BeautifulSoup
-import requests
-import webapp2, logging, re
+import webapp2, logging, re, urllib2
 
 
 #
@@ -21,9 +19,10 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
         self._read_feed()
     
     def _read_feed(self):
-        r  = requests.get("http://www.klwines.com/")
-        data = r.text
-        soup = BeautifulSoup(data)
+        req = urllib2.Request('http://www.klwines.com/')
+        response = urllib2.urlopen(req)
+        the_page = response.read()
+        soup = BeautifulSoup(the_page)
         
         for link in soup.find_all('a'):
             if link.get('title') and link.get('href'):
