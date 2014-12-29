@@ -1,1 +1,10 @@
-DELSTRrequests.packages.chardet.sbcsgroupprober
+INSTUPdispatchers.dispatchers_cron_tasks
+D:\prjGogistics\prjGogisticsWINEVER\src\dispatchers\dispatchers_cron_tasks.py
+INFOS:&&3|1|2|0&&1|3|2|0&&2|4|2|3&&2|5|2|3&&3|6|2|0&&3|7|2|0
+app=7
+get=4
+config=6
+dict_general=1
+dispatchers.dispatchers_cron_tasks=2
+CrawlerGeneralWineInfoDispatcher=3
+_read_feed=5

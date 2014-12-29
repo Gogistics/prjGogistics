@@ -19,7 +19,7 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
         self._read_feed()
     
     def _read_feed(self):
-        list_wine_weblinks = ['http://www.klwines.com/', 'http://www.winebid.com/'] # sample links
+        list_wine_weblinks = ['http://www.klwines.com/', 'http://www.winebid.com/BuyWine/Items/Red/15359']
         
         for root_link in list_wine_weblinks:
             req = urllib2.Request(root_link)
@@ -32,7 +32,7 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
                     m = re.match("http", link.get('href'), re.I)
                     full_href = ""
                     if not m:
-                        full_href = "{href_root_link}{sub_href}".format(href_root_link = root_link, sub_href = link.get('href'))
+                        full_href = "{0}{1}".format(root_link, link.get('href'))
                     else:
                         full_href = link.get('href')
                         
