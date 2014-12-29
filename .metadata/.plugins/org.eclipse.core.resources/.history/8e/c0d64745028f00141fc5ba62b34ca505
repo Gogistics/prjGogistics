@@ -12,7 +12,3 @@ class WebLink(ndb.Model):
     
     create_datetime = ndb.DateTimeProperty(auto_now_add = True)
     update_datetime = ndb.DateTimeProperty(auto_now = True)
-    
-    
-class RootWebLink(WebLink):
-    pass
