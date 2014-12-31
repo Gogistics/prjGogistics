@@ -86,9 +86,11 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
                     new_link = WebLinkWineTemp()
                     new_link.link = elem["link"]
                     new_link.title = elem["title"]
-                    new_link.put()                
+                    new_link.put()
+                
+                
         # end
-
+        
 #         for root_link in list_webInfo_temp:
 #             req = urllib2.Request(root_link)
 #             response = urllib2.urlopen(req)

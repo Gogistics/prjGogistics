@@ -86,30 +86,32 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
                     new_link = WebLinkWineTemp()
                     new_link.link = elem["link"]
                     new_link.title = elem["title"]
-                    new_link.put()                
+                
+                
         # end
-
-#         for root_link in list_webInfo_temp:
-#             req = urllib2.Request(root_link)
-#             response = urllib2.urlopen(req)
-#             the_page = response.read()
-#             soup = BeautifulSoup(the_page)
-#             
-#             for elem in soup.find_all('a'):
-#                 if elem.get('title') and elem.get('href'):
-#                     m = re.match("http", elem.get('href'), re.I)
-#                     full_href = ""
-#                     if not m:
-#                         full_href = "{href_root_link}{sub_href}".format(href_root_link = root_link, sub_href = elem.get('href'))
-#                     else:
-#                         full_href = elem.get('href')
-#                         
-#                     query_result = WebLink.query(WebLink.link == full_href)
-#                     if (query_result.count() == 0):
-#                         new_link = WebLink()
-#                         new_link.link = full_href
-#                         new_link.title = elem.get('title')
-#                         new_link.put()
+        
+        
+        for root_link in list_webInfo_temp:
+            req = urllib2.Request(root_link)
+            response = urllib2.urlopen(req)
+            the_page = response.read()
+            soup = BeautifulSoup(the_page)
+            
+            for elem in soup.find_all('a'):
+                if elem.get('title') and elem.get('href'):
+                    m = re.match("http", elem.get('href'), re.I)
+                    full_href = ""
+                    if not m:
+                        full_href = "{href_root_link}{sub_href}".format(href_root_link = root_link, sub_href = elem.get('href'))
+                    else:
+                        full_href = elem.get('href')
+                        
+                    query_result = WebLink.query(WebLink.link == full_href)
+                    if (query_result.count() == 0):
+                        new_link = WebLink()
+                        new_link.link = full_href
+                        new_link.title = elem.get('title')
+                        new_link.put()
 
 # configuration
 config = dict_general.config_setting
