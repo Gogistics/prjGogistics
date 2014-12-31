@@ -21,7 +21,7 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
     def _read_feed(self):
         """ crawling task """
         # temp root links
-        list_webInfo_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'}, {"title" : "WineBid", "link" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'}, {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}] # sample links
+        list_webInfo_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'}, {"title" : "WineBid", "link" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'}, {"title" : "The Wine Club", "link" : 'http://www.winebid.com/'}] # sample links
         
         # construct search list
         search_list = []
@@ -40,7 +40,7 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
         if query_wine_entities.count() != 0:
             wine_links = [] # links are going to be searched
             for entity in query_wine_entities:
-                wine_links.append({"title" : entity["title"] , "link" : entity["link"]})
+                wine_links.append({"title" : entity["title"] , "elem" : entity["elem"]})
                 entity.key.delete()
                 
             search_list.append(wine_links)
@@ -120,7 +120,7 @@ class TaskCategorizeWineInfoDispatcher(BaseHandler):
         """ categorize wine info """
         entities = WebLinkWineTemp.query()
         for entity in entities:
-            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe", entity["link"], re.I) # sku ; BuyWine/Item ; bwe
+            result = re.findall(r"BuyWine/Item|sku|bwe", entity["link"], re.I) # sku ; BuyWine/Item ; bwe
             query = WebLinkWine.query(WebLinkWine.link == entity["link"])
             if result and query.count() == 0:
                 new_wine_info = WebLinkWine()

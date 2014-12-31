@@ -21,7 +21,7 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
     def _read_feed(self):
         """ crawling task """
         # temp root links
-        list_webInfo_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'}, {"title" : "WineBid", "link" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'}, {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}] # sample links
+        list_webInfo_temp = [{"title" : "K&L", "elem" : 'http://www.klwines.com/'}, {"title" : "WineBid", "elem" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "elem" : 'http://www.belmontwine.com/'}] # sample links
         
         # construct search list
         search_list = []
@@ -29,7 +29,7 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
         if query_root_entities.count() != 0:
             root_list = []
             for entity in query_root_entities:
-                root_list.append({"title" : entity["title"] , "link" : entity["link"]})
+                root_list.append({"title" : entity["title"] , "elem" : entity["elem"]})
                 
             if len(root_list) != 0:
                 search_list.append(root_list)
@@ -40,14 +40,14 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
         if query_wine_entities.count() != 0:
             wine_links = [] # links are going to be searched
             for entity in query_wine_entities:
-                wine_links.append({"title" : entity["title"] , "link" : entity["link"]})
+                wine_links.append({"title" : entity["title"] , "elem" : entity["elem"]})
                 entity.key.delete()
                 
             search_list.append(wine_links)
             
         
         # crawl
-        count = 0 # count is used as a threshold to limit the app to consume quota
+        count = 0
         while len(search_list) > 0 or count < 8:
             sub_list = search_list.pop(0)
             
@@ -87,7 +87,8 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
                 new_link.link = elem["link"]
                 new_link.title = elem["title"]
                 new_link.put()                
-                
+        # end
+
 #         for root_link in list_webInfo_temp:
 #             req = urllib2.Request(root_link)
 #             response = urllib2.urlopen(req)
@@ -113,14 +114,12 @@ class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
  
 class TaskCategorizeWineInfoDispatcher(BaseHandler):
     def get(self):
-        """ cron task """
         self._categorize()
         
     def _categorize(self):
-        """ categorize wine info """
         entities = WebLinkWineTemp.query()
         for entity in entities:
-            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe", entity["link"], re.I) # sku ; BuyWine/Item ; bwe
+            result = re.findall(r"BuyWine/Item|sku|bwe", entity["link"], re.I) # sku ; BuyWine/Item ; bwe
             query = WebLinkWine.query(WebLinkWine.link == entity["link"])
             if result and query.count() == 0:
                 new_wine_info = WebLinkWine()

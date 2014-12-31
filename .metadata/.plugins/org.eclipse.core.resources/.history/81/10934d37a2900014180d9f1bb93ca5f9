@@ -47,11 +47,14 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">WINEver Services</div>
 					<div class="panel-body">
-						<p>This web service provides up-to-date wine information around bay area and logistics information for wine lovers who live outside US but would like to shop wine online and have wine shipped to your countries</p>
+						<p>This web service provide up-to-date wine information around bay area and logistics information for wine lovers who live outside US but would like to shop wine online and have wine shipped to your countries</p>
 					</div>
 					<div class="list-group">
-						<a href="#" class="list-group-item active">Up-to-date Wine Items</a>
-						<a href="#" class="list-group-item">Information of Shipping Services</a>
+						<a href="#" class="list-group-item active">Free Domain Name Registration </a>
+						<a href="#" class="list-group-item">24*7 support</a>
+						<a href="#" class="list-group-item">Free Window Space hosting</a>
+						<a href="#" class="list-group-item">Number of Images</a>
+						<a href="#" class="list-group-item">Renewal cost per year</a>
 					</div>
 				</div>
 
