@@ -5,7 +5,7 @@ Created on Dec 22, 2014
 @author: Alan Tai
 '''
 from handlers.handler_webapp2_extra_auth import BaseHandler
-from models.models_wine_info import WebLink, WebLinkRoot, WebLinkWineTemp
+from models.models_wine_info import WebLinkRoot, WebLinkWineTemp, WebLinkWine
 from dictionaries.dict_key_value_pairs import KeyValuePairsGeneral
 from bs4 import BeautifulSoup
 import webapp2, logging, re, urllib2, urlparse
@@ -14,7 +14,7 @@ import webapp2, logging, re, urllib2, urlparse
 #
 dict_general = KeyValuePairsGeneral()
 
-class CrawlerGeneralWineInfoDispatcher(BaseHandler):
+class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
     def get(self):
         self._read_feed()
     
@@ -54,7 +54,7 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
             for elem in sub_list:
                 # root elem
                 parsed = urlparse.urlsplit(elem["href"])
-                link_base = "{0}://{1}/".format(parsed.scheme, parsed.netloc)
+                link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed.scheme, url_netloc = parsed.netloc)
                 
                 req = urllib2.Request(elem["href"])
                 response = urllib2.urlopen(req)
@@ -81,12 +81,12 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
             
         # insert urls to WebLinkWineTemp
         while len(search_list) > 0:
-            for sub_list in search_list:
-                for elem in sub_list:
-                    new_link = WebLinkWineTemp()
-                    new_link.link = elem["link"]
-                    new_link.title = elem["title"]
-                    new_link.put()                
+            sub_list = search_list.pop()
+            for elem in sub_list:
+                new_link = WebLinkWineTemp()
+                new_link.link = elem["link"]
+                new_link.title = elem["title"]
+                new_link.put()                
         # end
 
 #         for root_link in list_webInfo_temp:
@@ -111,12 +111,30 @@ class CrawlerGeneralWineInfoDispatcher(BaseHandler):
 #                         new_link.title = elem.get('title')
 #                         new_link.put()
 
+ 
+class TaskCategorizeWineInfoDispatcher(BaseHandler):
+    def get(self):
+        self._categorize()
+        
+    def _categorize(self):
+        entities = WebLinkWineTemp.query()
+        for entity in entities:
+            result = re.findall(r"BuyWine/Item|sku|bwe", entity["link"], re.I) # sku ; BuyWine/Item ; bwe
+            query = WebLinkWine.query(WebLinkWine.link == entity["link"])
+            if result and query.count() == 0:
+                new_wine_info = WebLinkWine()
+                new_wine_info.link = entity["link"]
+                new_wine_info.title = entity["title"]
+                new_wine_info.put()
+
+
 # configuration
 config = dict_general.config_setting
 
 # app
 app = webapp2.WSGIApplication([
-    webapp2.Route(r'/cron_tasks/crawler_wine_searcher', CrawlerGeneralWineInfoDispatcher, name='crawler_wine_searcher')
+    webapp2.Route(r'/cron_tasks/crawler_wine_searcher', TaskCrawlerGeneralWineInfoDispatcher, name = 'crawler_wine_searcher'),
+    webapp2.Route(r'/cron_tasks/categorize_wine_info', TaskCategorizeWineInfoDispatcher, name = "categorize_wine_info")
 ], debug=True, config=config)
 
 # log
