@@ -14,81 +14,115 @@ import webapp2, logging, re, urllib2, urlparse
 #
 dict_general = KeyValuePairsGeneral()
 
-class TaskCrawlerGeneralWineInfoDispatcher(BaseHandler):
+class TaskCrawlRootLinksDispatcher(BaseHandler):
     def get(self):
         self._read_feed()
     
     def _read_feed(self):
         """ crawling task """
         # temp root links
-        list_webInfo_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'}, {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'}, {"title" : "WineBid", "link" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'}, {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}] # sample links
+        root_list_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'}, {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'}, {"title" : "WineBid", "link" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'}, {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}] # sample links
         
         # construct search list
         search_list = []
         query_root_entities = WebLinkRoot.query()
-        if query_root_entities.count() != 0:
-            root_list = []
+        if query_root_entities.count() > 0:
             for entity in query_root_entities:
-                root_list.append({"title" : entity["title"] , "link" : entity["link"]})
-                
-            if len(root_list) != 0:
-                search_list.append(root_list)
-            else:
-                search_list.append(list_webInfo_temp)
+                search_list.append({"title" : entity["title"] , "link" : entity["link"]})
+        else:
+            search_list = root_list_temp
             
-        query_wine_entities = WebLinkWineTemp.query()
-        if query_wine_entities.count() != 0:
-            wine_links = [] # links are going to be searched
-            for entity in query_wine_entities:
-                wine_links.append({"title" : entity["title"] , "link" : entity["link"]})
-                entity.key.delete()
-                
-            search_list.append(wine_links)
-            
-        
-        # crawl
-        count = 0 # count is used as a threshold to limit the app to consume quota
-        while len(search_list) > 0 and count < 8:
-            #
-            sub_list = search_list.pop(0)
-            for elem in sub_list:
-                # root elem
-                parsed = urlparse.urlsplit(elem["href"])
-                link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed.scheme, url_netloc = parsed.netloc)
-                
-                req = urllib2.Request(elem["href"])
-                response = urllib2.urlopen(req)
-                searched_page = response.read()
-                soup = BeautifulSoup(searched_page)
-                
-                new_sub_list = []
-                for found_link in soup.find_all('a'):
-                    if found_link.get('href'):
-                        match_group = re.match("http", found_link.get('href'), re.I)
-                        full_href = ""
-                        
-                        # not done yet
-                        if not match_group:
-                            full_href = "{href_link_base}{sub_href}".format(href_link_base = link_base, sub_href = found_link.get('href'))
-                        else:
-                            full_href = found_link.get('href')
-                            
-                        new_sub_list.append(full_href)
-                        
-                search_list.append(new_sub_list)
-            
-            count = count + 1
-            
-        # insert urls to WebLinkWineTemp
+        # start to crawl
+        list_found_link = []
         while len(search_list) > 0:
-            sub_list = search_list.pop()
-            for elem in sub_list:
-                new_link = WebLinkWineTemp()
-                new_link.link = elem["link"]
-                new_link.title = elem["title"]
-                new_link.put()                
-
+            link = search_list.pop(0)["link"]
+            parsed_str = urlparse.urlsplit(link)
+            link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
+            
+            req = urllib2.Request(link)
+            response = urllib2.urlopen(req)
+            searched_page = response.read()
+            soup = BeautifulSoup(searched_page)
+            
+            for found_link in soup.find_all('a'):
+                if found_link.get('href'):
+                    match_group = re.match("http", found_link.get('href'), re.I)
+                    full_href = ""
+                    title = "NA"
+                    
+                    if not match_group:
+                        full_href = "{href_link_base}{sub_href}".format(href_link_base = link_base, sub_href = found_link.get('href'))
+                    else:
+                        full_href = found_link.get('href')
+                        
+                    if link.contents[0].string:
+                        title = link.contents[0].string
+                        
+                    list_found_link.append({'title' : title, 'link' : full_href})
+                    
+        
+        # store result into db
+        while len(list_found_link) > 0:
+            new_link = list_found_link.pop(0)
+            query = WebLinkWineTemp.query(WebLinkWineTemp.link == new_link['link'])
+            if query.count() == 0:
+                new_info = WebLinkWineTemp()
+                new_info.link = new_link['link']
+                new_info.title = new_link['title']
+                new_info.put()
  
+
+# crawl temp links
+class TaskCrawlTempLinksDispatcher(BaseHandler):
+    def get(self):
+        # fetch entities from db
+        entities = WebLinkWineTemp.query().fetch(50)
+        search_list = []
+        for entity in entities:
+            search_list.append({'title' : entity['title'], 'link' : entity['link']})
+            entity.key.delete()
+            
+        # crawl website
+        list_found_link = []
+        while len(search_list) > 0:
+            link = search_list.pop(0)['link']
+            parsed_str = urlparse.urlsplit(link)
+            link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
+            
+            req = urllib2.Request(link)
+            response = urllib2.urlopen(req)
+            searched_page = response.read()
+            soup = BeautifulSoup(searched_page)
+            
+            for found_link in soup.find_all('a'):
+                if found_link.get('href'):
+                    match_group = re.match("http", found_link.get('href'), re.I)
+                    full_href = ""
+                    title = "NA"
+                    
+                    if not match_group:
+                        full_href = "{href_link_base}{sub_href}".format(href_link_base = link_base, sub_href = found_link.get('href'))
+                    else:
+                        full_href = found_link.get('href')
+                        
+                    if link.contents[0].string:
+                        title = link.contents[0].string
+                        
+                    list_found_link.append({'title' : title, 'link' : full_href})
+                    
+        # store result into db
+        while len(list_found_link) > 0:
+            new_link = list_found_link.pop(0)
+            query = WebLinkWineTemp.query(WebLinkWineTemp.link == new_link['link'])
+            if query.count() == 0:
+                new_info = WebLinkWineTemp()
+                new_info.link = new_link['link']
+                new_info.title = new_link['title']
+                new_info.put()
+        
+    
+
+# categorize wine info
 class TaskCategorizeWineInfoDispatcher(BaseHandler):
     def get(self):
         """ cron task """
@@ -112,7 +146,8 @@ config = dict_general.config_setting
 
 # app
 app = webapp2.WSGIApplication([
-    webapp2.Route(r'/cron_tasks/crawler_wine_searcher', TaskCrawlerGeneralWineInfoDispatcher, name = 'crawler_wine_searcher'),
+    webapp2.Route(r'/cron_tasks/crawl_root_links', TaskCrawlRootLinksDispatcher, name = 'crawl_root_links'),
+    webapp2.Route(r'/cron_tasks/crawl_temp_links', TaskCrawlTempLinksDispatcher, name = 'crawl_temp_links'),
     webapp2.Route(r'/cron_tasks/categorize_wine_info', TaskCategorizeWineInfoDispatcher, name = "categorize_wine_info")
 ], debug=True, config=config)
 
