@@ -16,6 +16,7 @@ var index_page_app;
 	// set global values
 	index_page_app.value('GLOBAL_VALUES', {
 		EMAIL : 'gogistics@gogistics-tw.com',
+		WINE_SEARCHER_API_KEY : 'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585'
 	});
 	
 	// set config.
@@ -37,10 +38,10 @@ var index_page_app;
 			parent : 'home',
 			templateUrl : '/my_ng_templates/' + device + '/index/index_page.html',
 			controller : 'indexPageDispatchCtrl'
-		}).state('index_introduction', {
-			url : '/index_introduction',
+		}).state('index_wine_searcher', {
+			url : '/index_wine_searcher',
 			parent : 'index_page',
-			templateUrl : '/my_ng_templates/' + device + '/index/index_introduction.html'
+			templateUrl : '/my_ng_templates/' + device + '/index/index_wine_searcher.html'
 		});
 	});
 	
@@ -53,7 +54,7 @@ var index_page_app;
 		if($state.current.name !== ''){
 			$state.transitionTo(selected_template);
 		} else{
-			$state.transitionTo('index_introduction');
+			$state.transitionTo('index_wine_searcher');
 		}
 	}
 	indexPageDispatchController.$inject = ['$state', '$scope', 'GLOBAL_VALUES'];
@@ -81,9 +82,19 @@ var index_page_app;
 					});
 			}
 		}
-	}
+	};
 	indexPageController.$inject = ['$state', '$scope', 'GLOBAL_VALUES'];
 	index_page_app.controller('indexPageCtrl', indexPageController);
+	// end
+	
+	
+	// controller of querying wine info
+	var wineInfoQueryController = function($scope, GLOBAL_VALUES){
+		$scope.wine = {"name" : "", "vintage" : 0}; // default search info
+		
+	};
+	wineInfoQueryController.$inject =['$scope', 'GLOBAL_VALUES'];
+	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
 	// end
 	
 })();

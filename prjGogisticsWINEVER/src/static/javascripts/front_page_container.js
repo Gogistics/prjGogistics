@@ -57,6 +57,5 @@ var front_page_app;
 
 
 	/* JQuery */
-	
 })();
 

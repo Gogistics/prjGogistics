@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_introduction.html&apos; to &apos;index_wine_searcher.html&apos;" description="Rename resource &apos;index_introduction.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/my_ng_templates/desktop/index/index_introduction.html" name="index_wine_searcher.html" stamp="1420864863026" updateReferences="true"/>
+</session>
