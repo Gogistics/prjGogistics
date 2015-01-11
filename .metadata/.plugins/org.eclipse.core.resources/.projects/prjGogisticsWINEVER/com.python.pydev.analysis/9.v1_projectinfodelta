@@ -9,5 +9,5 @@ config=9
 dict_general=1
 TaskCrawlRootLinksDispatcher=3
 dispatchers.dispatchers_cron_tasks=2
-TaskCrawlTempLinksWineInfoDispatcher=6
+TaskCrawlTempLinksDispatcher=6
 _read_feed=5

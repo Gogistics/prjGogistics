@@ -21,7 +21,11 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
     def _read_feed(self):
         """ crawling task """
         # temp root links
-        root_list_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'}, {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'}, {"title" : "WineBid", "link" : 'http://www.winebid.com/'}, {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'}, {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}] # sample links
+        root_list_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'},
+                          {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'},
+                          {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
+                          {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
+                          {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}] # sample links
         
         # construct search list
         search_list = []
@@ -55,8 +59,8 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
                     else:
                         full_href = found_link.get('href')
                         
-                    if link.contents[0].string:
-                        title = link.contents[0].string
+                    if found_link.contents[0].string:
+                        title = found_link.contents[0].string
                         
                     list_found_link.append({'title' : title, 'link' : full_href})
                     
@@ -78,9 +82,17 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
         # fetch entities from db
         entities = WebLinkWineTemp.query().fetch(50)
         search_list = []
-        for entity in entities:
-            search_list.append({'title' : entity['title'], 'link' : entity['link']})
-            entity.key.delete()
+        
+        if entities.count() > 0:
+            for entity in entities:
+                search_list.append({'title' : entity['title'], 'link' : entity['link']})
+                entity.key.delete()
+        else:
+            search_list = [{"title" : "K&L", "link" : 'http://www.klwines.com/'},
+                           {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'},
+                           {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
+                           {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
+                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}]
             
         # crawl website
         list_found_link = []

@@ -16,7 +16,7 @@ var index_page_app;
 	// set global values
 	index_page_app.value('GLOBAL_VALUES', {
 		EMAIL : 'gogistics@gogistics-tw.com',
-		WINE_SEARCHER_API_KEY : 'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585'
+		WINE_SEARCHER_API_KEY : 'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5'
 	});
 	
 	// set config.
@@ -90,11 +90,65 @@ var index_page_app;
 	
 	// controller of querying wine info
 	var wineInfoQueryController = function($scope, GLOBAL_VALUES){
-		$scope.wine = {"name" : "", "vintage" : 0}; // default search info
+		// var
+		var ctrl_this = this;
+		$scope.wine = {"info" : undefined, "vintage" : undefined}; // default search info
+		
+		var wine_vintage, wine_info; // query var
+		// get query vintage
+		var get_query_vintage = function(arg_vintage){
+			console.log(arg_vintage + " ; " + $scope.wine.info);
+		}
+		ctrl_this.get_query_vintage = get_query_vintage;
+		
+		// get query wine info
+		var search_wine_info = function(){
+			
+			// query string for average price
+			var query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
+			
+
+			// something wrong with get json query response from Wine Searcher; the error can be solved by passing query back to server
+			/*$.getJSON( query_str + "&callback=?", function(data, textStatus, jqXHR){
+				   //response data are now in the result variable
+				   alert(data);
+				})
+				.success(function(data, textStatus, jqXHR) { alert("second success"); })
+				.error(function(data, textStatus, jqXHR) { alert(JSON.stringify(data,2,2)); })
+				.complete(function(data, textStatus, jqXHR) { alert(JSON.stringify(data,2,2)); });
+			*/
+			/*$.ajax(query_str, {
+			    crossDomain:true, 
+			    dataType: "jsonp", 
+		        async: false,
+			    success:function(data,text,xhqr){
+			        $.each(data, function(i, item) {
+			            alert(item);
+			        });
+			    }
+			});*/
+			
+			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
+		}
+		ctrl_this.search_wine_info = search_wine_info;
 		
 	};
 	wineInfoQueryController.$inject =['$scope', 'GLOBAL_VALUES'];
 	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
+	// end
+	
+	var vintageFilter = function(){
+		return function(input, total){
+			var current_year = new Date().getFullYear();
+			// total = parseInt(total); // total can be assigned from view
+			for(var i = 0; i <= current_year; i++){
+				input.push(i);
+			}
+
+			return input;
+		};
+	};
+	index_page_app.filter('range', vintageFilter);
 	// end
 	
 })();
