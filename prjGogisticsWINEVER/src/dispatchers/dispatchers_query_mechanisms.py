@@ -42,7 +42,7 @@ class QueryWineSearcherDispatcher(BaseHandler):
         # vintage available at the query location
         
         
-        ajax_response = {'processing_status' : wine_searcher_response}
+        ajax_response = {'query_results' : wine_searcher_response}
         self.response.out.headers['Content-Type'] = 'text/json'
         self.response.out.write(json.dumps(ajax_response))
 

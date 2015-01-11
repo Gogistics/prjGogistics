@@ -42,6 +42,10 @@ var index_page_app;
 			url : '/index_wine_searcher',
 			parent : 'index_page',
 			templateUrl : '/my_ng_templates/' + device + '/index/index_wine_searcher.html'
+		}).state('index_shipping_service', {
+			url : '/index_shipping_service',
+			parent : 'index_page',
+			templateUrl : '/my_ng_templates/' + device + '/index/index_shipping_service.html'
 		});
 	});
 	
@@ -63,9 +67,11 @@ var index_page_app;
 	
 	// controller
 	var indexPageController = function($state, $scope, GLOBAL_VALUES){
+		//
 		var current_ctrl = this, $list_block = $( "#list_block" ), $list_detail = $("#list_detail");
-		current_ctrl.is_list_open = false;
+		current_ctrl.is_list_open = false, current_ctrl.selected = $state.current.name;
 		
+		// toggle list by list icon
 		current_ctrl.toggle_list = function(){
 			current_ctrl.is_list_open = !current_ctrl.is_list_open;
 			
@@ -79,9 +85,38 @@ var index_page_app;
 				$list_block.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
 					$list_block.removeClass('list_block_show');
 					$list_detail.addClass('list_display_none');
-					});
+				});
 			}
+		};
+		
+		// switch class
+		current_ctrl.is_selected = function(arg_topic){
+			return (current_ctrl.selected === arg_topic);
 		}
+		
+		// select topic
+		current_ctrl.select_topic = function(arg_topic){
+			current_ctrl.selected = arg_topic;
+			
+			//
+			current_ctrl.is_list_open = !current_ctrl.is_list_open;
+			
+			if($list_block.hasClass( "fadeOutLeft")){
+				$list_block.removeClass('fadeOutLeft');
+				$list_detail.removeClass('list_display_none');
+				$list_block.addClass('list_block_show fadeInLeft');
+			}else{
+				$list_block.removeClass('fadeInLeft');
+				$list_block.addClass(' fadeOutLeft');
+				$list_block.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
+					$list_block.removeClass('list_block_show');
+					$list_detail.addClass('list_display_none');
+					
+					// switch topic content
+					$state.transitionTo(arg_topic);
+				});
+			}
+		};
 	};
 	indexPageController.$inject = ['$state', '$scope', 'GLOBAL_VALUES'];
 	index_page_app.controller('indexPageCtrl', indexPageController);
@@ -134,10 +169,10 @@ var index_page_app;
 
 			// post query to server
 			$http(req).success(function(data, status, headers, config){
-				alert(JSON.stringify(data,2,2));
+				console.log(data.query_results);
 			})
 			.error(function(data, status, headers, config){
-				alert(status);
+				console.log(status);
 			});
 			// end of query
 			

@@ -1159,8 +1159,8 @@ Copyright (c) 2014 Daniel Eden
 }
 
 .fadeInLeft {
-  -webkit-animation: fadeInLeft 4s;
-          animation: fadeInLeft 4s;
+  -webkit-animation: fadeInLeft 2.5s;
+          animation: fadeInLeft 2.5s;
 }
 
 @-webkit-keyframes fadeInLeftBig {
