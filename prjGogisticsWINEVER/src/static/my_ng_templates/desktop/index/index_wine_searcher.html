@@ -96,6 +96,15 @@
 	  opacity:1;
 	  max-height:40px;
 	}
+	
+	
+	.search_block{
+		margin: 20px auto;
+	}
+	
+	.query_filter_filed{
+		text-align: center;
+	}
 }
 
 @media all and (max-device-width: 767px) {
@@ -109,7 +118,7 @@
 		class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron vertical-center text-center">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="container">
-			      <div class="row">
+			      <div class="row search_block">
 			         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			            <div class="input-group">
 				             <div class="input-group-btn" >
@@ -128,6 +137,16 @@
 			                </span>
 			            </div>
 			         </div>
+			      </div>
+			      
+			      <!-- query result -->
+			      <div class="row search_block">
+			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			      		<ul class="list-group">
+			      			<li class="list-group-item active"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Keyword" ng-model="query_keyword"></li>
+			      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:query_keyword">[[info]]</li>
+			      		</ul>
+			      	</div>
 			      </div>
 			</div>
 		</div>

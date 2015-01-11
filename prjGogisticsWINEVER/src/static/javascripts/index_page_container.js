@@ -171,10 +171,47 @@ var index_page_app;
 				};
 
 			// post query to server
-			$http(req).success(function(data, status, headers, config){
+			$http(req)
+			.success(function(data, status, headers, config){
 				var json_response = JSON.parse(data.query_results);
 				var return_code = json_response['wine-searcher']['return-code'];
 				console.log(json_response['wine-searcher']);
+				
+				ctrl_this.info_list = [];
+				if(return_code === "0"){
+					var currency = json_response['wine-searcher']['list-currency-code'];
+					
+					if(json_response['wine-searcher']['names'] !== undefined){
+						for(var ith = 0 ; ith < json_response['wine-searcher']['names'].length; ith++){
+							var wine_info = json_response['wine-searcher']['names'][ith]['name'];
+							ctrl_this.info_list.push("Wine Name: " + wine_info['wine-name']);
+							ctrl_this.info_list.push("Region: " + wine_info['region']);
+							ctrl_this.info_list.push("Grape: " + wine_info['grape']);
+							ctrl_this.info_list.push("Currency: " + currency);
+							ctrl_this.info_list.push("Avg. Price: " + wine_info['price-average']);
+							ctrl_this.info_list.push("Min. Price: " + wine_info['price-min']);
+							ctrl_this.info_list.push("Max. Price: " + wine_info['price-max']);
+						}
+					}
+					else if(json_response['wine-searcher']['wine-vintages'] !== undefined){
+						for(var ith = 0 ; ith < json_response['wine-searcher']['wine-vintages'].length; ith++){
+							var wine_info = json_response['wine-searcher']['wine-vintages'][ith]['wine-vintage'];
+							if(wine_info['vintage'].length < 3){
+								continue;
+							}
+							var str = "Wine: " + $scope.wine.info + " ; " +
+									  "Vintage: " + wine_info['vintage'] + " ; " + 
+									  "Currency: " + currency + " ; " +
+									  "Avg. Price: " + wine_info['price-average'] + " ; " +
+									  "Max. Price: " + wine_info['price-max'] + " ; " +
+									  "Min. Price: " + wine_info['price-min'];
+							console.log(str);
+							ctrl_this.info_list.push(str);
+						}
+					}
+				}else{
+					ctrl_this.info_list.push("No Related Information");
+				}
 			})
 			.error(function(data, status, headers, config){
 				console.log(status);
