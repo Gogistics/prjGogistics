@@ -17,16 +17,22 @@ dict_general = KeyValuePairsGeneral()
 class QueryWineSearcherDispatcher(BaseHandler):
     def post(self):
         """ query mechanism for wine searcher """
-        query_info = self.request.get('query_info')
-        query_info = re.sub(r' ','+',query_info)
-        query_vintage = self.request.get('query_vintage')
+        query_wine_info = self.request.get('query_info')
+        query_wine_info = re.sub(r' ','+',query_wine_info)
+        query_wine_vintage = self.request.get('query_vintage')
         
         # query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
         # average price of the wine
         query_str = dict_general.wine_searcher_api
-        query_str += '&Xformat=J' + '&Xlocation=usa' + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V"
-        query_str += '&Xwinename=' + query_info
-        query_str += '&Xvintage=' + query_vintage
+        queries = '''&Xformat={query_format}&Xautoexpand={query_autoexpand}&Xcurrencycode={query_currencycode}&Xkeyword_mode={query_keyword_mode}&Xwidesearch={query_widesearch}&Xwinename={query_winename}&Xvintage={query_vintage}'''.format(query_format = 'J',
+                                                                                                                                                                                                                                               query_autoexpand = 'Y',
+                                                                                                                                                                                                                                               query_currencycode = 'usd',
+                                                                                                                                                                                                                                               query_keyword_mode = 'X',
+                                                                                                                                                                                                                                               query_widesearch = 'V',
+                                                                                                                                                                                                                                               query_winename = query_wine_info,
+                                                                                                                                                                                                                                               query_vintage = query_wine_vintage)
+        
+        query_str += query_str + queries # final string
         
         wine_searcher_query = urllib2.Request(query_str)
         wine_searcher_response = urllib2.urlopen(wine_searcher_query).read()
