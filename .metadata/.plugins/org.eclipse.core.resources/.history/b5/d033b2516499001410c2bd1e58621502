@@ -21,11 +21,6 @@
 	border-color: #888 !important;
 }
 
-.list_cover{
-	background-color: #555;
-	opacity: .7;
-	height: 100%;
-}
 .list_cover:hover{
 	cursor: pointer;
 }
@@ -66,7 +61,8 @@
 
 
 			</div>
-			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 list_cover"
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"
+				style="background-color: #555; opacity: .7; height: 100%;"
 				ng-click="ctrl.toggle_list()"></div>
 		</div>
 	</div>

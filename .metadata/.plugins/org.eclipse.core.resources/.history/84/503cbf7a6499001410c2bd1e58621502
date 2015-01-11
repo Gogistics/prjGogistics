@@ -21,11 +21,6 @@
 	border-color: #888 !important;
 }
 
-.list_cover{
-	background-color: #555;
-	opacity: .7;
-	height: 100%;
-}
 .list_cover:hover{
 	cursor: pointer;
 }
