@@ -83,7 +83,7 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
         entities = WebLinkWineTemp.query().fetch(50)
         search_list = []
         
-        if entities.count() > 0:
+        if entities:
             for entity in entities:
                 search_list.append({'title' : entity['title'], 'link' : entity['link']})
                 entity.key.delete()
@@ -117,8 +117,8 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
                     else:
                         full_href = found_link.get('href')
                         
-                    if link.contents[0].string:
-                        title = link.contents[0].string
+                    if found_link.contents[0].string:
+                        title = found_link.contents[0].string
                         
                     list_found_link.append({'title' : title, 'link' : full_href})
                     

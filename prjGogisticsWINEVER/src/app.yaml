@@ -43,6 +43,9 @@ handlers:
 - url: /(base/.*)?
   script: dispatchers.dispatchers_base.app
 
+- url: /query/.*
+  script: dispatchers.dispatchers_query_mechanisms.app
+
 - url: /cron_tasks/.*
   script: dispatchers.dispatchers_cron_tasks.app
   login: admin

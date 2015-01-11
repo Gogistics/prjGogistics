@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//src/dispatchers/dispatchers_base.py=utf-8
 encoding//src/dispatchers/dispatchers_cron_tasks.py=utf-8
+encoding//src/dispatchers/dispatchers_query_mechanisms.py=utf-8

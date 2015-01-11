@@ -89,25 +89,59 @@ var index_page_app;
 	
 	
 	// controller of querying wine info
-	var wineInfoQueryController = function($scope, GLOBAL_VALUES){
+	var wineInfoQueryController = function($http, $scope, GLOBAL_VALUES){
 		// var
 		var ctrl_this = this;
 		$scope.wine = {"info" : undefined, "vintage" : undefined}; // default search info
+		// vintage list
+		ctrl_this.vintage = [];
+		var current_year = new Date().getFullYear();
+		for (var ith = 1600 ; ith <= current_year; ith++){
+			ctrl_this.vintage.push(ith);
+		}
 		
-		var wine_vintage, wine_info; // query var
 		// get query vintage
 		var get_query_vintage = function(arg_vintage){
-			console.log(arg_vintage + " ; " + $scope.wine.info);
+			$scope.wine.vintage = arg_vintage; // set vintage
+			
+			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 		}
 		ctrl_this.get_query_vintage = get_query_vintage;
 		
 		// get query wine info
 		var search_wine_info = function(){
-			
+			if ($scope.wine.info !== undefined){
+				$scope.wine.info = $scope.wine.info.trim();
+				if ($scope.wine.info.length <= 0){
+					alert("query string is empty!");
+					return false;
+				}
+			}else{
+				alert("query string is empty!");
+				return false;
+			}
 			// query string for average price
-			var query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
-			
+			// var query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
+			var query_data = $.param({ query_info : $scope.wine.info, query_vintage : $scope.wine.vintage });
+			var req = {
+					 method: 'POST',
+					 url: '/query/wine_searcher',
+					 headers: {
+					   'Content-Type': 'application/x-www-form-urlencoded',
+					 },
+					 data: query_data,
+				};
 
+			// post query to server
+			$http(req).success(function(data, status, headers, config){
+				alert(JSON.stringify(data,2,2));
+			})
+			.error(function(data, status, headers, config){
+				alert(status);
+			});
+			// end of query
+			
+			
 			// something wrong with get json query response from Wine Searcher; the error can be solved by passing query back to server
 			/*$.getJSON( query_str + "&callback=?", function(data, textStatus, jqXHR){
 				   //response data are now in the result variable
@@ -133,7 +167,7 @@ var index_page_app;
 		ctrl_this.search_wine_info = search_wine_info;
 		
 	};
-	wineInfoQueryController.$inject =['$scope', 'GLOBAL_VALUES'];
+	wineInfoQueryController.$inject =['$http', '$scope', 'GLOBAL_VALUES'];
 	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
 	// end
 	

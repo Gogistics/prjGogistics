@@ -14,7 +14,7 @@ jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader('static/te
 # dict
 dict_general = KeyValuePairsGeneral()
 
-class FrontPageDispatcher(BaseHandler):
+class QueryWineSearcherDispatcher(BaseHandler):
     def get(self):
         """ front page """
         template_values = {}
@@ -33,7 +33,7 @@ config = dict_general.config_setting
 
 # app
 app = webapp2.WSGIApplication([
-    webapp2.Route(r'/', FrontPageDispatcher, name='front_page'),
+    webapp2.Route(r'/', QueryWineSearcherDispatcher, name='front_page'),
     webapp2.Route(r'/base/index', IndexPageDispatcher, name='index_page')
 ], debug=True, config=config)
 
