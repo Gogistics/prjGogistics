@@ -59,7 +59,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
                     else:
                         full_href = found_link.get('href')
                         
-                    if found_link.contents and len(found_link.contents) > 0 and found_link.contents[0].string:
+                    if found_link.contents[0].string:
                         title = found_link.contents[0].string
                         
                     list_found_link.append({'title' : title, 'link' : full_href})

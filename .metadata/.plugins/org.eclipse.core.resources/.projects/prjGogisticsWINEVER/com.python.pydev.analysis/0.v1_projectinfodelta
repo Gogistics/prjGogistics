@@ -1,10 +1,1 @@
-INSTUPdispatchers.dispatchers_query_mechanisms
-D:\prjGogistics\prjGogisticsWINEVER\src\dispatchers\dispatchers_query_mechanisms.py
-INFOS:&&3|1|2|0&&3|3|2|0&&1|4|2|0&&2|5|2|4&&3|6|2|0&&3|7|2|0
-app=7
-dispatchers.dispatchers_query_mechanisms=2
-post=5
-jinja_environment=1
-config=6
-dict_general=3
-QueryWineSearcherDispatcher=4
+DELSTRdispatchers.dispatchers_cron_tasks
