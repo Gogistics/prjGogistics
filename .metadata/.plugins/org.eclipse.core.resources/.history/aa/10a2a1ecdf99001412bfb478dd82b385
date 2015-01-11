@@ -114,7 +114,7 @@
 		class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron vertical-center text-center">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="container">
-		      <div class="row shipping_service_block">
+		      <div class="row">
 		         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		            <div class="list-group">
 					   <div class="list-group-item active">
@@ -165,7 +165,7 @@ var winever_icon = L.icon({
 });
 
 //
-var address = "ExShipper", map_id = "map_shipping_service_location", location_description = "ExShipper Shipping Service for International Wine Merchandise", map_size = 15;
+var address = "ExShipper", map_id = "map_shipping_service_location", location_description = "ExShipper Shipping Service", map_size = 15;
 var map;
 $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=1&q='
 						+ address, function(data) {
