@@ -173,8 +173,8 @@ var index_page_app;
 			// post query to server
 			$http(req).success(function(data, status, headers, config){
 				var json_response = JSON.parse(data.query_results);
-				var return_code = json_response['wine-searcher']['return-code'];
-				console.log(json_response['wine-searcher']);
+				var return_code = json_response['wine-searcher']['return-code']
+				console.log();
 			})
 			.error(function(data, status, headers, config){
 				console.log(status);

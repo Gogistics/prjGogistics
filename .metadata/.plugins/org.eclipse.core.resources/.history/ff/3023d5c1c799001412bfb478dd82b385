@@ -145,9 +145,6 @@ var index_page_app;
 		
 		// get query wine info
 		var search_wine_info = function(){
-			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
-			
-			//
 			if ($scope.wine.info !== undefined){
 				$scope.wine.info = $scope.wine.info.trim();
 				if ($scope.wine.info.length <= 0){
@@ -172,9 +169,7 @@ var index_page_app;
 
 			// post query to server
 			$http(req).success(function(data, status, headers, config){
-				var json_response = JSON.parse(data.query_results);
-				var return_code = json_response['wine-searcher']['return-code'];
-				console.log(json_response['wine-searcher']);
+				console.log(data.query_results);
 			})
 			.error(function(data, status, headers, config){
 				console.log(status);
@@ -201,6 +196,8 @@ var index_page_app;
 			        });
 			    }
 			});*/
+			
+			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 		}
 		ctrl_this.search_wine_info = search_wine_info;
 	};
