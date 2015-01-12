@@ -124,7 +124,7 @@ var index_page_app;
 	
 	
 	// controller of querying wine info
-	var wineInfoQueryController = function($http, $scope, GLOBAL_VALUES){
+	var wineInfoQueryController = function($http, $scope, $timeout, GLOBAL_VALUES){
 		// var
 		var ctrl_this = this;
 		$scope.wine = {"info" : undefined, "vintage" : undefined}; // default search info
@@ -142,6 +142,12 @@ var index_page_app;
 			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 		}
 		ctrl_this.get_query_vintage = get_query_vintage;
+		
+		//
+		ctrl_this.is_map_ready = false;
+		ctrl_this.is_map_shown = function(){
+			return ctrl_this.is_map_ready;
+		}
 		
 		// get query wine info
 		var search_wine_info = function(){
@@ -173,6 +179,7 @@ var index_page_app;
 			// post query to server
 			$http(req)
 			.success(function(data, status, headers, config){
+				// get wine info
 				var json_response = JSON.parse(data.query_results);
 				var return_code = json_response['wine-searcher']['return-code'];
 				console.log(json_response['wine-searcher']);
@@ -212,6 +219,84 @@ var index_page_app;
 				}else{
 					ctrl_this.info_list.push("No Related Information");
 				}
+				
+				
+				// get nearest selling store
+				ctrl_this.is_map_ready = false; // remove map style
+				console.log(data.query_nearest_selling_store);
+				if( data.query_nearest_selling_store !== "NA"){
+					var json_selling_store_response = JSON.parse(data.query_nearest_selling_store);
+					var return_code_selling_store = json_selling_store_response['wine-searcher']['return-code'];
+					
+					if( return_code_selling_store === "0"){
+						// show map
+						ctrl_this.is_map_ready = true;
+						
+						// get store info
+						var currency = json_selling_store_response['wine-searcher']['list-currency-code'];
+						if(json_selling_store_response['wine-searcher']['wines'] !== undefined ){
+							for(var ith = 0; ith < json_selling_store_response['wine-searcher']['wines'].length; ith++){
+								var store_info = json_selling_store_response['wine-searcher']['wines'][ith]['wine'];
+								
+								var result_str = '<span>Wine: ' + store_info['wine-description'] + "</span><br>" +
+												 '<span>Vintage: ' + store_info['vintage'] + "</span><br>" +
+												 '<span>Price: ' + store_info['price'] + "(USD)</span><br>" +
+												 '<span>Bottle Size: ' + store_info['bottle-size'] + "</span><br><hr>" +
+												 '<span>Merchant: ' + store_info['merchant'] + "</span><br>" +
+												 '<span>Merchant Description: ' + store_info['merchant-description'] + "</span><br><hr>" +
+												 '<span>Address: ' + store_info['physical-address'] + "</span><br>" +
+												 '<span>State: ' + store_info['state'] + "</span><br>" +
+												 '<span>Country: ' + store_info['country'] + "</span><br>" +
+												 '<span>Phone Number: ' + store_info['contact-phone'] + "</span><br>"
+								
+								var lat = Number(store_info['latitude']), lng = Number(store_info['longitude']);
+								
+								
+								// show on map
+								var winever_icon = L.icon({
+									iconUrl : '/leaflet/images/winever_logo_map_marker_pin.png',
+									shadowUrl : '/leaflet/images/marker-shadow.png',
+
+									iconSize : [ 50, 50 ],
+									shadowSize : [ 40, 40 ],
+									iconAnchor : [ 25, 49 ],
+									shadowAnchor : [ 12, 37 ],
+									popupAnchor : [ 0, -39 ]
+								});
+								
+								// init map
+								
+								try{
+									ctrl_this.map = L.map("map_nearest_store");								
+								}catch(err){
+									console.log(err);
+								}
+								
+								// delay show map time
+								$timeout(function(){
+									// var new_lat = (Number(val.lat) + Number(offset_lat)).toFixed(6);
+									// map.panTo([new_lat , (val.lon + offset_lng)]);
+									ctrl_this.map.setView([ lat, lng ], 16);
+									ctrl_this.map.panTo([lat, lng]);
+									 
+									// disable scoll zoom
+									ctrl_this.map.scrollWheelZoom.disable();
+									// map.options.closePopupOnClick = false;
+
+									// add an OpenStreetMap tile layer
+									L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(ctrl_this.map);
+
+									// add a marker in the given location, attach some popup
+									// content to it and open the popup
+									L.marker([ lat, lng ], {
+										icon : winever_icon
+									}).addTo(ctrl_this.map).bindPopup(result_str).openPopup();
+								}, 1000);
+							}
+						}
+						console.log(json_selling_store_response['wine-searcher']);
+					}
+				}
 			})
 			.error(function(data, status, headers, config){
 				console.log(status);
@@ -241,7 +326,7 @@ var index_page_app;
 		}
 		ctrl_this.search_wine_info = search_wine_info;
 	};
-	wineInfoQueryController.$inject =['$http', '$scope', 'GLOBAL_VALUES'];
+	wineInfoQueryController.$inject =['$http', '$scope', '$timeout', 'GLOBAL_VALUES'];
 	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
 	// end
 	

@@ -151,7 +151,7 @@
 
 <script type="text/javascript">
 <!--
-
+/* map mechanism will be replaced by handler_map */
 // icon setting
 var winever_icon = L.icon({
 	iconUrl : '/leaflet/images/winever_logo_map_marker_pin.png',
@@ -164,7 +164,7 @@ var winever_icon = L.icon({
 	popupAnchor : [ 0, -39 ]
 });
 
-//
+// map information
 var address = "ExShipper", map_id = "map_shipping_service_location", location_description = "ExShipper Shipping Service for International Wine Merchandise", map_size = 15;
 var map;
 $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=1&q='
@@ -205,7 +205,7 @@ $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=1&q='
 				}).fail(function(){
 					console.log("fail to get geo-info");
 					// init lat and lng
-					var lat = 23.249154 , lng = 119.616476;
+					var lat = 37.65239 , lng = -122.41785;
 					
 					// init map
 					map = L.map(map_id).setView([ lat, lng ], map_size);

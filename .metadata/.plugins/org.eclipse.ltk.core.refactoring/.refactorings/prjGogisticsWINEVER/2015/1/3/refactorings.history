@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;prjGogisticsWINEVER/src/static/javascripts/map_handler.js&apos; to &apos;handler_map.js&apos;" description="Rename resource &apos;map_handler.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/javascripts/map_handler.js" name="handler_map.js" stamp="1421017057114" updateReferences="true"/>
+</session>

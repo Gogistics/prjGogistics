@@ -105,6 +105,10 @@
 	.query_filter_filed{
 		text-align: center;
 	}
+	
+	.map_nearest_store{
+		width: 650px; height: 450px; border: 1px solid #eee; margin: 5px auto; border-radius: 3px;
+	}
 }
 
 @media all and (max-device-width: 767px) {
@@ -148,6 +152,20 @@
 			      		</ul>
 			      	</div>
 			      </div>
+			      
+			      <!-- store info -->
+			      <div class="row search_block">
+			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			      		<ul class="list-group">
+			      		<li class="list-group-item active">
+			      			<h4>Nearest Store Information</h4>
+			      		</li>
+			      		<li class="list-group-item">
+			      			<div id="map_nearest_store" ng-class="ctrl.is_map_shown() ? 'map_nearest_store' : '' "></div></li>
+			      		</ul>
+			      	</div>
+			      </div>
+			      
 			</div>
 		</div>
 	</div>

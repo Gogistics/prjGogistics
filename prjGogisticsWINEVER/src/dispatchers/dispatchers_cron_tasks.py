@@ -144,12 +144,12 @@ class TaskCategorizeWineInfoDispatcher(BaseHandler):
         """ categorize wine info """
         entities = WebLinkWineTemp.query()
         for entity in entities:
-            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe|wines", entity["link"], re.I) # sku ; BuyWine/Item ; bwe
-            query = WebLinkWine.query(WebLinkWine.link == entity["link"])
+            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe|wines", entity.link, re.I) # sku ; BuyWine/Item ; bwe
+            query = WebLinkWine.query(WebLinkWine.link == entity.link)
             if result and query.count() == 0:
                 new_wine_info = WebLinkWine()
-                new_wine_info.link = entity["link"]
-                new_wine_info.title = entity["title"]
+                new_wine_info.link = entity.link
+                new_wine_info.title = entity.title
                 new_wine_info.put()
 
 
