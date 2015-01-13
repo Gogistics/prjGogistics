@@ -26,8 +26,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
                           {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
                           {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'},
-                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"},
-                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com/"}] # sample links
+                          {"title" : "", "link" : "https://aabalat.com/"}] # sample links
         
         # construct search list
         search_list = []
@@ -99,9 +98,7 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
                            {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'},
                            {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
                            {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
-                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'},
-                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"},
-                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com/"}]
+                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}]
             
         # crawl website
         list_found_link = []
@@ -156,7 +153,7 @@ class TaskCategorizeWineInfoDispatcher(BaseHandler):
         """ categorize wine info """
         entities = WebLinkWineTemp.query()
         for entity in entities:
-            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe|wines|wine", entity.link, re.I) # sku ; BuyWine/Item ; bwe
+            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe|wines", entity.link, re.I) # sku ; BuyWine/Item ; bwe
             query = WebLinkWine.query(WebLinkWine.link == entity.link)
             if result and query.count() == 0:
                 new_wine_info = WebLinkWine()

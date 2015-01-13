@@ -1,1 +1,9 @@
-DELSTRdispatchers.dispatchers_cron_tasks
+INSTUPdispatchers.dispatchers_cron_tasks
+D:\prjGogistics\prjGogisticsWINEVER\src\dispatchers\dispatchers_cron_tasks.py
+INFOS:&&3|1|2|0&&1|3|2|0&&2|4|2|3&&2|5|2|3&&1|6|2|0&&2|4|2|6
+get=4
+dict_general=1
+TaskCrawlRootLinksDispatcher=3
+dispatchers.dispatchers_cron_tasks=2
+TaskCrawlTempLinksDispatcher=6
+_read_feed=5

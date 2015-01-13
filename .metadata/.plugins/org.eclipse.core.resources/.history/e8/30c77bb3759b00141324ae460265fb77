@@ -26,8 +26,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
                           {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
                           {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'},
-                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"},
-                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com/"}] # sample links
+                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"}] # sample links
         
         # construct search list
         search_list = []
@@ -99,9 +98,7 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
                            {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'},
                            {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
                            {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
-                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'},
-                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"},
-                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com/"}]
+                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'}]
             
         # crawl website
         list_found_link = []
