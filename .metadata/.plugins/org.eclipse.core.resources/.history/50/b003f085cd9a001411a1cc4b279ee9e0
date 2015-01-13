@@ -39,7 +39,7 @@
 <!-- self-defined css -->
 <link type="text/css" rel="stylesheet" href="/css/base.css">
 
-{% block css_content %}{% endblock %}
+{% block css_content %} {% endblock %}
 <title>{{ title|safe }}</title>
 </head>
 <body>

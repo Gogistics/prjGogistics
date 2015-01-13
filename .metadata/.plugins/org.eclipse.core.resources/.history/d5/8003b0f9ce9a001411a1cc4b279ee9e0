@@ -32,7 +32,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
         query_root_entities = WebLinkRoot.query()
         if query_root_entities.count() > 0:
             for entity in query_root_entities:
-                search_list.append({"title" : entity.title , "link" : entity.link})
+                search_list.append({"title" : entity["title"] , "link" : entity["link"]})
         else:
             search_list = root_list_temp
             

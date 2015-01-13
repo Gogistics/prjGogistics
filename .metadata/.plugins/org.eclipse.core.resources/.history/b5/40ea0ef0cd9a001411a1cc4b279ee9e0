@@ -63,7 +63,7 @@
 			</div>
 			<div class="my_navbar_brand_copy_right">
 				<a href="http://gogistics.gogistics-tw.com" target="_blank"
-					title="Go to Gogistics Website" style="color: #000;">&nbsp;&copy;<span>Gogistics
+					title="Go to Gogistics Website" style="color: #000;"> &copy;<span>Gogistics
 						Ltd.&nbsp;(資雲科技有限公司)</span><span>&nbsp;&nbsp;Since 2014</span></a> <span><a
 					class="glyphicon glyphicon-envelope" href="mailto:[[email]]"
 					title="聯絡我們 -[[email]]" style="color: #000; margin-left: 10px;"></a></span>
