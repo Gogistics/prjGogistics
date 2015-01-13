@@ -252,7 +252,7 @@ var index_page_app;
 								var lat = Number(store_info['latitude']), lng = Number(store_info['longitude']);
 								
 								
-								// show store info on map; this part could be moved to mapObj()
+								// show store info on map; this part will be moved to mapObj()
 								var winever_icon = L.icon({
 									iconUrl : '/leaflet/images/winever_logo_map_marker_pin.png',
 									shadowUrl : '/leaflet/images/marker-shadow.png',
@@ -300,6 +300,28 @@ var index_page_app;
 			.error(function(data, status, headers, config){
 				console.log(status);
 			});
+			// end of query
+			
+			
+			// something wrong with get json query response from Wine Searcher; the error can be solved by passing query back to server
+			/*$.getJSON( query_str + "&callback=?", function(data, textStatus, jqXHR){
+				   //response data are now in the result variable
+				   alert(data);
+				})
+				.success(function(data, textStatus, jqXHR) { alert("second success"); })
+				.error(function(data, textStatus, jqXHR) { alert(JSON.stringify(data,2,2)); })
+				.complete(function(data, textStatus, jqXHR) { alert(JSON.stringify(data,2,2)); });
+			*/
+			/*$.ajax(query_str, {
+			    crossDomain:true, 
+			    dataType: "jsonp", 
+		        async: false,
+			    success:function(data,text,xhqr){
+			        $.each(data, function(i, item) {
+			            alert(item);
+			        });
+			    }
+			});*/
 		}
 		ctrl_this.search_wine_info = search_wine_info;
 	};
@@ -307,7 +329,6 @@ var index_page_app;
 	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
 	// end
 	
-	// for building vintage list
 	var vintageFilter = function(){
 		return function(input, total){
 			var current_year = new Date().getFullYear();

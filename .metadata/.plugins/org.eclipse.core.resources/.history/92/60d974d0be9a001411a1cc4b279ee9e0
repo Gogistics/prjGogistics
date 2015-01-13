@@ -300,6 +300,8 @@ var index_page_app;
 			.error(function(data, status, headers, config){
 				console.log(status);
 			});
+			// end of query
+			
 		}
 		ctrl_this.search_wine_info = search_wine_info;
 	};
@@ -307,7 +309,6 @@ var index_page_app;
 	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
 	// end
 	
-	// for building vintage list
 	var vintageFilter = function(){
 		return function(input, total){
 			var current_year = new Date().getFullYear();
