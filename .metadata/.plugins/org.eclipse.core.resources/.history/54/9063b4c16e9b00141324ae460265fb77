@@ -43,31 +43,26 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
             parsed_str = urlparse.urlsplit(link)
             link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
             
+            req = urllib2.Request(link)
+            response = urllib2.urlopen(req)
+            searched_page = response.read()
+            soup = BeautifulSoup(searched_page)
             
-            try:
-                req = urllib2.Request(link)
-                response = urllib2.urlopen(req)
-                searched_page = response.read()
-                soup = BeautifulSoup(searched_page)
-                
-                for found_link in soup.find_all('a'):
-                    if found_link.get('href'):
-                        match_group = re.match("http", found_link.get('href'), re.I)
-                        full_href = ""
-                        title = "NA"
+            for found_link in soup.find_all('a'):
+                if found_link.get('href'):
+                    match_group = re.match("http", found_link.get('href'), re.I)
+                    full_href = ""
+                    title = "NA"
+                    
+                    if not match_group:
+                        full_href = "{href_link_base}{sub_href}".format(href_link_base = link_base, sub_href = found_link.get('href'))
+                    else:
+                        full_href = found_link.get('href')
                         
-                        if not match_group:
-                            full_href = "{href_link_base}{sub_href}".format(href_link_base = link_base, sub_href = found_link.get('href'))
-                        else:
-                            full_href = found_link.get('href')
-                            
-                        if found_link.contents and len(found_link.contents) > 0 and found_link.contents[0].string:
-                            title = found_link.contents[0].string
-                            
-                        list_found_link.append({'title' : title, 'link' : full_href})
+                    if found_link.contents and len(found_link.contents) > 0 and found_link.contents[0].string:
+                        title = found_link.contents[0].string
                         
-            except urllib2.HTTPError, err:
-                pass
+                    list_found_link.append({'title' : title, 'link' : full_href})
                     
         
         # store result into db
@@ -127,8 +122,6 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
                             title = found_link.contents[0].string
                             
                         list_found_link.append({'title' : title, 'link' : full_href})
-            except urllib2.HTTPError, err:
-                pass
                     
         # store result into db
         while len(list_found_link) > 0:
