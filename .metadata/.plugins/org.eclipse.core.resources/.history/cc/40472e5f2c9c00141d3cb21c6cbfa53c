@@ -48,7 +48,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
             
             try:
                 req = urllib2.Request(link)
-                response = urllib2.urlopen(req) # need to add new mechanism to prevent fetch javascript
+                response = urllib2.urlopen(req)
                 searched_page = response.read()
                 soup = BeautifulSoup(searched_page)
                 
@@ -112,7 +112,7 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
             
             try:
                 req = urllib2.Request(link)
-                response = urllib2.urlopen(req) # need to add new mechanism to prevent fetch javascript
+                response = urllib2.urlopen(req)
                 searched_page = response.read()
                 soup = BeautifulSoup(searched_page)
                 
