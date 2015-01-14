@@ -182,7 +182,7 @@ var index_page_app;
 				// get wine info
 				var json_response = JSON.parse(data.query_results);
 				var return_code = json_response['wine-searcher']['return-code'];
-				console.log(json_response['wine-searcher']);
+				// console.log(json_response['wine-searcher']);
 				
 				ctrl_this.info_list = [];
 				if(return_code === "0"){
@@ -191,13 +191,12 @@ var index_page_app;
 					if(json_response['wine-searcher']['names'] !== undefined){
 						for(var ith = 0 ; ith < json_response['wine-searcher']['names'].length; ith++){
 							var wine_info = json_response['wine-searcher']['names'][ith]['name'];
+							
 							ctrl_this.info_list.push("Wine Name: " + wine_info['wine-name']);
-							ctrl_this.info_list.push("Region: " + wine_info['region']);
-							ctrl_this.info_list.push("Grape: " + wine_info['grape']);
-							ctrl_this.info_list.push("Currency: " + currency);
-							ctrl_this.info_list.push("Avg. Price: " + wine_info['price-average']);
-							ctrl_this.info_list.push("Min. Price: " + wine_info['price-min']);
-							ctrl_this.info_list.push("Max. Price: " + wine_info['price-max']);
+							ctrl_this.info_list.push("Region: " + wine_info['region'] + " ; " + "Grape: " + wine_info['grape']);
+							ctrl_this.info_list.push("Avg. Price: " + wine_info['price-average'] + "(" + currency + ") ; " +
+													 "Min. Price: " + wine_info['price-min'] + "(" + currency + ") ; " +
+													 "Max. Price: " + wine_info['price-max'] + "(" + currency + ")");
 						}
 					}
 					else if(json_response['wine-searcher']['wine-vintages'] !== undefined){
@@ -212,7 +211,7 @@ var index_page_app;
 									  "Avg. Price: " + wine_info['price-average'] + " ; " +
 									  "Max. Price: " + wine_info['price-max'] + " ; " +
 									  "Min. Price: " + wine_info['price-min'];
-							console.log(str);
+							// console.log(str);
 							ctrl_this.info_list.push(str);
 						}
 					}
@@ -221,9 +220,39 @@ var index_page_app;
 				}
 				
 				
+				// get selling stores
+				console.log(data.query_selling_stores);
+				ctrl_this.selling_stores = [];
+				if(data.query_selling_stores !== "NA"){
+					var json_selling_stores = JSON.parse(data.query_selling_stores);
+					var return_code_selling_stores = json_selling_stores['wine-searcher']['return-code'];
+
+					if(return_code_selling_stores === "0"){
+						// get stores info
+						if(json_selling_stores['wine-searcher']['wines'] !== undefined){
+							for(ith = 0; ith < json_selling_stores['wine-searcher']['wines'].length; ith++){
+								var store_info = json_selling_stores['wine-searcher']['wines'][ith]['wine'];
+								
+								var result_obj = {wine : 'Wine: ' + store_info['wine-description'],
+												  vintage : 'Vintage: ' + store_info['vintage'],
+												  price : 'Price: ' + store_info['price'] + "(USD)",
+												  bottle_size : 'Bottle Size: ' + store_info['bottle-size'],
+												  merchant : 'Merchant: ' + store_info['merchant'],
+												  merchant_description : 'Merchant Description: ' + store_info['merchant-description'],
+												  address : 'Address: ' + store_info['physical-address'],
+												  state : 'State: ' + store_info['state'],
+												  country : 'Country: ' + store_info['country'],
+												  phone_number : 'Phone Number: ' + store_info['contact-phone']};
+								 
+								 ctrl_this.selling_stores.push(result_obj);
+							}
+						}
+					}
+				}
+				
 				// get nearest selling store
 				ctrl_this.is_map_ready = false; // remove map style
-				console.log(data.query_nearest_selling_store);
+				// console.log(data.query_nearest_selling_store);
 				if( data.query_nearest_selling_store !== "NA"){
 					var json_selling_store_response = JSON.parse(data.query_nearest_selling_store);
 					var return_code_selling_store = json_selling_store_response['wine-searcher']['return-code'];
@@ -238,7 +267,8 @@ var index_page_app;
 							for(var ith = 0; ith < json_selling_store_response['wine-searcher']['wines'].length; ith++){
 								var store_info = json_selling_store_response['wine-searcher']['wines'][ith]['wine'];
 								
-								var result_str = '<span>Wine: ' + store_info['wine-description'] + "</span><br>" +
+								var result_str = '<h4>Nearest Store to Shipping Location (South San Francisco)</h4><br>' +
+												 '<span>Wine: ' + store_info['wine-description'] + "</span><br>" +
 												 '<span>Vintage: ' + store_info['vintage'] + "</span><br>" +
 												 '<span>Price: ' + store_info['price'] + "(USD)</span><br>" +
 												 '<span>Bottle Size: ' + store_info['bottle-size'] + "</span><br><hr>" +
@@ -293,7 +323,7 @@ var index_page_app;
 								}, 1000);
 							}
 						}
-						console.log(json_selling_store_response['wine-searcher']);
+						// console.log(json_selling_store_response['wine-searcher']);
 					}
 				}
 			})

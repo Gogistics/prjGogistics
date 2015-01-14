@@ -37,24 +37,42 @@ class QueryWineSearcherDispatcher(BaseHandler):
         wine_searcher_query = urllib2.Request(query_str)
         wine_searcher_response = urllib2.urlopen(wine_searcher_query).read()
         
-        # store selling the wine
+        # nearest store selling the wine
         # http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5&Xwinename=Yquem+Sauternes+Bordeaux+France&Xvintage=2000&Xcurrencycode=usd&Xkeyword_mode=A&Xlatitude=37.65239&Xlongitude=-122.41785&Xnearest=Y
         wine_searcher_nearest_selling_store_response = "NA"
         if query_wine_vintage:
-            query_selling_store_str = dict_general.wine_searcher_api
-            queries_selling_store = '''&Xformat={query_format}&Xcurrencycode={query_currencycode}&Xkeyword_mode={query_keyword_mode}&Xlatitude={query_latitude}&Xlongitude={query_longitude}&Xnearest={query_nearest}&Xwinename={query_winename}&Xvintage={query_vintage}'''.format(query_format = "J",
-                                                                                                                                                                                                                               query_currencycode = "usd",
-                                                                                                                                                                                                                               query_keyword_mode = "A",
-                                                                                                                                                                                                                               query_latitude = "37.65239",
-                                                                                                                                                                                                                               query_longitude = "-122.41785",
-                                                                                                                                                                                                                               query_nearest = "Y",
-                                                                                                                                                                                                                               query_winename = query_wine_info,
-                                                                                                                                                                                                                               query_vintage = query_wine_vintage)
-            query_selling_store_str += queries_selling_store
-            wine_searcher_nearest_store_query = urllib2.Request(query_selling_store_str)
+            query_nearest_selling_store_str = dict_general.wine_searcher_api
+            query_nearest_selling_store = '''&Xformat={query_format}&Xcurrencycode={query_currencycode}&Xkeyword_mode={query_keyword_mode}&Xlatitude={query_latitude}&Xlongitude={query_longitude}&Xnearest={query_nearest}&Xwinename={query_winename}&Xvintage={query_vintage}'''.format(query_format = "J",
+                                                                                                                                                                                                                                                                                       query_currencycode = "usd",
+                                                                                                                                                                                                                                                                                       query_keyword_mode = "A",
+                                                                                                                                                                                                                                                                                       query_latitude = "37.65239",
+                                                                                                                                                                                                                                                                                       query_longitude = "-122.41785",
+                                                                                                                                                                                                                                                                                       query_nearest = "Y",
+                                                                                                                                                                                                                                                                                       query_winename = query_wine_info,
+                                                                                                                                                                                                                                                                                       query_vintage = query_wine_vintage)
+            query_nearest_selling_store_str += query_nearest_selling_store
+            wine_searcher_nearest_store_query = urllib2.Request(query_nearest_selling_store_str)
             wine_searcher_nearest_selling_store_response = urllib2.urlopen(wine_searcher_nearest_store_query).read()
         
-        ajax_response = {'query_results' : wine_searcher_response, "query_nearest_selling_store" : wine_searcher_nearest_selling_store_response}
+        
+        # store selling the wine
+        # http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5&Xwinename=Yquem+Sauternes+Bordeaux+France&Xvintage=2000&Xautoexpand=Y&Xcurrencycode=usd&Xkeyword_mode=A&Xformat=J
+        wine_searcher_selling_stores_response = "NA"
+        if query_wine_vintage:
+            query_selling_stores_str = dict_general.wine_searcher_api
+            query_selling_stores = '''&Xformat={query_format}&Xcurrencycode={query_currencycode}&Xkeyword_mode={query_keyword_mode}&Xautoexpand={query_autoexpand}&Xwinename={query_wine_info}&Xvintage={query_wine_vintage}'''.format(query_format = "J",
+                                                                                                                                                                              query_currencycode = "usd",
+                                                                                                                                                                              query_keyword_mode = "A",
+                                                                                                                                                                              query_autoexpand = "Y",
+                                                                                                                                                                              query_wine_info = query_wine_info,
+                                                                                                                                                                              query_wine_vintage = query_wine_vintage)
+            query_selling_stores_str += query_selling_stores
+            wine_searcher_selling_stores_query = urllib2.Request(query_selling_stores_str)
+            wine_searcher_selling_stores_response = urllib2.urlopen(wine_searcher_selling_stores_query).read()
+                                            
+        ajax_response = {'query_results' : wine_searcher_response,
+                         "query_nearest_selling_store" : wine_searcher_nearest_selling_store_response,
+                         "query_selling_stores" : wine_searcher_selling_stores_response}
         self.response.out.headers['Content-Type'] = 'text/json'
         self.response.out.write(json.dumps(ajax_response))
 

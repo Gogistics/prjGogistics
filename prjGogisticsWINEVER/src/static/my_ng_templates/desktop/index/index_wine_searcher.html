@@ -58,6 +58,8 @@
 		width: 150px !important;
 		margin-right: 3px !important;
 		text-align: center !important;
+		border-top-left-radius: 3px !important;
+		border-bottom-left-radius: 3px !important;
 	}
 	
 	.wine_info_query_field{
@@ -107,7 +109,7 @@
 	}
 	
 	.map_nearest_store{
-		width: 650px; height: 450px; border: 1px solid #eee; margin: 5px auto; border-radius: 3px;
+		width: 650px; height: 500px; border: 1px solid #eee; margin: 5px auto; border-radius: 3px;
 	}
 }
 
@@ -128,10 +130,10 @@
 				             <div class="input-group-btn" >
 					            <div class="btn-group">
 					                <input type="number" min="0" class="form-control dropdown-toggle vintage_field" data-toggle="dropdown" placeholder="Vintage" ng-model= "wine.vintage">
-					                <ul class="dropdown-menu vintage_list" role="menu">
+					                <!-- temp. block vintage selector for better UX -->
+					                <!-- ul class="dropdown-menu vintage_list" role="menu">
 					                    <li class="animate-repeat" ng-repeat = " ith in ctrl.vintage | filter:wine.vintage "><a ng-click = "ctrl.get_query_vintage(ith)">[[ith]]</a></li>
-					                
-					                </ul>
+					                </ul -->
 					            </div>
 					        </div>  
 			                <input type="text" class="form-control wine_info_query_field" ng-model = "wine.info" placeholder="Type the wine for query (Supported by Wine Searcher)">
@@ -147,7 +149,7 @@
 			      <div class="row search_block">
 			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			      		<ul class="list-group">
-			      			<li class="list-group-item active"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Keyword" ng-model="query_keyword"></li>
+			      			<li class="list-group-item active"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Information" ng-model="query_keyword"></li>
 			      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:query_keyword">[[info]]</li>
 			      		</ul>
 			      	</div>
@@ -157,11 +159,41 @@
 			      <div class="row search_block">
 			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			      		<ul class="list-group">
-			      		<li class="list-group-item active">
-			      			<h4>Nearest Store Information</h4>
-			      		</li>
-			      		<li class="list-group-item">
-			      			<div id="map_nearest_store" ng-class="ctrl.is_map_shown() ? 'map_nearest_store' : '' "></div></li>
+				      		<li class="list-group-item active">
+				      			<h4>Stores Information (Selling Stores and Nearest Store)</h4>
+				      		</li>
+				      		<li class="list-group-item col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+				      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					      			<ul class="list-group">
+					      				<li class="list-group-item active"><input class="form-control query_filter_filed" type="text" placeholder="Filter Stores Information" ng-model="query_store_keyword"></li>
+					      				<li class="list-group-item text-left"  style="max-height: 450px; overflow: auto;">
+						      				<div class="animate-repeat" ng-repeat = "store in ctrl.selling_stores | filter:query_store_keyword">
+						      				[[store.merchant]]
+						      				<br>
+						      				[[store.merchant_description]]
+						      				<br>
+						      				<br>
+						      				[[store.address]]
+						      				<br>
+						      				[[store.state]]
+						      				<br>
+						      				[[store.country]]
+						      				<br>
+						      				[[store.phone_number]]
+						      				<br>
+						      				<br>
+						      				[[store.wine]]
+						      				<br>
+						      				[[store.vintage]]
+						      				<br>
+						      				[[store.bottle_size]]
+						      				<hr>
+						      				</div>
+					      				</li>
+					      			</ul>
+				      			</div>
+				      			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" id="map_nearest_store" ng-class="ctrl.is_map_shown() ? 'map_nearest_store' : '' "></div>
+				      		</li>
 			      		</ul>
 			      	</div>
 			      </div>
