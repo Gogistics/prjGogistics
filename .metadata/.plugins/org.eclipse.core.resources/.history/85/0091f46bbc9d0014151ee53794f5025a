@@ -43,9 +43,7 @@
 	}
 }
 
-@media all and (max-device-width: 767px) {
-
-}
+@media all and (max-device-width: 767px) {}
 
 </style>
 
