@@ -224,7 +224,7 @@
 					      </span>
 					      <br>
 					      <span class="list-group-item-text">
-					         Phone Number: <a href="tel:1-650-307-3834">1-650-307-3834</a>
+					         Phone Number: <a href="callto:1-650-307-3834">1-650-307-3834</a>
 					      </span>
 					      <br>
 					      <div id="map_shipping_service_location" class="map_shipping_service_location"></div>

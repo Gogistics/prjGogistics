@@ -126,6 +126,7 @@
    		margin-top: 30px;
 	}
 	.jumbotron {
+		margin-bottom: 0px !important;
 		background-color: transparent !important;
 	}
 	.flexcontainer {
@@ -192,30 +193,25 @@
 	.shipping_service_block{
 		margin: 20px auto;
 	}
-	
-	.map_shipping_service_location{
-		width: 250px; height: 300px; border-radius: 3px; margin: 5px auto; border: 1px solid #eee;
-	}
-	
-	.popup_size{
-		width: 190px;
-	}
 }
 </style>
 
 <!-- content -->
 <div ng-controller="wineInfoQueryCtrl as ctrl">
-	<div class="vertical-center text-center">
+	<div
+		class="jumbotron vertical-center text-center">
 		
 			<div class="container">
 		      <div class="row shipping_service_block">
-		            <ul class="list-group">
-					   <li class="list-group-item">
-					      <h5 class="list-group-item-heading">
+
+
+		            <div class="list-group">
+					   <div class="list-group-item">
+					      <h3 class="list-group-item-heading">
 					         Shipping Service
-					      </h5>
-					   </li>
-					   <li class="list-group-item text-center">
+					      </h3>
+					   </div>
+					   <div class="list-group-item text-center">
 					      <h4 class="list-group-item-heading">
 					         ExShipper
 					      </h4>
@@ -224,18 +220,24 @@
 					      </span>
 					      <br>
 					      <span class="list-group-item-text">
-					         Phone Number: <a href="tel:1-650-307-3834">1-650-307-3834</a>
+					         Phone Number: 1-650-307-3834
 					      </span>
 					      <br>
-					      <div id="map_shipping_service_location" class="map_shipping_service_location"></div>
-					   </li>
-					   <li class="list-group-item">
+					      <div id="map_shipping_service_location" style="width: 270px; height: 400px; border-radius: 3px; margin: 5px auto; border: 1px solid #eee;"></div>
+					   </div>
+					   <div class="list-group-item">
 					      <h4 class="list-group-item-heading">Shipping Fee List</h4>
 					      <span class="list-group-item-text">Coming Soon</span>
-					   </li>
-					</ul>
+					   </div>
+					</div>
+
+
+
 		      </div>
 			</div>
+
+
+
 	</div>
 </div>
 

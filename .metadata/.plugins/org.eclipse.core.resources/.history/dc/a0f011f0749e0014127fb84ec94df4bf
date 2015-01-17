@@ -193,10 +193,6 @@
 		margin: 20px auto;
 	}
 	
-	.map_shipping_service_location{
-		width: 250px; height: 300px; border-radius: 3px; margin: 5px auto; border: 1px solid #eee;
-	}
-	
 	.popup_size{
 		width: 190px;
 	}
@@ -224,10 +220,10 @@
 					      </span>
 					      <br>
 					      <span class="list-group-item-text">
-					         Phone Number: <a href="tel:1-650-307-3834">1-650-307-3834</a>
+					         Phone Number: 1-650-307-3834
 					      </span>
 					      <br>
-					      <div id="map_shipping_service_location" class="map_shipping_service_location"></div>
+					      <div id="map_shipping_service_location" style="width: 250px; height: 300px; border-radius: 3px; margin: 5px auto; border: 1px solid #eee;"></div>
 					   </li>
 					   <li class="list-group-item">
 					      <h4 class="list-group-item-heading">Shipping Fee List</h4>

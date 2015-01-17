@@ -113,8 +113,6 @@
 			}else{
 				$list_block.removeClass('fadeInLeft');
 				$list_block.addClass(' fadeOutLeft');
-				
-				// deferred action
 				$list_block.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
 					$list_block.removeClass('list_block_show');
 					$list_detail.addClass('list_display_none');

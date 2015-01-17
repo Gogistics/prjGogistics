@@ -258,6 +258,7 @@
 				            <input class="btn btn-default active col-xs-12 col-sm-12 col-md-12 col-lg-12" type="button" value="Search" ng-click = "ctrl.search_wine_info()">
 				      
 			      		</div>
+			      		
 			      </div>
 			      
 			      
