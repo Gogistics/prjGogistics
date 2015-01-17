@@ -143,11 +143,11 @@
 		var get_query_vintage = function(arg_vintage){
 			$scope.wine.vintage = arg_vintage; // set vintage
 			
-			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
+			// console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 		}
 		ctrl_this.get_query_vintage = get_query_vintage;
 		
-		//
+		// check if map is ready and shown in order to change ng-class
 		ctrl_this.is_map_ready = false;
 		ctrl_this.is_map_shown = function(){
 			return ctrl_this.is_map_ready;
@@ -271,7 +271,7 @@
 							for(var ith = 0; ith < json_selling_store_response['wine-searcher']['wines'].length; ith++){
 								var store_info = json_selling_store_response['wine-searcher']['wines'][ith]['wine'];
 								
-								var result_str = '<h4>Nearest Store to Shipping Location (South San Francisco)</h4><br>' +
+								var result_str = '<div class="popup_size"><h4>Nearest Store to Shipping Location (South San Francisco)</h4><br>' +
 												 '<span>Wine: ' + store_info['wine-description'] + "</span><br>" +
 												 '<span>Vintage: ' + store_info['vintage'] + "</span><br>" +
 												 '<span>Price: ' + store_info['price'] + "(USD)</span><br>" +
@@ -281,7 +281,7 @@
 												 '<span>Address: ' + store_info['physical-address'] + "</span><br>" +
 												 '<span>State: ' + store_info['state'] + "</span><br>" +
 												 '<span>Country: ' + store_info['country'] + "</span><br>" +
-												 '<span>Phone Number: ' + store_info['contact-phone'] + "</span><br>"
+												 '<span>Phone Number: ' + store_info['contact-phone'] + "</span><br></div>"
 								
 								var lat = Number(store_info['latitude']), lng = Number(store_info['longitude']);
 								
