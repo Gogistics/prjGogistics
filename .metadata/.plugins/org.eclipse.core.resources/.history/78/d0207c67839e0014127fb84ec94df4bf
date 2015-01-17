@@ -178,7 +178,7 @@
 						      				<br>
 						      				[[store.country]]
 						      				<br>
-						      				Phone Number:<a href="tel:[[store.phone_number]]">&nbsp;[[store.phone_number]]</a>
+						      				Phone Number:<a href="tel:[[store.phone_number]]">[[store.phone_number]]</a>
 						      				<br>
 						      				<br>
 						      				[[store.wine]]

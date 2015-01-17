@@ -283,7 +283,7 @@
 												 '<span>Address: ' + store_info['physical-address'] + "</span><br>" +
 												 '<span>State: ' + store_info['state'] + "</span><br>" +
 												 '<span>Country: ' + store_info['country'] + "</span><br>" +
-												 '<span>Phone Number: ' + "<a href='tel: " + store_info['contact-phone'] + " '>" + store_info['contact-phone'] + "</a></span><br></div>"
+												 '<span>Phone Number: ' + "<a href='tel:' " + store_info['contact-phone'] + " '>" + store_info['contact-phone'] + "</a>" + "</span><br></div>"
 								
 								var lat = Number(store_info['latitude']), lng = Number(store_info['longitude']);
 								
