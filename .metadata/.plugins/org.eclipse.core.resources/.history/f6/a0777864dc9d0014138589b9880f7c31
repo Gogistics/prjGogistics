@@ -4,13 +4,14 @@
  * */
 
 'use strict';
+window.index_page_app = window.index_page_app || {};
 
 (function(){
 	//
 	var injected_module = [];
 	injected_module = ['angular-responsive', 'ui.router', 'ngAnimate'];
 	
-	window.index_page_app = window.index_page_app || angular.module('indexPageApp', injected_module, function($interpolateProvider){
+	index_page_app = index_page_app || angular.module('indexPageApp', injected_module, function($interpolateProvider){
 		$interpolateProvider.startSymbol('[[');
 		$interpolateProvider.endSymbol(']]');
 	});
@@ -29,12 +30,9 @@
 		var responsiveHelper = responsiveHelperProvider.$get();
 		if(responsiveHelper.isMobile()){
 			device = 'mobile';
-		}
-		
-		// tablet templates could be replaced with desktop templates
-		/*else if(responsiveHelper.isTablet()){
+		}else if(responsiveHelper.isTablet()){
 			device = 'tablet';
-		}*/
+		}
 		
 		// nested templates routing
 		$stateProvider.state('home', {
@@ -72,7 +70,7 @@
 	
 	// controller
 	var indexPageController = function($state, $scope, GLOBAL_VALUES){
-		// var declaration
+		//
 		var current_ctrl = this, $list_block = $( "#list_block" ), $list_detail = $("#list_detail");
 		current_ctrl.is_list_open = false, current_ctrl.selected = $state.current.name;
 		

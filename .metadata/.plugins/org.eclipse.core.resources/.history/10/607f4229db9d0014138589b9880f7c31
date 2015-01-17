@@ -82,5 +82,3 @@
 
 <!-- content view -->
 <div ui-view></div>
-
-<!--  -->
