@@ -82,8 +82,3 @@
 
 <!-- content view -->
 <div ui-view></div>
-<script type="text/javascript">
-<!--
-var index_map_handler = new handler_openstreetmap();
-//-->
-</script>

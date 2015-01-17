@@ -84,7 +84,6 @@
 	<script type="text/javascript" src="/js/plugin_mis/moment_with_locales.js"></script>
 	
 	<!-- self-defined -->
-	<script type="text/javascript" src="/js/handler_openstreetmap.js"></script>
 	
 	<!-- sub-js -->
 	{% block js_content %} {% endblock %}

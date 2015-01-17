@@ -1,0 +1,13 @@
+/*
+ * 
+ * handler of handling query about wine info via Wine Searcher APIs
+ * 
+ */
+
+window.handler_wine_searcher = window.handler_wine_searcher || {
+	version : "1.0",
+	
+	get_version : function(){
+		return this.version;
+	}
+}

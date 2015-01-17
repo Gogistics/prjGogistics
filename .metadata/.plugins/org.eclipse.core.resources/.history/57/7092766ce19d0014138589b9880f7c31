@@ -127,9 +127,10 @@
 	index_page_app.controller('indexPageCtrl', indexPageController);
 	// end
 	
+	
 	// controller of querying wine info
 	var wineInfoQueryController = function($http, $scope, $timeout, GLOBAL_VALUES){
-		// var declaration
+		// var
 		var ctrl_this = this;
 		$scope.wine = {"info" : undefined, "vintage" : undefined}; // default search info
 		// vintage list

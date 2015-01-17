@@ -85,5 +85,6 @@
 <script type="text/javascript">
 <!--
 var index_map_handler = new handler_openstreetmap();
+alert(index_map_handler.get_version());
 //-->
 </script>

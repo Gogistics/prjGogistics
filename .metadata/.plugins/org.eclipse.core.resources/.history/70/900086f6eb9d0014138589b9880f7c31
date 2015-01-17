@@ -1,0 +1,21 @@
+/*
+ * Openstreetmap handler
+ * 
+ * */
+
+window.handler_openstreetmap = window.handler_openstreetmap || function(){
+	this.version = "1.0";
+	this.get_version = function(){
+		return this.version;
+	};
+	
+	// init map
+	this.init_map = function(arg_map){
+		return this;
+	}
+	
+	// set map icon
+	this.set_icon = function(arg_icon){
+		return this;
+	}
+};
