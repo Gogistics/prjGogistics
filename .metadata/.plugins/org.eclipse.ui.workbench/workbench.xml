@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="80" version="2.0">
+<workbench progressCount="43" version="2.0">
 <workbenchAdvisor/>
 <window height="398" maximized="true" width="1351" x="17" y="9">
 <fastViewData fastViewLocation="1024"/>
@@ -20,7 +20,7 @@
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="com.python.pydev.toolbars.evaluateActionSetterToolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -49,23 +49,23 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index_page_container.js" partName="index_page_container.js" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js" title="index_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/index_page_container.js" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5168" selectionTopPixel="1795"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4688" selectionTopPixel="2830"/>
 </editor>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" partName="index_page_container.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates/index_page_container.html" title="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="76" selectionOffset="288" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" partName="index_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_page.html" title="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_page.html" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_page.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1577" selectionTopPixel="1315"/>
 </editor>
-<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" partName="index_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html" title="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2399" selectionTopPixel="790"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" partName="front_page.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html" title="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
+<editorState selectionHorizontalPixel="55" selectionLength="0" selectionOffset="2703" selectionTopPixel="1150"/>
 </editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="handler_openstreetmap.js" partName="handler_openstreetmap.js" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts/handler_openstreetmap.js" title="handler_openstreetmap.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/handler_openstreetmap.js" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/javascripts/handler_openstreetmap.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="580" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index_wine_searcher.html" partName="index_wine_searcher.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_wine_searcher.html" title="index_wine_searcher.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_wine_searcher.html" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_wine_searcher.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7779" selectionTopPixel="4290"/>
 </editor>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="handler_wine_searcher.js" partName="handler_wine_searcher.js" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts/handler_wine_searcher.js" title="handler_wine_searcher.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/handler_wine_searcher.js" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/javascripts/handler_wine_searcher.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="378" selectionTopPixel="0"/>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index_wine_searcher.html" partName="index_wine_searcher.html" path="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html" title="index_wine_searcher.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html" workbook="org.eclipse.ui.internal.EditorStack@1dfb6c9">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6405" selectionTopPixel="2500"/>
 </editor>
 </editors>
 <views>
@@ -100,7 +100,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src"/>
-<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/css/plugin_ng"/>
+<expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/javascripts"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop"/>
@@ -109,6 +109,7 @@
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/tablet"/>
 <expanded IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/templates"/>
+<selected IMemento.internal.id="D:/prjGogistics/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html"/>
 </viewState>
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
@@ -288,7 +289,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.31653076" ratioLeft="427" ratioRight="922" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.12453669" ratioLeft="168" ratioRight="1181" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.9532258" ratioLeft="591" ratioRight="29" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
@@ -307,166 +308,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/templates/base.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/handler_map.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/handler_openstreetmap.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/index_page_desktop.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/handler_wine_searcher.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_wine_searcher.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_shipping_service.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/prjGogisticsWINEVER/src/static/javascripts/index_shipping_service.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_shipping_service.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_shipping_service.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html"/>
 </editors>
-<item historyLabel="index_wine_searcher.html" index="0">
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="10740" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="5775" y="0"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="10740" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="4484" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index_page_container.js" index="1">
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="2878" y="24"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="556" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.js" index="4">
+<position info="not_deleted" x="2656" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="5414" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.js" index="4">
+<position info="not_deleted" x="2656" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4084" y="10"/>
+</item>
+<item historyLabel="index_shipping_service.js" index="4">
+<position info="not_deleted" x="563" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="2878" y="24"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4887" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="5921" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.js" index="4">
+<position info="not_deleted" x="563" y="0"/>
+</item>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="3956" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="5061" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="5921" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.js" index="4">
+<position info="not_deleted" x="563" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="1">
+<position info="not_deleted" x="2694" y="22"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4903" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.js" index="4">
+<position info="not_deleted" x="563" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4903" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index_page_container.html" index="3">
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4900" y="0"/>
+</item>
+<item historyLabel="front_page.html" index="1">
+<position info="not_deleted" x="2703" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4888" y="29"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="5">
+<position info="not_deleted" x="3730" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="5383" y="29"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="5">
+<position info="not_deleted" x="3730" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="5921" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="3">
+<position info="not_deleted" x="4793" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="5">
+<position info="not_deleted" x="2632" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="8176" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="5">
+<position info="not_deleted" x="2632" y="0"/>
+</item>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="8176" y="0"/>
+</item>
+<item historyLabel="index_shipping_service.html" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="index_page.html" index="2">
-<position/>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="8176" y="0"/>
 </item>
-<item historyLabel="index_page_container.html" index="3">
-<position info="not_deleted" x="288" y="76"/>
+<item historyLabel="index_wine_searcher.html" index="7">
+<position info="not_deleted" x="5801" y="0"/>
 </item>
-<item historyLabel="index_page_container.js" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="9662" y="0"/>
 </item>
-<item historyLabel="index_page_container.js" index="1">
-<position info="not_deleted" x="2448" y="0"/>
+<item historyLabel="index_wine_searcher.html" index="7">
+<position info="not_deleted" x="5753" y="82"/>
 </item>
-<item historyLabel="front_page.html" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="7779" y="0"/>
 </item>
-<item historyLabel="index_page_container.js" index="1">
-<position info="not_deleted" x="4540" y="0"/>
+<item historyLabel="index_wine_searcher.html" index="7">
+<position info="not_deleted" x="5766" y="37"/>
 </item>
-<item historyLabel="index_page.html" index="2">
-<position/>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="11628" y="0"/>
 </item>
-<item historyLabel="handler_map.js" index="6">
-<position info="not_deleted" x="2" y="0"/>
+<item historyLabel="index_wine_searcher.html" index="7">
+<position info="not_deleted" x="5766" y="37"/>
 </item>
-<item historyLabel="index_page.html" index="2">
-<position/>
+<item historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="11686" y="0"/>
 </item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="578" y="0"/>
+<item historyLabel="index_wine_searcher.html" index="2">
+<position info="not_deleted" x="7779" y="0"/>
 </item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="74" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="155" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="157" y="0"/>
-</item>
-<item historyLabel="index_page.html" index="2">
-<position/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="157" y="0"/>
-</item>
-<item historyLabel="index_page.html" index="2">
-<position/>
-</item>
-<item historyLabel="base.html" index="4">
-<position info="not_deleted" x="3743" y="0"/>
-</item>
-<item historyLabel="index_page.html" index="2">
-<position/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="97" y="21"/>
-</item>
-<item historyLabel="index_page.html" index="2">
-<position info="not_deleted" x="2399" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="97" y="21"/>
-</item>
-<item historyLabel="index_page.html" index="2">
-<position info="not_deleted" x="2399" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="574" y="0"/>
-</item>
-<item historyLabel="index_page.html" index="2">
-<position info="not_deleted" x="2399" y="0"/>
-</item>
-<item historyLabel="index_page_desktop.js" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="574" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="271" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="487" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="404" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="300" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="356" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="378" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="487" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="53" y="0"/>
-</item>
-<item historyLabel="index_page_desktop.js" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="53" y="0"/>
-</item>
-<item historyLabel="index_page_container.js" index="1">
-<position info="not_deleted" x="4540" y="0"/>
-</item>
-<item historyLabel="handler_openstreetmap.js" index="7">
-<position info="not_deleted" x="580" y="0"/>
-</item>
-<item historyLabel="base.html" index="4">
-<position info="not_deleted" x="3743" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="378" y="0"/>
-</item>
-<item historyLabel="base.html" index="4">
-<position info="not_deleted" x="3743" y="0"/>
-</item>
-<item historyLabel="handler_wine_searcher.js" index="9">
-<position info="not_deleted" x="378" y="0"/>
-</item>
-<item active="true" historyLabel="index_page_container.js" index="1">
-<position info="not_deleted" x="4540" y="0"/>
+<item active="true" historyLabel="index_page_container.js" index="0">
+<position info="not_deleted" x="11686" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -487,6 +486,33 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_wine_searcher.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_shipping_service.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_shipping_service.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_shipping_service.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_shipping_service.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_shipping_service.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_shipping_service.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index_shipping_service.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/index_shipping_service.js">
+<persistable path="/prjGogisticsWINEVER/src/static/javascripts/index_shipping_service.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_wine_searcher.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_wine_searcher.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_wine_searcher.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/index/index_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html">
+<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="handler_wine_searcher.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/handler_wine_searcher.js">
 <persistable path="/prjGogisticsWINEVER/src/static/javascripts/handler_wine_searcher.js"/>
 </file>
@@ -502,35 +528,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="handler_map.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/handler_map.js">
 <persistable path="/prjGogisticsWINEVER/src/static/javascripts/handler_map.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html">
-<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/mobile/front_page.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html">
-<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_page.html"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/index_page_container.html">
 <persistable path="/prjGogisticsWINEVER/src/static/templates/index_page_container.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index_wine_searcher.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html">
-<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/index/index_wine_searcher.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="index_page_container.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/index_page_container.js">
-<persistable path="/prjGogisticsWINEVER/src/static/javascripts/index_page_container.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_cron_tasks.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_cron_tasks.py">
-<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_cron_tasks.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page.html" tooltip="prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html">
-<persistable path="/prjGogisticsWINEVER/src/static/my_ng_templates/desktop/front_page.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="front_page_container.html" tooltip="prjGogisticsWINEVER/src/static/templates/front_page_container.html">
-<persistable path="/prjGogisticsWINEVER/src/static/templates/front_page_container.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="dispatchers_query_mechanisms.py" tooltip="prjGogisticsWINEVER/src/dispatchers/dispatchers_query_mechanisms.py">
-<persistable path="/prjGogisticsWINEVER/src/dispatchers/dispatchers_query_mechanisms.py"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="map_handler.js" tooltip="prjGogisticsWINEVER/src/static/javascripts/map_handler.js">
-<persistable path="/prjGogisticsWINEVER/src/static/javascripts/map_handler.js"/>
 </file>
 </mruList>
 </workbench>

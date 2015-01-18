@@ -131,9 +131,11 @@
 	
 	// controller of querying wine info
 	var wineInfoQueryController = function($http, $scope, $timeout, GLOBAL_VALUES){
+		
 		// var declaration
 		var ctrl_this = this;
 		$scope.wine = {"info" : undefined, "vintage" : undefined}; // default search info
+		
 		// vintage list
 		ctrl_this.vintage = [];
 		var current_year = new Date().getFullYear();
@@ -155,9 +157,34 @@
 			return ctrl_this.is_map_ready;
 		}
 		
-		// get query wine info
+		
+		
+		
+		// mechanism of querying wine info
+		
+		var _handler_query_wine_info = {
+				
+				//
+				is_query_str_empty : function(){
+					
+				},
+				
+				//
+				query_wine_info : function(){
+					if(!this.is_query_str_empty()){
+						
+					}
+				},
+				
+				// query response
+				query_response_wine_info : undefined,
+				query_response_selling_stores_info : undefined,
+				query_response_nearest_selling_store_info : undefined,
+		};
+		
+		
 		var search_wine_info = function(){
-			console.log($scope.wine.vintage + " ; " + $scope.wine.info);
+			// console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 			
 			//
 			if ($scope.wine.info !== undefined){
@@ -170,6 +197,7 @@
 				alert("query string is empty!");
 				return false;
 			}
+			
 			// query string for average price
 			// var query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
 			var query_data = $.param({ query_info : $scope.wine.info, query_vintage : $scope.wine.vintage });
@@ -227,12 +255,13 @@
 				
 				
 				// get selling stores
-				console.log(data.query_selling_stores);
+				// console.log(data.query_selling_stores);
 				ctrl_this.selling_stores = [];
 				if(data.query_selling_stores !== "NA"){
 					var json_selling_stores = JSON.parse(data.query_selling_stores);
 					var return_code_selling_stores = json_selling_stores['wine-searcher']['return-code'];
 
+					// check return code
 					if(return_code_selling_stores === "0"){
 						// get stores info
 						if(json_selling_stores['wine-searcher']['wines'] !== undefined){
@@ -257,7 +286,7 @@
 				}
 				
 				// get nearest selling store
-				ctrl_this.is_map_ready = false; // remove map style
+				ctrl_this.is_map_ready = false; // hide map
 				// console.log(data.query_nearest_selling_store);
 				if( data.query_nearest_selling_store !== "NA"){
 					var json_selling_store_response = JSON.parse(data.query_nearest_selling_store);
@@ -331,13 +360,22 @@
 						}
 						// console.log(json_selling_store_response['wine-searcher']);
 					}
+					// end
 				}
+				// end
+				
 			})
 			.error(function(data, status, headers, config){
 				console.log(status);
 			});
-		}
+			// end of http
+			
+		};
+		
+		
+		// assign search function
 		ctrl_this.search_wine_info = search_wine_info;
+		
 	};
 	wineInfoQueryController.$inject =['$http', '$scope', '$timeout', 'GLOBAL_VALUES'];
 	index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
