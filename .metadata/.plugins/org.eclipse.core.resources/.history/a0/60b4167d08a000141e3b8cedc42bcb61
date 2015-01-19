@@ -36,6 +36,8 @@
 	}
 }
 
+
+
 @media all and (max-device-width: 767px) {
 	.list_icon_block{
 		margin: 0px auto;

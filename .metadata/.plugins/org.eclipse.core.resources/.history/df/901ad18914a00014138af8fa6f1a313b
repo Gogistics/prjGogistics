@@ -10,7 +10,5 @@
 
 <!-- sub-js block -->
 {% block js_content %}
-<!--[if (gt IE 9)|!(IE)]><!-->
 <script type="text/javascript" src="/js/index_page_container.js"></script>
-<!--<![endif]-->
 {% endblock %}

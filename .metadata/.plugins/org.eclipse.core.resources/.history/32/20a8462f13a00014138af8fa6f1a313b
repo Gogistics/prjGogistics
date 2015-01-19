@@ -8,13 +8,6 @@
 <meta name="keywords" content="wine,price,shipping,merchandise">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	
-<!-- speeds up cross domain loading using DNS prefetching -->
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="//code.jquery.com">
-<link rel="dns-prefetch" href="//ajax.googleapis.com">
-<!-- /dns prefetching -->
-	
-	
 <!-- icon -->
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -29,10 +22,11 @@
 	href="/apple-touch-icon-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="/apple-touch-icon-precomposed.png">
-<!-- /icon setting -->
 
 
-<!--[if (gt IE 9)|!(IE)]><!-->
+
+
+
 <!-- Bootstrap Core CSS -->
 <link type="text/css" rel="stylesheet" href="/css/plugin_bootstrap/bootstrap.min.css">
 
@@ -48,7 +42,8 @@
 
 <!-- self-defined css -->
 <link type="text/css" rel="stylesheet" href="/css/base.css">
-<!--<![endif]-->
+
+
 
 
 {% block css_content %}{% endblock %}
@@ -67,8 +62,6 @@
 	<p>No Templates Found</p>
 	{% endblock %}
 
-
-	<!--[if (gt IE 9)|!(IE)]><!--> 
 	<!-- js files are placed at the end of the document so the pages load faster -->
 	<!-- jquery ; there is jquery 1.11.0 in local folder for IE 7,8 -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -84,7 +77,7 @@
 	<script type="text/javascript" src="/js/plugin_ng/angular.min.js"></script>
 	<script type="text/javascript" src="/js/plugin_ng/angular-route.js"></script>
 	<script type="text/javascript" src="/js/plugin_ng/angular-ui-router.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
 	
 	<!-- bootstrap -->
 	<script type="text/javascript" src="/js/plugin_bootstrap/bootstrap.min.js"></script>
@@ -99,10 +92,8 @@
 	
 	<!-- self-defined -->
 	<script type="text/javascript" src="/js/handler_openstreetmap.js"></script>
-	<!--<![endif]-->
-	
 	
 	<!-- sub-js -->
-	{% block js_content %}{% endblock %}
+	{% block js_content %} {% endblock %}
 </body>
 </html>

@@ -10,9 +10,8 @@
 	
 <!-- speeds up cross domain loading using DNS prefetching -->
 <meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="//code.jquery.com">
-<link rel="dns-prefetch" href="//ajax.googleapis.com">
-<!-- /dns prefetching -->
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<!-- / dns prefetching -->
 	
 	
 <!-- icon -->
@@ -84,7 +83,7 @@
 	<script type="text/javascript" src="/js/plugin_ng/angular.min.js"></script>
 	<script type="text/javascript" src="/js/plugin_ng/angular-route.js"></script>
 	<script type="text/javascript" src="/js/plugin_ng/angular-ui-router.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
 	
 	<!-- bootstrap -->
 	<script type="text/javascript" src="/js/plugin_bootstrap/bootstrap.min.js"></script>
