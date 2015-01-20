@@ -13,8 +13,7 @@
 <link rel="dns-prefetch" href="//code.jquery.com">
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
 <!-- /dns prefetching -->
-	
-	
+
 <!-- icon -->
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -50,7 +49,6 @@
 <link type="text/css" rel="stylesheet" href="/css/base.css">
 <!--<![endif]-->
 
-
 {% block css_content %}{% endblock %}
 <title>{{ title|safe }}</title>
 </head>
@@ -67,6 +65,13 @@
 	<p>No Templates Found</p>
 	{% endblock %}
 
+
+	<!-- IE alert -->
+	<!--[if lte IE 9]>
+	<script type="text/javascript">
+		alert("Do not support for IE version lower than or equal to IE 9");
+	</script>
+	<![endif]-->
 
 	<!--[if (gt IE 9)|!(IE)]><!--> 
 	<!-- js files are placed at the end of the document so the pages load faster -->

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;prjGogisticsWINEVER/src/static/javascripts/ie_lt_9&apos; to &apos;plugin_ie_lt_9&apos;" description="Rename resource &apos;ie_lt_9&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/javascripts/ie_lt_9" name="plugin_ie_lt_9" stamp="1421707998423" updateReferences="true"/>
+</session>
