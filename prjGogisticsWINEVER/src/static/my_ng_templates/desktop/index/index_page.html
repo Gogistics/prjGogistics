@@ -1,4 +1,5 @@
 <style>
+/* on this template, temporarily without @media */
 .list_icon:hover {
 	cursor: pointer;
 }
@@ -34,24 +35,26 @@
 	cursor: pointer;
 }
 
-
+.brand_icon{
+	margin: 0px auto !important;
+}
 </style>
 
 <div ng-controller="indexPageCtrl as ctrl">
 	<div class="navbar navbar-default navbar-fixed-top block"
 		role="navigation">
-		<div class="navbar-header list_icon">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 list_icon">
 			<a class="navbar-brand glyphicon glyphicon-list"
 				ng-click="ctrl.toggle_list()"></a>
 		</div>
 
-		<div class="navbar-header navbar-right">
-			<img class="nav navbar-nav navbar-brand" alt="winever logo"
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<img class="nav navbar-nav navbar-brand pull-right brand_icon" alt="winever logo"
 				src="/img/winever_txt.png">
 		</div>
 	</div>
 
-
+	<!-- topic selector area -->
 	<div id="list_block" class="container animated fadeOutLeft">
 		<div id="list_detail" class="row list_display_none"
 			style="height: 100%;">
@@ -73,7 +76,7 @@
 				</div>
 			</div>
 			
-			<!-- cover -->
+			<!-- cover area -->
 			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 list_cover"
 				ng-click="ctrl.toggle_list()"></div>
 		</div>
@@ -84,6 +87,7 @@
 <div ui-view></div>
 <script type="text/javascript">
 <!--
+/* temp. testing */
 var index_map_handler = new handler_openstreetmap();
 //-->
 </script>

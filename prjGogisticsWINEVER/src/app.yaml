@@ -9,32 +9,41 @@ handlers:
 - url: /favicon\.ico
   static_files: static/images/favicon.ico
   upload: static/images/favicon.ico
+  expiration: "2d 0m"
 
 - url: /apple-touch-icon\.png
   static_files: static/images/winever_logo.png
   upload: static/images/winever_logo.png
+  expiration: "2d 0m"
 
 - url: /apple-touch-icon-precomposed\.png
   static_files: static/images/winever_logo.png
   upload: static/images/winever_logo.png
+  expiration: "2d 0m"
 
 - url: /css
   static_dir: static/css
+  expiration: "2d 0m"
 
 - url: /js
   static_dir: static/javascripts
+  expiration: "2d 0m"
 
 - url: /img
   static_dir: static/images
+  expiration: "2d 0m"
 
 - url: /my_ng_templates
   static_dir: static/my_ng_templates
+  expiration: "2d 0m"
 
 - url: /leaflet
   static_dir: static/leaflet-0.7
+  expiration: "2d 0m"
 
 - url: /mis
   static_dir: static/mis
+  expiration: "2d 0m"
 
 - url: /robots\.txt
   static_files: static/mis/robots.txt
