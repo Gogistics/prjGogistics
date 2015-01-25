@@ -84,10 +84,8 @@
 			</div>
 				
 			<div class="pull-right">
-				<a href="/">
 				<img class="nav navbar-nav navbar-brand" alt="winever_logo"
 					src="/img/winever_txt.png" style="margin: 1px;">
-				</a>
 			</div>
 		</div>
 	</div>

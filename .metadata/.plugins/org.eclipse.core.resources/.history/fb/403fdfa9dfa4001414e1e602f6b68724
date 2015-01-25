@@ -74,8 +74,8 @@
 						<p class="text-left">WINEver提供酒價查詢(資料來源-<a href="http://www.wine-searcher.com/" target="_blank">Wine Searcher</a>)，並提供海外酒友配送服務，目前提供服務區域-台灣、香港、日本，灣區配送據點位於南三蕃市，細節請參考配送服務(Shipping Service)</p>
 					</div>
 					<div class="list-group">
-						<a class="list-group-item topic_selector" ng-class = "ctrl.is_selected('index_wine_searcher') ? 'active' : '' " ng-click = "ctrl.select_topic('index_wine_searcher')">Search Wine (酒價收詢)</a>
-						<a class="list-group-item topic_selector" ng-class = "ctrl.is_selected('index_shipping_service') ? 'active' : '' " ng-click = "ctrl.select_topic('index_shipping_service')">Shipping Services (配送服務)</a>
+						<a class="list-group-item topic_selector" ng-class = "ctrl.is_selected('index_wine_searcher') ? 'active' : '' " ng-click = "ctrl.select_topic('index_wine_searcher')">Search Wine</a>
+						<a class="list-group-item topic_selector" ng-class = "ctrl.is_selected('index_shipping_service') ? 'active' : '' " ng-click = "ctrl.select_topic('index_shipping_service')">Shipping Services</a>
 					</div>
 				</div>
 			</div>

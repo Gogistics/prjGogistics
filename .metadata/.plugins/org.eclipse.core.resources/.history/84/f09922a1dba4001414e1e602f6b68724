@@ -87,7 +87,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
 class TaskCrawlTempLinksDispatcher(BaseHandler):
     def get(self):
         # fetch entities from db
-        entities = WebLinkWineTemp.query().fetch(15)
+        entities = WebLinkWineTemp.query().fetch(20)
         search_list = []
         
         if entities:
