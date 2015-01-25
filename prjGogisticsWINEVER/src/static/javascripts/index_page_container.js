@@ -157,11 +157,7 @@
 			return ctrl_this.is_map_ready;
 		}
 		
-		
-		
-		
 		// mechanism of querying wine info
-		
 		var _handler_query_wine_info = {
 				
 				//
@@ -182,19 +178,22 @@
 				query_response_nearest_selling_store_info : undefined,
 		};
 		
-		
+		//
+		ctrl_this.has_result = false;
 		var search_wine_info = function(){
 			// console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 			
-			//
+			// check if query str is empty
 			if ($scope.wine.info !== undefined){
 				$scope.wine.info = $scope.wine.info.trim();
 				if ($scope.wine.info.length <= 0){
 					alert("query string is empty!");
+					ctrl_this.has_result = false;
 					return false;
 				}
 			}else{
 				alert("query string is empty!");
+				ctrl_this.has_result = false;
 				return false;
 			}
 			
@@ -213,6 +212,8 @@
 			// post query to server
 			$http(req)
 			.success(function(data, status, headers, config){
+				ctrl_this.has_result = true;
+				
 				// get wine info
 				var json_response = JSON.parse(data.query_results);
 				var return_code = json_response['wine-searcher']['return-code'];
@@ -367,6 +368,7 @@
 			})
 			.error(function(data, status, headers, config){
 				console.log(status);
+				ctrl_this.has_result = false;
 			});
 			// end of http
 			
@@ -375,13 +377,14 @@
 		// assign search function
 		ctrl_this.search_wine_info = search_wine_info;
 		
+		// key listener of wine searcher mechanism
 		var search_wine_info_of_keyup = function(event){
 			if(event.keyCode == 13){
 				search_wine_info();
 			}
 		};
 		
-		//
+		// set key listener for wine info search
 		ctrl_this.search_wine_info_of_keyup = search_wine_info_of_keyup;
 		
 	};

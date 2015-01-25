@@ -125,6 +125,7 @@
 			<div class="container">
 			      <div class="row search_block">
 			         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			         	<!-- search input group -->
 			            <div class="input-group">
 				             <div class="input-group-btn" >
 					            <div class="btn-group">
@@ -145,63 +146,71 @@
 			                   <input class="btn btn-default" type="button" value="Search" ng-click = "ctrl.search_wine_info()">
 			                </span>
 			            </div>
+			            <!-- /search input group -->
+			            
 			         </div>
 			      </div>
 			      
 			      <!-- query result -->
-			      <div class="row search_block">
-			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			      		<ul class="list-group">
-			      			<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Information" ng-model="query_keyword"></li>
-			      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:query_keyword">[[info]]</li>
-			      		</ul>
-			      	</div>
+			      <div ng-if="ctrl.has_result" class="animate-if">
+				      <!-- query result (text) -->
+				      <div class="row search_block">
+				      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				      		<ul class="list-group">
+				      			<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Information" ng-model="query_keyword"></li>
+				      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:query_keyword">[[info]]</li>
+				      		</ul>
+				      	</div>
+				      </div>
+				      
+				      <!-- store info -->
+				      <div class="row search_block">
+				      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				      		<ul class="list-group">
+					      		<li class="list-group-item">
+					      			<h4>Stores Information (Selling Stores and Nearest Store)</h4>
+					      		</li>
+					      		
+					      		<!-- query result including text and map -->
+					      		<li class="list-group-item col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+						      			<ul class="list-group">
+						      				<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Stores Information" ng-model="query_store_keyword"></li>
+						      				<li class="list-group-item text-left"  style="max-height: 450px; overflow: auto;">
+							      				<div class="animate-repeat" ng-repeat = "store in ctrl.selling_stores | filter:query_store_keyword">
+							      				[[store.merchant]]
+							      				<br>
+							      				[[store.merchant_description]]
+							      				<br>
+							      				<br>
+							      				[[store.address]]
+							      				<br>
+							      				[[store.state]]
+							      				<br>
+							      				[[store.country]]
+							      				<br>
+							      				Phone Number:<a href="tel:[[store.phone_number]]">&nbsp;[[store.phone_number]]</a>
+							      				<br>
+							      				<br>
+							      				[[store.wine]]
+							      				<br>
+							      				[[store.vintage]]
+							      				<br>
+							      				[[store.bottle_size]]
+							      				<hr>
+							      				</div>
+						      				</li>
+						      			</ul>
+					      			</div>
+					      			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" id="map_nearest_store" ng-class="ctrl.is_map_shown() ? 'map_nearest_store' : '' "></div>
+					      		</li>
+				      		</ul>
+				      	</div>
+				      </div>
 			      </div>
 			      
-			      <!-- store info -->
-			      <div class="row search_block">
-			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			      		<ul class="list-group">
-				      		<li class="list-group-item">
-				      			<h4>Stores Information (Selling Stores and Nearest Store)</h4>
-				      		</li>
-				      		
-				      		<!-- query result including text and map -->
-				      		<li class="list-group-item col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-				      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-					      			<ul class="list-group">
-					      				<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Stores Information" ng-model="query_store_keyword"></li>
-					      				<li class="list-group-item text-left"  style="max-height: 450px; overflow: auto;">
-						      				<div class="animate-repeat" ng-repeat = "store in ctrl.selling_stores | filter:query_store_keyword">
-						      				[[store.merchant]]
-						      				<br>
-						      				[[store.merchant_description]]
-						      				<br>
-						      				<br>
-						      				[[store.address]]
-						      				<br>
-						      				[[store.state]]
-						      				<br>
-						      				[[store.country]]
-						      				<br>
-						      				Phone Number:<a href="tel:[[store.phone_number]]">&nbsp;[[store.phone_number]]</a>
-						      				<br>
-						      				<br>
-						      				[[store.wine]]
-						      				<br>
-						      				[[store.vintage]]
-						      				<br>
-						      				[[store.bottle_size]]
-						      				<hr>
-						      				</div>
-					      				</li>
-					      			</ul>
-				      			</div>
-				      			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" id="map_nearest_store" ng-class="ctrl.is_map_shown() ? 'map_nearest_store' : '' "></div>
-				      		</li>
-			      		</ul>
-			      	</div>
-			      </div>
+			      
+			      
 			</div>
 		</div>
 	</div>

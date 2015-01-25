@@ -177,7 +177,6 @@
 		text-align: center;
 	}
 	
-	
 	/* filter animation*/
 	.vintage_list{
 		max-height: 100px;
@@ -210,6 +209,10 @@
 	  max-height:40px;
 	}
 	
+	.search_input_group{
+		margin-top: 40%;
+		max-margin-top: 40px;
+	}
 	
 	.search_block{
 		margin: 20px auto;
@@ -220,7 +223,7 @@
 	}
 	
 	.map_nearest_store{
-		width: 260px; height: 630px; border: 1px solid #eee; margin: 5px auto; border-radius: 3px;
+		max-width: 260px; height: 630px; border: 1px solid #eee; margin: 5px auto; border-radius: 3px;
 	}
 	
 	/* popup size on map */
@@ -233,35 +236,36 @@
 <!-- content -->
 <div ng-controller="wineInfoQueryCtrl as ctrl" class="index_page_block">
 	<div class="vertical-center text-center">
-	
-			<div class="container">
-			      <div class="row search_block">
-			      		<div class="jumbotron">
-				      		<!--  -->
-				      		<div class="form-horizontal">
-							    <div class="form-group">
-							        <label class="control-label" style="display: inline-block;">Wine:</label>
-							        <div style="display: inline-block;">
-						          		 <input type="text" class="form-control" ng-model = "wine.info" placeholder="Query String">
-							        </div>
-							    </div>
-				      		
-				      			<div class="form-group">
-							        <label class="control-label" style="display: inline-block;">Vintage:</label>
-							        <div style="display: inline-block;">
-						          		<input type="number" min="0" class="form-control" data-toggle="dropdown" placeholder="Vintage" ng-model= "wine.vintage">
-							        </div>
-							    </div>
-				      		</div>
-				      		
-				      		<!-- search button -->
-				            <input class="btn btn-default active col-xs-12 col-sm-12 col-md-12 col-lg-12" type="button" value="Search" ng-click = "ctrl.search_wine_info()">
-				      
+		<div class="container">
+			  <!-- wine search input group -->
+		      <div class="row search_input_group">
+		      		<div class="jumbotron">
+			      		<!--  -->
+			      		<div class="form-horizontal">
+						    <div class="form-group row">
+						        <label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3 text-left">Wine:</label>
+						        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+					          		 <input type="text" class="form-control" ng-model = "wine.info" placeholder="Query String">
+						        </div>
+						    </div>
+			      		
+			      			<div class="form-group">
+						        <label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3 text-left">Vintage:</label>
+						        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+					          		<input type="text" class="form-control" data-toggle="dropdown" placeholder="Vintage" ng-model= "wine.vintage">
+						        </div>
+						    </div>
 			      		</div>
-			      </div>
+			      		
+			      		<!-- search button -->
+			            <input class="btn btn-default active col-xs-12 col-sm-12 col-md-12 col-lg-12" type="button" value="Search" ng-click = "ctrl.search_wine_info()">
 			      
-			      
-			      <!-- query result -->
+		      		</div>
+		      </div>
+		      
+		      <!-- query result -->
+		      <div ng-if="ctrl.has_result" class="animate-if">
+			      <!-- query result (text) -->
 			      <div class="row search_block">
 
 			      		<ul class="list-group">
@@ -273,7 +277,6 @@
 			      
 			      <!-- store info -->
 			      <div class="row search_block">
-
 						<!-- stores info block -->
 			      		<ul class="list-group">
 				      		<li class="row list-group-item">
@@ -317,6 +320,8 @@
 			      		</ul>
 			      		<!-- /stores info block -->
 			      </div>
-			</div>
+		      </div>
+		      <!-- /query result -->
+		</div>
 	</div>
 </div>
