@@ -372,17 +372,15 @@
 			
 		};
 		
-		// assign search function
-		ctrl_this.search_wine_info = search_wine_info;
-		
 		var search_wine_info_of_keyup = function(event){
 			if(event.keyCode == 13){
 				search_wine_info();
 			}
 		};
 		
-		//
-		ctrl_this.search_wine_info_of_keyup = search_wine_info_of_keyup;
+		
+		// assign search function
+		ctrl_this.search_wine_info = search_wine_info;
 		
 	};
 	wineInfoQueryController.$inject =['$http', '$scope', '$timeout', 'GLOBAL_VALUES'];
