@@ -139,7 +139,7 @@
 					        </div>
 					        
 					        <!-- info field with query event while clicking Enter -->
-			                <input type="text" class="form-control wine_info_query_field" ng-model = "wine.info" placeholder="Type the wine for query (Supported by Wine Searcher)" ng-keyup = "ctrl.search_wine_info_of_keyup($event)">
+			                <input type="text" class="form-control wine_info_query_field" ng-model = "wine.info" placeholder="Type the wine for query (Supported by Wine Searcher)" ng-keyup="ctrl.search_wine_info_of_keyup($event)">
 			               
 			               <!-- query button -->
 			                <span class="input-group-btn">
@@ -157,8 +157,8 @@
 				      <div class="row search_block">
 				      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				      		<ul class="list-group">
-				      			<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Information" ng-model="ctrl.query_keyword" ng-keyup = "ctrl.search_wine_info_of_keyup_by_qery_keyword($event)"></li>
-				      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:ctrl.query_keyword">[[info]]</li>
+				      			<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Information" ng-model="query_keyword"></li>
+				      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:query_keyword">[[info]]</li>
 				      		</ul>
 				      	</div>
 				      </div>
@@ -208,6 +208,9 @@
 				      	</div>
 				      </div>
 			      </div>
+			      
+			      
+			      
 			</div>
 		</div>
 	</div>

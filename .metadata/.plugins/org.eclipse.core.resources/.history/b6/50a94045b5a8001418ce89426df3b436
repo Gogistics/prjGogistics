@@ -80,6 +80,7 @@
 		margin: 0px auto !important;
 	}
 }
+
 </style>
 
 <div ng-controller="indexPageCtrl as ctrl">

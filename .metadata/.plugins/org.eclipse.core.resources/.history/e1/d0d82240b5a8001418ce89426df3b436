@@ -80,6 +80,7 @@
 		margin: 0px auto !important;
 	}
 }
+
 </style>
 
 <div ng-controller="indexPageCtrl as ctrl">
@@ -131,6 +132,4 @@
 
 <!-- content view -->
 <div ui-view></div>
-
-<!-- JS -->
 <script type="text/javascript" src="/js/index_page_desktop.js"></script>

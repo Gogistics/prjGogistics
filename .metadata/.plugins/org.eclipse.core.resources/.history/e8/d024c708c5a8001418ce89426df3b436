@@ -379,7 +379,7 @@
 		// assign search function
 		ctrl_this.search_wine_info = search_wine_info;
 		
-		// key listener of wine searcher mechanism (vintage field)
+		// key listener of wine searcher mechanism
 		var search_wine_info_of_keyup = function(event){
 			if(event.keyCode == 13){
 				search_wine_info();
@@ -387,10 +387,9 @@
 		};
 		ctrl_this.search_wine_info_of_keyup = search_wine_info_of_keyup; // set key listener for wine info search
 		
-		// key listener of wine searcher mechanism (query_keyword field)
 		var search_wine_info_of_keyup_by_qery_keyword = function(event){
-			$scope.wine.vintage = ctrl_this.query_keyword;
 			if(event.keyCode == 13){
+				ctrl_this.wine.vintage = ctrl_this.query_keyword;
 				search_wine_info();
 			}
 		}

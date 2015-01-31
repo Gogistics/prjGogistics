@@ -130,7 +130,7 @@
 				             <div class="input-group-btn" >
 					            <div class="btn-group">
 					            	<!-- vintage field with query event while clicking Enter -->
-					                <input type="number" min="0" class="form-control dropdown-toggle vintage_field" data-toggle="dropdown" placeholder="Vintage" ng-model="wine.vintage" ng-keyup="ctrl.search_wine_info_of_keyup($event)">
+					                <input type="number" min="0" class="form-control dropdown-toggle vintage_field" data-toggle="dropdown" placeholder="Vintage" ng-model="ctrl.wine.vintage" ng-keyup="ctrl.search_wine_info_of_keyup($event)">
 					                <!-- temp. block vintage selector for better UX -->
 					                <!-- ul class="dropdown-menu vintage_list" role="menu">
 					                    <li class="animate-repeat" ng-repeat = " ith in ctrl.vintage | filter:wine.vintage "><a ng-click = "ctrl.get_query_vintage(ith)">[[ith]]</a></li>
@@ -139,7 +139,7 @@
 					        </div>
 					        
 					        <!-- info field with query event while clicking Enter -->
-			                <input type="text" class="form-control wine_info_query_field" ng-model = "wine.info" placeholder="Type the wine for query (Supported by Wine Searcher)" ng-keyup = "ctrl.search_wine_info_of_keyup($event)">
+			                <input type="text" class="form-control wine_info_query_field" ng-model = "ctrl.wine.info" placeholder="Type the wine for query (Supported by Wine Searcher)" ng-keyup = "ctrl.search_wine_info_of_keyup($event)">
 			               
 			               <!-- query button -->
 			                <span class="input-group-btn">

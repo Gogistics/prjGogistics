@@ -95,10 +95,8 @@
 	<script type="text/javascript" src="/js/plugin_bootstrap/bootstrap.min.js"></script>
 	
 	<!-- d3 -->
-	<script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript" src="/js/plugin_d3/d3.js"></script>
 	<script type="text/javascript" src="/js/plugin_d3/d3_tips.js"></script>
-	<script type="text/javascript" src="/js/plugin_d3/box.js"></script>
 	
 	<!-- mis js -->
 	<script type="text/javascript" src="/js/plugin_mis/responsive-directive.js"></script>

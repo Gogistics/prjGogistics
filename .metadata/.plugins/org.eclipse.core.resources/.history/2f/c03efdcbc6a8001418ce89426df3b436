@@ -389,8 +389,8 @@
 		
 		// key listener of wine searcher mechanism (query_keyword field)
 		var search_wine_info_of_keyup_by_qery_keyword = function(event){
-			$scope.wine.vintage = ctrl_this.query_keyword;
 			if(event.keyCode == 13){
+				$scope.wine.vintage = ctrl_this.query_keyword;
 				search_wine_info();
 			}
 		}
