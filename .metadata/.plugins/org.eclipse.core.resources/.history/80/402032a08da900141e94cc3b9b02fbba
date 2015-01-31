@@ -139,7 +139,7 @@
 					        </div>
 					        
 					        <!-- info field with query event while clicking Enter -->
-			                <input type="text" class="form-control wine_info_query_field" ng-model = "wine.info" placeholder="Type the wine information for query" ng-keyup = "ctrl.search_wine_info_of_keyup($event)">
+			                <input type="text" class="form-control wine_info_query_field" ng-model = "wine.info" placeholder="Type the wine for query (Supported by Wine Searcher)" ng-keyup = "ctrl.search_wine_info_of_keyup($event)">
 			               
 			               <!-- query button -->
 			                <span class="input-group-btn">
