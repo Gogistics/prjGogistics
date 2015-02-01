@@ -21,13 +21,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
     def _read_feed(self):
         """ crawling task """
         # temp root links
-        root_list_temp = [{"title" : "K&L", "link" : 'http://www.klwines.com/'},
-                          {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'},
-                          {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
-                          {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
-                          {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'},
-                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"},
-                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com/"}] # sample links
+        root_list_temp = dict_general.default_urls
         
         # construct search list
         search_list = []
@@ -43,7 +37,7 @@ class TaskCrawlRootLinksDispatcher(BaseHandler):
         while len(search_list) > 0:
             link = search_list.pop(0)["link"]
             parsed_str = urlparse.urlsplit(link)
-            link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
+            link_base = "{url_scheme}://{url_netloc}".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
             
             
             try:
@@ -95,20 +89,14 @@ class TaskCrawlTempLinksDispatcher(BaseHandler):
                 search_list.append({'title' : entity.title, 'link' : entity.link})
                 entity.key.delete()
         else:
-            search_list = [{"title" : "K&L", "link" : 'http://www.klwines.com/'},
-                           {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com/'},
-                           {"title" : "WineBid", "link" : 'http://www.winebid.com/'},
-                           {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com/'},
-                           {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com/'},
-                           {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com/"},
-                           {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com/"}]
+            search_list = dict_general.default_urls
             
         # crawl website
         list_found_link = []
         while len(search_list) > 0:
             link = search_list.pop(0)['link']
             parsed_str = urlparse.urlsplit(link)
-            link_base = "{url_scheme}://{url_netloc}/".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
+            link_base = "{url_scheme}://{url_netloc}".format(url_scheme = parsed_str.scheme, url_netloc = parsed_str.netloc)
             
             try:
                 req = urllib2.Request(link)
@@ -156,7 +144,7 @@ class TaskCategorizeWineInfoDispatcher(BaseHandler):
         """ categorize wine info """
         entities = WebLinkWineTemp.query().fetch(50) # to avoid running datastore free quota limit
         for entity in entities:
-            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe|wines|wine", entity.link, re.I) # sku ; BuyWine/Item ; bwe
+            result = re.findall(r"BuyWine/Item|sku|skuIT|bwe|wines|wine|Apply/Vintage", entity.link, re.I) # sku ; BuyWine/Item ; bwe
             query = WebLinkWine.query(WebLinkWine.link == entity.link)
             if result and query.count() == 0:
                 new_wine_info = WebLinkWine()

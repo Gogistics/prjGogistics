@@ -8,6 +8,15 @@ class KeyValuePairsGeneral():
     """ general key and value pair """
     def __init__(self):
         
+        # deafult setting of crawler
+        self.default_urls = [{"title" : "K&L", "link" : 'http://www.klwines.com'},
+                          {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com'},
+                          {"title" : "WineBid", "link" : 'http://www.winebid.com'},
+                          {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com'},
+                          {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com'},
+                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com"},
+                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com"}] # sample links
+        
         # query api
         self.wine_searcher_api = 'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5'
         
