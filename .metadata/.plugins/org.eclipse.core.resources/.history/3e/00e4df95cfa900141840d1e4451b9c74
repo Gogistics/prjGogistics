@@ -18,7 +18,7 @@ class QueryWineSearcherDispatcher(BaseHandler):
     def post(self):
         """ query mechanism for wine searcher """
         query_wine_info = self.request.get('query_info')
-        query_wine_info = re.sub(r'\s|-','+',query_wine_info)
+        query_wine_info = re.sub(r' ','+',query_wine_info)
         query_wine_vintage = self.request.get('query_vintage')
         
         # query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
@@ -74,7 +74,7 @@ class QueryWineSearcherDispatcher(BaseHandler):
                          "query_nearest_selling_store" : wine_searcher_nearest_selling_store_response,
                          "query_selling_stores" : wine_searcher_selling_stores_response}
         self.response.out.headers['Content-Type'] = 'text/json'
-        self.response.out.write(json.dumps(ajax_response, ensure_ascii = False).encode('utf8'))
+        self.response.out.write(json.dumps(ajax_response, ensure_ascii=False).encode('utf8'))
 
     
 # configuration

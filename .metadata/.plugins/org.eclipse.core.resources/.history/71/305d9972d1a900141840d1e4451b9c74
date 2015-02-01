@@ -18,7 +18,7 @@ class QueryWineSearcherDispatcher(BaseHandler):
     def post(self):
         """ query mechanism for wine searcher """
         query_wine_info = self.request.get('query_info')
-        query_wine_info = re.sub(r'\s|-','+',query_wine_info)
+        query_wine_info = re.sub(r' |-','+',query_wine_info)
         query_wine_vintage = self.request.get('query_vintage')
         
         # query_str = GLOBAL_VALUES.WINE_SEARCHER_API_KEY + "&Xformat=J" + "&Xwinename=" + "stag+leap+napa+usa" + "&Xvintage=" + "1999" + "&Xlocation=" + "&Xautoexpand=Y" + "&Xcurrencycode=usd" + "&Xkeyword_mode=X" + "&Xwidesearch=V";
