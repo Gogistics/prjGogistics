@@ -9,16 +9,16 @@ class KeyValuePairsGeneral():
     def __init__(self):
         
         # deafult setting of crawler
-        self.default_urls = [{"title" : "K&L", "link" : 'http://www.klwines.com'},
-                          {"title" : "BenchMarkWine", "link" : 'https://www.benchmarkwine.com'},
-                          {"title" : "WineBid", "link" : 'http://www.winebid.com'},
-                          {"title" : "BelmontWine", "link" : 'http://www.belmontwine.com'},
-                          {"title" : "The Wine Club", "link" : 'http://www.thewineclub.com'},
-                          {"title" : "Aabalat Fine and Rare Wine", "link" : "https://aabalat.com"},
-                          {"title" : "Rare Wine Co.", "link" : "http://www.rarewineco.com"}] # sample links
+        self.default_urls = [{u"title" : u"K&L",                        u"link" : u'http://www.klwines.com'},
+                             {u"title" : u"BenchMarkWine",              u"link" : 'https://www.benchmarkwine.com'},
+                             {u"title" : u"WineBid", "link" :           u'http://www.winebid.com'},
+                             {u"title" : u"BelmontWine",                u"link" : 'http://www.belmontwine.com'},
+                             {u"title" : u"The Wine Club",              u"link" : 'http://www.thewineclub.com'},
+                             {u"title" : u"Aabalat Fine and Rare Wine", u"link" : "https://aabalat.com"},
+                             {u"title" : u"Rare Wine Co.",              u"link" : "http://www.rarewineco.com"}]
         
         # query api
-        self.wine_searcher_api = 'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5'
+        self.wine_searcher_api = u'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5'
         
         # config. setting
         self.config_setting = {

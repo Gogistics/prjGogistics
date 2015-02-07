@@ -1,13 +1,1 @@
-INSTUPdispatchers.dispatchers_cron_tasks
-D:\prjGogistics\prjGogisticsWINEVER\src\dispatchers\dispatchers_cron_tasks.py
-INFOS:&&3|1|2|0&&1|3|2|0&&2|4|2|3&&2|5|2|3&&1|6|2|0&&2|4|2|6&&1|7|2|0&&2|4|2|7&&2|8|2|7&&3|9|2|0&&3|10|2|0
-app=10
-_categorize=8
-TaskCategorizeWineInfoDispatcher=7
-get=4
-config=9
-dict_general=1
-TaskCrawlRootLinksDispatcher=3
-dispatchers.dispatchers_cron_tasks=2
-TaskCrawlTempLinksDispatcher=6
-_read_feed=5
+DELSTRdictionaries.dict_key_value_pairs

@@ -1,1 +1,10 @@
-DELSTRdispatchers.dispatchers_cron_tasks
+INSTUPdictionaries.dict_key_value_pairs
+D:\prjGogistics\prjGogisticsWINEVER\src\dictionaries\dict_key_value_pairs.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5
+__init__=3
+KeyValuePairsGeneral=1
+default_urls=4
+wine_searcher_api=6
+KeyValuePairsGeneral.__init__=5
+config_setting=7
+dictionaries.dict_key_value_pairs=2
