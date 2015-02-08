@@ -51,7 +51,7 @@ d3.box = function() {
       // Retrieve the old x-scale, if this is an update.
       var x0 = this.__chart__ || d3.scale.linear()
           .domain([0, Infinity])
-		 // .domain([0, max])
+		  // .domain([0, max])
           .range(x1.range());
 
       // Stash the new scale.
@@ -94,8 +94,7 @@ d3.box = function() {
           .remove();
 
       // Update innerquartile box.
-      var box = g.selectAll("rect.box")
-          .data([quartileData]);
+      var box = g.selectAll("rect.box").data([quartileData]);
 
       box.enter().append("rect")
           .attr("class", "box")
@@ -195,19 +194,20 @@ d3.box = function() {
       // Update box ticks.
       var boxTick = g.selectAll("text.box")
           .data(quartileData);
-	 if(showLabels == true) {
-      boxTick.enter().append("text")
-          .attr("class", "box")
-          .attr("dy", ".3em")
-          .attr("dx", function(d, i) { return i & 1 ? 6 : -6 })
-          .attr("x", function(d, i) { return i & 1 ?  + width : 0 })
-          .attr("y", x0)
-          .attr("text-anchor", function(d, i) { return i & 1 ? "start" : "end"; })
-          .text(format)
-        .transition()
-          .duration(duration)
-          .attr("y", x1);
-	}
+      
+	  if(showLabels == true) {
+	      boxTick.enter().append("text")
+	          .attr("class", "box")
+	          .attr("dy", ".3em")
+	          .attr("dx", function(d, i) { return i & 1 ? 5 : -5 })
+	          .attr("x", function(d, i) { return i & 1 ?  + width : 0 })
+	          .attr("y", x0)
+	          .attr("text-anchor", function(d, i) { return i & 1 ? "start" : "end"; })
+	          .text(format)
+	          .transition()
+	          .duration(duration)
+	          .attr("y", x1);
+	   }
 		 
       boxTick.transition()
           .duration(duration)
@@ -219,33 +219,33 @@ d3.box = function() {
       // to join box ticks pre-transition with whisker ticks post-.
       var whiskerTick = g.selectAll("text.whisker")
           .data(whiskerData || []);
-	if(showLabels == true) {
-      whiskerTick.enter().append("text")
-          .attr("class", "whisker")
-          .attr("dy", ".3em")
-          .attr("dx", 6)
-          .attr("x", width)
-          .attr("y", x0)
-          .text(format)
-          .style("opacity", 1e-6)
-        .transition()
-          .duration(duration)
-          .attr("y", x1)
-          .style("opacity", 1);
-	}
-      whiskerTick.transition()
-          .duration(duration)
-          .text(format)
-          .attr("y", x1)
-          .style("opacity", 1);
-
-      whiskerTick.exit().transition()
-          .duration(duration)
-          .attr("y", x1)
-          .style("opacity", 1e-6)
-          .remove();
-    });
-    d3.timer.flush();
+		if(showLabels == true) {
+	      whiskerTick.enter().append("text")
+	          .attr("class", "whisker")
+	          .attr("dy", ".3em")
+	          .attr("dx", 5)
+	          .attr("x", width)
+	          .attr("y", x0)
+	          .text(format)
+	          .style("opacity", 1e-6)
+	          .transition()
+	          .duration(duration)
+	          .attr("y", x1)
+	          .style("opacity", 1);
+		}
+	      whiskerTick.transition()
+	          .duration(duration)
+	          .text(format)
+	          .attr("y", x1)
+	          .style("opacity", 1);
+	
+	      whiskerTick.exit().transition()
+	          .duration(duration)
+	          .attr("y", x1)
+	          .style("opacity", 1e-6)
+	          .remove();
+	    });
+	    d3.timer.flush();
   }
 
   box.width = function(x) {
