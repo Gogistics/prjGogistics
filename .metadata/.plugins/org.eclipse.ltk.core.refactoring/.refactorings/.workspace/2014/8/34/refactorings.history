@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;prjGogistics/src/dispatchers/dispatcher_client_services.py&apos;" deleteContents="false" description="Delete resource &apos;prjGogistics/src/dispatchers/dispatcher_client_services.py&apos;" element1="/prjGogistics/src/dispatchers/dispatcher_client_services.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1408333469359"/>
-</session>

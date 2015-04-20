@@ -1,8 +1,0 @@
-INSTUPdispatchers.dispatchers_gcm
-D:\prjGogistics\prjGogistics\src\dispatchers\dispatchers_gcm.py
-INFOS:&&1|1|2|0&&2|3|2|1&&1|4|2|0&&2|3|2|4&&3|5|2|0
-app=5
-dispatchers.dispatchers_gcm=2
-post=3
-GCMSendHandler=4
-GCMReceiveRegIDHandler=1

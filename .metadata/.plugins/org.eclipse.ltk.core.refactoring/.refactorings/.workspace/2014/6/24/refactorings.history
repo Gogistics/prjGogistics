@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;prjGogistics/src/static/images/favicon.ico&apos;" deleteContents="false" description="Delete resource &apos;prjGogistics/src/static/images/favicon.ico&apos;" element1="/prjGogistics/src/static/images/favicon.ico" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1402324414925"/>
-</session>

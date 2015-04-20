@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;prjGogistics/src/static/images/gogistics_font_side.png&apos; to &apos;gogistics_front_side.png&apos;" description="Rename resource &apos;gogistics_font_side.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/images/gogistics_font_side.png" name="gogistics_front_side.png" stamp="1411281700218" updateReferences="true"/>
-</session>

@@ -1,5 +1,0 @@
-cron:
-- description: pre-sale email notification
-  url: /cron_task_create_pre_sale_notification_task
-  schedule: 1 of jul,aug,sep 01:00
-  timezone: Asia/Taipei

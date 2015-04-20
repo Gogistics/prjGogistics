@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;prjGogistics/src/handlers_general/handler_cron_tasks.py&apos; to &apos;dispatcher_cron_tasks.py&apos;" description="Rename resource &apos;handler_cron_tasks.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/handlers_general/handler_cron_tasks.py" name="dispatcher_cron_tasks.py" stamp="1406237225097" updateReferences="true"/>
-</session>

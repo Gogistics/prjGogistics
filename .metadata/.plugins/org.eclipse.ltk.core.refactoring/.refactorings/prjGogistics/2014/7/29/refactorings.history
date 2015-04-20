@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;prjGogistics/src/static/bisque_font_style&apos; to &apos;font_styles&apos;" description="Rename resource &apos;bisque_font_style&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/bisque_font_style" name="font_styles" stamp="1405748698769" updateReferences="true"/>
-</session>

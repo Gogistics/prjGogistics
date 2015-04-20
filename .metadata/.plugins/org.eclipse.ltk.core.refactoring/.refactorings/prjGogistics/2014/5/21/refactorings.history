@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;prjGogistics/src/static/templates/index_gogistics.html&apos; to &apos;gogistics_index.html&apos;" description="Rename resource &apos;index_gogistics.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/static/templates/index_gogistics.html" name="gogistics_index.html" stamp="1400664550847" updateReferences="true"/>
-</session>

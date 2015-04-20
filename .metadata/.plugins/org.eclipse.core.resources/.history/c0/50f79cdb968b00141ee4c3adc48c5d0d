@@ -1,5 +1,0 @@
-cron:
-- description: crawler for searching wine
-  url: /cron_tasks/crawler
-  schedule: every 1 hours
-  timezone: Asia/Taipei

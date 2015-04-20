@@ -1,8 +1,0 @@
-
-window.handler_openstreetmap = window.handler_openstreetmap || function(){
-	this.version = "1.0";
-	
-	this.get_version = function(){
-		return this.version;
-	};
-};
