@@ -15,7 +15,7 @@ class KeyValuePairsGeneral():
                              {u"title" : u"BelmontWine",                u"link" : 'http://www.belmontwine.com'},
                              {u"title" : u"The Wine Club",              u"link" : 'http://www.thewineclub.com'},
                              {u"title" : u"Aabalat Fine and Rare Wine", u"link" : "https://aabalat.com"},
-                             {u"title" : u"Rare Wine Co.",              u"link" : "http://www.rarewineco.com"}]
+                             {u"title" : u"Rare Wine Co.",              u"link" : "http://www.rarewineco.com/fine-wines/"}]
         
         # query api
         self.wine_searcher_api = u'http://api.wine-searcher.com/wine-select-api.lml?Xkey=ggstcs871585&Xversion=5'

@@ -152,6 +152,19 @@ class TaskCategorizeWineInfoDispatcher(BaseHandler):
                 new_wine_info.title = entity.title
                 new_wine_info.put()
 
+# find price
+class TaskSearchPriceDispatcher(BaseHandler):
+    def get(self):
+        self._search_price()
+    
+    def _search_price(self):
+        entities = WebLinkWine.query().fecth(50)
+        
+        # belmontwine
+        
+        # winebid
+        pass
+
 
 # configuration
 config = dict_general.config_setting
@@ -160,7 +173,8 @@ config = dict_general.config_setting
 app = webapp2.WSGIApplication([
     webapp2.Route(r'/cron_tasks/crawl_root_links', TaskCrawlRootLinksDispatcher, name = 'crawl_root_links'),
     webapp2.Route(r'/cron_tasks/crawl_temp_links', TaskCrawlTempLinksDispatcher, name = 'crawl_temp_links'),
-    webapp2.Route(r'/cron_tasks/categorize_wine_info', TaskCategorizeWineInfoDispatcher, name = "categorize_wine_info")
+    webapp2.Route(r'/cron_tasks/categorize_wine_info', TaskCategorizeWineInfoDispatcher, name = "categorize_wine_info"),
+    webapp2.Route(r'/cron_tasks/search_wine_price', TaskSearchPriceDispatcher, name = "search_wine_price")
 ], debug=True, config=config)
 
 # log
