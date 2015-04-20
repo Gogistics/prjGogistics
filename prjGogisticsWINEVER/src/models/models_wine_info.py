@@ -21,3 +21,6 @@ class WebLinkWine(WebLink):
 
 class WebLinkWineTemp(WebLink):
     pass
+
+class WinePriceInfo(ndb.Expando):
+    pass

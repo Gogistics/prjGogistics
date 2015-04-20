@@ -5,10 +5,12 @@ Created on Dec 22, 2014
 @author: Alan Tai
 '''
 from handlers.handler_webapp2_extra_auth import BaseHandler
-from models.models_wine_info import WebLinkRoot, WebLinkWineTemp, WebLinkWine
+from models.models_wine_info import WebLinkRoot, WebLinkWineTemp, WebLinkWine,\
+    WinePriceInfo
 from dictionaries.dict_key_value_pairs import KeyValuePairsGeneral
 from bs4 import BeautifulSoup
 import webapp2, logging, re, urllib2, urlparse
+from datetime import datetime
 
 
 #
@@ -160,11 +162,55 @@ class TaskSearchPriceDispatcher(BaseHandler):
     def _search_price(self):
         entities = WebLinkWine.query().fecth(50)
         
-        # belmontwine
-        
-        # winebid
-        pass
-
+        for entity in entities:
+            # belmontwine
+            match_result = re.findall(r'^(?=http://www.belmontwine.com/)(?=bwe/\d+)$', entity.link, re.I)
+            if match_result:
+                req = urllib2.Request(entity.link)
+                response = urllib2.urlopen(req) # need to add new mechanism to prevent fetch javascript
+                searched_page = response.read()
+                soup = BeautifulSoup(searched_page)
+                
+                found_price = soup.find('td', { "class" : "detail-price-txt" })
+                price = found_price.string.strip()
+                if price != '':
+                    wine_price = WinePriceInfo(link = entity.link,
+                                               current_price = price,
+                                               created_datetime = datetime.now())
+                    wine_price.put()
+                    
+            # winebid
+            match_result = re.findall(r'^(?=http://www.winebid.com/Apply/Vintage/)(?=\d+).*$', entity.link, re.I)
+            if match_result:
+                req = urllib2.Request(entity.link)
+                response = urllib2.urlopen(req) # need to add new mechanism to prevent fetch javascript
+                searched_page = response.read()
+                soup = BeautifulSoup(searched_page)
+                
+                found_price = soup.find('div', { "class" : "price" } )
+                price = found_price.string.strip()
+                if price != '':
+                    wine_price = WinePriceInfo(link = entity.link,
+                                               current_price = price,
+                                               created_datetime = datetime.now())
+                    wine_price.put()
+                        
+            # k&l
+            match_result = re.findall(r'^(?=http://www.klwines.com/)(?=.*sku=\d+)$', entity.link, re.I)
+            if match_result:
+                req = urllib2.Request(entity.link)
+                response = urllib2.urlopen(req) # need to add new mechanism to prevent fetch javascript
+                searched_page = response.read()
+                soup = BeautifulSoup(searched_page)
+                
+                found_price = soup.find('span', { "class" : "price" })
+                price_elem = found_price.find('strong')
+                price = price_elem.string.strip()
+                if price != '':
+                    wine_price = WinePriceInfo(link = entity.link,
+                                               current_price = price,
+                                               created_datetime = datetime.now())
+                    wine_price.put()
 
 # configuration
 config = dict_general.config_setting
