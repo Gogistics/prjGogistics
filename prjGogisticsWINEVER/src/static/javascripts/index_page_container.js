@@ -51,6 +51,10 @@
 			url : '/index_shipping_service',
 			parent : 'index_page',
 			templateUrl : '/my_ng_templates/' + device + '/index/index_shipping_service.html'
+		}).state('index_pso_demo', {
+			url : '/index_pso_demo',
+			parent : 'index_page',
+			templateUrl : '/my_ng_templates/' + device + '/data_analysis/particle_swarm_optimization_animation.html'
 		});
 	});
 	
