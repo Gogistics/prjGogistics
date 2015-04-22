@@ -160,7 +160,7 @@ class TaskSearchPriceDispatcher(BaseHandler):
         self._search_price()
     
     def _search_price(self):
-        entities = WebLinkWine.query().fecth(50)
+        entities = WebLinkWine.query().fetch(50)
         
         for entity in entities:
             # belmontwine
