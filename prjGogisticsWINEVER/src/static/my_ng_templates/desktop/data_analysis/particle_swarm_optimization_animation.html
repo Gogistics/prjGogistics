@@ -65,7 +65,7 @@ stroke-width: 0;
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron vertical-center text-center">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="container">
-				<button id="btn_start_animation" class="btn btn-primary">Start Animation</button>
+				<button id="btn_start_animation" class="btn btn-primary fadeInUp">Start Animation</button>
 				<p class="intro_content">
 					<span>Purpose: Search minimum value of the given test function below throughout the given space,  x = [-15, 15] and y = [-15, 15]. Total Iteration: 50</span><br>
 					<span>Test function =(0.007 * x * (-y - 1)) * (cos(x + 0.3) - sin(y))+(1 - sin(x))</span><br>
@@ -452,6 +452,9 @@ $("#btn_animation").click(function(){
 				// show reset btn
 				$('#btn_reset').removeClass('bounceOutLeft');
 				$('#btn_reset').addClass(' fadeInUp');
+				
+				$('#btn_start_animation').removeClass('fadeInUp');
+				$('#btn_start_animation').addClass(' bounceOutLeft');
 			}
 	}
 	
