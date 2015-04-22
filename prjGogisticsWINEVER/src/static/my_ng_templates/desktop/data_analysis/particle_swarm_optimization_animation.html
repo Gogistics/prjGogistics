@@ -6,6 +6,21 @@
 	height: 100%;
 }
 
+.vertical-center {
+		min-height: 100% !important;
+		min-height: 100vh !important;
+		display: flex !important;
+		display: -webkit-flex !important;
+		align-items: center !important;
+		-webkit-align-items: center !important;
+		justify-content: center;
+	}
+	.jumbotron {
+		margin-top: 100px !important;
+		margin-bottom: 0px !important;
+		background-color: transparent !important;
+	}
+
 .intro_content,.intro_content>span {
 	color: #555;
 	font-size: 14px;
@@ -52,10 +67,12 @@ stroke-width: 0;
 			<div class="container">
 				<button id="btn_start_animation" class="btn btn-primary">Start Animation</button>
 				<p class="intro_content">
-				<span>Purpose: Search minimum value of the given test function below throughout the given space,  x = [-15, 15] and y = [-15, 15]. Total Iteration: 50</span><br>
-				<span>Test function =(0.007 * x * (-y - 1)) * (cos(x + 0.3) - sin(y))+(1 - sin(x))</span><br>
-				<span>Iteration:</span><span id="iteration"></span><br>
-				<span id="optimal_result" class="optimal_result"></span>
+					<span>Purpose: Search minimum value of the given test function below throughout the given space,  x = [-15, 15] and y = [-15, 15]. Total Iteration: 50</span><br>
+					<span>Test function =(0.007 * x * (-y - 1)) * (cos(x + 0.3) - sin(y))+(1 - sin(x))</span><br>
+					<span>Iteration:</span><span id="iteration"></span><br>
+					<span id="optimal_result" class="optimal_result"></span>
+					<br>
+					<input type="button" class="btn btn-warning bounceOutLeft" value="Reset" id="btn_reset_pso">
 				</p>
 				
 				<div id="pso_animation"></div>
@@ -431,6 +448,10 @@ $("#btn_animation").click(function(){
 				var optimal_position = particles_swarm_optimization_d3.config.global_optimal_particles_set;
 				alert(optimal);
 				$("#optimal_result").text("Optimal: " + optimal + " ; Position: x => " + optimal_position[0][0] + ", y => " + optimal_position[0][1]);
+				
+				// show reset btn
+				$('#btn_reset').removeClass('bounceOutLeft');
+				$('#btn_reset').addClass(' fadeInUp');
 			}
 	}
 	
