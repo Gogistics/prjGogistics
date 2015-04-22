@@ -2,6 +2,10 @@
 <style>
 <!--
 
+.index_pso_block{
+	height: 100%;
+}
+
 .intro_content,.intro_content>span {
 	color: #555;
 	font-size: 14px;
@@ -42,29 +46,32 @@ stroke-width: 0;
 }
 
 -->
-</style>
-<div class="container">
-<button id="btn_start_animation" class="btn btn-primary">Start Animation</button>
-<p class="intro_content">
-<span>Purpose: Search minimum value of the given test function below throughout the given space,  x = [-15, 15] and y = [-15, 15]. Total Iteration: 50</span><br>
-<span>Test function =(0.007 * x * (-y - 1)) * (cos(x + 0.3) - sin(y))+(1 - sin(x))</span><br>
-<span>Iteration:</span><span id="iteration"></span><br>
-<span id="optimal_result" class="optimal_result"></span>
-</p>
-	<div id="pso_animation"></div>
-	<div class="row text-center">
-	<h4>Visualization of Test Function with Matlab</h4>
-	<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3"></div>
-	<img alt="" src="/img/algorithms/PSO-2.png" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-	<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3"></div>
+</style><div class="index_pso_block">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron vertical-center text-center">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="container">
+				<button id="btn_start_animation" class="btn btn-primary">Start Animation</button>
+				<p class="intro_content">
+				<span>Purpose: Search minimum value of the given test function below throughout the given space,  x = [-15, 15] and y = [-15, 15]. Total Iteration: 50</span><br>
+				<span>Test function =(0.007 * x * (-y - 1)) * (cos(x + 0.3) - sin(y))+(1 - sin(x))</span><br>
+				<span>Iteration:</span><span id="iteration"></span><br>
+				<span id="optimal_result" class="optimal_result"></span>
+				</p>
+				
+				<div id="pso_animation"></div>
+				
+				<!-- temp. remove the desc. -->
+				<!--div class="row text-center">
+				<h4>Visualization of Test Function with Matlab</h4>
+				<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3"></div>
+				<img alt="" src="/img/algorithms/PSO-2.png" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<div class="col-xs-0 col-sm-0 col-md-3 col-lg-3"></div>
+				</div-->
+			</div>
+		</div>
 	</div>
 </div>
 
-<div>
-<input id="btn_animation" type="button" value="Click Me">
-<div id="test_animation" style="width: 100px; height: 50px; border: 1px solid #555;" class="animated bounceOutLeft">Test</div>
-</div>
- 
 <!-- js -->
 <script type="text/javascript" src="/js/plugin_mis/numeric-1.2.6.min.js"></script>
 <script type="text/javascript">
