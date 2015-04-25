@@ -187,6 +187,9 @@
 		var search_wine_info = function(){
 			// console.log($scope.wine.vintage + " ; " + $scope.wine.info);
 			
+			// popup loader gif
+			$("#processing_cover").css({ display : "block"});
+			
 			// check if query str is empty
 			if ($scope.wine.info !== undefined){
 				$scope.wine.info = $scope.wine.info.trim();
@@ -375,6 +378,10 @@
 			.error(function(data, status, headers, config){
 				console.log(status);
 				ctrl_this.has_result = false;
+			})
+			.finally(function(){
+				// popup loader gif
+				$("#processing_cover").css({ display : "none"});
 			});
 			// end of http
 			

@@ -1,5 +1,17 @@
 @CHARSET "UTF-8";
 
+/* loader */
+#loader {
+    background: transparent url(/img/loader.gif) center center no-repeat;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
 @media all and (min-device-width: 768px) {
 	body {
 		width: 100%;
