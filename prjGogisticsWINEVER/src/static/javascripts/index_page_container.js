@@ -161,7 +161,7 @@
 			return ctrl_this.is_map_ready;
 		}
 		
-		// mechanism of querying wine info
+		// mechanism of querying wine info; under construction
 		var _handler_query_wine_info = {
 				
 				//
