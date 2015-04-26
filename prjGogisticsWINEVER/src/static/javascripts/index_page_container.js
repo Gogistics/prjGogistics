@@ -182,13 +182,200 @@
 				query_response_nearest_selling_store_info : undefined,
 		};
 		
+		// D3 visualization
+		var visualize_wine_price = function(arg_searched_wine, arg_data){
+			//
+			var margin = {top: 100, right: 150, bottom: 100, left: 100},
+			    width = 960 - margin.left - margin.right,
+			    height = 500 - margin.top - margin.bottom,
+			    padding = 50;
+
+			var parseDate = d3.time.format("%Y").parse;
+			var formatTime = d3.time.format("%Y");
+
+			var x = d3.time.scale()
+			    .range([0, width]);
+
+			var y = d3.scale.linear()
+			    .range([height, 0]);
+
+			var color = d3.scale.category10();
+
+			var xAxis = d3.svg.axis()
+			    .scale(x)
+				.tickFormat(d3.time.format("%Y"))
+			    .orient("bottom");
+
+			var yAxis = d3.svg.axis()
+			    .scale(y)
+			    .orient("left");
+
+			var line = d3.svg.line()
+			    .x(function(d) { return x(d.date); })
+			    .y(function(d) { return y(d.price); });
+			    
+			var line_interpolate = d3.svg.line()
+			.interpolate("basis")
+			.x(function(d) { return x(d.date); })
+			.y(function(d) { return y(d.price); });
+
+			var svg = d3.select("#price_model").append("svg")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom)
+			  	.append("g")
+			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			/**/
+			function make_x_axis() {        
+			    return d3.svg.axis()
+			        .scale(x)
+			         .orient("bottom")
+			         .ticks(4)
+			}
+
+			function make_y_axis() {        
+			    return d3.svg.axis()
+			        .scale(y)
+			        .orient("left")
+			        .ticks(4)
+			}
+
+			svg.append("g")         
+			.attr("class", "grid")
+			.call(make_y_axis()
+			    .tickSize(-width, 0, 0)
+			    .tickFormat("")
+			)
+
+			var data = arg_data;
+			console.log(JSON.stringify(data,2,2));
+			  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+
+			  data.forEach(function(d) {
+			    d.date = parseDate(d.date);
+			  });
+
+			  var wine_price_data = color.domain().map(function(name) {
+			    return {
+			      name: name,
+			      values: data.map(function(d) {
+			        return {date: d.date, price: +d[name], type: name};
+			      })
+			    };
+			  });
+
+			  x.domain(d3.extent(data, function(d) { return d.date; }));
+
+			  y.domain([
+			    d3.min(wine_price_data, function(c) { return d3.min(c.values, function(v) { return v.price; }); }),
+			    d3.max(wine_price_data, function(c) { return d3.max(c.values, function(v) { return v.price; }); })
+			  ]);
+
+			  svg.append("g")
+			      .attr("class", "x axis")
+			      .attr("transform", "translate(0," + height + ")")
+			      .call(xAxis);
+
+			  svg.append("g")
+			      .attr("class", "y axis")
+			      .call(yAxis);
+
+			  	// labels
+				svg.append("text")
+							.attr("class", "label")
+							.attr("transform","rotate(-90)")
+							.attr("y", -85)
+							.attr("x", 0 - (height/2) - 20)
+							.attr("dy","1em")
+							.text("Price ($)");
+
+				svg.append("text")
+				   .attr("class","label")
+				   .attr("x", width / 2 - padding + 35)
+				   .attr("y", height + padding)
+				   .attr("text-anchor","middle")
+				   .text("Vintage");
+				
+				svg.append("text")
+				   .attr("class","label")
+				   .attr("x", width / 2 - padding + 35)
+				   .attr("y", -50)
+				   .attr("text-anchor","middle")
+				   .text(arg_searched_wine);
+				
+				// lengend
+				var price_legend = ['min','avg','max'];
+				var legend = svg.selectAll(".legend").data(price_legend.slice().reverse())
+				.enter().append("g").attr("class", "legend").attr("transform",
+						function(d, i) {
+							return "translate(100," + i * 20 + ")";
+						});
+
+				legend.append("rect").attr("x", width - 18).attr("width", 18).attr(
+					"height", 18).style("fill", color);
+				
+				legend.append("text").attr("x", width - 24).attr("y", 9)
+					.attr("dy", ".35em").style("text-anchor", "end").text(function(d) {
+						return d;
+					});
+				
+				var div = d3.select("body").append("div")   
+			    .attr("class", "tooltip")               
+			    .style("opacity", 0);
+				
+			  var city = svg.selectAll(".city")
+			      .data(wine_price_data)
+			    .enter().append("g")
+			      .attr("class", "city");
+
+			  city.append("path")
+			      .attr("class", "line")
+			      .attr("d", function(d) { return line(d.values); })
+			      .style("stroke", function(d) { return color(d.name); });
+			  
+			  city.append("path")
+			  .attr("class", "line_interpolate")
+			  .attr("d", function(d) { return line_interpolate(d.values); })
+			  .style("stroke", function(d) { return color(d.name); });
+			  
+			  // draw dot
+			  wine_price_data.forEach(function(prices){
+				  //console.log(prices);
+				  
+				  svg.selectAll("dot")    
+			      .data(prices.values)         
+			  	  .enter().append("circle") 
+			  	  .attr("class", "price_dot")
+			      .attr("r", 4)       
+			      .attr("cx", function(d) { return x(d.date); })       
+			      .attr("cy", function(d) { return y(d.price); })     
+			      .on("mouseover", function(d) {      
+			          div.transition()        
+			              .duration(200)
+			              .style("opacity", .9);      
+			          div.html('Vintage: ' + formatTime(d.date) + ' ; ' + d.type + ' price: $' + d.price)  
+			              .style("left", (d3.event.pageX) + "px")     
+			              .style("top", (d3.event.pageY - 28) + "px");    
+			          })                  
+			      .on("mouseout", function(d) {       
+			          div.transition()        
+			              .duration(500)      
+			              .style("opacity", 0);   
+			      });
+			  });
+
+			$("#price_model").css({ display : "block"});
+		};
+		ctrl_this.visualize_wine_price = visualize_wine_price;
+		
 		// wine info query function
 		ctrl_this.has_result = false;
 		var search_wine_info = function(){
-			// console.log($scope.wine.vintage + " ; " + $scope.wine.info);
+			$("#price_model").empty();
 			
 			// popup loader gif
 			$("#processing_cover").css({ display : "block"});
+			$("#price_model").css({ display : "none"});
 			
 			// check if query str is empty
 			if ($scope.wine.info !== undefined){
@@ -242,6 +429,7 @@
 						}
 					}
 					else if(json_response['wine-searcher']['wine-vintages'] !== undefined){
+						var searched_wine, wine_price_data = [];
 						for(var ith = 0 ; ith < json_response['wine-searcher']['wine-vintages'].length; ith++){
 							var wine_info = json_response['wine-searcher']['wine-vintages'][ith]['wine-vintage'];
 							if(wine_info['vintage'].length < 3){
@@ -253,15 +441,21 @@
 									  "Avg. Price: " + wine_info['price-average'] + " ; " +
 									  "Max. Price: " + wine_info['price-max'] + " ; " +
 									  "Min. Price: " + wine_info['price-min'];
+							
 							// console.log(str);
 							ctrl_this.info_list.push(str);
+							searched_wine = $scope.wine.info;
+							wine_price_data.push({date : wine_info['vintage'], min : wine_info['price-min'], avg : wine_info['price-average'], max : wine_info['price-max']});
 						}
+
+						/* update list for D3 */
+						ctrl_this.visualize_wine_price(searched_wine, wine_price_data);
+						/* end of D3 */
 					}
 				}else{
 					ctrl_this.has_result = false;
 					ctrl_this.info_list.push("No Related Information");
 				}
-				
 				
 				// get selling stores
 				// console.log(data.query_selling_stores);

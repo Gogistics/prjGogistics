@@ -145,8 +145,16 @@
 	  	stroke-dasharray: 5, 5;
 	}
 	
+	.price_dot{
+		box-shadow: 0px 0px 10px #999;
+	    opacity: 0.5;
+		transition: opacity .5s;
+	}
+	
 	.price_dot:hover{
 		cursor: crosshair;
+		box-shadow: 0px 0px 5px #333;
+		opacity: 0.9;
 	}
 	
 	.grid .tick {
@@ -170,7 +178,8 @@
 	  position: absolute;           
 	  text-align: center;           
 	  max-width: 200px;               
-	  padding: 2px;             
+	  padding: 8px;
+	  color: #000;          
 	  font: 12px sans-serif;        
 	  background: lightsteelblue;   
 	  border: 0px;      
@@ -190,7 +199,7 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="container">
 			      <div class="row search_block">
-			         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			         <div class="col-sm-12 col-md-12 col-lg-12">
 			         	<!-- search input group -->
 			            <div class="input-group">
 				             <div class="input-group-btn" >
@@ -217,18 +226,24 @@
 			         </div>
 			      </div>
 			      
+			      	<!-- D3 -->
+					<div class="col-md-12 col-lg-12 text-center">
+						<div id="price_model"></div>
+					</div>
+			      
+			      
+			      
 			      <!-- query result -->
 			      <div ng-if="ctrl.has_result" class="animate-if">
 				      <!-- query result (text) -->
 				      <div class="row search_block">
-				      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				      	<div class="col-sm-12 col-md-12 col-lg-12">
 				      		<ul class="list-group">
 				      			<li class="list-group-item"><input class="form-control query_filter_filed" type="text" placeholder="Filter Query Information" ng-model="ctrl.query_keyword" ng-keyup = "ctrl.search_wine_info_of_keyup_by_qery_keyword($event)"></li>
 				      			<li class="list-group-item animate-repeat" ng-repeat = "info in ctrl.info_list | filter:ctrl.query_keyword">[[info]]</li>
 				      		</ul>
 				      	</div>
 				      </div>
-				      
 				      <!-- store info -->
 				      <div class="row search_block">
 				      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -278,183 +293,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- d3 box testing -->
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-<div id="price_model"></div>
-</div>
-<script type="text/javascript">
-
-var margin = {top: 20, right: 150, bottom: 100, left: 100},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
-    padding = 50;
-
-var parseDate = d3.time.format("%Y").parse;
-var formatTime = d3.time.format("%Y");
-
-var x = d3.time.scale()
-    .range([0, width]);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var color = d3.scale.category10();
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-	.tickFormat(d3.time.format("%Y"))
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-
-var line = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.price); });
-    
-var line_interpolate = d3.svg.line()
-.interpolate("basis")
-.x(function(d) { return x(d.date); })
-.y(function(d) { return y(d.price); });
-
-var svg = d3.select("#price_model").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  	.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-/**/
-function make_x_axis() {        
-    return d3.svg.axis()
-        .scale(x)
-         .orient("bottom")
-         .ticks(4)
-}
-
-function make_y_axis() {        
-    return d3.svg.axis()
-        .scale(y)
-        .orient("left")
-        .ticks(4)
-}
-
-svg.append("g")         
-.attr("class", "grid")
-.call(make_y_axis()
-    .tickSize(-width, 0, 0)
-    .tickFormat("")
-)
-
-d3.tsv("/mis/data.tsv", function(error, data) {
-  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
-
-  data.forEach(function(d) {
-    d.date = parseDate(d.date);
-  });
-
-  var cities = color.domain().map(function(name) {
-    return {
-      name: name,
-      values: data.map(function(d) {
-        return {date: d.date, price: +d[name], type: name};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(v) { return v.price; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(v) { return v.price; }); })
-  ]);
-
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
-
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
-
-  	// labels
-	svg.append("text")
-				.attr("class", "label")
-				.attr("transform","rotate(-90)")
-				.attr("y", -55)
-				.attr("x", 0 - (height/2) - 20)
-				.attr("dy","1em")
-				.text("Price ($)");
-
-	svg.append("text")
-	   .attr("class","label")
-	   .attr("x", width / 2 - padding + 35)
-	   .attr("y", height + padding)
-	   .attr("text-anchor","middle")
-	   .text("Vintage");
-	
-	// lengend
-	var price_legend = ['min','avg','max'];
-	var legend = svg.selectAll(".legend").data(price_legend.slice().reverse())
-	.enter().append("g").attr("class", "legend").attr("transform",
-			function(d, i) {
-				return "translate(100," + i * 20 + ")";
-			});
-
-	legend.append("rect").attr("x", width - 18).attr("width", 18).attr(
-		"height", 18).style("fill", color);
-	
-	legend.append("text").attr("x", width - 24).attr("y", 9)
-		.attr("dy", ".35em").style("text-anchor", "end").text(function(d) {
-			return d;
-		});
-	
-	var div = d3.select("body").append("div")   
-    .attr("class", "tooltip")               
-    .style("opacity", 0);
-	
-  var city = svg.selectAll(".city")
-      .data(cities)
-    .enter().append("g")
-      .attr("class", "city");
-
-  city.append("path")
-      .attr("class", "line")
-      .attr("d", function(d) { return line(d.values); })
-      .style("stroke", function(d) { return color(d.name); });
-  
-  city.append("path")
-  .attr("class", "line_interpolate")
-  .attr("d", function(d) { return line_interpolate(d.values); })
-  .style("stroke", function(d) { return color(d.name); });
-  
-  // draw dot
-  cities.forEach(function(prices){
-	  //console.log(prices);
-	  
-	  svg.selectAll("dot")    
-      .data(prices.values)         
-  	  .enter().append("circle") 
-  	  .attr("class", "price_dot")
-      .attr("r", 3)       
-      .attr("cx", function(d) { return x(d.date); })       
-      .attr("cy", function(d) { return y(d.price); })     
-      .on("mouseover", function(d) {      
-          div.transition()        
-              .duration(200)      
-              .style("opacity", .9);      
-          div.html(d.type + ' price: $' + d.price + ' ; ' + formatTime(d.date))  
-              .style("left", (d3.event.pageX) + "px")     
-              .style("top", (d3.event.pageY - 28) + "px");    
-          })                  
-      .on("mouseout", function(d) {       
-          div.transition()        
-              .duration(500)      
-              .style("opacity", 0);   
-      });
-  });
-
-});
-</script>
