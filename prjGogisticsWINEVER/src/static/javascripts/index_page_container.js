@@ -432,7 +432,7 @@
 						var searched_wine, wine_price_data = [];
 						for(var ith = 0 ; ith < json_response['wine-searcher']['wine-vintages'].length; ith++){
 							var wine_info = json_response['wine-searcher']['wine-vintages'][ith]['wine-vintage'];
-							if(wine_info['vintage'].length < 3){
+							if(wine_info['vintage'].length < 3 || wine_info['price-average'] === '0' || wine_info['price-max'] === '0' || wine_info['price-min'] === '0'){
 								continue;
 							}
 							var str = "Wine: " + $scope.wine.info + " ; " +
@@ -562,7 +562,6 @@
 								}, 1000);
 							}
 						}
-						// console.log(json_selling_store_response['wine-searcher']);
 					}
 					// end
 				}
