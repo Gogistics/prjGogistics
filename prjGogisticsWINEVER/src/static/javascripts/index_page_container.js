@@ -184,7 +184,7 @@
 		
 		// D3 visualization
 		var visualize_wine_price = function(arg_searched_wine, arg_data){
-			//
+			// init
 			var margin = {top: 100, right: 150, bottom: 100, left: 100},
 			    width = 960 - margin.left - margin.right,
 			    height = 500 - margin.top - margin.bottom,
@@ -215,17 +215,17 @@
 			    .y(function(d) { return y(d.price); });
 			    
 			var line_interpolate = d3.svg.line()
-			.interpolate("basis")
-			.x(function(d) { return x(d.date); })
-			.y(function(d) { return y(d.price); });
+									.interpolate("basis")
+									.x(function(d) { return x(d.date); })
+									.y(function(d) { return y(d.price); });
 
 			var svg = d3.select("#price_model").append("svg")
-			    .attr("width", width + margin.left + margin.right)
-			    .attr("height", height + margin.top + margin.bottom)
-			  	.append("g")
-			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+					    .attr("width", width + margin.left + margin.right)
+					    .attr("height", height + margin.top + margin.bottom)
+					  	.append("g")
+					    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			/**/
+			/* make grid */
 			function make_x_axis() {        
 			    return d3.svg.axis()
 			        .scale(x)
@@ -240,22 +240,24 @@
 			        .ticks(4)
 			}
 
-			svg.append("g")         
+			svg.append("svg:g")         
 			.attr("class", "grid")
 			.call(make_y_axis()
 			    .tickSize(-width, 0, 0)
-			    .tickFormat("")
-			)
+			    .tickFormat(""))
+			/* end of make grid */
 
 			var data = arg_data;
 			console.log(JSON.stringify(data,2,2));
-			  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+			color.domain(d3.keys(data[0]).filter(function(key){ return key !== "date"; }));
 
-			  data.forEach(function(d) {
+			// parse date
+			data.forEach(function(d) {
 			    d.date = parseDate(d.date);
-			  });
+			});
 
-			  var wine_price_data = color.domain().map(function(name) {
+			// map data
+			var wine_price_data = color.domain().map(function(name) {
 			    return {
 			      name: name,
 			      values: data.map(function(d) {
@@ -271,12 +273,12 @@
 			    d3.max(wine_price_data, function(c) { return d3.max(c.values, function(v) { return v.price; }); })
 			  ]);
 
-			  svg.append("g")
+			  svg.append("svg:g")
 			      .attr("class", "x axis")
 			      .attr("transform", "translate(0," + height + ")")
 			      .call(xAxis);
 
-			  svg.append("g")
+			  svg.append("svg:g")
 			      .attr("class", "y axis")
 			      .call(yAxis);
 
@@ -302,8 +304,9 @@
 				   .attr("y", -50)
 				   .attr("text-anchor","middle")
 				   .text(arg_searched_wine);
+				// end labels
 				
-				// lengend
+				// legend
 				var price_legend = ['min','avg','max'];
 				var legend = svg.selectAll(".legend").data(price_legend.slice().reverse())
 				.enter().append("g").attr("class", "legend").attr("transform",
@@ -318,22 +321,28 @@
 					.attr("dy", ".35em").style("text-anchor", "end").text(function(d) {
 						return d;
 					});
-				
-				var div = d3.select("body").append("div")   
-			    .attr("class", "tooltip")               
-			    .style("opacity", 0);
-				
-			  var city = svg.selectAll(".city")
-			      .data(wine_price_data)
-			    .enter().append("g")
-			      .attr("class", "city");
+				// end legend
 
-			  city.append("path")
+				
+			  // tip block
+			  var div = d3.select("body").append("div")   
+			    		  .attr("class", "tooltip")               
+			    		  .style("opacity", 0);
+			
+			  // init price var
+			  var price_type = svg.selectAll(".price_type")
+			      			.data(wine_price_data)
+			      			.enter().append("g")
+			      			.attr("class", "price_type");
+
+			  // append broken line
+			  price_type.append("path")
 			      .attr("class", "line")
 			      .attr("d", function(d) { return line(d.values); })
 			      .style("stroke", function(d) { return color(d.name); });
 			  
-			  city.append("path")
+			  // append interpolated line
+			  price_type.append("path")
 			  .attr("class", "line_interpolate")
 			  .attr("d", function(d) { return line_interpolate(d.values); })
 			  .style("stroke", function(d) { return color(d.name); });
@@ -363,8 +372,20 @@
 			              .style("opacity", 0);   
 			      });
 			  });
-
-			$("#price_model").css({ display : "block"});
+			  
+			  // draw function
+			  function draw(){
+				  
+			  }
+			  
+			  function zoom(){
+				  draw();
+			  }
+			  // zoom function
+			  
+			  // show chart; draw() then show
+			  draw();
+			  $("#price_model").css({ display : "block"});
 		};
 		ctrl_this.visualize_wine_price = visualize_wine_price;
 		
