@@ -767,11 +767,14 @@ stroke-width: 0;
 	var linesMesh;
 	var animation_id;
 
-	//
-	var maxParticleCount = 1000;
-	var particleCount = 50;
-	var r = 800;
-	var rHalf = r / 2;
+	var maxParticleCount = 2000;
+	var particleCount = 50; // replaced with PSO particles number
+	var space_x = 800, space_y = 500, space_z = 900; // space size and will be replaced with PSO space size
+	// var r = 800;
+	// var rHalf = r / 2;
+
+	
+	// for GUI panel
 	var effectController = {
 		showDots: true,
 		showLines: false,
@@ -780,9 +783,8 @@ stroke-width: 0;
 		maxConnections: 0,
 		particleCount: 500
 	}
-
 	// init control panel
-	function initGUI() {
+	/* function initGUI() {
 		var gui = new dat.GUI();
 		gui.add( effectController, "showDots" ).onChange( function( value ) { pointCloud.visible = value; } );
 		gui.add( effectController, "showLines" ).onChange( function( value ) { linesMesh.visible = value; } );
@@ -796,13 +798,14 @@ stroke-width: 0;
 
 		});
 
-	}
+	} */
 
+	// init
 	function init() {
 		// initGUI(); // hide control panel
 		container = document.getElementById( 'container' );
 
-		//
+		// camera setting
 		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1800 ); // camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 		camera.position.z = 1750;
 		controls = new THREE.OrbitControls( camera, container );
@@ -810,7 +813,7 @@ stroke-width: 0;
 		group = new THREE.Group();
 		scene.add( group );
 
-		var helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxGeometry( r, r, r ) ) );
+		var helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxGeometry( space_x, space_y, space_z ) ) );
 		helper.material.color.setHex( 0x080808 );
 		helper.material.blending = THREE.AdditiveBlending;
 		helper.material.transparent = true;
@@ -823,7 +826,7 @@ stroke-width: 0;
 
 		var pMaterial = new THREE.PointCloudMaterial( {
 			color: 0xFFFFFF,
-			size: 3,
+			size: 4,
 			blending: THREE.AdditiveBlending,
 			transparent: true,
 			sizeAttenuation: false
@@ -835,9 +838,9 @@ stroke-width: 0;
 		// set particles' position; will be used to init particles' position
 		for ( var i = 0; i < maxParticleCount; i++ ) {
 
-			var x = Math.random() * r - r / 2;
-			var y = Math.random() * r - r / 2;
-			var z = Math.random() * r - r / 2;
+			var x = Math.random() * space_x - space_x / 2;
+			var y = Math.random() * space_y - space_y / 2;
+			var z = Math.random() * space_z - space_z / 2;
 
 			particlePositions[ i * 3     ] = x;
 			particlePositions[ i * 3 + 1 ] = y;
@@ -864,12 +867,9 @@ stroke-width: 0;
 		group.add( pointCloud );
 
 		var geometry = new THREE.BufferGeometry();
-
 		geometry.addAttribute( 'position', new THREE.DynamicBufferAttribute( positions, 3 ) );
 		geometry.addAttribute( 'color', new THREE.DynamicBufferAttribute( colors, 3 ) );
-
 		geometry.computeBoundingSphere();
-
 		geometry.drawcalls.push( {
 			start: 0,
 			count: 0,
@@ -932,20 +932,20 @@ stroke-width: 0;
 			particlePositions[ i * 3 + 1 ] += particleData.velocity.y;
 			particlePositions[ i * 3 + 2 ] += particleData.velocity.z;
 
-			if ( particlePositions[ i * 3 + 1 ] < -rHalf || particlePositions[ i * 3 + 1 ] > rHalf )
+			if ( particlePositions[ i * 3 + 1 ] < -(space_y / 2) || particlePositions[ i * 3 + 1 ] > (space_y / 2)  )
 				particleData.velocity.y = -particleData.velocity.y;
 
-			if ( particlePositions[ i * 3 ] < -rHalf || particlePositions[ i * 3 ] > rHalf )
+			if ( particlePositions[ i * 3 ] < -(space_x / 2)  || particlePositions[ i * 3 ] > (space_x / 2)  )
 				particleData.velocity.x = -particleData.velocity.x;
 
-			if ( particlePositions[ i * 3 + 2 ] < -rHalf || particlePositions[ i * 3 + 2 ] > rHalf )
+			if ( particlePositions[ i * 3 + 2 ] < -(space_z / 2)  || particlePositions[ i * 3 + 2 ] > (space_z / 2)  )
 				particleData.velocity.z = -particleData.velocity.z;
 
 			if ( effectController.limitConnections && particleData.numConnections >= effectController.maxConnections )
 				continue;
 
 			// Check collision
-			for ( var j = i + 1; j < particleCount; j++ ) {
+			/* for ( var j = i + 1; j < particleCount; j++ ) {
 
 				var particleDataB = particlesData[ j ];
 				if ( effectController.limitConnections && particleDataB.numConnections >= effectController.maxConnections )
@@ -981,7 +981,7 @@ stroke-width: 0;
 
 					numConnected++;
 				}
-			}
+			} */
 		}
 
 
@@ -1004,14 +1004,14 @@ stroke-width: 0;
 		}
 		pso_counter += 1;
 		console.log('count: ' + pso_counter);
-	}
+	};
 
 	// use to control the iteration
 	function render() {
 		var time = Date.now() * 0.8;
 		group.rotation.y = time * 0.0001;
 		renderer.render( scene, camera );
-	}
+	};
 	
 	// do animation
 	function do3DPSOAnimation(){
@@ -1019,7 +1019,7 @@ stroke-width: 0;
 			init();
 			animate();
 		}
-	}
+	};
 
 	// init & start animation
 	// bind click events
