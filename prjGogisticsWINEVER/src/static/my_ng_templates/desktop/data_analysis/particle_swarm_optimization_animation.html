@@ -617,11 +617,13 @@ stroke-width: 0;
 			this.config.local_optimal_value_set = numeric.rep([this.config.particles_size], this.config.min_cost);
 			
 			this.config.mean_cost = numeric.sum(temp_cost) / this.config.particles_size;
+			
+			//
 		},
 		
 		// go through iteration
-		go_iteration : function(){
-			for(var ith = 0; ith < this.config.iteration; ith++ ){
+		go_iteration : function(ith){
+			if(ith < this.config.iteration){
 				
 				this.config.learning_rate_self = this.config.learning_rate_self_param_max - (this.config.learning_rate_self_param_max - this.config.learning_rate_self_param_min) * (ith + 1) / this.config.iteration;
 				
@@ -720,41 +722,28 @@ stroke-width: 0;
 					this.config.global_optimal_particles_set = numeric.rep([this.config.particles_size], this.config.particles_values[temp_optimal_index]);
 					
 					if (Math.abs(temp_optimal - pre_global_optimal) < numeric.epsilon){
-						break;
+						false;
 					}
 				}
+				
+				return true
+			}else{
+				return false;
 			}
 		},
 			
 		// start optimization
 		start_optimization : function(){
 			this.init_pso();
-			this.go_iteration();
+			this.go_iteration(1);
 			console.log(JSON.stringify(this.config.global_optimal_particles_set, 2, 2));
 			console.log(-this.config.max_min_factor * this.config.global_optimal);
 			console.log(this.config.max_min_factor);
 		}
 	}
-	window.customized_optimization = window.customized_optimization || {};
-	window.customized_optimization.performance_index = function(arg_x, arg_y, arg_z, arg_a, arg_b){
-		/* Performance index for Demo:
-		 * sin(arg_x) * cos(arg_y + 0.5 * arg_x) + arg_z^2 * cos(arg_x + arg_y * arg_z);
-		 * Ranges:
-		 * -10 < arg_x < 30
-	     * -5  < arg_y < 50
-		 * -15 < arg_z < 25
-		 * 5   < arg_a < 70
-		 * -10 < arg_b < 5 */
-		 
-		return (arg_b * Math.sin(arg_x * arg_a) * Math.cos(arg_y + 0.5 * arg_x) + arg_a * Math.cos(arg_x + arg_y * arg_z));
-	};
-	window.customized_optimization.variable_ranges = [[-10, -5, -15, 5, -10], [30, 50, 25, 70, 5]];
-	window.particles_swarm_optimization_3js.set_customized_performance_index_and_variable_ranges(window.customized_optimization.performance_index, window.customized_optimization.variable_ranges);
-	window.particles_swarm_optimization_3js.set_particles_size(200);
-	window.particles_swarm_optimization_3js.set_iteration(300);
-	window.particles_swarm_optimization_3js.set_max_min_factor(1);
-	window.particles_swarm_optimization_3js.start_optimization();
 	/* end of PSO */
+	
+	/* Three.js */
 	
 	/* Three.js */
 	var group;
@@ -768,12 +757,10 @@ stroke-width: 0;
 	var animation_id;
 
 	var maxParticleCount = 2000;
-	var particleCount = 50; // replaced with PSO particles number
+	var particleCount = 100; // replaced with PSO particles number
 	var space_x = 800, space_y = 500, space_z = 900; // space size and will be replaced with PSO space size
-	// var r = 800;
-	// var rHalf = r / 2;
-
 	
+	var pso_counter = 0;
 	// for GUI panel
 	var effectController = {
 		showDots: true,
@@ -783,23 +770,7 @@ stroke-width: 0;
 		maxConnections: 0,
 		particleCount: 500
 	}
-	// init control panel
-	/* function initGUI() {
-		var gui = new dat.GUI();
-		gui.add( effectController, "showDots" ).onChange( function( value ) { pointCloud.visible = value; } );
-		gui.add( effectController, "showLines" ).onChange( function( value ) { linesMesh.visible = value; } );
-		gui.add( effectController, "minDistance", 10, 300 );
-		gui.add( effectController, "limitConnections" );
-		gui.add( effectController, "maxConnections", 0, 30, 1 );
-		gui.add( effectController, "particleCount", 0, maxParticleCount, 1 ).onChange( function( value ) {
-			// dynamically change particles amount
-			particleCount = parseInt( value );
-			particles.drawcalls[ 0 ].count = particleCount;
-
-		});
-
-	} */
-
+	
 	// init
 	function init() {
 		// initGUI(); // hide control panel
@@ -807,7 +778,7 @@ stroke-width: 0;
 
 		// camera setting
 		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1800 ); // camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-		camera.position.z = 1750;
+		camera.position.z = 1250;
 		controls = new THREE.OrbitControls( camera, container );
 		scene = new THREE.Scene();
 		group = new THREE.Group();
@@ -851,7 +822,6 @@ stroke-width: 0;
 				velocity: new THREE.Vector3( -1 + Math.random() * 2, -1 + Math.random() * 2,  -1 + Math.random() * 2 ),
 				numConnections: 0
 			} );
-
 		}
 
 		particles.drawcalls.push( {
@@ -896,7 +866,6 @@ stroke-width: 0;
 		container.appendChild( renderer.domElement );
 
 		//
-
 		stats = new Stats();
 		stats.domElement.style.position = 'absolute';
 		stats.domElement.style.top = '0px';
@@ -914,7 +883,6 @@ stroke-width: 0;
 	}
 
 	// will be used for updating particles' position by PSO
-	var pso_counter = 0;
 	function animate() {
 		var vertexpos = 0;
 		var colorpos = 0;
@@ -943,45 +911,6 @@ stroke-width: 0;
 
 			if ( effectController.limitConnections && particleData.numConnections >= effectController.maxConnections )
 				continue;
-
-			// Check collision
-			/* for ( var j = i + 1; j < particleCount; j++ ) {
-
-				var particleDataB = particlesData[ j ];
-				if ( effectController.limitConnections && particleDataB.numConnections >= effectController.maxConnections )
-					continue;
-
-				var dx = particlePositions[ i * 3     ] - particlePositions[ j * 3     ];
-				var dy = particlePositions[ i * 3 + 1 ] - particlePositions[ j * 3 + 1 ];
-				var dz = particlePositions[ i * 3 + 2 ] - particlePositions[ j * 3 + 2 ];
-				var dist = Math.sqrt( dx * dx + dy * dy + dz * dz );
-
-				if ( dist < effectController.minDistance ) {
-
-					particleData.numConnections++;
-					particleDataB.numConnections++;
-
-					var alpha = 1.0 - dist / effectController.minDistance;
-
-					positions[ vertexpos++ ] = particlePositions[ i * 3     ];
-					positions[ vertexpos++ ] = particlePositions[ i * 3 + 1 ];
-					positions[ vertexpos++ ] = particlePositions[ i * 3 + 2 ];
-
-					positions[ vertexpos++ ] = particlePositions[ j * 3     ];
-					positions[ vertexpos++ ] = particlePositions[ j * 3 + 1 ];
-					positions[ vertexpos++ ] = particlePositions[ j * 3 + 2 ];
-
-					colors[ colorpos++ ] = alpha;
-					colors[ colorpos++ ] = alpha;
-					colors[ colorpos++ ] = alpha;
-
-					colors[ colorpos++ ] = alpha;
-					colors[ colorpos++ ] = alpha;
-					colors[ colorpos++ ] = alpha;
-
-					numConnected++;
-				}
-			} */
 		}
 
 
@@ -993,22 +922,31 @@ stroke-width: 0;
 
 		animation_id = requestAnimationFrame( animate );
 
-		if(pso_counter < 1000){
+		if(pso_counter < particles_swarm_optimization_3js.config.iteration){
+			window.particles_swarm_optimization_3js.go_iteration(pso_counter);
 			stats.update();
 			render();
+			console.log('count: ' + pso_counter);
 		}else{
+			// stop animation
 			if (animation_id) {
 		       	window.cancelAnimationFrame(animation_id);
 		       	animation_id = undefined;
 		    }
+			
+			// print out result
+			var optimal = window.particles_swarm_optimization_3js.config.global_optimal;
+			var optimal_position = window.particles_swarm_optimization_3js.config.global_optimal_particles_set;
+			alert(optimal);
+			console.log(JSON.stringify( optimal_position,2,2));
+			console.log("Optimal: " + optimal + " ; Position: x => " + optimal_position[0][0] + ", y => " + optimal_position[0][1] + ", z => " + optimal_position[0][2]);
 		}
 		pso_counter += 1;
-		console.log('count: ' + pso_counter);
 	};
 
 	// use to control the iteration
 	function render() {
-		var time = Date.now() * 0.8;
+		var time = Date.now() * 1.5;
 		group.rotation.y = time * 0.0001;
 		renderer.render( scene, camera );
 	};
@@ -1016,6 +954,33 @@ stroke-width: 0;
 	// do animation
 	function do3DPSOAnimation(){
 		if(!animation_id){
+			// init PSO (sholud be done before three.js)
+			//set initial conditions
+			window.customized_optimization = window.customized_optimization || {};
+			window.customized_optimization.performance_index = function(arg_x, arg_y, arg_z, arg_a, arg_b){
+				/* Performance index for Demo:
+				 * sin(arg_x) * cos(arg_y + 0.5 * arg_x) + arg_z^2 * cos(arg_x + arg_y * arg_z);
+				 * Ranges:
+				 * -10 < arg_x < 30
+			     * -5  < arg_y < 50
+				 * -15 < arg_z < 25
+				 * 5   < arg_a < 70
+				 * -10 < arg_b < 5 */
+				 
+				return (arg_y * Math.sin(arg_x) * Math.cos(arg_y + 0.5 * arg_x) +  Math.cos(arg_x + arg_y * arg_z));
+			};
+			window.customized_optimization.variable_ranges = [[-10, -5, -15], [30, 50, 25]];
+			window.particles_swarm_optimization_3js.set_customized_performance_index_and_variable_ranges(window.customized_optimization.performance_index, window.customized_optimization.variable_ranges);
+			window.particles_swarm_optimization_3js.set_particles_size(particleCount);
+			window.particles_swarm_optimization_3js.set_iteration(1000);
+			window.particles_swarm_optimization_3js.set_max_min_factor(1);
+			window.particles_swarm_optimization_3js.init_pso();
+			
+			console.log(JSON.stringify(window.particles_swarm_optimization_3js.config.global_optimal_particles_set, 2, 2));
+			console.log(-window.particles_swarm_optimization_3js.config.max_min_factor * window.particles_swarm_optimization_3js.config.global_optimal);
+			console.log(window.particles_swarm_optimization_3js.config.max_min_factor);
+			
+			// three.js
 			init();
 			animate();
 		}

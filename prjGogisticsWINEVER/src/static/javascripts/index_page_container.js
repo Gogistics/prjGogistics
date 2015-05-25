@@ -186,7 +186,7 @@
 		var visualize_wine_price = function(arg_searched_wine, arg_data){
 			// init
 			var margin = {top: 100, right: 150, bottom: 100, left: 100},
-			    width = 960 - margin.left - margin.right,
+			    width = 800 - margin.left - margin.right,
 			    height = 500 - margin.top - margin.bottom,
 			    padding = 50;
 
@@ -347,10 +347,16 @@
 			  .attr("d", function(d) { return line_interpolate(d.values); })
 			  .style("stroke", function(d) { return color(d.name); });
 			  
+			  // clip paths
+			  svg.append("svg:path").attr("class", "line").attr("clip-path",
+              "url(#clip)");
+              
+			  svg.append("svg:path").attr("class", "line_interpolate").attr("clip-path",
+		              "url(#clip)");
+			  // end clip paths
+			  
 			  // draw dot
 			  wine_price_data.forEach(function(prices){
-				  //console.log(prices);
-				  
 				  svg.selectAll("dot")    
 			      .data(prices.values)         
 			  	  .enter().append("circle") 
@@ -377,11 +383,11 @@
 			  function draw(){
 				  
 			  }
-			  
+
+			  // zoom function
 			  function zoom(){
 				  draw();
 			  }
-			  // zoom function
 			  
 			  // show chart; draw() then show
 			  draw();
