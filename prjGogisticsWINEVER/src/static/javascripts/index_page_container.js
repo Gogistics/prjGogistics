@@ -347,14 +347,6 @@
 			  .attr("d", function(d) { return line_interpolate(d.values); })
 			  .style("stroke", function(d) { return color(d.name); });
 			  
-			  // clip paths
-			  svg.append("svg:path").attr("class", "line").attr("clip-path",
-              "url(#clip)");
-              
-			  svg.append("svg:path").attr("class", "line_interpolate").attr("clip-path",
-		              "url(#clip)");
-			  // end clip paths
-			  
 			  // draw dot
 			  wine_price_data.forEach(function(prices){
 				  svg.selectAll("dot")    
@@ -379,18 +371,6 @@
 			      });
 			  });
 			  
-			  // draw function
-			  function draw(){
-				  
-			  }
-
-			  // zoom function
-			  function zoom(){
-				  draw();
-			  }
-			  
-			  // show chart; draw() then show
-			  draw();
 			  $("#price_model").css({ display : "block"});
 		};
 		ctrl_this.visualize_wine_price = visualize_wine_price;
