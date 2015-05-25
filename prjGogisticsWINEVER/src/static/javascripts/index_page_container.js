@@ -218,12 +218,19 @@
 									.interpolate("basis")
 									.x(function(d) { return x(d.date); })
 									.y(function(d) { return y(d.price); });
+			
+
+			var zoom = d3.behavior.zoom()
+					    .scaleExtent([1, 10])
+					    .on("zoom", zoomed);
 
 			var svg = d3.select("#price_model").append("svg")
 					    .attr("width", width + margin.left + margin.right)
 					    .attr("height", height + margin.top + margin.bottom)
 					  	.append("g")
-					    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+					    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+					    .call(zoom);
+			
 
 			/* make grid */
 			function make_x_axis() {        
@@ -370,6 +377,11 @@
 			              .style("opacity", 0);   
 			      });
 			  });
+			  // zoom
+				function zoomed() {
+					alert('trigger');
+					price_type.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+				}
 			  
 			  $("#price_model").css({ display : "block"});
 		};
